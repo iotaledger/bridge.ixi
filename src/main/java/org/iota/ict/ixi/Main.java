@@ -4,7 +4,7 @@ import org.iota.ict.Ict;
 import org.iota.ict.utils.properties.Properties;
 
 /**
- * This class is just for testing timestamping.ixi, so you don't have to run Ict manually.
+ * This class is just for testing bridge.ixi, so you don't have to run Ict manually.
  * */
 public class Main {
 
