@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+import "model.proto";
+
+message FindTransactionsByAddressRequest {
+    string address = 1;
+}
+
+message FindTransactionsByTagRequest {
+    string tag = 1;
+}
+
+message FindTransactionByHashRequest {
+    string hash = 1;
+}
+
+message SubmitTransactionBuilderRequest {
+	TransactionBuilder transactionBuilder = 1;
+}
+
+message SubmitTransactionRequest {
+	Transaction transaction = 1;
+}
+
+message DetermineApprovalConfidenceRequest {
+	string transactionHash = 1;
+}
+
+message AddEffectListenerRequest {
+	string environment = 1;
+}
+
+message RemoveEffectListenerRequest {
+	string environment = 1;
+}
+
+message SubmitEffectRequest {
+	string environment = 1;
+	string effect = 2;
+}

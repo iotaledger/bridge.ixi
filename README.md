@@ -19,21 +19,34 @@ The default port should be the same for every bridge.ixi implementation. By this
 #### Serialization
 bridge.ixi makes use of protocol buffers, an efficient, language-neutral mechanism for serializing structured data.
 ##### Procedure
-	1) client generates request message
-	2) server processes request message
-	3) server returns response message
+1) client builds request message and sends it to the server
+2) server processes request message
+3) server builds response message and returns it to the client
 ##### Messages
-Following messages are decleared:
 
-    submitEffect(environment,effect)
-    addEffectListener(listenerId,environment)
-    getEffect(listenerId,environment)
-    addGossipListener(listenerId)
-    getGossipEvent(listenerId)
-    findTransactionsByAddress(address)
-    findTransactionsByTag(tag)
-    submitTransaction(transaction)
-    getTransaction(transactionHash)
+The definitions of the protocol buffers can be found here in detail: 
+https://github.com/iotaledger/bridge.ixi/tree/master/src/main/java/org/iota/ict/ixi/protobuf
+
+The following messages serve as requests:
+
+    FindTransactionsByAddressRequest
+    FindTransactionsByTagRequest
+ 	FindTransactionByHashRequest
+ 	SubmitTransactionBuilderRequest
+ 	SubmitTransactionRequest
+ 	DetermineApprovalConfidenceRequest
+ 	AddEffectListenerRequest
+ 	RemoveEffectListenerRequest
+ 	SubmitEffectRequest
+
+The following messages serve as responses:
+
+ 	FindTransactionsByAddressResponse
+ 	FindTransactionsByTagResponse
+ 	FindTransactionByHashResponse
+ 	DetermineApprovalConfidenceResponse
+ 	
+Note that each message must be sent within a wrapper message. This is necessary so that the participants know what kind of message it is.
 
 ### Listener
-As already mentioned, all connections will be handeled in seperate threads. Each thread contains exactly those listeners that are relevant for it. These threads provide the link between the listeners and the 
+As already mentioned, all connections will be handled in separate threads. Each thread contains exactly those listeners that are relevant for it.

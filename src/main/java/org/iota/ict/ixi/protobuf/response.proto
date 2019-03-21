@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "model.proto";
+
+message FindTransactionsByAddressResponse {
+    repeated Transaction transactions = 1;
+}
+
+message FindTransactionsByTagResponse {
+    repeated Transaction transactions = 1;
+}
+
+message FindTransactionByHashResponse {
+    Transaction transactions = 1;
+}
+
+message DetermineApprovalConfidenceResponse {
+	double approvalConfidence = 1;
+}
+

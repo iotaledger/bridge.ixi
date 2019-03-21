@@ -1,29 +1,5 @@
 syntax = "proto3";
 
-message FindTransactionsByAddress {
-    string address = 1;
-}
-
-message FindTransactionsByTag {
-    string tag = 1;
-}
-
-message FindTransactionByHash {
-    string hash = 1;
-}
-
-message SubmitTransactionBuilder {
-	TransactionBuilder transactionBuilder = 1;
-}
-
-message SubmitTransaction {
-	Transaction transaction = 1;
-}
-
-message DetermineApprovalConfidence {
-	string transactionHash = 1;
-}
-
 message TransactionBuilder {
 
 	string signatureFragments = 1;
@@ -45,7 +21,7 @@ message TransactionBuilder {
     string essence = 17;
 	bool isBundleHead = 18;
 	bool isBundleTail = 19;
-
+	
 }
 
 message Transaction {
@@ -69,38 +45,9 @@ message Transaction {
     string essence = 17;
 	bool isBundleHead = 18;
 	bool isBundleTail = 19;
-
+	
 	string hash = 20;
-
+	
 }
 
-message AddEffectListener {
-	string environment = 1;
-}
 
-message RemoveEffectListener {
-	string environment = 1;
-}
-
-message SubmitEffect {
-	string environment = 1;
-	string effect = 2;
-}
-
-message WrapperMessage {
-
-    oneof msg {
-
-        FindTransactionsByAddress findTransactionsByAddress = 1;
-        FindTransactionsByTag findTransactionsByTag = 2;
-		FindTransactionByHash findTransactionByHash = 3;
-		SubmitTransactionBuilder submitTransactionBuilder = 4;
-		SubmitTransaction submitTransaction = 5;
-		DetermineApprovalConfidence determineApprovalConfidence = 6;
-		AddEffectListener addEffectListener = 7;
-		RemoveEffectListener removeEffectListener = 8;
-		SubmitEffect submitEffect = 9;
-
-    }
-
-}

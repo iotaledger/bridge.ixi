@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+ import "request.proto";
+ import "response.proto";
+
+ message WrapperMessage {
+
+     oneof msg {
+
+        FindTransactionsByAddressRequest findTransactionsByAddressRequest = 1;
+        FindTransactionsByTagRequest findTransactionsByTagRequest = 2;
+ 		FindTransactionByHashRequest findTransactionByHashRequest = 3;
+ 		SubmitTransactionBuilderRequest submitTransactionBuilderRequest = 4;
+ 		SubmitTransactionRequest submitTransactionRequest = 5;
+ 		DetermineApprovalConfidenceRequest determineApprovalConfidenceRequest = 6;
+ 		AddEffectListenerRequest addEffectListenerRequest = 7;
+ 		RemoveEffectListenerRequest removeEffectListenerRequest = 8;
+ 		SubmitEffectRequest submitEffectRequest = 9;
+
+ 		FindTransactionsByAddressResponse findTransactionsByAddressResponse = 10;
+ 		FindTransactionsByTagResponse findTransactionsByTagResponse = 11;
+ 		FindTransactionByHashResponse findTransactionByHashResponse = 13;
+ 		DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 14;
+
+     }
+
+ }
