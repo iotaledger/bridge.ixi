@@ -31,25 +31,23 @@ public class ClientHandler extends Thread {
 
         BufferedReader reader = null;
         PrintWriter writer = null;
+
         try {
 
              reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
              writer = new PrintWriter(socket.getOutputStream());
 
             while(!interrupted()) {
-                
 
             }
 
-            reader.close();
-            writer.close();
-
         } catch (SocketException e) {
-            try { reader.close(); } catch (Exception x) { ; }
-            try { writer.close(); } catch (Exception x) { ; }
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            try { reader.close(); } catch (Exception x) { ; }
+            try { writer.close(); } catch (Exception x) { ; }
         }
 
     }
