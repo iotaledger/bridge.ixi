@@ -1,13 +1,13 @@
 package org.iota.ict.ixi;
 
 import org.iota.ict.eee.EffectListener;
+import org.iota.ict.ixi.protobuf.Request;
+import org.iota.ict.ixi.protobuf.Wrapper;
 
-import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.SocketException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,26 +29,57 @@ public class ClientHandler extends Thread {
     @Override
     public void run() {
 
-        BufferedReader reader = null;
-        PrintWriter writer = null;
+        while(!interrupted()) {
 
-        try {
+            try {
+                    Wrapper.WrapperMessage response = Wrapper.WrapperMessage.newBuilder().mergeFrom(socket.getInputStream()).build();
 
-             reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-             writer = new PrintWriter(socket.getOutputStream());
+                System.out.println(response);
 
-            while(!interrupted()) {
-
+            } catch (IOException e) {
+                    e.printStackTrace();
             }
 
-        } catch (SocketException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try { reader.close(); } catch (Exception x) { ; }
-            try { writer.close(); } catch (Exception x) { ; }
+
         }
+
+    }
+
+    public static void main(String[] args) throws IOException {
+
+        ServerSocket serverSocket = new ServerSocket(20324);
+
+        new Thread(() -> {
+
+            try {
+
+                Thread.sleep(1000);
+                Socket socket = new Socket("127.0.0.1", 20324);
+
+                Request.AddEffectListenerRequest request = Request.AddEffectListenerRequest.newBuilder().setEnvironment("TestEnvironment").build();
+                Wrapper.WrapperMessage message = Wrapper.WrapperMessage.newBuilder().setAddEffectListenerRequest(request).build();
+
+                System.out.println("DOIN");
+                message.writeDelimitedTo(socket.getOutputStream());
+                System.out.println("DONE");
+
+
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }).start();
+
+        Socket client = serverSocket.accept();
+
+        System.out.println("CONNECTED");
+
+
+
+        Wrapper.WrapperMessage response = Wrapper.WrapperMessage.parseDelimitedFrom(client.getInputStream());
+        System.out.println("BLA");
+        System.out.println(response.getAddEffectListenerRequest().getEnvironment());
 
     }
 

@@ -19,8 +19,8 @@ syntax = "proto3";
 
  		FindTransactionsByAddressResponse findTransactionsByAddressResponse = 10;
  		FindTransactionsByTagResponse findTransactionsByTagResponse = 11;
- 		FindTransactionByHashResponse findTransactionByHashResponse = 13;
- 		DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 14;
+ 		FindTransactionByHashResponse findTransactionByHashResponse = 12;
+ 		DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 13;
 
      }
 

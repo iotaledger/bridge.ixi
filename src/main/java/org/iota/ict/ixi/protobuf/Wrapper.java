@@ -160,28 +160,28 @@ public final class Wrapper {
     Response.FindTransactionsByTagResponseOrBuilder getFindTransactionsByTagResponseOrBuilder();
 
     /**
-     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
+     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 12;</code>
      */
     boolean hasFindTransactionByHashResponse();
     /**
-     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
+     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 12;</code>
      */
     Response.FindTransactionByHashResponse getFindTransactionByHashResponse();
     /**
-     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
+     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 12;</code>
      */
     Response.FindTransactionByHashResponseOrBuilder getFindTransactionByHashResponseOrBuilder();
 
     /**
-     * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 14;</code>
+     * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 13;</code>
      */
     boolean hasDetermineApprovalConfidenceResponse();
     /**
-     * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 14;</code>
+     * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 13;</code>
      */
     Response.DetermineApprovalConfidenceResponse getDetermineApprovalConfidenceResponse();
     /**
-     * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 14;</code>
+     * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 13;</code>
      */
     Response.DetermineApprovalConfidenceResponseOrBuilder getDetermineApprovalConfidenceResponseOrBuilder();
 
@@ -380,9 +380,9 @@ public final class Wrapper {
               msgCase_ = 11;
               break;
             }
-            case 106: {
+            case 98: {
               Response.FindTransactionByHashResponse.Builder subBuilder = null;
-              if (msgCase_ == 13) {
+              if (msgCase_ == 12) {
                 subBuilder = ((Response.FindTransactionByHashResponse) msg_).toBuilder();
               }
               msg_ =
@@ -391,12 +391,12 @@ public final class Wrapper {
                 subBuilder.mergeFrom((Response.FindTransactionByHashResponse) msg_);
                 msg_ = subBuilder.buildPartial();
               }
-              msgCase_ = 13;
+              msgCase_ = 12;
               break;
             }
-            case 114: {
+            case 106: {
               Response.DetermineApprovalConfidenceResponse.Builder subBuilder = null;
-              if (msgCase_ == 14) {
+              if (msgCase_ == 13) {
                 subBuilder = ((Response.DetermineApprovalConfidenceResponse) msg_).toBuilder();
               }
               msg_ =
@@ -405,7 +405,7 @@ public final class Wrapper {
                 subBuilder.mergeFrom((Response.DetermineApprovalConfidenceResponse) msg_);
                 msg_ = subBuilder.buildPartial();
               }
-              msgCase_ = 14;
+              msgCase_ = 13;
               break;
             }
             default: {
@@ -455,8 +455,8 @@ public final class Wrapper {
       SUBMITEFFECTREQUEST(9),
       FINDTRANSACTIONSBYADDRESSRESPONSE(10),
       FINDTRANSACTIONSBYTAGRESPONSE(11),
-      FINDTRANSACTIONBYHASHRESPONSE(13),
-      DETERMINEAPPROVALCONFIDENCERESPONSE(14),
+      FINDTRANSACTIONBYHASHRESPONSE(12),
+      DETERMINEAPPROVALCONFIDENCERESPONSE(13),
       MSG_NOT_SET(0);
       private final int value;
       private MsgCase(int value) {
@@ -483,8 +483,8 @@ public final class Wrapper {
           case 9: return SUBMITEFFECTREQUEST;
           case 10: return FINDTRANSACTIONSBYADDRESSRESPONSE;
           case 11: return FINDTRANSACTIONSBYTAGRESPONSE;
-          case 13: return FINDTRANSACTIONBYHASHRESPONSE;
-          case 14: return DETERMINEAPPROVALCONFIDENCERESPONSE;
+          case 12: return FINDTRANSACTIONBYHASHRESPONSE;
+          case 13: return DETERMINEAPPROVALCONFIDENCERESPONSE;
           case 0: return MSG_NOT_SET;
           default: return null;
         }
@@ -786,53 +786,53 @@ public final class Wrapper {
       return Response.FindTransactionsByTagResponse.getDefaultInstance();
     }
 
-    public static final int FINDTRANSACTIONBYHASHRESPONSE_FIELD_NUMBER = 13;
+    public static final int FINDTRANSACTIONBYHASHRESPONSE_FIELD_NUMBER = 12;
     /**
-     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
+     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 12;</code>
      */
     public boolean hasFindTransactionByHashResponse() {
-      return msgCase_ == 13;
+      return msgCase_ == 12;
     }
     /**
-     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
+     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 12;</code>
      */
     public Response.FindTransactionByHashResponse getFindTransactionByHashResponse() {
-      if (msgCase_ == 13) {
+      if (msgCase_ == 12) {
          return (Response.FindTransactionByHashResponse) msg_;
       }
       return Response.FindTransactionByHashResponse.getDefaultInstance();
     }
     /**
-     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
+     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 12;</code>
      */
     public Response.FindTransactionByHashResponseOrBuilder getFindTransactionByHashResponseOrBuilder() {
-      if (msgCase_ == 13) {
+      if (msgCase_ == 12) {
          return (Response.FindTransactionByHashResponse) msg_;
       }
       return Response.FindTransactionByHashResponse.getDefaultInstance();
     }
 
-    public static final int DETERMINEAPPROVALCONFIDENCERESPONSE_FIELD_NUMBER = 14;
+    public static final int DETERMINEAPPROVALCONFIDENCERESPONSE_FIELD_NUMBER = 13;
     /**
-     * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 14;</code>
+     * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 13;</code>
      */
     public boolean hasDetermineApprovalConfidenceResponse() {
-      return msgCase_ == 14;
+      return msgCase_ == 13;
     }
     /**
-     * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 14;</code>
+     * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 13;</code>
      */
     public Response.DetermineApprovalConfidenceResponse getDetermineApprovalConfidenceResponse() {
-      if (msgCase_ == 14) {
+      if (msgCase_ == 13) {
          return (Response.DetermineApprovalConfidenceResponse) msg_;
       }
       return Response.DetermineApprovalConfidenceResponse.getDefaultInstance();
     }
     /**
-     * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 14;</code>
+     * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 13;</code>
      */
     public Response.DetermineApprovalConfidenceResponseOrBuilder getDetermineApprovalConfidenceResponseOrBuilder() {
-      if (msgCase_ == 14) {
+      if (msgCase_ == 13) {
          return (Response.DetermineApprovalConfidenceResponse) msg_;
       }
       return Response.DetermineApprovalConfidenceResponse.getDefaultInstance();
@@ -885,11 +885,11 @@ public final class Wrapper {
       if (msgCase_ == 11) {
         output.writeMessage(11, (Response.FindTransactionsByTagResponse) msg_);
       }
-      if (msgCase_ == 13) {
-        output.writeMessage(13, (Response.FindTransactionByHashResponse) msg_);
+      if (msgCase_ == 12) {
+        output.writeMessage(12, (Response.FindTransactionByHashResponse) msg_);
       }
-      if (msgCase_ == 14) {
-        output.writeMessage(14, (Response.DetermineApprovalConfidenceResponse) msg_);
+      if (msgCase_ == 13) {
+        output.writeMessage(13, (Response.DetermineApprovalConfidenceResponse) msg_);
       }
       unknownFields.writeTo(output);
     }
@@ -944,13 +944,13 @@ public final class Wrapper {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, (Response.FindTransactionsByTagResponse) msg_);
       }
+      if (msgCase_ == 12) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, (Response.FindTransactionByHashResponse) msg_);
+      }
       if (msgCase_ == 13) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, (Response.FindTransactionByHashResponse) msg_);
-      }
-      if (msgCase_ == 14) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, (Response.DetermineApprovalConfidenceResponse) msg_);
+          .computeMessageSize(13, (Response.DetermineApprovalConfidenceResponse) msg_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1013,11 +1013,11 @@ public final class Wrapper {
           if (!getFindTransactionsByTagResponse()
               .equals(other.getFindTransactionsByTagResponse())) return false;
           break;
-        case 13:
+        case 12:
           if (!getFindTransactionByHashResponse()
               .equals(other.getFindTransactionByHashResponse())) return false;
           break;
-        case 14:
+        case 13:
           if (!getDetermineApprovalConfidenceResponse()
               .equals(other.getDetermineApprovalConfidenceResponse())) return false;
           break;
@@ -1080,11 +1080,11 @@ public final class Wrapper {
           hash = (37 * hash) + FINDTRANSACTIONSBYTAGRESPONSE_FIELD_NUMBER;
           hash = (53 * hash) + getFindTransactionsByTagResponse().hashCode();
           break;
-        case 13:
+        case 12:
           hash = (37 * hash) + FINDTRANSACTIONBYHASHRESPONSE_FIELD_NUMBER;
           hash = (53 * hash) + getFindTransactionByHashResponse().hashCode();
           break;
-        case 14:
+        case 13:
           hash = (37 * hash) + DETERMINEAPPROVALCONFIDENCERESPONSE_FIELD_NUMBER;
           hash = (53 * hash) + getDetermineApprovalConfidenceResponse().hashCode();
           break;
@@ -1329,14 +1329,14 @@ public final class Wrapper {
             result.msg_ = findTransactionsByTagResponseBuilder_.build();
           }
         }
-        if (msgCase_ == 13) {
+        if (msgCase_ == 12) {
           if (findTransactionByHashResponseBuilder_ == null) {
             result.msg_ = msg_;
           } else {
             result.msg_ = findTransactionByHashResponseBuilder_.build();
           }
         }
-        if (msgCase_ == 14) {
+        if (msgCase_ == 13) {
           if (determineApprovalConfidenceResponseBuilder_ == null) {
             result.msg_ = msg_;
           } else {
@@ -2992,29 +2992,29 @@ public final class Wrapper {
       private com.google.protobuf.SingleFieldBuilderV3<
           Response.FindTransactionByHashResponse, Response.FindTransactionByHashResponse.Builder, Response.FindTransactionByHashResponseOrBuilder> findTransactionByHashResponseBuilder_;
       /**
-       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
+       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 12;</code>
        */
       public boolean hasFindTransactionByHashResponse() {
-        return msgCase_ == 13;
+        return msgCase_ == 12;
       }
       /**
-       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
+       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 12;</code>
        */
       public Response.FindTransactionByHashResponse getFindTransactionByHashResponse() {
         if (findTransactionByHashResponseBuilder_ == null) {
-          if (msgCase_ == 13) {
+          if (msgCase_ == 12) {
             return (Response.FindTransactionByHashResponse) msg_;
           }
           return Response.FindTransactionByHashResponse.getDefaultInstance();
         } else {
-          if (msgCase_ == 13) {
+          if (msgCase_ == 12) {
             return findTransactionByHashResponseBuilder_.getMessage();
           }
           return Response.FindTransactionByHashResponse.getDefaultInstance();
         }
       }
       /**
-       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
+       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 12;</code>
        */
       public Builder setFindTransactionByHashResponse(Response.FindTransactionByHashResponse value) {
         if (findTransactionByHashResponseBuilder_ == null) {
@@ -3026,11 +3026,11 @@ public final class Wrapper {
         } else {
           findTransactionByHashResponseBuilder_.setMessage(value);
         }
-        msgCase_ = 13;
+        msgCase_ = 12;
         return this;
       }
       /**
-       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
+       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 12;</code>
        */
       public Builder setFindTransactionByHashResponse(
           Response.FindTransactionByHashResponse.Builder builderForValue) {
@@ -3040,15 +3040,15 @@ public final class Wrapper {
         } else {
           findTransactionByHashResponseBuilder_.setMessage(builderForValue.build());
         }
-        msgCase_ = 13;
+        msgCase_ = 12;
         return this;
       }
       /**
-       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
+       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 12;</code>
        */
       public Builder mergeFindTransactionByHashResponse(Response.FindTransactionByHashResponse value) {
         if (findTransactionByHashResponseBuilder_ == null) {
-          if (msgCase_ == 13 &&
+          if (msgCase_ == 12 &&
               msg_ != Response.FindTransactionByHashResponse.getDefaultInstance()) {
             msg_ = Response.FindTransactionByHashResponse.newBuilder((Response.FindTransactionByHashResponse) msg_)
                 .mergeFrom(value).buildPartial();
@@ -3057,26 +3057,26 @@ public final class Wrapper {
           }
           onChanged();
         } else {
-          if (msgCase_ == 13) {
+          if (msgCase_ == 12) {
             findTransactionByHashResponseBuilder_.mergeFrom(value);
           }
           findTransactionByHashResponseBuilder_.setMessage(value);
         }
-        msgCase_ = 13;
+        msgCase_ = 12;
         return this;
       }
       /**
-       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
+       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 12;</code>
        */
       public Builder clearFindTransactionByHashResponse() {
         if (findTransactionByHashResponseBuilder_ == null) {
-          if (msgCase_ == 13) {
+          if (msgCase_ == 12) {
             msgCase_ = 0;
             msg_ = null;
             onChanged();
           }
         } else {
-          if (msgCase_ == 13) {
+          if (msgCase_ == 12) {
             msgCase_ = 0;
             msg_ = null;
           }
@@ -3085,32 +3085,32 @@ public final class Wrapper {
         return this;
       }
       /**
-       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
+       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 12;</code>
        */
       public Response.FindTransactionByHashResponse.Builder getFindTransactionByHashResponseBuilder() {
         return getFindTransactionByHashResponseFieldBuilder().getBuilder();
       }
       /**
-       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
+       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 12;</code>
        */
       public Response.FindTransactionByHashResponseOrBuilder getFindTransactionByHashResponseOrBuilder() {
-        if ((msgCase_ == 13) && (findTransactionByHashResponseBuilder_ != null)) {
+        if ((msgCase_ == 12) && (findTransactionByHashResponseBuilder_ != null)) {
           return findTransactionByHashResponseBuilder_.getMessageOrBuilder();
         } else {
-          if (msgCase_ == 13) {
+          if (msgCase_ == 12) {
             return (Response.FindTransactionByHashResponse) msg_;
           }
           return Response.FindTransactionByHashResponse.getDefaultInstance();
         }
       }
       /**
-       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
+       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           Response.FindTransactionByHashResponse, Response.FindTransactionByHashResponse.Builder, Response.FindTransactionByHashResponseOrBuilder> 
           getFindTransactionByHashResponseFieldBuilder() {
         if (findTransactionByHashResponseBuilder_ == null) {
-          if (!(msgCase_ == 13)) {
+          if (!(msgCase_ == 12)) {
             msg_ = Response.FindTransactionByHashResponse.getDefaultInstance();
           }
           findTransactionByHashResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -3120,7 +3120,7 @@ public final class Wrapper {
                   isClean());
           msg_ = null;
         }
-        msgCase_ = 13;
+        msgCase_ = 12;
         onChanged();;
         return findTransactionByHashResponseBuilder_;
       }
@@ -3128,29 +3128,29 @@ public final class Wrapper {
       private com.google.protobuf.SingleFieldBuilderV3<
           Response.DetermineApprovalConfidenceResponse, Response.DetermineApprovalConfidenceResponse.Builder, Response.DetermineApprovalConfidenceResponseOrBuilder> determineApprovalConfidenceResponseBuilder_;
       /**
-       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 14;</code>
+       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 13;</code>
        */
       public boolean hasDetermineApprovalConfidenceResponse() {
-        return msgCase_ == 14;
+        return msgCase_ == 13;
       }
       /**
-       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 14;</code>
+       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 13;</code>
        */
       public Response.DetermineApprovalConfidenceResponse getDetermineApprovalConfidenceResponse() {
         if (determineApprovalConfidenceResponseBuilder_ == null) {
-          if (msgCase_ == 14) {
+          if (msgCase_ == 13) {
             return (Response.DetermineApprovalConfidenceResponse) msg_;
           }
           return Response.DetermineApprovalConfidenceResponse.getDefaultInstance();
         } else {
-          if (msgCase_ == 14) {
+          if (msgCase_ == 13) {
             return determineApprovalConfidenceResponseBuilder_.getMessage();
           }
           return Response.DetermineApprovalConfidenceResponse.getDefaultInstance();
         }
       }
       /**
-       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 14;</code>
+       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 13;</code>
        */
       public Builder setDetermineApprovalConfidenceResponse(Response.DetermineApprovalConfidenceResponse value) {
         if (determineApprovalConfidenceResponseBuilder_ == null) {
@@ -3162,11 +3162,11 @@ public final class Wrapper {
         } else {
           determineApprovalConfidenceResponseBuilder_.setMessage(value);
         }
-        msgCase_ = 14;
+        msgCase_ = 13;
         return this;
       }
       /**
-       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 14;</code>
+       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 13;</code>
        */
       public Builder setDetermineApprovalConfidenceResponse(
           Response.DetermineApprovalConfidenceResponse.Builder builderForValue) {
@@ -3176,15 +3176,15 @@ public final class Wrapper {
         } else {
           determineApprovalConfidenceResponseBuilder_.setMessage(builderForValue.build());
         }
-        msgCase_ = 14;
+        msgCase_ = 13;
         return this;
       }
       /**
-       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 14;</code>
+       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 13;</code>
        */
       public Builder mergeDetermineApprovalConfidenceResponse(Response.DetermineApprovalConfidenceResponse value) {
         if (determineApprovalConfidenceResponseBuilder_ == null) {
-          if (msgCase_ == 14 &&
+          if (msgCase_ == 13 &&
               msg_ != Response.DetermineApprovalConfidenceResponse.getDefaultInstance()) {
             msg_ = Response.DetermineApprovalConfidenceResponse.newBuilder((Response.DetermineApprovalConfidenceResponse) msg_)
                 .mergeFrom(value).buildPartial();
@@ -3193,26 +3193,26 @@ public final class Wrapper {
           }
           onChanged();
         } else {
-          if (msgCase_ == 14) {
+          if (msgCase_ == 13) {
             determineApprovalConfidenceResponseBuilder_.mergeFrom(value);
           }
           determineApprovalConfidenceResponseBuilder_.setMessage(value);
         }
-        msgCase_ = 14;
+        msgCase_ = 13;
         return this;
       }
       /**
-       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 14;</code>
+       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 13;</code>
        */
       public Builder clearDetermineApprovalConfidenceResponse() {
         if (determineApprovalConfidenceResponseBuilder_ == null) {
-          if (msgCase_ == 14) {
+          if (msgCase_ == 13) {
             msgCase_ = 0;
             msg_ = null;
             onChanged();
           }
         } else {
-          if (msgCase_ == 14) {
+          if (msgCase_ == 13) {
             msgCase_ = 0;
             msg_ = null;
           }
@@ -3221,32 +3221,32 @@ public final class Wrapper {
         return this;
       }
       /**
-       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 14;</code>
+       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 13;</code>
        */
       public Response.DetermineApprovalConfidenceResponse.Builder getDetermineApprovalConfidenceResponseBuilder() {
         return getDetermineApprovalConfidenceResponseFieldBuilder().getBuilder();
       }
       /**
-       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 14;</code>
+       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 13;</code>
        */
       public Response.DetermineApprovalConfidenceResponseOrBuilder getDetermineApprovalConfidenceResponseOrBuilder() {
-        if ((msgCase_ == 14) && (determineApprovalConfidenceResponseBuilder_ != null)) {
+        if ((msgCase_ == 13) && (determineApprovalConfidenceResponseBuilder_ != null)) {
           return determineApprovalConfidenceResponseBuilder_.getMessageOrBuilder();
         } else {
-          if (msgCase_ == 14) {
+          if (msgCase_ == 13) {
             return (Response.DetermineApprovalConfidenceResponse) msg_;
           }
           return Response.DetermineApprovalConfidenceResponse.getDefaultInstance();
         }
       }
       /**
-       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 14;</code>
+       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           Response.DetermineApprovalConfidenceResponse, Response.DetermineApprovalConfidenceResponse.Builder, Response.DetermineApprovalConfidenceResponseOrBuilder> 
           getDetermineApprovalConfidenceResponseFieldBuilder() {
         if (determineApprovalConfidenceResponseBuilder_ == null) {
-          if (!(msgCase_ == 14)) {
+          if (!(msgCase_ == 13)) {
             msg_ = Response.DetermineApprovalConfidenceResponse.getDefaultInstance();
           }
           determineApprovalConfidenceResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -3256,7 +3256,7 @@ public final class Wrapper {
                   isClean());
           msg_ = null;
         }
-        msgCase_ = 14;
+        msgCase_ = 13;
         onChanged();;
         return determineApprovalConfidenceResponseBuilder_;
       }
@@ -3349,9 +3349,9 @@ public final class Wrapper {
       "dressResponseH\000\022G\n\035findTransactionsByTag" +
       "Response\030\013 \001(\0132\036.FindTransactionsByTagRe" +
       "sponseH\000\022G\n\035findTransactionByHashRespons" +
-      "e\030\r \001(\0132\036.FindTransactionByHashResponseH" +
+      "e\030\014 \001(\0132\036.FindTransactionByHashResponseH" +
       "\000\022S\n#determineApprovalConfidenceResponse" +
-      "\030\016 \001(\0132$.DetermineApprovalConfidenceResp" +
+      "\030\r \001(\0132$.DetermineApprovalConfidenceResp" +
       "onseH\000B\005\n\003msgb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
