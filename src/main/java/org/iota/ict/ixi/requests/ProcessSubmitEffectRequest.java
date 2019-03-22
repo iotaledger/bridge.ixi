@@ -1,16 +1,11 @@
 package org.iota.ict.ixi.requests;
 
 import org.iota.ict.ixi.Client;
-import org.iota.ict.ixi.protobuf.Wrapper;
+import org.iota.ict.ixi.protobuf.Request;
 
-public class ProcessSubmitEffectRequest extends AbstractRequest {
+public class ProcessSubmitEffectRequest {
 
-    public ProcessSubmitEffectRequest(Wrapper.WrapperMessage request, Client clientHandler) {
-        super(request, clientHandler);
-    }
-
-    @Override
-    protected void process(Wrapper.WrapperMessage request, Client clientHandler) {
+    public static void process(Request.SubmitEffectRequest request, Client clientHandler) {
 
     }
 

@@ -38,47 +38,47 @@ public class Client extends Thread {
                 switch (type) {
 
                     case FIND_TRANSACTIONS_BY_ADDRESS_REQUEST: {
-                        new ProcessFindTransactionsByAddressRequest(request, this);
+                        ProcessFindTransactionsByAddressRequest.process(request.getFindTransactionsByAddressRequest(), this);
                         break;
                     }
 
                     case FIND_TRANSACTIONS_BY_TAG_REQUEST: {
-                        new ProcessFindTransactionsByTagRequest(request, this);
+                        ProcessFindTransactionsByTagRequest.process(request.getFindTransactionsByTagRequest(), this);
                         break;
                     }
 
-                    case FIND_TRANSACTIONS_BY_HASH_REQUEST: {
-                        new ProcessFindTransactionByHashRequest(request, this);
+                    case FIND_TRANSACTION_BY_HASH_REQUEST: {
+                        ProcessFindTransactionByHashRequest.process(request.getFindTransactionByHashRequest(), this);
                         break;
                     }
 
                     case SUBMIT_TRANSACTION_BUILDER_REQUEST: {
-                        new ProcessSubmitTransactionBuilderRequest(request, this);
+                        ProcessSubmitTransactionBuilderRequest.process(request.getSubmitTransactionBuilderRequest(), this);
                         break;
                     }
 
-                    case SUBMIT_TRANSACTION_REQUEST: {
-                        new ProcessSubmitEffectRequest(request, this);
+                    case SUBMIT_TRANSACTION_BYTES_REQUEST: {
+                        ProcessSubmitTransactionBytesRequest.process(request.getSubmitTransactionBytesRequest(), this);
                         break;
                     }
 
                     case DETERMINE_APPROVAL_CONFIDENCE_REQUEST: {
-                        new ProcessDetermineApprovalConfidenceRequest(request, this);
+                        ProcessDetermineApprovalConfidenceRequest.process(request.getDetermineApprovalConfidenceRequest(), this);
                         break;
                     }
 
                     case ADD_EFFECT_LISTENER_REQUEST: {
-                        new ProcessAddEffectListenerRequest(request, this);
+                        ProcessAddEffectListenerRequest.process(request.getAddEffectListenerRequest(), this);
                         break;
                     }
 
                     case REMOVE_EFFECT_LISTENER_REQUEST: {
-                        new ProcessRemoveEffectListenerRequest(request, this);
+                        ProcessRemoveEffectListenerRequest.process(request.getRemoveEffectListenerRequest(), this);
                         break;
                     }
 
                     case SUBMIT_EFFECT_REQUEST: {
-                        new ProcessSubmitEffectRequest(request, this);
+                        ProcessSubmitEffectRequest.process(request.getSubmitEffectRequest(), this);
                         break;
                     }
 

@@ -1,16 +1,39 @@
 package org.iota.ict.ixi.requests;
 
 import org.iota.ict.ixi.Client;
-import org.iota.ict.ixi.protobuf.Wrapper;
+import org.iota.ict.ixi.protobuf.Model;
+import org.iota.ict.ixi.protobuf.Request;
+import org.iota.ict.model.transaction.Transaction;
+import org.iota.ict.model.transaction.TransactionBuilder;
 
-public class ProcessSubmitTransactionBuilderRequest extends AbstractRequest {
+import java.math.BigInteger;
 
-    public ProcessSubmitTransactionBuilderRequest(Wrapper.WrapperMessage request, Client clientHandler) {
-        super(request, clientHandler);
-    }
+public class ProcessSubmitTransactionBuilderRequest {
 
-    @Override
-    protected void process(Wrapper.WrapperMessage request, Client clientHandler) {
+    public static void process(Request.SubmitTransactionBuilderRequest request, Client clientHandler) {
+
+        Model.TransactionBuilder protoBuf = request.getTransactionBuilder();
+
+        TransactionBuilder transactionBuilder = new TransactionBuilder();
+        transactionBuilder.signatureFragments = protoBuf.getSignatureFragments();
+        transactionBuilder.extraDataDigest = protoBuf.getExtraDataDigest();
+        transactionBuilder.address = protoBuf.getAddress();
+        transactionBuilder.value = new BigInteger(protoBuf.getValue().toByteArray());
+        transactionBuilder.issuanceTimestamp = protoBuf.getIssuanceTimestamp();
+        transactionBuilder.timelockLowerBound = protoBuf.getTimelockLowerBound();
+        transactionBuilder.timelockUpperBound = protoBuf.getTimelockUpperBound();
+        transactionBuilder.bundleNonce = protoBuf.getBundleNonce();
+        transactionBuilder.trunkHash = protoBuf.getTrunkHash();
+        transactionBuilder.branchHash = protoBuf.getBranchHash();
+        transactionBuilder.tag = protoBuf.getTag();
+        transactionBuilder.attachmentTimestamp = protoBuf.getAttachmentTimestamp();
+        transactionBuilder.attachmentTimestampLowerBound = protoBuf.getAttachmentTimestampLowerBound();
+        transactionBuilder.attachmentTimestampUpperBound = protoBuf.getAttachmentTimestampUpperBound();
+        transactionBuilder.isBundleHead = protoBuf.getIsBundleHead();
+        transactionBuilder.isBundleTail = protoBuf.getIsBundleTail();
+
+        Transaction transaction = transactionBuilder.build();
+        clientHandler.getIxi().submit(transaction);
 
     }
 

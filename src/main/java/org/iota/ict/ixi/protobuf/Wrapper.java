@@ -78,17 +78,17 @@ public final class Wrapper {
     Request.SubmitTransactionBuilderRequestOrBuilder getSubmitTransactionBuilderRequestOrBuilder();
 
     /**
-     * <code>.SubmitTransactionRequest submitTransactionRequest = 6;</code>
+     * <code>.SubmitTransactionBytesRequest submitTransactionBytesRequest = 6;</code>
      */
-    boolean hasSubmitTransactionRequest();
+    boolean hasSubmitTransactionBytesRequest();
     /**
-     * <code>.SubmitTransactionRequest submitTransactionRequest = 6;</code>
+     * <code>.SubmitTransactionBytesRequest submitTransactionBytesRequest = 6;</code>
      */
-    Request.SubmitTransactionRequest getSubmitTransactionRequest();
+    Request.SubmitTransactionBytesRequest getSubmitTransactionBytesRequest();
     /**
-     * <code>.SubmitTransactionRequest submitTransactionRequest = 6;</code>
+     * <code>.SubmitTransactionBytesRequest submitTransactionBytesRequest = 6;</code>
      */
-    Request.SubmitTransactionRequestOrBuilder getSubmitTransactionRequestOrBuilder();
+    Request.SubmitTransactionBytesRequestOrBuilder getSubmitTransactionBytesRequestOrBuilder();
 
     /**
      * <code>.DetermineApprovalConfidenceRequest determineApprovalConfidenceRequest = 7;</code>
@@ -299,14 +299,14 @@ public final class Wrapper {
               break;
             }
             case 50: {
-              Request.SubmitTransactionRequest.Builder subBuilder = null;
+              Request.SubmitTransactionBytesRequest.Builder subBuilder = null;
               if (msgCase_ == 6) {
-                subBuilder = ((Request.SubmitTransactionRequest) msg_).toBuilder();
+                subBuilder = ((Request.SubmitTransactionBytesRequest) msg_).toBuilder();
               }
               msg_ =
-                  input.readMessage(Request.SubmitTransactionRequest.parser(), extensionRegistry);
+                  input.readMessage(Request.SubmitTransactionBytesRequest.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((Request.SubmitTransactionRequest) msg_);
+                subBuilder.mergeFrom((Request.SubmitTransactionBytesRequest) msg_);
                 msg_ = subBuilder.buildPartial();
               }
               msgCase_ = 6;
@@ -470,17 +470,17 @@ public final class Wrapper {
        */
       FIND_TRANSACTIONS_BY_TAG_REQUEST(1),
       /**
-       * <code>FIND_TRANSACTIONS_BY_HASH_REQUEST = 2;</code>
+       * <code>FIND_TRANSACTION_BY_HASH_REQUEST = 2;</code>
        */
-      FIND_TRANSACTIONS_BY_HASH_REQUEST(2),
+      FIND_TRANSACTION_BY_HASH_REQUEST(2),
       /**
        * <code>SUBMIT_TRANSACTION_BUILDER_REQUEST = 3;</code>
        */
       SUBMIT_TRANSACTION_BUILDER_REQUEST(3),
       /**
-       * <code>SUBMIT_TRANSACTION_REQUEST = 4;</code>
+       * <code>SUBMIT_TRANSACTION_BYTES_REQUEST = 4;</code>
        */
-      SUBMIT_TRANSACTION_REQUEST(4),
+      SUBMIT_TRANSACTION_BYTES_REQUEST(4),
       /**
        * <code>DETERMINE_APPROVAL_CONFIDENCE_REQUEST = 5;</code>
        */
@@ -498,17 +498,17 @@ public final class Wrapper {
        */
       SUBMIT_EFFECT_REQUEST(8),
       /**
-       * <code>FIND_TRANSCATIONS_BY_ADDRESS_RESPONSE = 9;</code>
+       * <code>FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE = 9;</code>
        */
-      FIND_TRANSCATIONS_BY_ADDRESS_RESPONSE(9),
+      FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE(9),
       /**
-       * <code>FIND_TRANSACTIONS_BY_TAG_RESPOSNE = 10;</code>
+       * <code>FIND_TRANSACTIONS_BY_TAG_RESPONSE = 10;</code>
        */
-      FIND_TRANSACTIONS_BY_TAG_RESPOSNE(10),
+      FIND_TRANSACTIONS_BY_TAG_RESPONSE(10),
       /**
-       * <code>FIND_TRANSACIONS_BY_HASH_RESPONSE = 11;</code>
+       * <code>FIND_TRANSACTION_BY_HASH_RESPONSE = 11;</code>
        */
-      FIND_TRANSACIONS_BY_HASH_RESPONSE(11),
+      FIND_TRANSACTION_BY_HASH_RESPONSE(11),
       /**
        * <code>DETERMINE_APPROVAL_CONFIDENCE_RESPONSE = 12;</code>
        */
@@ -525,17 +525,17 @@ public final class Wrapper {
        */
       public static final int FIND_TRANSACTIONS_BY_TAG_REQUEST_VALUE = 1;
       /**
-       * <code>FIND_TRANSACTIONS_BY_HASH_REQUEST = 2;</code>
+       * <code>FIND_TRANSACTION_BY_HASH_REQUEST = 2;</code>
        */
-      public static final int FIND_TRANSACTIONS_BY_HASH_REQUEST_VALUE = 2;
+      public static final int FIND_TRANSACTION_BY_HASH_REQUEST_VALUE = 2;
       /**
        * <code>SUBMIT_TRANSACTION_BUILDER_REQUEST = 3;</code>
        */
       public static final int SUBMIT_TRANSACTION_BUILDER_REQUEST_VALUE = 3;
       /**
-       * <code>SUBMIT_TRANSACTION_REQUEST = 4;</code>
+       * <code>SUBMIT_TRANSACTION_BYTES_REQUEST = 4;</code>
        */
-      public static final int SUBMIT_TRANSACTION_REQUEST_VALUE = 4;
+      public static final int SUBMIT_TRANSACTION_BYTES_REQUEST_VALUE = 4;
       /**
        * <code>DETERMINE_APPROVAL_CONFIDENCE_REQUEST = 5;</code>
        */
@@ -553,17 +553,17 @@ public final class Wrapper {
        */
       public static final int SUBMIT_EFFECT_REQUEST_VALUE = 8;
       /**
-       * <code>FIND_TRANSCATIONS_BY_ADDRESS_RESPONSE = 9;</code>
+       * <code>FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE = 9;</code>
        */
-      public static final int FIND_TRANSCATIONS_BY_ADDRESS_RESPONSE_VALUE = 9;
+      public static final int FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE_VALUE = 9;
       /**
-       * <code>FIND_TRANSACTIONS_BY_TAG_RESPOSNE = 10;</code>
+       * <code>FIND_TRANSACTIONS_BY_TAG_RESPONSE = 10;</code>
        */
-      public static final int FIND_TRANSACTIONS_BY_TAG_RESPOSNE_VALUE = 10;
+      public static final int FIND_TRANSACTIONS_BY_TAG_RESPONSE_VALUE = 10;
       /**
-       * <code>FIND_TRANSACIONS_BY_HASH_RESPONSE = 11;</code>
+       * <code>FIND_TRANSACTION_BY_HASH_RESPONSE = 11;</code>
        */
-      public static final int FIND_TRANSACIONS_BY_HASH_RESPONSE_VALUE = 11;
+      public static final int FIND_TRANSACTION_BY_HASH_RESPONSE_VALUE = 11;
       /**
        * <code>DETERMINE_APPROVAL_CONFIDENCE_RESPONSE = 12;</code>
        */
@@ -590,16 +590,16 @@ public final class Wrapper {
         switch (value) {
           case 0: return FIND_TRANSACTIONS_BY_ADDRESS_REQUEST;
           case 1: return FIND_TRANSACTIONS_BY_TAG_REQUEST;
-          case 2: return FIND_TRANSACTIONS_BY_HASH_REQUEST;
+          case 2: return FIND_TRANSACTION_BY_HASH_REQUEST;
           case 3: return SUBMIT_TRANSACTION_BUILDER_REQUEST;
-          case 4: return SUBMIT_TRANSACTION_REQUEST;
+          case 4: return SUBMIT_TRANSACTION_BYTES_REQUEST;
           case 5: return DETERMINE_APPROVAL_CONFIDENCE_REQUEST;
           case 6: return ADD_EFFECT_LISTENER_REQUEST;
           case 7: return REMOVE_EFFECT_LISTENER_REQUEST;
           case 8: return SUBMIT_EFFECT_REQUEST;
-          case 9: return FIND_TRANSCATIONS_BY_ADDRESS_RESPONSE;
-          case 10: return FIND_TRANSACTIONS_BY_TAG_RESPOSNE;
-          case 11: return FIND_TRANSACIONS_BY_HASH_RESPONSE;
+          case 9: return FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE;
+          case 10: return FIND_TRANSACTIONS_BY_TAG_RESPONSE;
+          case 11: return FIND_TRANSACTION_BY_HASH_RESPONSE;
           case 12: return DETERMINE_APPROVAL_CONFIDENCE_RESPONSE;
           default: return null;
         }
@@ -661,7 +661,7 @@ public final class Wrapper {
       FINDTRANSACTIONSBYTAGREQUEST(3),
       FINDTRANSACTIONBYHASHREQUEST(4),
       SUBMITTRANSACTIONBUILDERREQUEST(5),
-      SUBMITTRANSACTIONREQUEST(6),
+      SUBMITTRANSACTIONBYTESREQUEST(6),
       DETERMINEAPPROVALCONFIDENCEREQUEST(7),
       ADDEFFECTLISTENERREQUEST(8),
       REMOVEEFFECTLISTENERREQUEST(9),
@@ -689,7 +689,7 @@ public final class Wrapper {
           case 3: return FINDTRANSACTIONSBYTAGREQUEST;
           case 4: return FINDTRANSACTIONBYHASHREQUEST;
           case 5: return SUBMITTRANSACTIONBUILDERREQUEST;
-          case 6: return SUBMITTRANSACTIONREQUEST;
+          case 6: return SUBMITTRANSACTIONBYTESREQUEST;
           case 7: return DETERMINEAPPROVALCONFIDENCEREQUEST;
           case 8: return ADDEFFECTLISTENERREQUEST;
           case 9: return REMOVEEFFECTLISTENERREQUEST;
@@ -834,30 +834,30 @@ public final class Wrapper {
       return Request.SubmitTransactionBuilderRequest.getDefaultInstance();
     }
 
-    public static final int SUBMITTRANSACTIONREQUEST_FIELD_NUMBER = 6;
+    public static final int SUBMITTRANSACTIONBYTESREQUEST_FIELD_NUMBER = 6;
     /**
-     * <code>.SubmitTransactionRequest submitTransactionRequest = 6;</code>
+     * <code>.SubmitTransactionBytesRequest submitTransactionBytesRequest = 6;</code>
      */
-    public boolean hasSubmitTransactionRequest() {
+    public boolean hasSubmitTransactionBytesRequest() {
       return msgCase_ == 6;
     }
     /**
-     * <code>.SubmitTransactionRequest submitTransactionRequest = 6;</code>
+     * <code>.SubmitTransactionBytesRequest submitTransactionBytesRequest = 6;</code>
      */
-    public Request.SubmitTransactionRequest getSubmitTransactionRequest() {
+    public Request.SubmitTransactionBytesRequest getSubmitTransactionBytesRequest() {
       if (msgCase_ == 6) {
-         return (Request.SubmitTransactionRequest) msg_;
+         return (Request.SubmitTransactionBytesRequest) msg_;
       }
-      return Request.SubmitTransactionRequest.getDefaultInstance();
+      return Request.SubmitTransactionBytesRequest.getDefaultInstance();
     }
     /**
-     * <code>.SubmitTransactionRequest submitTransactionRequest = 6;</code>
+     * <code>.SubmitTransactionBytesRequest submitTransactionBytesRequest = 6;</code>
      */
-    public Request.SubmitTransactionRequestOrBuilder getSubmitTransactionRequestOrBuilder() {
+    public Request.SubmitTransactionBytesRequestOrBuilder getSubmitTransactionBytesRequestOrBuilder() {
       if (msgCase_ == 6) {
-         return (Request.SubmitTransactionRequest) msg_;
+         return (Request.SubmitTransactionBytesRequest) msg_;
       }
-      return Request.SubmitTransactionRequest.getDefaultInstance();
+      return Request.SubmitTransactionBytesRequest.getDefaultInstance();
     }
 
     public static final int DETERMINEAPPROVALCONFIDENCEREQUEST_FIELD_NUMBER = 7;
@@ -1098,7 +1098,7 @@ public final class Wrapper {
         output.writeMessage(5, (Request.SubmitTransactionBuilderRequest) msg_);
       }
       if (msgCase_ == 6) {
-        output.writeMessage(6, (Request.SubmitTransactionRequest) msg_);
+        output.writeMessage(6, (Request.SubmitTransactionBytesRequest) msg_);
       }
       if (msgCase_ == 7) {
         output.writeMessage(7, (Request.DetermineApprovalConfidenceRequest) msg_);
@@ -1155,7 +1155,7 @@ public final class Wrapper {
       }
       if (msgCase_ == 6) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, (Request.SubmitTransactionRequest) msg_);
+          .computeMessageSize(6, (Request.SubmitTransactionBytesRequest) msg_);
       }
       if (msgCase_ == 7) {
         size += com.google.protobuf.CodedOutputStream
@@ -1224,8 +1224,8 @@ public final class Wrapper {
               .equals(other.getSubmitTransactionBuilderRequest())) return false;
           break;
         case 6:
-          if (!getSubmitTransactionRequest()
-              .equals(other.getSubmitTransactionRequest())) return false;
+          if (!getSubmitTransactionBytesRequest()
+              .equals(other.getSubmitTransactionBytesRequest())) return false;
           break;
         case 7:
           if (!getDetermineApprovalConfidenceRequest()
@@ -1293,8 +1293,8 @@ public final class Wrapper {
           hash = (53 * hash) + getSubmitTransactionBuilderRequest().hashCode();
           break;
         case 6:
-          hash = (37 * hash) + SUBMITTRANSACTIONREQUEST_FIELD_NUMBER;
-          hash = (53 * hash) + getSubmitTransactionRequest().hashCode();
+          hash = (37 * hash) + SUBMITTRANSACTIONBYTESREQUEST_FIELD_NUMBER;
+          hash = (53 * hash) + getSubmitTransactionBytesRequest().hashCode();
           break;
         case 7:
           hash = (37 * hash) + DETERMINEAPPROVALCONFIDENCEREQUEST_FIELD_NUMBER;
@@ -1524,10 +1524,10 @@ public final class Wrapper {
           }
         }
         if (msgCase_ == 6) {
-          if (submitTransactionRequestBuilder_ == null) {
+          if (submitTransactionBytesRequestBuilder_ == null) {
             result.msg_ = msg_;
           } else {
-            result.msg_ = submitTransactionRequestBuilder_.build();
+            result.msg_ = submitTransactionBytesRequestBuilder_.build();
           }
         }
         if (msgCase_ == 7) {
@@ -1655,8 +1655,8 @@ public final class Wrapper {
             mergeSubmitTransactionBuilderRequest(other.getSubmitTransactionBuilderRequest());
             break;
           }
-          case SUBMITTRANSACTIONREQUEST: {
-            mergeSubmitTransactionRequest(other.getSubmitTransactionRequest());
+          case SUBMITTRANSACTIONBYTESREQUEST: {
+            mergeSubmitTransactionBytesRequest(other.getSubmitTransactionBytesRequest());
             break;
           }
           case DETERMINEAPPROVALCONFIDENCEREQUEST: {
@@ -2329,67 +2329,67 @@ public final class Wrapper {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          Request.SubmitTransactionRequest, Request.SubmitTransactionRequest.Builder, Request.SubmitTransactionRequestOrBuilder> submitTransactionRequestBuilder_;
+          Request.SubmitTransactionBytesRequest, Request.SubmitTransactionBytesRequest.Builder, Request.SubmitTransactionBytesRequestOrBuilder> submitTransactionBytesRequestBuilder_;
       /**
-       * <code>.SubmitTransactionRequest submitTransactionRequest = 6;</code>
+       * <code>.SubmitTransactionBytesRequest submitTransactionBytesRequest = 6;</code>
        */
-      public boolean hasSubmitTransactionRequest() {
+      public boolean hasSubmitTransactionBytesRequest() {
         return msgCase_ == 6;
       }
       /**
-       * <code>.SubmitTransactionRequest submitTransactionRequest = 6;</code>
+       * <code>.SubmitTransactionBytesRequest submitTransactionBytesRequest = 6;</code>
        */
-      public Request.SubmitTransactionRequest getSubmitTransactionRequest() {
-        if (submitTransactionRequestBuilder_ == null) {
+      public Request.SubmitTransactionBytesRequest getSubmitTransactionBytesRequest() {
+        if (submitTransactionBytesRequestBuilder_ == null) {
           if (msgCase_ == 6) {
-            return (Request.SubmitTransactionRequest) msg_;
+            return (Request.SubmitTransactionBytesRequest) msg_;
           }
-          return Request.SubmitTransactionRequest.getDefaultInstance();
+          return Request.SubmitTransactionBytesRequest.getDefaultInstance();
         } else {
           if (msgCase_ == 6) {
-            return submitTransactionRequestBuilder_.getMessage();
+            return submitTransactionBytesRequestBuilder_.getMessage();
           }
-          return Request.SubmitTransactionRequest.getDefaultInstance();
+          return Request.SubmitTransactionBytesRequest.getDefaultInstance();
         }
       }
       /**
-       * <code>.SubmitTransactionRequest submitTransactionRequest = 6;</code>
+       * <code>.SubmitTransactionBytesRequest submitTransactionBytesRequest = 6;</code>
        */
-      public Builder setSubmitTransactionRequest(Request.SubmitTransactionRequest value) {
-        if (submitTransactionRequestBuilder_ == null) {
+      public Builder setSubmitTransactionBytesRequest(Request.SubmitTransactionBytesRequest value) {
+        if (submitTransactionBytesRequestBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           msg_ = value;
           onChanged();
         } else {
-          submitTransactionRequestBuilder_.setMessage(value);
+          submitTransactionBytesRequestBuilder_.setMessage(value);
         }
         msgCase_ = 6;
         return this;
       }
       /**
-       * <code>.SubmitTransactionRequest submitTransactionRequest = 6;</code>
+       * <code>.SubmitTransactionBytesRequest submitTransactionBytesRequest = 6;</code>
        */
-      public Builder setSubmitTransactionRequest(
-          Request.SubmitTransactionRequest.Builder builderForValue) {
-        if (submitTransactionRequestBuilder_ == null) {
+      public Builder setSubmitTransactionBytesRequest(
+          Request.SubmitTransactionBytesRequest.Builder builderForValue) {
+        if (submitTransactionBytesRequestBuilder_ == null) {
           msg_ = builderForValue.build();
           onChanged();
         } else {
-          submitTransactionRequestBuilder_.setMessage(builderForValue.build());
+          submitTransactionBytesRequestBuilder_.setMessage(builderForValue.build());
         }
         msgCase_ = 6;
         return this;
       }
       /**
-       * <code>.SubmitTransactionRequest submitTransactionRequest = 6;</code>
+       * <code>.SubmitTransactionBytesRequest submitTransactionBytesRequest = 6;</code>
        */
-      public Builder mergeSubmitTransactionRequest(Request.SubmitTransactionRequest value) {
-        if (submitTransactionRequestBuilder_ == null) {
+      public Builder mergeSubmitTransactionBytesRequest(Request.SubmitTransactionBytesRequest value) {
+        if (submitTransactionBytesRequestBuilder_ == null) {
           if (msgCase_ == 6 &&
-              msg_ != Request.SubmitTransactionRequest.getDefaultInstance()) {
-            msg_ = Request.SubmitTransactionRequest.newBuilder((Request.SubmitTransactionRequest) msg_)
+              msg_ != Request.SubmitTransactionBytesRequest.getDefaultInstance()) {
+            msg_ = Request.SubmitTransactionBytesRequest.newBuilder((Request.SubmitTransactionBytesRequest) msg_)
                 .mergeFrom(value).buildPartial();
           } else {
             msg_ = value;
@@ -2397,18 +2397,18 @@ public final class Wrapper {
           onChanged();
         } else {
           if (msgCase_ == 6) {
-            submitTransactionRequestBuilder_.mergeFrom(value);
+            submitTransactionBytesRequestBuilder_.mergeFrom(value);
           }
-          submitTransactionRequestBuilder_.setMessage(value);
+          submitTransactionBytesRequestBuilder_.setMessage(value);
         }
         msgCase_ = 6;
         return this;
       }
       /**
-       * <code>.SubmitTransactionRequest submitTransactionRequest = 6;</code>
+       * <code>.SubmitTransactionBytesRequest submitTransactionBytesRequest = 6;</code>
        */
-      public Builder clearSubmitTransactionRequest() {
-        if (submitTransactionRequestBuilder_ == null) {
+      public Builder clearSubmitTransactionBytesRequest() {
+        if (submitTransactionBytesRequestBuilder_ == null) {
           if (msgCase_ == 6) {
             msgCase_ = 0;
             msg_ = null;
@@ -2419,49 +2419,49 @@ public final class Wrapper {
             msgCase_ = 0;
             msg_ = null;
           }
-          submitTransactionRequestBuilder_.clear();
+          submitTransactionBytesRequestBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.SubmitTransactionRequest submitTransactionRequest = 6;</code>
+       * <code>.SubmitTransactionBytesRequest submitTransactionBytesRequest = 6;</code>
        */
-      public Request.SubmitTransactionRequest.Builder getSubmitTransactionRequestBuilder() {
-        return getSubmitTransactionRequestFieldBuilder().getBuilder();
+      public Request.SubmitTransactionBytesRequest.Builder getSubmitTransactionBytesRequestBuilder() {
+        return getSubmitTransactionBytesRequestFieldBuilder().getBuilder();
       }
       /**
-       * <code>.SubmitTransactionRequest submitTransactionRequest = 6;</code>
+       * <code>.SubmitTransactionBytesRequest submitTransactionBytesRequest = 6;</code>
        */
-      public Request.SubmitTransactionRequestOrBuilder getSubmitTransactionRequestOrBuilder() {
-        if ((msgCase_ == 6) && (submitTransactionRequestBuilder_ != null)) {
-          return submitTransactionRequestBuilder_.getMessageOrBuilder();
+      public Request.SubmitTransactionBytesRequestOrBuilder getSubmitTransactionBytesRequestOrBuilder() {
+        if ((msgCase_ == 6) && (submitTransactionBytesRequestBuilder_ != null)) {
+          return submitTransactionBytesRequestBuilder_.getMessageOrBuilder();
         } else {
           if (msgCase_ == 6) {
-            return (Request.SubmitTransactionRequest) msg_;
+            return (Request.SubmitTransactionBytesRequest) msg_;
           }
-          return Request.SubmitTransactionRequest.getDefaultInstance();
+          return Request.SubmitTransactionBytesRequest.getDefaultInstance();
         }
       }
       /**
-       * <code>.SubmitTransactionRequest submitTransactionRequest = 6;</code>
+       * <code>.SubmitTransactionBytesRequest submitTransactionBytesRequest = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          Request.SubmitTransactionRequest, Request.SubmitTransactionRequest.Builder, Request.SubmitTransactionRequestOrBuilder> 
-          getSubmitTransactionRequestFieldBuilder() {
-        if (submitTransactionRequestBuilder_ == null) {
+          Request.SubmitTransactionBytesRequest, Request.SubmitTransactionBytesRequest.Builder, Request.SubmitTransactionBytesRequestOrBuilder> 
+          getSubmitTransactionBytesRequestFieldBuilder() {
+        if (submitTransactionBytesRequestBuilder_ == null) {
           if (!(msgCase_ == 6)) {
-            msg_ = Request.SubmitTransactionRequest.getDefaultInstance();
+            msg_ = Request.SubmitTransactionBytesRequest.getDefaultInstance();
           }
-          submitTransactionRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Request.SubmitTransactionRequest, Request.SubmitTransactionRequest.Builder, Request.SubmitTransactionRequestOrBuilder>(
-                  (Request.SubmitTransactionRequest) msg_,
+          submitTransactionBytesRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              Request.SubmitTransactionBytesRequest, Request.SubmitTransactionBytesRequest.Builder, Request.SubmitTransactionBytesRequestOrBuilder>(
+                  (Request.SubmitTransactionBytesRequest) msg_,
                   getParentForChildren(),
                   isClean());
           msg_ = null;
         }
         msgCase_ = 6;
         onChanged();;
-        return submitTransactionRequestBuilder_;
+        return submitTransactionBytesRequestBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3619,7 +3619,7 @@ public final class Wrapper {
   static {
     String[] descriptorData = {
       "\n\rwrapper.proto\032\rrequest.proto\032\016response" +
-      ".proto\"\365\013\n\016WrapperMessage\0220\n\013messageType" +
+      ".proto\"\204\014\n\016WrapperMessage\0220\n\013messageType" +
       "\030\001 \001(\0162\033.WrapperMessage.MessageType\022M\n f" +
       "indTransactionsByAddressRequest\030\002 \001(\0132!." +
       "FindTransactionsByAddressRequestH\000\022E\n\034fi" +
@@ -3628,36 +3628,36 @@ public final class Wrapper {
       "tionByHashRequest\030\004 \001(\0132\035.FindTransactio" +
       "nByHashRequestH\000\022K\n\037submitTransactionBui" +
       "lderRequest\030\005 \001(\0132 .SubmitTransactionBui" +
-      "lderRequestH\000\022=\n\030submitTransactionReques" +
-      "t\030\006 \001(\0132\031.SubmitTransactionRequestH\000\022Q\n\"" +
-      "determineApprovalConfidenceRequest\030\007 \001(\013" +
-      "2#.DetermineApprovalConfidenceRequestH\000\022" +
-      "=\n\030addEffectListenerRequest\030\010 \001(\0132\031.AddE" +
-      "ffectListenerRequestH\000\022C\n\033removeEffectLi" +
-      "stenerRequest\030\t \001(\0132\034.RemoveEffectListen" +
-      "erRequestH\000\0223\n\023submitEffectRequest\030\n \001(\013" +
-      "2\024.SubmitEffectRequestH\000\022O\n!findTransact" +
-      "ionsByAddressResponse\030\013 \001(\0132\".FindTransa" +
-      "ctionsByAddressResponseH\000\022G\n\035findTransac" +
-      "tionsByTagResponse\030\014 \001(\0132\036.FindTransacti" +
-      "onsByTagResponseH\000\022G\n\035findTransactionByH" +
-      "ashResponse\030\r \001(\0132\036.FindTransactionByHas" +
-      "hResponseH\000\022S\n#determineApprovalConfiden" +
-      "ceResponse\030\016 \001(\0132$.DetermineApprovalConf" +
-      "idenceResponseH\000\"\374\003\n\013MessageType\022(\n$FIND" +
-      "_TRANSACTIONS_BY_ADDRESS_REQUEST\020\000\022$\n FI" +
-      "ND_TRANSACTIONS_BY_TAG_REQUEST\020\001\022%\n!FIND" +
-      "_TRANSACTIONS_BY_HASH_REQUEST\020\002\022&\n\"SUBMI" +
-      "T_TRANSACTION_BUILDER_REQUEST\020\003\022\036\n\032SUBMI" +
-      "T_TRANSACTION_REQUEST\020\004\022)\n%DETERMINE_APP" +
-      "ROVAL_CONFIDENCE_REQUEST\020\005\022\037\n\033ADD_EFFECT" +
-      "_LISTENER_REQUEST\020\006\022\"\n\036REMOVE_EFFECT_LIS" +
-      "TENER_REQUEST\020\007\022\031\n\025SUBMIT_EFFECT_REQUEST" +
-      "\020\010\022)\n%FIND_TRANSCATIONS_BY_ADDRESS_RESPO" +
-      "NSE\020\t\022%\n!FIND_TRANSACTIONS_BY_TAG_RESPOS" +
-      "NE\020\n\022%\n!FIND_TRANSACIONS_BY_HASH_RESPONS" +
-      "E\020\013\022*\n&DETERMINE_APPROVAL_CONFIDENCE_RES" +
-      "PONSE\020\014B\005\n\003msgb\006proto3"
+      "lderRequestH\000\022G\n\035submitTransactionBytesR" +
+      "equest\030\006 \001(\0132\036.SubmitTransactionBytesReq" +
+      "uestH\000\022Q\n\"determineApprovalConfidenceReq" +
+      "uest\030\007 \001(\0132#.DetermineApprovalConfidence" +
+      "RequestH\000\022=\n\030addEffectListenerRequest\030\010 " +
+      "\001(\0132\031.AddEffectListenerRequestH\000\022C\n\033remo" +
+      "veEffectListenerRequest\030\t \001(\0132\034.RemoveEf" +
+      "fectListenerRequestH\000\0223\n\023submitEffectReq" +
+      "uest\030\n \001(\0132\024.SubmitEffectRequestH\000\022O\n!fi" +
+      "ndTransactionsByAddressResponse\030\013 \001(\0132\"." +
+      "FindTransactionsByAddressResponseH\000\022G\n\035f" +
+      "indTransactionsByTagResponse\030\014 \001(\0132\036.Fin" +
+      "dTransactionsByTagResponseH\000\022G\n\035findTran" +
+      "sactionByHashResponse\030\r \001(\0132\036.FindTransa" +
+      "ctionByHashResponseH\000\022S\n#determineApprov" +
+      "alConfidenceResponse\030\016 \001(\0132$.DetermineAp" +
+      "provalConfidenceResponseH\000\"\201\004\n\013MessageTy" +
+      "pe\022(\n$FIND_TRANSACTIONS_BY_ADDRESS_REQUE" +
+      "ST\020\000\022$\n FIND_TRANSACTIONS_BY_TAG_REQUEST" +
+      "\020\001\022$\n FIND_TRANSACTION_BY_HASH_REQUEST\020\002" +
+      "\022&\n\"SUBMIT_TRANSACTION_BUILDER_REQUEST\020\003" +
+      "\022$\n SUBMIT_TRANSACTION_BYTES_REQUEST\020\004\022)" +
+      "\n%DETERMINE_APPROVAL_CONFIDENCE_REQUEST\020" +
+      "\005\022\037\n\033ADD_EFFECT_LISTENER_REQUEST\020\006\022\"\n\036RE" +
+      "MOVE_EFFECT_LISTENER_REQUEST\020\007\022\031\n\025SUBMIT" +
+      "_EFFECT_REQUEST\020\010\022)\n%FIND_TRANSACTIONS_B" +
+      "Y_ADDRESS_RESPONSE\020\t\022%\n!FIND_TRANSACTION" +
+      "S_BY_TAG_RESPONSE\020\n\022%\n!FIND_TRANSACTION_" +
+      "BY_HASH_RESPONSE\020\013\022*\n&DETERMINE_APPROVAL" +
+      "_CONFIDENCE_RESPONSE\020\014B\005\n\003msgb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3678,7 +3678,7 @@ public final class Wrapper {
     internal_static_WrapperMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_WrapperMessage_descriptor,
-        new String[] { "MessageType", "FindTransactionsByAddressRequest", "FindTransactionsByTagRequest", "FindTransactionByHashRequest", "SubmitTransactionBuilderRequest", "SubmitTransactionRequest", "DetermineApprovalConfidenceRequest", "AddEffectListenerRequest", "RemoveEffectListenerRequest", "SubmitEffectRequest", "FindTransactionsByAddressResponse", "FindTransactionsByTagResponse", "FindTransactionByHashResponse", "DetermineApprovalConfidenceResponse", "Msg", });
+        new String[] { "MessageType", "FindTransactionsByAddressRequest", "FindTransactionsByTagRequest", "FindTransactionByHashRequest", "SubmitTransactionBuilderRequest", "SubmitTransactionBytesRequest", "DetermineApprovalConfidenceRequest", "AddEffectListenerRequest", "RemoveEffectListenerRequest", "SubmitEffectRequest", "FindTransactionsByAddressResponse", "FindTransactionsByTagResponse", "FindTransactionByHashResponse", "DetermineApprovalConfidenceResponse", "Msg", });
     Request.getDescriptor();
     Response.getDescriptor();
   }

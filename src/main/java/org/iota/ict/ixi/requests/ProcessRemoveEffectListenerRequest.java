@@ -1,16 +1,11 @@
 package org.iota.ict.ixi.requests;
 
 import org.iota.ict.ixi.Client;
-import org.iota.ict.ixi.protobuf.Wrapper;
+import org.iota.ict.ixi.protobuf.Request;
 
-public class ProcessRemoveEffectListenerRequest extends AbstractRequest {
+public class ProcessRemoveEffectListenerRequest {
 
-    public ProcessRemoveEffectListenerRequest(Wrapper.WrapperMessage request, Client clientHandler) {
-        super(request, clientHandler);
-    }
-
-    @Override
-    protected void process(Wrapper.WrapperMessage request, Client clientHandler) {
+    public static void process(Request.RemoveEffectListenerRequest request, Client clientHandler) {
 
     }
 

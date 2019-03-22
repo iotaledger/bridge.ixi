@@ -21,7 +21,7 @@ message TransactionBuilder {
     string essence = 17;
 	bool isBundleHead = 18;
 	bool isBundleTail = 19;
-	
+
 }
 
 message Transaction {
@@ -45,9 +45,9 @@ message Transaction {
     string essence = 17;
 	bool isBundleHead = 18;
 	bool isBundleTail = 19;
-	
+
 	string hash = 20;
-	
+
 }
 
 

@@ -17,27 +17,27 @@ public final class Response {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
     java.util.List<Model.Transaction> 
-        getTransactionsList();
+        getTransactionList();
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
-    Model.Transaction getTransactions(int index);
+    Model.Transaction getTransaction(int index);
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
-    int getTransactionsCount();
+    int getTransactionCount();
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
     java.util.List<? extends Model.TransactionOrBuilder> 
-        getTransactionsOrBuilderList();
+        getTransactionOrBuilderList();
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
-    Model.TransactionOrBuilder getTransactionsOrBuilder(
+    Model.TransactionOrBuilder getTransactionOrBuilder(
             int index);
   }
   /**
@@ -53,7 +53,7 @@ public final class Response {
       super(builder);
     }
     private FindTransactionsByAddressResponse() {
-      transactions_ = java.util.Collections.emptyList();
+      transaction_ = java.util.Collections.emptyList();
     }
 
     @Override
@@ -82,10 +82,10 @@ public final class Response {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                transactions_ = new java.util.ArrayList<Model.Transaction>();
+                transaction_ = new java.util.ArrayList<Model.Transaction>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              transactions_.add(
+              transaction_.add(
                   input.readMessage(Model.Transaction.parser(), extensionRegistry));
               break;
             }
@@ -105,7 +105,7 @@ public final class Response {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          transactions_ = java.util.Collections.unmodifiableList(transactions_);
+          transaction_ = java.util.Collections.unmodifiableList(transaction_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -124,39 +124,39 @@ public final class Response {
               FindTransactionsByAddressResponse.class, Builder.class);
     }
 
-    public static final int TRANSACTIONS_FIELD_NUMBER = 1;
-    private java.util.List<Model.Transaction> transactions_;
+    public static final int TRANSACTION_FIELD_NUMBER = 1;
+    private java.util.List<Model.Transaction> transaction_;
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
-    public java.util.List<Model.Transaction> getTransactionsList() {
-      return transactions_;
+    public java.util.List<Model.Transaction> getTransactionList() {
+      return transaction_;
     }
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
     public java.util.List<? extends Model.TransactionOrBuilder> 
-        getTransactionsOrBuilderList() {
-      return transactions_;
+        getTransactionOrBuilderList() {
+      return transaction_;
     }
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
-    public int getTransactionsCount() {
-      return transactions_.size();
+    public int getTransactionCount() {
+      return transaction_.size();
     }
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
-    public Model.Transaction getTransactions(int index) {
-      return transactions_.get(index);
+    public Model.Transaction getTransaction(int index) {
+      return transaction_.get(index);
     }
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
-    public Model.TransactionOrBuilder getTransactionsOrBuilder(
+    public Model.TransactionOrBuilder getTransactionOrBuilder(
         int index) {
-      return transactions_.get(index);
+      return transaction_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -173,8 +173,8 @@ public final class Response {
     @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < transactions_.size(); i++) {
-        output.writeMessage(1, transactions_.get(i));
+      for (int i = 0; i < transaction_.size(); i++) {
+        output.writeMessage(1, transaction_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -185,9 +185,9 @@ public final class Response {
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < transactions_.size(); i++) {
+      for (int i = 0; i < transaction_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, transactions_.get(i));
+          .computeMessageSize(1, transaction_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -204,8 +204,8 @@ public final class Response {
       }
       FindTransactionsByAddressResponse other = (FindTransactionsByAddressResponse) obj;
 
-      if (!getTransactionsList()
-          .equals(other.getTransactionsList())) return false;
+      if (!getTransactionList()
+          .equals(other.getTransactionList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -217,9 +217,9 @@ public final class Response {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getTransactionsCount() > 0) {
-        hash = (37 * hash) + TRANSACTIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getTransactionsList().hashCode();
+      if (getTransactionCount() > 0) {
+        hash = (37 * hash) + TRANSACTION_FIELD_NUMBER;
+        hash = (53 * hash) + getTransactionList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -349,17 +349,17 @@ public final class Response {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getTransactionsFieldBuilder();
+          getTransactionFieldBuilder();
         }
       }
       @Override
       public Builder clear() {
         super.clear();
-        if (transactionsBuilder_ == null) {
-          transactions_ = java.util.Collections.emptyList();
+        if (transactionBuilder_ == null) {
+          transaction_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          transactionsBuilder_.clear();
+          transactionBuilder_.clear();
         }
         return this;
       }
@@ -388,14 +388,14 @@ public final class Response {
       public FindTransactionsByAddressResponse buildPartial() {
         FindTransactionsByAddressResponse result = new FindTransactionsByAddressResponse(this);
         int from_bitField0_ = bitField0_;
-        if (transactionsBuilder_ == null) {
+        if (transactionBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
-            transactions_ = java.util.Collections.unmodifiableList(transactions_);
+            transaction_ = java.util.Collections.unmodifiableList(transaction_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
-          result.transactions_ = transactions_;
+          result.transaction_ = transaction_;
         } else {
-          result.transactions_ = transactionsBuilder_.build();
+          result.transaction_ = transactionBuilder_.build();
         }
         onBuilt();
         return result;
@@ -445,29 +445,29 @@ public final class Response {
 
       public Builder mergeFrom(FindTransactionsByAddressResponse other) {
         if (other == FindTransactionsByAddressResponse.getDefaultInstance()) return this;
-        if (transactionsBuilder_ == null) {
-          if (!other.transactions_.isEmpty()) {
-            if (transactions_.isEmpty()) {
-              transactions_ = other.transactions_;
+        if (transactionBuilder_ == null) {
+          if (!other.transaction_.isEmpty()) {
+            if (transaction_.isEmpty()) {
+              transaction_ = other.transaction_;
               bitField0_ = (bitField0_ & ~0x00000001);
             } else {
-              ensureTransactionsIsMutable();
-              transactions_.addAll(other.transactions_);
+              ensureTransactionIsMutable();
+              transaction_.addAll(other.transaction_);
             }
             onChanged();
           }
         } else {
-          if (!other.transactions_.isEmpty()) {
-            if (transactionsBuilder_.isEmpty()) {
-              transactionsBuilder_.dispose();
-              transactionsBuilder_ = null;
-              transactions_ = other.transactions_;
+          if (!other.transaction_.isEmpty()) {
+            if (transactionBuilder_.isEmpty()) {
+              transactionBuilder_.dispose();
+              transactionBuilder_ = null;
+              transaction_ = other.transaction_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              transactionsBuilder_ = 
+              transactionBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getTransactionsFieldBuilder() : null;
+                   getTransactionFieldBuilder() : null;
             } else {
-              transactionsBuilder_.addAllMessages(other.transactions_);
+              transactionBuilder_.addAllMessages(other.transaction_);
             }
           }
         }
@@ -501,244 +501,244 @@ public final class Response {
       }
       private int bitField0_;
 
-      private java.util.List<Model.Transaction> transactions_ =
+      private java.util.List<Model.Transaction> transaction_ =
         java.util.Collections.emptyList();
-      private void ensureTransactionsIsMutable() {
+      private void ensureTransactionIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          transactions_ = new java.util.ArrayList<Model.Transaction>(transactions_);
+          transaction_ = new java.util.ArrayList<Model.Transaction>(transaction_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          Model.Transaction, Model.Transaction.Builder, Model.TransactionOrBuilder> transactionsBuilder_;
+          Model.Transaction, Model.Transaction.Builder, Model.TransactionOrBuilder> transactionBuilder_;
 
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public java.util.List<Model.Transaction> getTransactionsList() {
-        if (transactionsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(transactions_);
+      public java.util.List<Model.Transaction> getTransactionList() {
+        if (transactionBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(transaction_);
         } else {
-          return transactionsBuilder_.getMessageList();
+          return transactionBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public int getTransactionsCount() {
-        if (transactionsBuilder_ == null) {
-          return transactions_.size();
+      public int getTransactionCount() {
+        if (transactionBuilder_ == null) {
+          return transaction_.size();
         } else {
-          return transactionsBuilder_.getCount();
+          return transactionBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Model.Transaction getTransactions(int index) {
-        if (transactionsBuilder_ == null) {
-          return transactions_.get(index);
+      public Model.Transaction getTransaction(int index) {
+        if (transactionBuilder_ == null) {
+          return transaction_.get(index);
         } else {
-          return transactionsBuilder_.getMessage(index);
+          return transactionBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Builder setTransactions(
+      public Builder setTransaction(
           int index, Model.Transaction value) {
-        if (transactionsBuilder_ == null) {
+        if (transactionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTransactionsIsMutable();
-          transactions_.set(index, value);
+          ensureTransactionIsMutable();
+          transaction_.set(index, value);
           onChanged();
         } else {
-          transactionsBuilder_.setMessage(index, value);
+          transactionBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Builder setTransactions(
+      public Builder setTransaction(
           int index, Model.Transaction.Builder builderForValue) {
-        if (transactionsBuilder_ == null) {
-          ensureTransactionsIsMutable();
-          transactions_.set(index, builderForValue.build());
+        if (transactionBuilder_ == null) {
+          ensureTransactionIsMutable();
+          transaction_.set(index, builderForValue.build());
           onChanged();
         } else {
-          transactionsBuilder_.setMessage(index, builderForValue.build());
+          transactionBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Builder addTransactions(Model.Transaction value) {
-        if (transactionsBuilder_ == null) {
+      public Builder addTransaction(Model.Transaction value) {
+        if (transactionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTransactionsIsMutable();
-          transactions_.add(value);
+          ensureTransactionIsMutable();
+          transaction_.add(value);
           onChanged();
         } else {
-          transactionsBuilder_.addMessage(value);
+          transactionBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Builder addTransactions(
+      public Builder addTransaction(
           int index, Model.Transaction value) {
-        if (transactionsBuilder_ == null) {
+        if (transactionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTransactionsIsMutable();
-          transactions_.add(index, value);
+          ensureTransactionIsMutable();
+          transaction_.add(index, value);
           onChanged();
         } else {
-          transactionsBuilder_.addMessage(index, value);
+          transactionBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Builder addTransactions(
+      public Builder addTransaction(
           Model.Transaction.Builder builderForValue) {
-        if (transactionsBuilder_ == null) {
-          ensureTransactionsIsMutable();
-          transactions_.add(builderForValue.build());
+        if (transactionBuilder_ == null) {
+          ensureTransactionIsMutable();
+          transaction_.add(builderForValue.build());
           onChanged();
         } else {
-          transactionsBuilder_.addMessage(builderForValue.build());
+          transactionBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Builder addTransactions(
+      public Builder addTransaction(
           int index, Model.Transaction.Builder builderForValue) {
-        if (transactionsBuilder_ == null) {
-          ensureTransactionsIsMutable();
-          transactions_.add(index, builderForValue.build());
+        if (transactionBuilder_ == null) {
+          ensureTransactionIsMutable();
+          transaction_.add(index, builderForValue.build());
           onChanged();
         } else {
-          transactionsBuilder_.addMessage(index, builderForValue.build());
+          transactionBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Builder addAllTransactions(
+      public Builder addAllTransaction(
           Iterable<? extends Model.Transaction> values) {
-        if (transactionsBuilder_ == null) {
-          ensureTransactionsIsMutable();
+        if (transactionBuilder_ == null) {
+          ensureTransactionIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, transactions_);
+              values, transaction_);
           onChanged();
         } else {
-          transactionsBuilder_.addAllMessages(values);
+          transactionBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Builder clearTransactions() {
-        if (transactionsBuilder_ == null) {
-          transactions_ = java.util.Collections.emptyList();
+      public Builder clearTransaction() {
+        if (transactionBuilder_ == null) {
+          transaction_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
-          transactionsBuilder_.clear();
+          transactionBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Builder removeTransactions(int index) {
-        if (transactionsBuilder_ == null) {
-          ensureTransactionsIsMutable();
-          transactions_.remove(index);
+      public Builder removeTransaction(int index) {
+        if (transactionBuilder_ == null) {
+          ensureTransactionIsMutable();
+          transaction_.remove(index);
           onChanged();
         } else {
-          transactionsBuilder_.remove(index);
+          transactionBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Model.Transaction.Builder getTransactionsBuilder(
+      public Model.Transaction.Builder getTransactionBuilder(
           int index) {
-        return getTransactionsFieldBuilder().getBuilder(index);
+        return getTransactionFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Model.TransactionOrBuilder getTransactionsOrBuilder(
+      public Model.TransactionOrBuilder getTransactionOrBuilder(
           int index) {
-        if (transactionsBuilder_ == null) {
-          return transactions_.get(index);  } else {
-          return transactionsBuilder_.getMessageOrBuilder(index);
+        if (transactionBuilder_ == null) {
+          return transaction_.get(index);  } else {
+          return transactionBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
       public java.util.List<? extends Model.TransactionOrBuilder> 
-           getTransactionsOrBuilderList() {
-        if (transactionsBuilder_ != null) {
-          return transactionsBuilder_.getMessageOrBuilderList();
+           getTransactionOrBuilderList() {
+        if (transactionBuilder_ != null) {
+          return transactionBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(transactions_);
+          return java.util.Collections.unmodifiableList(transaction_);
         }
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Model.Transaction.Builder addTransactionsBuilder() {
-        return getTransactionsFieldBuilder().addBuilder(
+      public Model.Transaction.Builder addTransactionBuilder() {
+        return getTransactionFieldBuilder().addBuilder(
             Model.Transaction.getDefaultInstance());
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Model.Transaction.Builder addTransactionsBuilder(
+      public Model.Transaction.Builder addTransactionBuilder(
           int index) {
-        return getTransactionsFieldBuilder().addBuilder(
+        return getTransactionFieldBuilder().addBuilder(
             index, Model.Transaction.getDefaultInstance());
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
       public java.util.List<Model.Transaction.Builder> 
-           getTransactionsBuilderList() {
-        return getTransactionsFieldBuilder().getBuilderList();
+           getTransactionBuilderList() {
+        return getTransactionFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
           Model.Transaction, Model.Transaction.Builder, Model.TransactionOrBuilder> 
-          getTransactionsFieldBuilder() {
-        if (transactionsBuilder_ == null) {
-          transactionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          getTransactionFieldBuilder() {
+        if (transactionBuilder_ == null) {
+          transactionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               Model.Transaction, Model.Transaction.Builder, Model.TransactionOrBuilder>(
-                  transactions_,
+                  transaction_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
-          transactions_ = null;
+          transaction_ = null;
         }
-        return transactionsBuilder_;
+        return transactionBuilder_;
       }
       @Override
       public final Builder setUnknownFields(
@@ -798,27 +798,27 @@ public final class Response {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
     java.util.List<Model.Transaction> 
-        getTransactionsList();
+        getTransactionList();
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
-    Model.Transaction getTransactions(int index);
+    Model.Transaction getTransaction(int index);
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
-    int getTransactionsCount();
+    int getTransactionCount();
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
     java.util.List<? extends Model.TransactionOrBuilder> 
-        getTransactionsOrBuilderList();
+        getTransactionOrBuilderList();
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
-    Model.TransactionOrBuilder getTransactionsOrBuilder(
+    Model.TransactionOrBuilder getTransactionOrBuilder(
             int index);
   }
   /**
@@ -834,7 +834,7 @@ public final class Response {
       super(builder);
     }
     private FindTransactionsByTagResponse() {
-      transactions_ = java.util.Collections.emptyList();
+      transaction_ = java.util.Collections.emptyList();
     }
 
     @Override
@@ -863,10 +863,10 @@ public final class Response {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                transactions_ = new java.util.ArrayList<Model.Transaction>();
+                transaction_ = new java.util.ArrayList<Model.Transaction>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              transactions_.add(
+              transaction_.add(
                   input.readMessage(Model.Transaction.parser(), extensionRegistry));
               break;
             }
@@ -886,7 +886,7 @@ public final class Response {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          transactions_ = java.util.Collections.unmodifiableList(transactions_);
+          transaction_ = java.util.Collections.unmodifiableList(transaction_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -905,39 +905,39 @@ public final class Response {
               FindTransactionsByTagResponse.class, Builder.class);
     }
 
-    public static final int TRANSACTIONS_FIELD_NUMBER = 1;
-    private java.util.List<Model.Transaction> transactions_;
+    public static final int TRANSACTION_FIELD_NUMBER = 1;
+    private java.util.List<Model.Transaction> transaction_;
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
-    public java.util.List<Model.Transaction> getTransactionsList() {
-      return transactions_;
+    public java.util.List<Model.Transaction> getTransactionList() {
+      return transaction_;
     }
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
     public java.util.List<? extends Model.TransactionOrBuilder> 
-        getTransactionsOrBuilderList() {
-      return transactions_;
+        getTransactionOrBuilderList() {
+      return transaction_;
     }
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
-    public int getTransactionsCount() {
-      return transactions_.size();
+    public int getTransactionCount() {
+      return transaction_.size();
     }
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
-    public Model.Transaction getTransactions(int index) {
-      return transactions_.get(index);
+    public Model.Transaction getTransaction(int index) {
+      return transaction_.get(index);
     }
     /**
-     * <code>repeated .Transaction transactions = 1;</code>
+     * <code>repeated .Transaction transaction = 1;</code>
      */
-    public Model.TransactionOrBuilder getTransactionsOrBuilder(
+    public Model.TransactionOrBuilder getTransactionOrBuilder(
         int index) {
-      return transactions_.get(index);
+      return transaction_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -954,8 +954,8 @@ public final class Response {
     @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < transactions_.size(); i++) {
-        output.writeMessage(1, transactions_.get(i));
+      for (int i = 0; i < transaction_.size(); i++) {
+        output.writeMessage(1, transaction_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -966,9 +966,9 @@ public final class Response {
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < transactions_.size(); i++) {
+      for (int i = 0; i < transaction_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, transactions_.get(i));
+          .computeMessageSize(1, transaction_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -985,8 +985,8 @@ public final class Response {
       }
       FindTransactionsByTagResponse other = (FindTransactionsByTagResponse) obj;
 
-      if (!getTransactionsList()
-          .equals(other.getTransactionsList())) return false;
+      if (!getTransactionList()
+          .equals(other.getTransactionList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -998,9 +998,9 @@ public final class Response {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getTransactionsCount() > 0) {
-        hash = (37 * hash) + TRANSACTIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getTransactionsList().hashCode();
+      if (getTransactionCount() > 0) {
+        hash = (37 * hash) + TRANSACTION_FIELD_NUMBER;
+        hash = (53 * hash) + getTransactionList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1130,17 +1130,17 @@ public final class Response {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getTransactionsFieldBuilder();
+          getTransactionFieldBuilder();
         }
       }
       @Override
       public Builder clear() {
         super.clear();
-        if (transactionsBuilder_ == null) {
-          transactions_ = java.util.Collections.emptyList();
+        if (transactionBuilder_ == null) {
+          transaction_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          transactionsBuilder_.clear();
+          transactionBuilder_.clear();
         }
         return this;
       }
@@ -1169,14 +1169,14 @@ public final class Response {
       public FindTransactionsByTagResponse buildPartial() {
         FindTransactionsByTagResponse result = new FindTransactionsByTagResponse(this);
         int from_bitField0_ = bitField0_;
-        if (transactionsBuilder_ == null) {
+        if (transactionBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
-            transactions_ = java.util.Collections.unmodifiableList(transactions_);
+            transaction_ = java.util.Collections.unmodifiableList(transaction_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
-          result.transactions_ = transactions_;
+          result.transaction_ = transaction_;
         } else {
-          result.transactions_ = transactionsBuilder_.build();
+          result.transaction_ = transactionBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1226,29 +1226,29 @@ public final class Response {
 
       public Builder mergeFrom(FindTransactionsByTagResponse other) {
         if (other == FindTransactionsByTagResponse.getDefaultInstance()) return this;
-        if (transactionsBuilder_ == null) {
-          if (!other.transactions_.isEmpty()) {
-            if (transactions_.isEmpty()) {
-              transactions_ = other.transactions_;
+        if (transactionBuilder_ == null) {
+          if (!other.transaction_.isEmpty()) {
+            if (transaction_.isEmpty()) {
+              transaction_ = other.transaction_;
               bitField0_ = (bitField0_ & ~0x00000001);
             } else {
-              ensureTransactionsIsMutable();
-              transactions_.addAll(other.transactions_);
+              ensureTransactionIsMutable();
+              transaction_.addAll(other.transaction_);
             }
             onChanged();
           }
         } else {
-          if (!other.transactions_.isEmpty()) {
-            if (transactionsBuilder_.isEmpty()) {
-              transactionsBuilder_.dispose();
-              transactionsBuilder_ = null;
-              transactions_ = other.transactions_;
+          if (!other.transaction_.isEmpty()) {
+            if (transactionBuilder_.isEmpty()) {
+              transactionBuilder_.dispose();
+              transactionBuilder_ = null;
+              transaction_ = other.transaction_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              transactionsBuilder_ = 
+              transactionBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getTransactionsFieldBuilder() : null;
+                   getTransactionFieldBuilder() : null;
             } else {
-              transactionsBuilder_.addAllMessages(other.transactions_);
+              transactionBuilder_.addAllMessages(other.transaction_);
             }
           }
         }
@@ -1282,244 +1282,244 @@ public final class Response {
       }
       private int bitField0_;
 
-      private java.util.List<Model.Transaction> transactions_ =
+      private java.util.List<Model.Transaction> transaction_ =
         java.util.Collections.emptyList();
-      private void ensureTransactionsIsMutable() {
+      private void ensureTransactionIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          transactions_ = new java.util.ArrayList<Model.Transaction>(transactions_);
+          transaction_ = new java.util.ArrayList<Model.Transaction>(transaction_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          Model.Transaction, Model.Transaction.Builder, Model.TransactionOrBuilder> transactionsBuilder_;
+          Model.Transaction, Model.Transaction.Builder, Model.TransactionOrBuilder> transactionBuilder_;
 
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public java.util.List<Model.Transaction> getTransactionsList() {
-        if (transactionsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(transactions_);
+      public java.util.List<Model.Transaction> getTransactionList() {
+        if (transactionBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(transaction_);
         } else {
-          return transactionsBuilder_.getMessageList();
+          return transactionBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public int getTransactionsCount() {
-        if (transactionsBuilder_ == null) {
-          return transactions_.size();
+      public int getTransactionCount() {
+        if (transactionBuilder_ == null) {
+          return transaction_.size();
         } else {
-          return transactionsBuilder_.getCount();
+          return transactionBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Model.Transaction getTransactions(int index) {
-        if (transactionsBuilder_ == null) {
-          return transactions_.get(index);
+      public Model.Transaction getTransaction(int index) {
+        if (transactionBuilder_ == null) {
+          return transaction_.get(index);
         } else {
-          return transactionsBuilder_.getMessage(index);
+          return transactionBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Builder setTransactions(
+      public Builder setTransaction(
           int index, Model.Transaction value) {
-        if (transactionsBuilder_ == null) {
+        if (transactionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTransactionsIsMutable();
-          transactions_.set(index, value);
+          ensureTransactionIsMutable();
+          transaction_.set(index, value);
           onChanged();
         } else {
-          transactionsBuilder_.setMessage(index, value);
+          transactionBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Builder setTransactions(
+      public Builder setTransaction(
           int index, Model.Transaction.Builder builderForValue) {
-        if (transactionsBuilder_ == null) {
-          ensureTransactionsIsMutable();
-          transactions_.set(index, builderForValue.build());
+        if (transactionBuilder_ == null) {
+          ensureTransactionIsMutable();
+          transaction_.set(index, builderForValue.build());
           onChanged();
         } else {
-          transactionsBuilder_.setMessage(index, builderForValue.build());
+          transactionBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Builder addTransactions(Model.Transaction value) {
-        if (transactionsBuilder_ == null) {
+      public Builder addTransaction(Model.Transaction value) {
+        if (transactionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTransactionsIsMutable();
-          transactions_.add(value);
+          ensureTransactionIsMutable();
+          transaction_.add(value);
           onChanged();
         } else {
-          transactionsBuilder_.addMessage(value);
+          transactionBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Builder addTransactions(
+      public Builder addTransaction(
           int index, Model.Transaction value) {
-        if (transactionsBuilder_ == null) {
+        if (transactionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTransactionsIsMutable();
-          transactions_.add(index, value);
+          ensureTransactionIsMutable();
+          transaction_.add(index, value);
           onChanged();
         } else {
-          transactionsBuilder_.addMessage(index, value);
+          transactionBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Builder addTransactions(
+      public Builder addTransaction(
           Model.Transaction.Builder builderForValue) {
-        if (transactionsBuilder_ == null) {
-          ensureTransactionsIsMutable();
-          transactions_.add(builderForValue.build());
+        if (transactionBuilder_ == null) {
+          ensureTransactionIsMutable();
+          transaction_.add(builderForValue.build());
           onChanged();
         } else {
-          transactionsBuilder_.addMessage(builderForValue.build());
+          transactionBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Builder addTransactions(
+      public Builder addTransaction(
           int index, Model.Transaction.Builder builderForValue) {
-        if (transactionsBuilder_ == null) {
-          ensureTransactionsIsMutable();
-          transactions_.add(index, builderForValue.build());
+        if (transactionBuilder_ == null) {
+          ensureTransactionIsMutable();
+          transaction_.add(index, builderForValue.build());
           onChanged();
         } else {
-          transactionsBuilder_.addMessage(index, builderForValue.build());
+          transactionBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Builder addAllTransactions(
+      public Builder addAllTransaction(
           Iterable<? extends Model.Transaction> values) {
-        if (transactionsBuilder_ == null) {
-          ensureTransactionsIsMutable();
+        if (transactionBuilder_ == null) {
+          ensureTransactionIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, transactions_);
+              values, transaction_);
           onChanged();
         } else {
-          transactionsBuilder_.addAllMessages(values);
+          transactionBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Builder clearTransactions() {
-        if (transactionsBuilder_ == null) {
-          transactions_ = java.util.Collections.emptyList();
+      public Builder clearTransaction() {
+        if (transactionBuilder_ == null) {
+          transaction_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
-          transactionsBuilder_.clear();
+          transactionBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Builder removeTransactions(int index) {
-        if (transactionsBuilder_ == null) {
-          ensureTransactionsIsMutable();
-          transactions_.remove(index);
+      public Builder removeTransaction(int index) {
+        if (transactionBuilder_ == null) {
+          ensureTransactionIsMutable();
+          transaction_.remove(index);
           onChanged();
         } else {
-          transactionsBuilder_.remove(index);
+          transactionBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Model.Transaction.Builder getTransactionsBuilder(
+      public Model.Transaction.Builder getTransactionBuilder(
           int index) {
-        return getTransactionsFieldBuilder().getBuilder(index);
+        return getTransactionFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Model.TransactionOrBuilder getTransactionsOrBuilder(
+      public Model.TransactionOrBuilder getTransactionOrBuilder(
           int index) {
-        if (transactionsBuilder_ == null) {
-          return transactions_.get(index);  } else {
-          return transactionsBuilder_.getMessageOrBuilder(index);
+        if (transactionBuilder_ == null) {
+          return transaction_.get(index);  } else {
+          return transactionBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
       public java.util.List<? extends Model.TransactionOrBuilder> 
-           getTransactionsOrBuilderList() {
-        if (transactionsBuilder_ != null) {
-          return transactionsBuilder_.getMessageOrBuilderList();
+           getTransactionOrBuilderList() {
+        if (transactionBuilder_ != null) {
+          return transactionBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(transactions_);
+          return java.util.Collections.unmodifiableList(transaction_);
         }
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Model.Transaction.Builder addTransactionsBuilder() {
-        return getTransactionsFieldBuilder().addBuilder(
+      public Model.Transaction.Builder addTransactionBuilder() {
+        return getTransactionFieldBuilder().addBuilder(
             Model.Transaction.getDefaultInstance());
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
-      public Model.Transaction.Builder addTransactionsBuilder(
+      public Model.Transaction.Builder addTransactionBuilder(
           int index) {
-        return getTransactionsFieldBuilder().addBuilder(
+        return getTransactionFieldBuilder().addBuilder(
             index, Model.Transaction.getDefaultInstance());
       }
       /**
-       * <code>repeated .Transaction transactions = 1;</code>
+       * <code>repeated .Transaction transaction = 1;</code>
        */
       public java.util.List<Model.Transaction.Builder> 
-           getTransactionsBuilderList() {
-        return getTransactionsFieldBuilder().getBuilderList();
+           getTransactionBuilderList() {
+        return getTransactionFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
           Model.Transaction, Model.Transaction.Builder, Model.TransactionOrBuilder> 
-          getTransactionsFieldBuilder() {
-        if (transactionsBuilder_ == null) {
-          transactionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          getTransactionFieldBuilder() {
+        if (transactionBuilder_ == null) {
+          transactionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               Model.Transaction, Model.Transaction.Builder, Model.TransactionOrBuilder>(
-                  transactions_,
+                  transaction_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
-          transactions_ = null;
+          transaction_ = null;
         }
-        return transactionsBuilder_;
+        return transactionBuilder_;
       }
       @Override
       public final Builder setUnknownFields(
@@ -1579,17 +1579,17 @@ public final class Response {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.Transaction transactions = 1;</code>
+     * <code>.Transaction transaction = 1;</code>
      */
-    boolean hasTransactions();
+    boolean hasTransaction();
     /**
-     * <code>.Transaction transactions = 1;</code>
+     * <code>.Transaction transaction = 1;</code>
      */
-    Model.Transaction getTransactions();
+    Model.Transaction getTransaction();
     /**
-     * <code>.Transaction transactions = 1;</code>
+     * <code>.Transaction transaction = 1;</code>
      */
-    Model.TransactionOrBuilder getTransactionsOrBuilder();
+    Model.TransactionOrBuilder getTransactionOrBuilder();
   }
   /**
    * Protobuf type {@code FindTransactionByHashResponse}
@@ -1632,13 +1632,13 @@ public final class Response {
               break;
             case 10: {
               Model.Transaction.Builder subBuilder = null;
-              if (transactions_ != null) {
-                subBuilder = transactions_.toBuilder();
+              if (transaction_ != null) {
+                subBuilder = transaction_.toBuilder();
               }
-              transactions_ = input.readMessage(Model.Transaction.parser(), extensionRegistry);
+              transaction_ = input.readMessage(Model.Transaction.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(transactions_);
-                transactions_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(transaction_);
+                transaction_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1675,25 +1675,25 @@ public final class Response {
               FindTransactionByHashResponse.class, Builder.class);
     }
 
-    public static final int TRANSACTIONS_FIELD_NUMBER = 1;
-    private Model.Transaction transactions_;
+    public static final int TRANSACTION_FIELD_NUMBER = 1;
+    private Model.Transaction transaction_;
     /**
-     * <code>.Transaction transactions = 1;</code>
+     * <code>.Transaction transaction = 1;</code>
      */
-    public boolean hasTransactions() {
-      return transactions_ != null;
+    public boolean hasTransaction() {
+      return transaction_ != null;
     }
     /**
-     * <code>.Transaction transactions = 1;</code>
+     * <code>.Transaction transaction = 1;</code>
      */
-    public Model.Transaction getTransactions() {
-      return transactions_ == null ? Model.Transaction.getDefaultInstance() : transactions_;
+    public Model.Transaction getTransaction() {
+      return transaction_ == null ? Model.Transaction.getDefaultInstance() : transaction_;
     }
     /**
-     * <code>.Transaction transactions = 1;</code>
+     * <code>.Transaction transaction = 1;</code>
      */
-    public Model.TransactionOrBuilder getTransactionsOrBuilder() {
-      return getTransactions();
+    public Model.TransactionOrBuilder getTransactionOrBuilder() {
+      return getTransaction();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1710,8 +1710,8 @@ public final class Response {
     @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (transactions_ != null) {
-        output.writeMessage(1, getTransactions());
+      if (transaction_ != null) {
+        output.writeMessage(1, getTransaction());
       }
       unknownFields.writeTo(output);
     }
@@ -1722,9 +1722,9 @@ public final class Response {
       if (size != -1) return size;
 
       size = 0;
-      if (transactions_ != null) {
+      if (transaction_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getTransactions());
+          .computeMessageSize(1, getTransaction());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1741,10 +1741,10 @@ public final class Response {
       }
       FindTransactionByHashResponse other = (FindTransactionByHashResponse) obj;
 
-      if (hasTransactions() != other.hasTransactions()) return false;
-      if (hasTransactions()) {
-        if (!getTransactions()
-            .equals(other.getTransactions())) return false;
+      if (hasTransaction() != other.hasTransaction()) return false;
+      if (hasTransaction()) {
+        if (!getTransaction()
+            .equals(other.getTransaction())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -1757,9 +1757,9 @@ public final class Response {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasTransactions()) {
-        hash = (37 * hash) + TRANSACTIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getTransactions().hashCode();
+      if (hasTransaction()) {
+        hash = (37 * hash) + TRANSACTION_FIELD_NUMBER;
+        hash = (53 * hash) + getTransaction().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1894,11 +1894,11 @@ public final class Response {
       @Override
       public Builder clear() {
         super.clear();
-        if (transactionsBuilder_ == null) {
-          transactions_ = null;
+        if (transactionBuilder_ == null) {
+          transaction_ = null;
         } else {
-          transactions_ = null;
-          transactionsBuilder_ = null;
+          transaction_ = null;
+          transactionBuilder_ = null;
         }
         return this;
       }
@@ -1926,10 +1926,10 @@ public final class Response {
       @Override
       public FindTransactionByHashResponse buildPartial() {
         FindTransactionByHashResponse result = new FindTransactionByHashResponse(this);
-        if (transactionsBuilder_ == null) {
-          result.transactions_ = transactions_;
+        if (transactionBuilder_ == null) {
+          result.transaction_ = transaction_;
         } else {
-          result.transactions_ = transactionsBuilder_.build();
+          result.transaction_ = transactionBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1979,8 +1979,8 @@ public final class Response {
 
       public Builder mergeFrom(FindTransactionByHashResponse other) {
         if (other == FindTransactionByHashResponse.getDefaultInstance()) return this;
-        if (other.hasTransactions()) {
-          mergeTransactions(other.getTransactions());
+        if (other.hasTransaction()) {
+          mergeTransaction(other.getTransaction());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2011,121 +2011,121 @@ public final class Response {
         return this;
       }
 
-      private Model.Transaction transactions_;
+      private Model.Transaction transaction_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          Model.Transaction, Model.Transaction.Builder, Model.TransactionOrBuilder> transactionsBuilder_;
+          Model.Transaction, Model.Transaction.Builder, Model.TransactionOrBuilder> transactionBuilder_;
       /**
-       * <code>.Transaction transactions = 1;</code>
+       * <code>.Transaction transaction = 1;</code>
        */
-      public boolean hasTransactions() {
-        return transactionsBuilder_ != null || transactions_ != null;
+      public boolean hasTransaction() {
+        return transactionBuilder_ != null || transaction_ != null;
       }
       /**
-       * <code>.Transaction transactions = 1;</code>
+       * <code>.Transaction transaction = 1;</code>
        */
-      public Model.Transaction getTransactions() {
-        if (transactionsBuilder_ == null) {
-          return transactions_ == null ? Model.Transaction.getDefaultInstance() : transactions_;
+      public Model.Transaction getTransaction() {
+        if (transactionBuilder_ == null) {
+          return transaction_ == null ? Model.Transaction.getDefaultInstance() : transaction_;
         } else {
-          return transactionsBuilder_.getMessage();
+          return transactionBuilder_.getMessage();
         }
       }
       /**
-       * <code>.Transaction transactions = 1;</code>
+       * <code>.Transaction transaction = 1;</code>
        */
-      public Builder setTransactions(Model.Transaction value) {
-        if (transactionsBuilder_ == null) {
+      public Builder setTransaction(Model.Transaction value) {
+        if (transactionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          transactions_ = value;
+          transaction_ = value;
           onChanged();
         } else {
-          transactionsBuilder_.setMessage(value);
+          transactionBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.Transaction transactions = 1;</code>
+       * <code>.Transaction transaction = 1;</code>
        */
-      public Builder setTransactions(
+      public Builder setTransaction(
           Model.Transaction.Builder builderForValue) {
-        if (transactionsBuilder_ == null) {
-          transactions_ = builderForValue.build();
+        if (transactionBuilder_ == null) {
+          transaction_ = builderForValue.build();
           onChanged();
         } else {
-          transactionsBuilder_.setMessage(builderForValue.build());
+          transactionBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.Transaction transactions = 1;</code>
+       * <code>.Transaction transaction = 1;</code>
        */
-      public Builder mergeTransactions(Model.Transaction value) {
-        if (transactionsBuilder_ == null) {
-          if (transactions_ != null) {
-            transactions_ =
-              Model.Transaction.newBuilder(transactions_).mergeFrom(value).buildPartial();
+      public Builder mergeTransaction(Model.Transaction value) {
+        if (transactionBuilder_ == null) {
+          if (transaction_ != null) {
+            transaction_ =
+              Model.Transaction.newBuilder(transaction_).mergeFrom(value).buildPartial();
           } else {
-            transactions_ = value;
+            transaction_ = value;
           }
           onChanged();
         } else {
-          transactionsBuilder_.mergeFrom(value);
+          transactionBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.Transaction transactions = 1;</code>
+       * <code>.Transaction transaction = 1;</code>
        */
-      public Builder clearTransactions() {
-        if (transactionsBuilder_ == null) {
-          transactions_ = null;
+      public Builder clearTransaction() {
+        if (transactionBuilder_ == null) {
+          transaction_ = null;
           onChanged();
         } else {
-          transactions_ = null;
-          transactionsBuilder_ = null;
+          transaction_ = null;
+          transactionBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.Transaction transactions = 1;</code>
+       * <code>.Transaction transaction = 1;</code>
        */
-      public Model.Transaction.Builder getTransactionsBuilder() {
+      public Model.Transaction.Builder getTransactionBuilder() {
         
         onChanged();
-        return getTransactionsFieldBuilder().getBuilder();
+        return getTransactionFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Transaction transactions = 1;</code>
+       * <code>.Transaction transaction = 1;</code>
        */
-      public Model.TransactionOrBuilder getTransactionsOrBuilder() {
-        if (transactionsBuilder_ != null) {
-          return transactionsBuilder_.getMessageOrBuilder();
+      public Model.TransactionOrBuilder getTransactionOrBuilder() {
+        if (transactionBuilder_ != null) {
+          return transactionBuilder_.getMessageOrBuilder();
         } else {
-          return transactions_ == null ?
-              Model.Transaction.getDefaultInstance() : transactions_;
+          return transaction_ == null ?
+              Model.Transaction.getDefaultInstance() : transaction_;
         }
       }
       /**
-       * <code>.Transaction transactions = 1;</code>
+       * <code>.Transaction transaction = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           Model.Transaction, Model.Transaction.Builder, Model.TransactionOrBuilder> 
-          getTransactionsFieldBuilder() {
-        if (transactionsBuilder_ == null) {
-          transactionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getTransactionFieldBuilder() {
+        if (transactionBuilder_ == null) {
+          transactionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               Model.Transaction, Model.Transaction.Builder, Model.TransactionOrBuilder>(
-                  getTransactions(),
+                  getTransaction(),
                   getParentForChildren(),
                   isClean());
-          transactions_ = null;
+          transaction_ = null;
         }
-        return transactionsBuilder_;
+        return transactionBuilder_;
       }
       @Override
       public final Builder setUnknownFields(
@@ -2685,14 +2685,14 @@ public final class Response {
       descriptor;
   static {
     String[] descriptorData = {
-      "\n\016response.proto\032\013model.proto\"G\n!FindTra" +
-      "nsactionsByAddressResponse\022\"\n\014transactio" +
-      "ns\030\001 \003(\0132\014.Transaction\"C\n\035FindTransactio" +
-      "nsByTagResponse\022\"\n\014transactions\030\001 \003(\0132\014." +
-      "Transaction\"C\n\035FindTransactionByHashResp" +
-      "onse\022\"\n\014transactions\030\001 \001(\0132\014.Transaction" +
-      "\"A\n#DetermineApprovalConfidenceResponse\022" +
-      "\032\n\022approvalConfidence\030\001 \001(\001b\006proto3"
+      "\n\016response.proto\032\013model.proto\"F\n!FindTra" +
+      "nsactionsByAddressResponse\022!\n\013transactio" +
+      "n\030\001 \003(\0132\014.Transaction\"B\n\035FindTransaction" +
+      "sByTagResponse\022!\n\013transaction\030\001 \003(\0132\014.Tr" +
+      "ansaction\"B\n\035FindTransactionByHashRespon" +
+      "se\022!\n\013transaction\030\001 \001(\0132\014.Transaction\"A\n" +
+      "#DetermineApprovalConfidenceResponse\022\032\n\022" +
+      "approvalConfidence\030\001 \001(\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2712,19 +2712,19 @@ public final class Response {
     internal_static_FindTransactionsByAddressResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_FindTransactionsByAddressResponse_descriptor,
-        new String[] { "Transactions", });
+        new String[] { "Transaction", });
     internal_static_FindTransactionsByTagResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_FindTransactionsByTagResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_FindTransactionsByTagResponse_descriptor,
-        new String[] { "Transactions", });
+        new String[] { "Transaction", });
     internal_static_FindTransactionByHashResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_FindTransactionByHashResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_FindTransactionByHashResponse_descriptor,
-        new String[] { "Transactions", });
+        new String[] { "Transaction", });
     internal_static_DetermineApprovalConfidenceResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_DetermineApprovalConfidenceResponse_fieldAccessorTable = new

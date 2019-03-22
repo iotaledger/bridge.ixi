@@ -13,7 +13,7 @@ message WrapperMessage {
 		FindTransactionsByTagRequest findTransactionsByTagRequest = 3;
  	    FindTransactionByHashRequest findTransactionByHashRequest = 4;
  		SubmitTransactionBuilderRequest submitTransactionBuilderRequest = 5;
- 		SubmitTransactionRequest submitTransactionRequest = 6;
+ 		SubmitTransactionBytesRequest submitTransactionBytesRequest = 6;
  		DetermineApprovalConfidenceRequest determineApprovalConfidenceRequest = 7;
  		AddEffectListenerRequest addEffectListenerRequest = 8;
  		RemoveEffectListenerRequest removeEffectListenerRequest = 9;
@@ -30,17 +30,17 @@ message WrapperMessage {
 
 		FIND_TRANSACTIONS_BY_ADDRESS_REQUEST = 0;
         FIND_TRANSACTIONS_BY_TAG_REQUEST = 1;
-      	FIND_TRANSACTIONS_BY_HASH_REQUEST = 2;
+      	FIND_TRANSACTION_BY_HASH_REQUEST = 2;
       	SUBMIT_TRANSACTION_BUILDER_REQUEST = 3;
-      	SUBMIT_TRANSACTION_REQUEST = 4;
+      	SUBMIT_TRANSACTION_BYTES_REQUEST = 4;
       	DETERMINE_APPROVAL_CONFIDENCE_REQUEST = 5;
       	ADD_EFFECT_LISTENER_REQUEST = 6;
       	REMOVE_EFFECT_LISTENER_REQUEST = 7;
         SUBMIT_EFFECT_REQUEST = 8;
 
-        FIND_TRANSCATIONS_BY_ADDRESS_RESPONSE = 9;
-        FIND_TRANSACTIONS_BY_TAG_RESPOSNE = 10;
-        FIND_TRANSACIONS_BY_HASH_RESPONSE = 11;
+        FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE = 9;
+        FIND_TRANSACTIONS_BY_TAG_RESPONSE = 10;
+        FIND_TRANSACTION_BY_HASH_RESPONSE = 11;
         DETERMINE_APPROVAL_CONFIDENCE_RESPONSE = 12;
 
     }

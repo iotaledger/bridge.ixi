@@ -2265,36 +2265,29 @@ public final class Request {
 
   }
 
-  public interface SubmitTransactionRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:SubmitTransactionRequest)
+  public interface SubmitTransactionBytesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SubmitTransactionBytesRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.Transaction transaction = 1;</code>
+     * <code>bytes transactionBytes = 1;</code>
      */
-    boolean hasTransaction();
-    /**
-     * <code>.Transaction transaction = 1;</code>
-     */
-    Model.Transaction getTransaction();
-    /**
-     * <code>.Transaction transaction = 1;</code>
-     */
-    Model.TransactionOrBuilder getTransactionOrBuilder();
+    com.google.protobuf.ByteString getTransactionBytes();
   }
   /**
-   * Protobuf type {@code SubmitTransactionRequest}
+   * Protobuf type {@code SubmitTransactionBytesRequest}
    */
-  public  static final class SubmitTransactionRequest extends
+  public  static final class SubmitTransactionBytesRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:SubmitTransactionRequest)
-      SubmitTransactionRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:SubmitTransactionBytesRequest)
+      SubmitTransactionBytesRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use SubmitTransactionRequest.newBuilder() to construct.
-    private SubmitTransactionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use SubmitTransactionBytesRequest.newBuilder() to construct.
+    private SubmitTransactionBytesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private SubmitTransactionRequest() {
+    private SubmitTransactionBytesRequest() {
+      transactionBytes_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     @Override
@@ -2302,7 +2295,7 @@ public final class Request {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private SubmitTransactionRequest(
+    private SubmitTransactionBytesRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2322,16 +2315,8 @@ public final class Request {
               done = true;
               break;
             case 10: {
-              Model.Transaction.Builder subBuilder = null;
-              if (transaction_ != null) {
-                subBuilder = transaction_.toBuilder();
-              }
-              transaction_ = input.readMessage(Model.Transaction.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(transaction_);
-                transaction_ = subBuilder.buildPartial();
-              }
 
+              transactionBytes_ = input.readBytes();
               break;
             }
             default: {
@@ -2355,36 +2340,24 @@ public final class Request {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return Request.internal_static_SubmitTransactionRequest_descriptor;
+      return Request.internal_static_SubmitTransactionBytesRequest_descriptor;
     }
 
     @Override
     protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Request.internal_static_SubmitTransactionRequest_fieldAccessorTable
+      return Request.internal_static_SubmitTransactionBytesRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              SubmitTransactionRequest.class, Builder.class);
+              SubmitTransactionBytesRequest.class, Builder.class);
     }
 
-    public static final int TRANSACTION_FIELD_NUMBER = 1;
-    private Model.Transaction transaction_;
+    public static final int TRANSACTIONBYTES_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString transactionBytes_;
     /**
-     * <code>.Transaction transaction = 1;</code>
+     * <code>bytes transactionBytes = 1;</code>
      */
-    public boolean hasTransaction() {
-      return transaction_ != null;
-    }
-    /**
-     * <code>.Transaction transaction = 1;</code>
-     */
-    public Model.Transaction getTransaction() {
-      return transaction_ == null ? Model.Transaction.getDefaultInstance() : transaction_;
-    }
-    /**
-     * <code>.Transaction transaction = 1;</code>
-     */
-    public Model.TransactionOrBuilder getTransactionOrBuilder() {
-      return getTransaction();
+    public com.google.protobuf.ByteString getTransactionBytes() {
+      return transactionBytes_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2401,8 +2374,8 @@ public final class Request {
     @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (transaction_ != null) {
-        output.writeMessage(1, getTransaction());
+      if (!transactionBytes_.isEmpty()) {
+        output.writeBytes(1, transactionBytes_);
       }
       unknownFields.writeTo(output);
     }
@@ -2413,9 +2386,9 @@ public final class Request {
       if (size != -1) return size;
 
       size = 0;
-      if (transaction_ != null) {
+      if (!transactionBytes_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getTransaction());
+          .computeBytesSize(1, transactionBytes_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2427,16 +2400,13 @@ public final class Request {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof SubmitTransactionRequest)) {
+      if (!(obj instanceof SubmitTransactionBytesRequest)) {
         return super.equals(obj);
       }
-      SubmitTransactionRequest other = (SubmitTransactionRequest) obj;
+      SubmitTransactionBytesRequest other = (SubmitTransactionBytesRequest) obj;
 
-      if (hasTransaction() != other.hasTransaction()) return false;
-      if (hasTransaction()) {
-        if (!getTransaction()
-            .equals(other.getTransaction())) return false;
-      }
+      if (!getTransactionBytes()
+          .equals(other.getTransactionBytes())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2448,78 +2418,76 @@ public final class Request {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasTransaction()) {
-        hash = (37 * hash) + TRANSACTION_FIELD_NUMBER;
-        hash = (53 * hash) + getTransaction().hashCode();
-      }
+      hash = (37 * hash) + TRANSACTIONBYTES_FIELD_NUMBER;
+      hash = (53 * hash) + getTransactionBytes().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static SubmitTransactionRequest parseFrom(
+    public static SubmitTransactionBytesRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SubmitTransactionRequest parseFrom(
+    public static SubmitTransactionBytesRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SubmitTransactionRequest parseFrom(
+    public static SubmitTransactionBytesRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SubmitTransactionRequest parseFrom(
+    public static SubmitTransactionBytesRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SubmitTransactionRequest parseFrom(byte[] data)
+    public static SubmitTransactionBytesRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SubmitTransactionRequest parseFrom(
+    public static SubmitTransactionBytesRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SubmitTransactionRequest parseFrom(java.io.InputStream input)
+    public static SubmitTransactionBytesRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SubmitTransactionRequest parseFrom(
+    public static SubmitTransactionBytesRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SubmitTransactionRequest parseDelimitedFrom(java.io.InputStream input)
+    public static SubmitTransactionBytesRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static SubmitTransactionRequest parseDelimitedFrom(
+    public static SubmitTransactionBytesRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SubmitTransactionRequest parseFrom(
+    public static SubmitTransactionBytesRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SubmitTransactionRequest parseFrom(
+    public static SubmitTransactionBytesRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2532,7 +2500,7 @@ public final class Request {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(SubmitTransactionRequest prototype) {
+    public static Builder newBuilder(SubmitTransactionBytesRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @Override
@@ -2548,26 +2516,26 @@ public final class Request {
       return builder;
     }
     /**
-     * Protobuf type {@code SubmitTransactionRequest}
+     * Protobuf type {@code SubmitTransactionBytesRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:SubmitTransactionRequest)
-        SubmitTransactionRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:SubmitTransactionBytesRequest)
+        SubmitTransactionBytesRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return Request.internal_static_SubmitTransactionRequest_descriptor;
+        return Request.internal_static_SubmitTransactionBytesRequest_descriptor;
       }
 
       @Override
       protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Request.internal_static_SubmitTransactionRequest_fieldAccessorTable
+        return Request.internal_static_SubmitTransactionBytesRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                SubmitTransactionRequest.class, Builder.class);
+                SubmitTransactionBytesRequest.class, Builder.class);
       }
 
-      // Construct using Request.SubmitTransactionRequest.newBuilder()
+      // Construct using Request.SubmitTransactionBytesRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2585,29 +2553,25 @@ public final class Request {
       @Override
       public Builder clear() {
         super.clear();
-        if (transactionBuilder_ == null) {
-          transaction_ = null;
-        } else {
-          transaction_ = null;
-          transactionBuilder_ = null;
-        }
+        transactionBytes_ = com.google.protobuf.ByteString.EMPTY;
+
         return this;
       }
 
       @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Request.internal_static_SubmitTransactionRequest_descriptor;
+        return Request.internal_static_SubmitTransactionBytesRequest_descriptor;
       }
 
       @Override
-      public SubmitTransactionRequest getDefaultInstanceForType() {
-        return SubmitTransactionRequest.getDefaultInstance();
+      public SubmitTransactionBytesRequest getDefaultInstanceForType() {
+        return SubmitTransactionBytesRequest.getDefaultInstance();
       }
 
       @Override
-      public SubmitTransactionRequest build() {
-        SubmitTransactionRequest result = buildPartial();
+      public SubmitTransactionBytesRequest build() {
+        SubmitTransactionBytesRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2615,13 +2579,9 @@ public final class Request {
       }
 
       @Override
-      public SubmitTransactionRequest buildPartial() {
-        SubmitTransactionRequest result = new SubmitTransactionRequest(this);
-        if (transactionBuilder_ == null) {
-          result.transaction_ = transaction_;
-        } else {
-          result.transaction_ = transactionBuilder_.build();
-        }
+      public SubmitTransactionBytesRequest buildPartial() {
+        SubmitTransactionBytesRequest result = new SubmitTransactionBytesRequest(this);
+        result.transactionBytes_ = transactionBytes_;
         onBuilt();
         return result;
       }
@@ -2660,18 +2620,18 @@ public final class Request {
       }
       @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SubmitTransactionRequest) {
-          return mergeFrom((SubmitTransactionRequest)other);
+        if (other instanceof SubmitTransactionBytesRequest) {
+          return mergeFrom((SubmitTransactionBytesRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(SubmitTransactionRequest other) {
-        if (other == SubmitTransactionRequest.getDefaultInstance()) return this;
-        if (other.hasTransaction()) {
-          mergeTransaction(other.getTransaction());
+      public Builder mergeFrom(SubmitTransactionBytesRequest other) {
+        if (other == SubmitTransactionBytesRequest.getDefaultInstance()) return this;
+        if (other.getTransactionBytes() != com.google.protobuf.ByteString.EMPTY) {
+          setTransactionBytes(other.getTransactionBytes());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2688,11 +2648,11 @@ public final class Request {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        SubmitTransactionRequest parsedMessage = null;
+        SubmitTransactionBytesRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SubmitTransactionRequest) e.getUnfinishedMessage();
+          parsedMessage = (SubmitTransactionBytesRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2702,121 +2662,33 @@ public final class Request {
         return this;
       }
 
-      private Model.Transaction transaction_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          Model.Transaction, Model.Transaction.Builder, Model.TransactionOrBuilder> transactionBuilder_;
+      private com.google.protobuf.ByteString transactionBytes_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>.Transaction transaction = 1;</code>
+       * <code>bytes transactionBytes = 1;</code>
        */
-      public boolean hasTransaction() {
-        return transactionBuilder_ != null || transaction_ != null;
+      public com.google.protobuf.ByteString getTransactionBytes() {
+        return transactionBytes_;
       }
       /**
-       * <code>.Transaction transaction = 1;</code>
+       * <code>bytes transactionBytes = 1;</code>
        */
-      public Model.Transaction getTransaction() {
-        if (transactionBuilder_ == null) {
-          return transaction_ == null ? Model.Transaction.getDefaultInstance() : transaction_;
-        } else {
-          return transactionBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.Transaction transaction = 1;</code>
-       */
-      public Builder setTransaction(Model.Transaction value) {
-        if (transactionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          transaction_ = value;
-          onChanged();
-        } else {
-          transactionBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Transaction transaction = 1;</code>
-       */
-      public Builder setTransaction(
-          Model.Transaction.Builder builderForValue) {
-        if (transactionBuilder_ == null) {
-          transaction_ = builderForValue.build();
-          onChanged();
-        } else {
-          transactionBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Transaction transaction = 1;</code>
-       */
-      public Builder mergeTransaction(Model.Transaction value) {
-        if (transactionBuilder_ == null) {
-          if (transaction_ != null) {
-            transaction_ =
-              Model.Transaction.newBuilder(transaction_).mergeFrom(value).buildPartial();
-          } else {
-            transaction_ = value;
-          }
-          onChanged();
-        } else {
-          transactionBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Transaction transaction = 1;</code>
-       */
-      public Builder clearTransaction() {
-        if (transactionBuilder_ == null) {
-          transaction_ = null;
-          onChanged();
-        } else {
-          transaction_ = null;
-          transactionBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.Transaction transaction = 1;</code>
-       */
-      public Model.Transaction.Builder getTransactionBuilder() {
-        
+      public Builder setTransactionBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        transactionBytes_ = value;
         onChanged();
-        return getTransactionFieldBuilder().getBuilder();
+        return this;
       }
       /**
-       * <code>.Transaction transaction = 1;</code>
+       * <code>bytes transactionBytes = 1;</code>
        */
-      public Model.TransactionOrBuilder getTransactionOrBuilder() {
-        if (transactionBuilder_ != null) {
-          return transactionBuilder_.getMessageOrBuilder();
-        } else {
-          return transaction_ == null ?
-              Model.Transaction.getDefaultInstance() : transaction_;
-        }
-      }
-      /**
-       * <code>.Transaction transaction = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          Model.Transaction, Model.Transaction.Builder, Model.TransactionOrBuilder> 
-          getTransactionFieldBuilder() {
-        if (transactionBuilder_ == null) {
-          transactionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Model.Transaction, Model.Transaction.Builder, Model.TransactionOrBuilder>(
-                  getTransaction(),
-                  getParentForChildren(),
-                  isClean());
-          transaction_ = null;
-        }
-        return transactionBuilder_;
+      public Builder clearTransactionBytes() {
+        
+        transactionBytes_ = getDefaultInstance().getTransactionBytes();
+        onChanged();
+        return this;
       }
       @Override
       public final Builder setUnknownFields(
@@ -2831,41 +2703,41 @@ public final class Request {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:SubmitTransactionRequest)
+      // @@protoc_insertion_point(builder_scope:SubmitTransactionBytesRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:SubmitTransactionRequest)
-    private static final SubmitTransactionRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:SubmitTransactionBytesRequest)
+    private static final SubmitTransactionBytesRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new SubmitTransactionRequest();
+      DEFAULT_INSTANCE = new SubmitTransactionBytesRequest();
     }
 
-    public static SubmitTransactionRequest getDefaultInstance() {
+    public static SubmitTransactionBytesRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<SubmitTransactionRequest>
-        PARSER = new com.google.protobuf.AbstractParser<SubmitTransactionRequest>() {
+    private static final com.google.protobuf.Parser<SubmitTransactionBytesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SubmitTransactionBytesRequest>() {
       @Override
-      public SubmitTransactionRequest parsePartialFrom(
+      public SubmitTransactionBytesRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SubmitTransactionRequest(input, extensionRegistry);
+        return new SubmitTransactionBytesRequest(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<SubmitTransactionRequest> parser() {
+    public static com.google.protobuf.Parser<SubmitTransactionBytesRequest> parser() {
       return PARSER;
     }
 
     @Override
-    public com.google.protobuf.Parser<SubmitTransactionRequest> getParserForType() {
+    public com.google.protobuf.Parser<SubmitTransactionBytesRequest> getParserForType() {
       return PARSER;
     }
 
     @Override
-    public SubmitTransactionRequest getDefaultInstanceForType() {
+    public SubmitTransactionBytesRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5225,10 +5097,10 @@ public final class Request {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_SubmitTransactionBuilderRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_SubmitTransactionRequest_descriptor;
+    internal_static_SubmitTransactionBytesRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_SubmitTransactionRequest_fieldAccessorTable;
+      internal_static_SubmitTransactionBytesRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_DetermineApprovalConfidenceRequest_descriptor;
   private static final 
@@ -5264,14 +5136,14 @@ public final class Request {
       "\030\001 \001(\t\",\n\034FindTransactionByHashRequest\022\014" +
       "\n\004hash\030\001 \001(\t\"R\n\037SubmitTransactionBuilder" +
       "Request\022/\n\022transactionBuilder\030\001 \001(\0132\023.Tr" +
-      "ansactionBuilder\"=\n\030SubmitTransactionReq" +
-      "uest\022!\n\013transaction\030\001 \001(\0132\014.Transaction\"" +
-      "=\n\"DetermineApprovalConfidenceRequest\022\027\n" +
-      "\017transactionHash\030\001 \001(\t\"/\n\030AddEffectListe" +
-      "nerRequest\022\023\n\013environment\030\001 \001(\t\"2\n\033Remov" +
-      "eEffectListenerRequest\022\023\n\013environment\030\001 " +
-      "\001(\t\":\n\023SubmitEffectRequest\022\023\n\013environmen" +
-      "t\030\001 \001(\t\022\016\n\006effect\030\002 \001(\tb\006proto3"
+      "ansactionBuilder\"9\n\035SubmitTransactionByt" +
+      "esRequest\022\030\n\020transactionBytes\030\001 \001(\014\"=\n\"D" +
+      "etermineApprovalConfidenceRequest\022\027\n\017tra" +
+      "nsactionHash\030\001 \001(\t\"/\n\030AddEffectListenerR" +
+      "equest\022\023\n\013environment\030\001 \001(\t\"2\n\033RemoveEff" +
+      "ectListenerRequest\022\023\n\013environment\030\001 \001(\t\"" +
+      ":\n\023SubmitEffectRequest\022\023\n\013environment\030\001 " +
+      "\001(\t\022\016\n\006effect\030\002 \001(\tb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5310,12 +5182,12 @@ public final class Request {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SubmitTransactionBuilderRequest_descriptor,
         new String[] { "TransactionBuilder", });
-    internal_static_SubmitTransactionRequest_descriptor =
+    internal_static_SubmitTransactionBytesRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_SubmitTransactionRequest_fieldAccessorTable = new
+    internal_static_SubmitTransactionBytesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_SubmitTransactionRequest_descriptor,
-        new String[] { "Transaction", });
+        internal_static_SubmitTransactionBytesRequest_descriptor,
+        new String[] { "TransactionBytes", });
     internal_static_DetermineApprovalConfidenceRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_DetermineApprovalConfidenceRequest_fieldAccessorTable = new
