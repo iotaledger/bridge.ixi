@@ -5,10 +5,14 @@ import org.iota.ict.ixi.util.Constants;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Bridge extends IxiModule {
 
     private ServerSocket serverSocket;
+    private List<ClientHandler> clients = new ArrayList();
+    private boolean terminate;
 
     public Bridge(Ixi ixi) {
         super(ixi);
@@ -26,14 +30,14 @@ public class Bridge extends IxiModule {
             return;
         }
 
-        while(true) {
+        while(!terminate) {
 
             Socket clientSocket = null;
 
             try {
 
                 clientSocket = serverSocket.accept();
-                new ClientHandler(clientSocket, ixi);
+                clients.add(new ClientHandler(clientSocket, ixi));
 
             } catch (IOException e) {
                 System.err.println("Error while accepting client.");
@@ -43,6 +47,13 @@ public class Bridge extends IxiModule {
 
         }
 
+    }
+
+    public void terminate() {
+        terminate = true;
+        try { serverSocket.close(); } catch(Exception e) { ; }
+        for(ClientHandler client: clients)
+            client.interrupt();
     }
 
 }

@@ -17,6 +17,14 @@ public class ProcessFindTransactionsByAddressRequest {
 
         Set<Transaction> transactions = clientHandler.getIxi().findTransactionsByAddress(request.getAddress());
 
+        if(transactions.size() == 0) {
+            Wrapper.WrapperMessage wrapperMessage = Wrapper.WrapperMessage.newBuilder()
+                    .setMessageType(Wrapper.WrapperMessage.MessageType.FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE)
+                    .build();
+            wrapperMessage.writeDelimitedTo(clientHandler.getOutputStream());
+            return;
+        }
+
         Response.FindTransactionsByAddressResponse.Builder responseBuilder = Response.FindTransactionsByAddressResponse.newBuilder();
 
         for(Transaction transaction: transactions) {

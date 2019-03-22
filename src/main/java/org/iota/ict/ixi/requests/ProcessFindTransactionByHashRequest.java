@@ -16,8 +16,16 @@ public class ProcessFindTransactionByHashRequest {
 
         Transaction transaction = clientHandler.getIxi().findTransactionByHash(request.getHash());
 
+        if(transaction == null) {
+            Wrapper.WrapperMessage wrapperMessage = Wrapper.WrapperMessage.newBuilder()
+                    .setMessageType(Wrapper.WrapperMessage.MessageType.FIND_TRANSACTION_BY_HASH_RESPONSE)
+                    .build();
+            wrapperMessage.writeDelimitedTo(clientHandler.getOutputStream());
+            return;
+        }
+
         Model.Transaction ret = Model.Transaction.newBuilder()
-                .setHash(request.getHash())
+                .setHash(transaction.hash)
                 .setSignatureFragments(transaction.signatureFragments())
                 .setExtraDataDigest(transaction.extraDataDigest())
                 .setAddress(transaction.address())

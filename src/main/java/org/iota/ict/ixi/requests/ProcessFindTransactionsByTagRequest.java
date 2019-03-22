@@ -15,7 +15,15 @@ public class ProcessFindTransactionsByTagRequest {
 
     public static void process(Request.FindTransactionsByTagRequest request, ClientHandler clientHandler) throws IOException {
 
-        Set<Transaction> transactions = clientHandler.getIxi().findTransactionsByAddress(request.getTag());
+        Set<Transaction> transactions = clientHandler.getIxi().findTransactionsByTag(request.getTag());
+
+        if(transactions.size() == 0) {
+            Wrapper.WrapperMessage wrapperMessage = Wrapper.WrapperMessage.newBuilder()
+                    .setMessageType(Wrapper.WrapperMessage.MessageType.FIND_TRANSACTIONS_BY_TAG_RESPONSE)
+                    .build();
+            wrapperMessage.writeDelimitedTo(clientHandler.getOutputStream());
+            return;
+        }
 
         Response.FindTransactionsByTagResponse.Builder responseBuilder = Response.FindTransactionsByTagResponse.newBuilder();
 
