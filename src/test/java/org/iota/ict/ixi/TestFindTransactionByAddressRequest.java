@@ -37,7 +37,7 @@ public class TestFindTransactionByAddressRequest extends TestTemplate {
         // register external module to bridge
         Socket socket = new Socket("127.0.0.1", Constants.DEFAULT_BRIDGE_PORT);
 
-        // request transaction by hash
+        // request transaction by address
         Request.FindTransactionsByAddressRequest request = Request.FindTransactionsByAddressRequest.newBuilder().setAddress(address).build();
         Wrapper.WrapperMessage message = Wrapper.WrapperMessage.newBuilder()
                 .setMessageType(Wrapper.WrapperMessage.MessageType.FIND_TRANSACTIONS_BY_ADDRESS_REQUEST)
