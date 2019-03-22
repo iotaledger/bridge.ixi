@@ -20,23 +20,25 @@ public class Bridge extends IxiModule {
         try {
             serverSocket = new ServerSocket(Constants.DEFAULT_PORT);
         } catch (IOException e) {
-            System.err.println("Error while staring server socket: " + e.getMessage());
+            System.err.println("Error while staring server socket.");
+            e.printStackTrace();
             try { serverSocket.close(); } catch(Exception x) { ; }
             return;
         }
 
         while(true) {
 
-            Socket client = null;
+            Socket clientSocket = null;
 
             try {
 
-                client = serverSocket.accept();
-                new ClientHandler(client, ixi);
+                clientSocket = serverSocket.accept();
+                new Client(clientSocket, ixi);
 
             } catch (IOException e) {
-                System.err.println("Error while accepting client: " + e.getMessage());
-                try { client.close(); } catch(Exception x) { ; }
+                System.err.println("Error while accepting client.");
+                e.printStackTrace();
+                try { clientSocket.close(); } catch(Exception x) { ; }
             }
 
         }
