@@ -104,13 +104,13 @@ public class ClientHandler extends Thread {
     }
 
     public void addEffectListener(EffectListenerQueue<String> effectListener) {
-        effectListenerByEnvironment.put(effectListener.getEnvironment().toString(), effectListener);
         ixi.addListener(effectListener);
+        effectListenerByEnvironment.put(effectListener.getEnvironment().toString(), effectListener);
     }
 
     public void removeEffectListener(String environment) {
+        ixi.removeListener(effectListenerByEnvironment.get(environment));
         effectListenerByEnvironment.remove(environment);
-        // remove also from ixi (method currently not available)
     }
 
 }
