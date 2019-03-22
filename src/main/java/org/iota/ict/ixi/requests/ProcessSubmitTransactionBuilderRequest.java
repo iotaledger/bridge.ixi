@@ -1,6 +1,6 @@
 package org.iota.ict.ixi.requests;
 
-import org.iota.ict.ixi.Client;
+import org.iota.ict.ixi.ClientHandler;
 import org.iota.ict.ixi.protobuf.Model;
 import org.iota.ict.ixi.protobuf.Request;
 import org.iota.ict.model.transaction.Transaction;
@@ -10,7 +10,7 @@ import java.math.BigInteger;
 
 public class ProcessSubmitTransactionBuilderRequest {
 
-    public static void process(Request.SubmitTransactionBuilderRequest request, Client clientHandler) {
+    public static void process(Request.SubmitTransactionBuilderRequest request, ClientHandler clientHandler) {
 
         Model.TransactionBuilder protoBuf = request.getTransactionBuilder();
 

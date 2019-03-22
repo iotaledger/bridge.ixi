@@ -1,6 +1,6 @@
 package org.iota.ict.ixi.requests;
 
-import org.iota.ict.ixi.Client;
+import org.iota.ict.ixi.ClientHandler;
 import org.iota.ict.ixi.protobuf.Request;
 import org.iota.ict.ixi.protobuf.Response;
 import org.iota.ict.ixi.protobuf.Wrapper;
@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class ProcessDetermineApprovalConfidenceRequest {
 
-    public static void process(Request.DetermineApprovalConfidenceRequest request, Client clientHandler) throws IOException {
+    public static void process(Request.DetermineApprovalConfidenceRequest request, ClientHandler clientHandler) throws IOException {
 
         double approvalConfidence = clientHandler.getIxi().determineApprovalConfidence(request.getTransactionHash());
 

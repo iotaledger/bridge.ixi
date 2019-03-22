@@ -1,6 +1,6 @@
 package org.iota.ict.ixi;
 
-import org.iota.ict.eee.EffectListener;
+import org.iota.ict.eee.EffectListenerQueue;
 import org.iota.ict.ixi.protobuf.Wrapper;
 import org.iota.ict.ixi.requests.*;
 
@@ -13,13 +13,13 @@ import java.util.Map;
 /**
  * Thread which handles incoming connections on the given socket.
  */
-public class Client extends Thread {
+public class ClientHandler extends Thread {
 
     private Socket socket;
     private Ixi ixi;
-    private Map<String, EffectListener<String>> registeredListener = new HashMap<>();
+    private Map<String, EffectListenerQueue<String>> effectListenerByEnvironment = new HashMap<>();
 
-    public Client(Socket socket, Ixi ixi) {
+    public ClientHandler(Socket socket, Ixi ixi) {
         this.socket = socket;
         this.ixi = ixi;
         start();
@@ -101,6 +101,16 @@ public class Client extends Thread {
 
     public Ixi getIxi() {
         return ixi;
+    }
+
+    public void addEffectListener(EffectListenerQueue<String> effectListener) {
+        effectListenerByEnvironment.put(effectListener.getEnvironment().toString(), effectListener);
+        ixi.addListener(effectListener);
+    }
+
+    public void removeEffectListener(String environment) {
+        effectListenerByEnvironment.remove(environment);
+        // remove also from ixi (method currently not available)
     }
 
 }

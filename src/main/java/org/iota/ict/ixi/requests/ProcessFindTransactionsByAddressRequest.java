@@ -1,7 +1,7 @@
 package org.iota.ict.ixi.requests;
 
 import com.google.protobuf.ByteString;
-import org.iota.ict.ixi.Client;
+import org.iota.ict.ixi.ClientHandler;
 import org.iota.ict.ixi.protobuf.Model;
 import org.iota.ict.ixi.protobuf.Request;
 import org.iota.ict.ixi.protobuf.Response;
@@ -13,7 +13,7 @@ import java.util.Set;
 
 public class ProcessFindTransactionsByAddressRequest {
 
-    public static void process(Request.FindTransactionsByAddressRequest request, Client clientHandler) throws IOException {
+    public static void process(Request.FindTransactionsByAddressRequest request, ClientHandler clientHandler) throws IOException {
 
         Set<Transaction> transactions = clientHandler.getIxi().findTransactionsByAddress(request.getAddress());
 

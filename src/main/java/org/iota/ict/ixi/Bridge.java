@@ -18,7 +18,7 @@ public class Bridge extends IxiModule {
     public void run() {
 
         try {
-            serverSocket = new ServerSocket(Constants.DEFAULT_PORT);
+            serverSocket = new ServerSocket(Constants.DEFAULT_BRIDGE_PORT);
         } catch (IOException e) {
             System.err.println("Error while staring server socket.");
             e.printStackTrace();
@@ -33,7 +33,7 @@ public class Bridge extends IxiModule {
             try {
 
                 clientSocket = serverSocket.accept();
-                new Client(clientSocket, ixi);
+                new ClientHandler(clientSocket, ixi);
 
             } catch (IOException e) {
                 System.err.println("Error while accepting client.");

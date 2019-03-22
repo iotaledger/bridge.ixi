@@ -1,11 +1,17 @@
 package org.iota.ict.ixi.requests;
 
-import org.iota.ict.ixi.Client;
+import org.iota.ict.eee.Environment;
+import org.iota.ict.ixi.ClientHandler;
 import org.iota.ict.ixi.protobuf.Request;
 
 public class ProcessSubmitEffectRequest {
 
-    public static void process(Request.SubmitEffectRequest request, Client clientHandler) {
+    public static void process(Request.SubmitEffectRequest request, ClientHandler clientHandler) {
+
+        String effect = request.getEffect();
+        String environment = request.getEnvironment();
+
+        clientHandler.getIxi().submitEffect(new Environment(environment), effect);
 
     }
 

@@ -1,7 +1,7 @@
 package org.iota.ict.ixi.requests;
 
 import com.google.protobuf.ByteString;
-import org.iota.ict.ixi.Client;
+import org.iota.ict.ixi.ClientHandler;
 import org.iota.ict.ixi.protobuf.Model;
 import org.iota.ict.ixi.protobuf.Request;
 import org.iota.ict.ixi.protobuf.Response;
@@ -12,11 +12,12 @@ import java.io.IOException;
 
 public class ProcessFindTransactionByHashRequest {
 
-    public static void process(Request.FindTransactionByHashRequest request, Client clientHandler) throws IOException {
+    public static void process(Request.FindTransactionByHashRequest request, ClientHandler clientHandler) throws IOException {
 
         Transaction transaction = clientHandler.getIxi().findTransactionByHash(request.getHash());
 
         Model.Transaction ret = Model.Transaction.newBuilder()
+                .setHash(request.getHash())
                 .setSignatureFragments(transaction.signatureFragments())
                 .setExtraDataDigest(transaction.extraDataDigest())
                 .setAddress(transaction.address())
