@@ -1,7 +1,6 @@
-package org.iota.ict.ixi.requests;
+package org.iota.ict.ixi.handler;
 
 import com.google.protobuf.ByteString;
-import org.iota.ict.ixi.ClientHandler;
 import org.iota.ict.ixi.protobuf.Model;
 import org.iota.ict.ixi.protobuf.Request;
 import org.iota.ict.ixi.protobuf.Response;
@@ -11,21 +10,21 @@ import org.iota.ict.model.transaction.Transaction;
 import java.io.IOException;
 import java.util.Set;
 
-public class ProcessFindTransactionsByAddressRequest {
+public class ProcessFindTransactionsByTagRequest {
 
-    public static void process(Request.FindTransactionsByAddressRequest request, ClientHandler clientHandler) throws IOException {
+    public static void process(Request.FindTransactionsByTagRequest request, ClientHandler clientHandler) throws IOException {
 
-        Set<Transaction> transactions = clientHandler.getIxi().findTransactionsByAddress(request.getAddress());
+        Set<Transaction> transactions = clientHandler.getIxi().findTransactionsByTag(request.getTag());
 
         if(transactions.size() == 0) {
             Wrapper.WrapperMessage wrapperMessage = Wrapper.WrapperMessage.newBuilder()
-                    .setMessageType(Wrapper.WrapperMessage.MessageType.FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE)
+                    .setMessageType(Wrapper.WrapperMessage.MessageType.FIND_TRANSACTIONS_BY_TAG_RESPONSE)
                     .build();
             wrapperMessage.writeDelimitedTo(clientHandler.getOutputStream());
             return;
         }
 
-        Response.FindTransactionsByAddressResponse.Builder responseBuilder = Response.FindTransactionsByAddressResponse.newBuilder();
+        Response.FindTransactionsByTagResponse.Builder responseBuilder = Response.FindTransactionsByTagResponse.newBuilder();
 
         for(Transaction transaction: transactions) {
 
@@ -56,8 +55,8 @@ public class ProcessFindTransactionsByAddressRequest {
         }
 
         Wrapper.WrapperMessage wrapperMessage = Wrapper.WrapperMessage.newBuilder()
-                .setMessageType(Wrapper.WrapperMessage.MessageType.FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE)
-                .setFindTransactionsByAddressResponse(responseBuilder.build())
+                .setMessageType(Wrapper.WrapperMessage.MessageType.FIND_TRANSACTIONS_BY_TAG_RESPONSE)
+                .setFindTransactionsByTagResponse(responseBuilder.build())
                 .build();
 
         wrapperMessage.writeDelimitedTo(clientHandler.getOutputStream());

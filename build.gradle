@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'org.iota.'
-version '0.0.1'
+version '0.1-SNAPSHOT'
 
 sourceCompatibility = 1.8
 repositories {
@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.iotaledger:ict:3cd81fce9eb79ec78a104f5460f25c91734d5dd9'
+    compile 'com.github.iotaledger:ict:632bd04c96b24a08e16b8466857da2108bd17ed6'
     compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.11.1'
     compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.11.1'
     compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.21'

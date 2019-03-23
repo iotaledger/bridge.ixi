@@ -1,5 +1,6 @@
 package org.iota.ict.ixi;
 
+import org.iota.ict.ixi.handler.ClientHandler;
 import org.iota.ict.ixi.util.Constants;
 
 import java.io.IOException;
@@ -29,6 +30,8 @@ public class Bridge extends IxiModule {
             try { serverSocket.close(); } catch(Exception x) { ; }
             return;
         }
+
+        System.out.println("bridge.ixi successfully started at port "+Constants.DEFAULT_BRIDGE_PORT);
 
         while(!terminate) {
 

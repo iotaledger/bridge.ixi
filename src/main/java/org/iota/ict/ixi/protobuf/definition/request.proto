@@ -38,3 +38,7 @@ message SubmitEffectRequest {
 	string environment = 1;
 	string effect = 2;
 }
+
+message GetEffectRequest {
+	string environment = 1;
+}

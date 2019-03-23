@@ -122,42 +122,12 @@ public final class Model {
     long getAttachmentTimestampUpperBound();
 
     /**
-     * <code>string nonce = 15;</code>
-     */
-    String getNonce();
-    /**
-     * <code>string nonce = 15;</code>
-     */
-    com.google.protobuf.ByteString
-        getNonceBytes();
-
-    /**
-     * <code>string decodedSignatureFragments = 16;</code>
-     */
-    String getDecodedSignatureFragments();
-    /**
-     * <code>string decodedSignatureFragments = 16;</code>
-     */
-    com.google.protobuf.ByteString
-        getDecodedSignatureFragmentsBytes();
-
-    /**
-     * <code>string essence = 17;</code>
-     */
-    String getEssence();
-    /**
-     * <code>string essence = 17;</code>
-     */
-    com.google.protobuf.ByteString
-        getEssenceBytes();
-
-    /**
-     * <code>bool isBundleHead = 18;</code>
+     * <code>bool isBundleHead = 15;</code>
      */
     boolean getIsBundleHead();
 
     /**
-     * <code>bool isBundleTail = 19;</code>
+     * <code>bool isBundleTail = 16;</code>
      */
     boolean getIsBundleTail();
   }
@@ -182,9 +152,6 @@ public final class Model {
       trunkHash_ = "";
       branchHash_ = "";
       tag_ = "";
-      nonce_ = "";
-      decodedSignatureFragments_ = "";
-      essence_ = "";
     }
 
     @Override
@@ -288,30 +255,12 @@ public final class Model {
               attachmentTimestampUpperBound_ = input.readInt64();
               break;
             }
-            case 122: {
-              String s = input.readStringRequireUtf8();
-
-              nonce_ = s;
-              break;
-            }
-            case 130: {
-              String s = input.readStringRequireUtf8();
-
-              decodedSignatureFragments_ = s;
-              break;
-            }
-            case 138: {
-              String s = input.readStringRequireUtf8();
-
-              essence_ = s;
-              break;
-            }
-            case 144: {
+            case 120: {
 
               isBundleHead_ = input.readBool();
               break;
             }
-            case 152: {
+            case 128: {
 
               isBundleTail_ = input.readBool();
               break;
@@ -649,121 +598,19 @@ public final class Model {
       return attachmentTimestampUpperBound_;
     }
 
-    public static final int NONCE_FIELD_NUMBER = 15;
-    private volatile Object nonce_;
-    /**
-     * <code>string nonce = 15;</code>
-     */
-    public String getNonce() {
-      Object ref = nonce_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        nonce_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string nonce = 15;</code>
-     */
-    public com.google.protobuf.ByteString
-        getNonceBytes() {
-      Object ref = nonce_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        nonce_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int DECODEDSIGNATUREFRAGMENTS_FIELD_NUMBER = 16;
-    private volatile Object decodedSignatureFragments_;
-    /**
-     * <code>string decodedSignatureFragments = 16;</code>
-     */
-    public String getDecodedSignatureFragments() {
-      Object ref = decodedSignatureFragments_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        decodedSignatureFragments_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string decodedSignatureFragments = 16;</code>
-     */
-    public com.google.protobuf.ByteString
-        getDecodedSignatureFragmentsBytes() {
-      Object ref = decodedSignatureFragments_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        decodedSignatureFragments_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ESSENCE_FIELD_NUMBER = 17;
-    private volatile Object essence_;
-    /**
-     * <code>string essence = 17;</code>
-     */
-    public String getEssence() {
-      Object ref = essence_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        essence_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string essence = 17;</code>
-     */
-    public com.google.protobuf.ByteString
-        getEssenceBytes() {
-      Object ref = essence_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        essence_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ISBUNDLEHEAD_FIELD_NUMBER = 18;
+    public static final int ISBUNDLEHEAD_FIELD_NUMBER = 15;
     private boolean isBundleHead_;
     /**
-     * <code>bool isBundleHead = 18;</code>
+     * <code>bool isBundleHead = 15;</code>
      */
     public boolean getIsBundleHead() {
       return isBundleHead_;
     }
 
-    public static final int ISBUNDLETAIL_FIELD_NUMBER = 19;
+    public static final int ISBUNDLETAIL_FIELD_NUMBER = 16;
     private boolean isBundleTail_;
     /**
-     * <code>bool isBundleTail = 19;</code>
+     * <code>bool isBundleTail = 16;</code>
      */
     public boolean getIsBundleTail() {
       return isBundleTail_;
@@ -825,20 +672,11 @@ public final class Model {
       if (attachmentTimestampUpperBound_ != 0L) {
         output.writeInt64(14, attachmentTimestampUpperBound_);
       }
-      if (!getNonceBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, nonce_);
-      }
-      if (!getDecodedSignatureFragmentsBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, decodedSignatureFragments_);
-      }
-      if (!getEssenceBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, essence_);
-      }
       if (isBundleHead_ != false) {
-        output.writeBool(18, isBundleHead_);
+        output.writeBool(15, isBundleHead_);
       }
       if (isBundleTail_ != false) {
-        output.writeBool(19, isBundleTail_);
+        output.writeBool(16, isBundleTail_);
       }
       unknownFields.writeTo(output);
     }
@@ -898,22 +736,13 @@ public final class Model {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(14, attachmentTimestampUpperBound_);
       }
-      if (!getNonceBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, nonce_);
-      }
-      if (!getDecodedSignatureFragmentsBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, decodedSignatureFragments_);
-      }
-      if (!getEssenceBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, essence_);
-      }
       if (isBundleHead_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(18, isBundleHead_);
+          .computeBoolSize(15, isBundleHead_);
       }
       if (isBundleTail_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(19, isBundleTail_);
+          .computeBoolSize(16, isBundleTail_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -958,12 +787,6 @@ public final class Model {
           != other.getAttachmentTimestampLowerBound()) return false;
       if (getAttachmentTimestampUpperBound()
           != other.getAttachmentTimestampUpperBound()) return false;
-      if (!getNonce()
-          .equals(other.getNonce())) return false;
-      if (!getDecodedSignatureFragments()
-          .equals(other.getDecodedSignatureFragments())) return false;
-      if (!getEssence()
-          .equals(other.getEssence())) return false;
       if (getIsBundleHead()
           != other.getIsBundleHead()) return false;
       if (getIsBundleTail()
@@ -1013,12 +836,6 @@ public final class Model {
       hash = (37 * hash) + ATTACHMENTTIMESTAMPUPPERBOUND_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getAttachmentTimestampUpperBound());
-      hash = (37 * hash) + NONCE_FIELD_NUMBER;
-      hash = (53 * hash) + getNonce().hashCode();
-      hash = (37 * hash) + DECODEDSIGNATUREFRAGMENTS_FIELD_NUMBER;
-      hash = (53 * hash) + getDecodedSignatureFragments().hashCode();
-      hash = (37 * hash) + ESSENCE_FIELD_NUMBER;
-      hash = (53 * hash) + getEssence().hashCode();
       hash = (37 * hash) + ISBUNDLEHEAD_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsBundleHead());
@@ -1186,12 +1003,6 @@ public final class Model {
 
         attachmentTimestampUpperBound_ = 0L;
 
-        nonce_ = "";
-
-        decodedSignatureFragments_ = "";
-
-        essence_ = "";
-
         isBundleHead_ = false;
 
         isBundleTail_ = false;
@@ -1236,9 +1047,6 @@ public final class Model {
         result.attachmentTimestamp_ = attachmentTimestamp_;
         result.attachmentTimestampLowerBound_ = attachmentTimestampLowerBound_;
         result.attachmentTimestampUpperBound_ = attachmentTimestampUpperBound_;
-        result.nonce_ = nonce_;
-        result.decodedSignatureFragments_ = decodedSignatureFragments_;
-        result.essence_ = essence_;
         result.isBundleHead_ = isBundleHead_;
         result.isBundleTail_ = isBundleTail_;
         onBuilt();
@@ -1337,18 +1145,6 @@ public final class Model {
         }
         if (other.getAttachmentTimestampUpperBound() != 0L) {
           setAttachmentTimestampUpperBound(other.getAttachmentTimestampUpperBound());
-        }
-        if (!other.getNonce().isEmpty()) {
-          nonce_ = other.nonce_;
-          onChanged();
-        }
-        if (!other.getDecodedSignatureFragments().isEmpty()) {
-          decodedSignatureFragments_ = other.decodedSignatureFragments_;
-          onChanged();
-        }
-        if (!other.getEssence().isEmpty()) {
-          essence_ = other.essence_;
-          onChanged();
         }
         if (other.getIsBundleHead() != false) {
           setIsBundleHead(other.getIsBundleHead());
@@ -2053,222 +1849,15 @@ public final class Model {
         return this;
       }
 
-      private Object nonce_ = "";
-      /**
-       * <code>string nonce = 15;</code>
-       */
-      public String getNonce() {
-        Object ref = nonce_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          nonce_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>string nonce = 15;</code>
-       */
-      public com.google.protobuf.ByteString
-          getNonceBytes() {
-        Object ref = nonce_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          nonce_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string nonce = 15;</code>
-       */
-      public Builder setNonce(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        nonce_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string nonce = 15;</code>
-       */
-      public Builder clearNonce() {
-        
-        nonce_ = getDefaultInstance().getNonce();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string nonce = 15;</code>
-       */
-      public Builder setNonceBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        nonce_ = value;
-        onChanged();
-        return this;
-      }
-
-      private Object decodedSignatureFragments_ = "";
-      /**
-       * <code>string decodedSignatureFragments = 16;</code>
-       */
-      public String getDecodedSignatureFragments() {
-        Object ref = decodedSignatureFragments_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          decodedSignatureFragments_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>string decodedSignatureFragments = 16;</code>
-       */
-      public com.google.protobuf.ByteString
-          getDecodedSignatureFragmentsBytes() {
-        Object ref = decodedSignatureFragments_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          decodedSignatureFragments_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string decodedSignatureFragments = 16;</code>
-       */
-      public Builder setDecodedSignatureFragments(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        decodedSignatureFragments_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string decodedSignatureFragments = 16;</code>
-       */
-      public Builder clearDecodedSignatureFragments() {
-        
-        decodedSignatureFragments_ = getDefaultInstance().getDecodedSignatureFragments();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string decodedSignatureFragments = 16;</code>
-       */
-      public Builder setDecodedSignatureFragmentsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        decodedSignatureFragments_ = value;
-        onChanged();
-        return this;
-      }
-
-      private Object essence_ = "";
-      /**
-       * <code>string essence = 17;</code>
-       */
-      public String getEssence() {
-        Object ref = essence_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          essence_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>string essence = 17;</code>
-       */
-      public com.google.protobuf.ByteString
-          getEssenceBytes() {
-        Object ref = essence_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          essence_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string essence = 17;</code>
-       */
-      public Builder setEssence(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        essence_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string essence = 17;</code>
-       */
-      public Builder clearEssence() {
-        
-        essence_ = getDefaultInstance().getEssence();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string essence = 17;</code>
-       */
-      public Builder setEssenceBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        essence_ = value;
-        onChanged();
-        return this;
-      }
-
       private boolean isBundleHead_ ;
       /**
-       * <code>bool isBundleHead = 18;</code>
+       * <code>bool isBundleHead = 15;</code>
        */
       public boolean getIsBundleHead() {
         return isBundleHead_;
       }
       /**
-       * <code>bool isBundleHead = 18;</code>
+       * <code>bool isBundleHead = 15;</code>
        */
       public Builder setIsBundleHead(boolean value) {
         
@@ -2277,7 +1866,7 @@ public final class Model {
         return this;
       }
       /**
-       * <code>bool isBundleHead = 18;</code>
+       * <code>bool isBundleHead = 15;</code>
        */
       public Builder clearIsBundleHead() {
         
@@ -2288,13 +1877,13 @@ public final class Model {
 
       private boolean isBundleTail_ ;
       /**
-       * <code>bool isBundleTail = 19;</code>
+       * <code>bool isBundleTail = 16;</code>
        */
       public boolean getIsBundleTail() {
         return isBundleTail_;
       }
       /**
-       * <code>bool isBundleTail = 19;</code>
+       * <code>bool isBundleTail = 16;</code>
        */
       public Builder setIsBundleTail(boolean value) {
         
@@ -2303,7 +1892,7 @@ public final class Model {
         return this;
       }
       /**
-       * <code>bool isBundleTail = 19;</code>
+       * <code>bool isBundleTail = 16;</code>
        */
       public Builder clearIsBundleTail() {
         
@@ -2369,159 +1958,159 @@ public final class Model {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string signatureFragments = 1;</code>
+     * <code>string hash = 1;</code>
+     */
+    String getHash();
+    /**
+     * <code>string hash = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getHashBytes();
+
+    /**
+     * <code>string signatureFragments = 2;</code>
      */
     String getSignatureFragments();
     /**
-     * <code>string signatureFragments = 1;</code>
+     * <code>string signatureFragments = 2;</code>
      */
     com.google.protobuf.ByteString
         getSignatureFragmentsBytes();
 
     /**
-     * <code>string extraDataDigest = 2;</code>
+     * <code>string extraDataDigest = 3;</code>
      */
     String getExtraDataDigest();
     /**
-     * <code>string extraDataDigest = 2;</code>
+     * <code>string extraDataDigest = 3;</code>
      */
     com.google.protobuf.ByteString
         getExtraDataDigestBytes();
 
     /**
-     * <code>string address = 3;</code>
+     * <code>string address = 4;</code>
      */
     String getAddress();
     /**
-     * <code>string address = 3;</code>
+     * <code>string address = 4;</code>
      */
     com.google.protobuf.ByteString
         getAddressBytes();
 
     /**
-     * <code>bytes value = 4;</code>
+     * <code>bytes value = 5;</code>
      */
     com.google.protobuf.ByteString getValue();
 
     /**
-     * <code>int64 issuanceTimestamp = 5;</code>
+     * <code>int64 issuanceTimestamp = 6;</code>
      */
     long getIssuanceTimestamp();
 
     /**
-     * <code>int64 timelockLowerBound = 6;</code>
+     * <code>int64 timelockLowerBound = 7;</code>
      */
     long getTimelockLowerBound();
 
     /**
-     * <code>int64 timelockUpperBound = 7;</code>
+     * <code>int64 timelockUpperBound = 8;</code>
      */
     long getTimelockUpperBound();
 
     /**
-     * <code>string bundleNonce = 8;</code>
+     * <code>string bundleNonce = 9;</code>
      */
     String getBundleNonce();
     /**
-     * <code>string bundleNonce = 8;</code>
+     * <code>string bundleNonce = 9;</code>
      */
     com.google.protobuf.ByteString
         getBundleNonceBytes();
 
     /**
-     * <code>string trunkHash = 9;</code>
+     * <code>string trunkHash = 10;</code>
      */
     String getTrunkHash();
     /**
-     * <code>string trunkHash = 9;</code>
+     * <code>string trunkHash = 10;</code>
      */
     com.google.protobuf.ByteString
         getTrunkHashBytes();
 
     /**
-     * <code>string branchHash = 10;</code>
+     * <code>string branchHash = 11;</code>
      */
     String getBranchHash();
     /**
-     * <code>string branchHash = 10;</code>
+     * <code>string branchHash = 11;</code>
      */
     com.google.protobuf.ByteString
         getBranchHashBytes();
 
     /**
-     * <code>string tag = 11;</code>
+     * <code>string tag = 12;</code>
      */
     String getTag();
     /**
-     * <code>string tag = 11;</code>
+     * <code>string tag = 12;</code>
      */
     com.google.protobuf.ByteString
         getTagBytes();
 
     /**
-     * <code>int64 attachmentTimestamp = 12;</code>
+     * <code>int64 attachmentTimestamp = 13;</code>
      */
     long getAttachmentTimestamp();
 
     /**
-     * <code>int64 attachmentTimestampLowerBound = 13;</code>
+     * <code>int64 attachmentTimestampLowerBound = 14;</code>
      */
     long getAttachmentTimestampLowerBound();
 
     /**
-     * <code>int64 attachmentTimestampUpperBound = 14;</code>
+     * <code>int64 attachmentTimestampUpperBound = 15;</code>
      */
     long getAttachmentTimestampUpperBound();
 
     /**
-     * <code>string nonce = 15;</code>
+     * <code>string nonce = 16;</code>
      */
     String getNonce();
     /**
-     * <code>string nonce = 15;</code>
+     * <code>string nonce = 16;</code>
      */
     com.google.protobuf.ByteString
         getNonceBytes();
 
     /**
-     * <code>string decodedSignatureFragments = 16;</code>
+     * <code>string decodedSignatureFragments = 17;</code>
      */
     String getDecodedSignatureFragments();
     /**
-     * <code>string decodedSignatureFragments = 16;</code>
+     * <code>string decodedSignatureFragments = 17;</code>
      */
     com.google.protobuf.ByteString
         getDecodedSignatureFragmentsBytes();
 
     /**
-     * <code>string essence = 17;</code>
+     * <code>string essence = 18;</code>
      */
     String getEssence();
     /**
-     * <code>string essence = 17;</code>
+     * <code>string essence = 18;</code>
      */
     com.google.protobuf.ByteString
         getEssenceBytes();
 
     /**
-     * <code>bool isBundleHead = 18;</code>
+     * <code>bool isBundleHead = 19;</code>
      */
     boolean getIsBundleHead();
 
     /**
-     * <code>bool isBundleTail = 19;</code>
+     * <code>bool isBundleTail = 20;</code>
      */
     boolean getIsBundleTail();
-
-    /**
-     * <code>string hash = 20;</code>
-     */
-    String getHash();
-    /**
-     * <code>string hash = 20;</code>
-     */
-    com.google.protobuf.ByteString
-        getHashBytes();
   }
   /**
    * Protobuf type {@code Transaction}
@@ -2536,6 +2125,7 @@ public final class Model {
       super(builder);
     }
     private Transaction() {
+      hash_ = "";
       signatureFragments_ = "";
       extraDataDigest_ = "";
       address_ = "";
@@ -2547,7 +2137,6 @@ public final class Model {
       nonce_ = "";
       decodedSignatureFragments_ = "";
       essence_ = "";
-      hash_ = "";
     }
 
     @Override
@@ -2577,112 +2166,112 @@ public final class Model {
             case 10: {
               String s = input.readStringRequireUtf8();
 
-              signatureFragments_ = s;
+              hash_ = s;
               break;
             }
             case 18: {
               String s = input.readStringRequireUtf8();
 
-              extraDataDigest_ = s;
+              signatureFragments_ = s;
               break;
             }
             case 26: {
               String s = input.readStringRequireUtf8();
 
-              address_ = s;
+              extraDataDigest_ = s;
               break;
             }
             case 34: {
+              String s = input.readStringRequireUtf8();
+
+              address_ = s;
+              break;
+            }
+            case 42: {
 
               value_ = input.readBytes();
               break;
             }
-            case 40: {
+            case 48: {
 
               issuanceTimestamp_ = input.readInt64();
               break;
             }
-            case 48: {
+            case 56: {
 
               timelockLowerBound_ = input.readInt64();
               break;
             }
-            case 56: {
+            case 64: {
 
               timelockUpperBound_ = input.readInt64();
-              break;
-            }
-            case 66: {
-              String s = input.readStringRequireUtf8();
-
-              bundleNonce_ = s;
               break;
             }
             case 74: {
               String s = input.readStringRequireUtf8();
 
-              trunkHash_ = s;
+              bundleNonce_ = s;
               break;
             }
             case 82: {
               String s = input.readStringRequireUtf8();
 
-              branchHash_ = s;
+              trunkHash_ = s;
               break;
             }
             case 90: {
               String s = input.readStringRequireUtf8();
 
-              tag_ = s;
+              branchHash_ = s;
               break;
             }
-            case 96: {
+            case 98: {
+              String s = input.readStringRequireUtf8();
 
-              attachmentTimestamp_ = input.readInt64();
+              tag_ = s;
               break;
             }
             case 104: {
 
-              attachmentTimestampLowerBound_ = input.readInt64();
+              attachmentTimestamp_ = input.readInt64();
               break;
             }
             case 112: {
 
-              attachmentTimestampUpperBound_ = input.readInt64();
+              attachmentTimestampLowerBound_ = input.readInt64();
               break;
             }
-            case 122: {
-              String s = input.readStringRequireUtf8();
+            case 120: {
 
-              nonce_ = s;
+              attachmentTimestampUpperBound_ = input.readInt64();
               break;
             }
             case 130: {
               String s = input.readStringRequireUtf8();
 
-              decodedSignatureFragments_ = s;
+              nonce_ = s;
               break;
             }
             case 138: {
               String s = input.readStringRequireUtf8();
 
-              essence_ = s;
+              decodedSignatureFragments_ = s;
               break;
             }
-            case 144: {
+            case 146: {
+              String s = input.readStringRequireUtf8();
 
-              isBundleHead_ = input.readBool();
+              essence_ = s;
               break;
             }
             case 152: {
 
-              isBundleTail_ = input.readBool();
+              isBundleHead_ = input.readBool();
               break;
             }
-            case 162: {
-              String s = input.readStringRequireUtf8();
+            case 160: {
 
-              hash_ = s;
+              isBundleTail_ = input.readBool();
               break;
             }
             default: {
@@ -2717,10 +2306,44 @@ public final class Model {
               Transaction.class, Builder.class);
     }
 
-    public static final int SIGNATUREFRAGMENTS_FIELD_NUMBER = 1;
+    public static final int HASH_FIELD_NUMBER = 1;
+    private volatile Object hash_;
+    /**
+     * <code>string hash = 1;</code>
+     */
+    public String getHash() {
+      Object ref = hash_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        hash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string hash = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHashBytes() {
+      Object ref = hash_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
+        hash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGNATUREFRAGMENTS_FIELD_NUMBER = 2;
     private volatile Object signatureFragments_;
     /**
-     * <code>string signatureFragments = 1;</code>
+     * <code>string signatureFragments = 2;</code>
      */
     public String getSignatureFragments() {
       Object ref = signatureFragments_;
@@ -2735,7 +2358,7 @@ public final class Model {
       }
     }
     /**
-     * <code>string signatureFragments = 1;</code>
+     * <code>string signatureFragments = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSignatureFragmentsBytes() {
@@ -2751,10 +2374,10 @@ public final class Model {
       }
     }
 
-    public static final int EXTRADATADIGEST_FIELD_NUMBER = 2;
+    public static final int EXTRADATADIGEST_FIELD_NUMBER = 3;
     private volatile Object extraDataDigest_;
     /**
-     * <code>string extraDataDigest = 2;</code>
+     * <code>string extraDataDigest = 3;</code>
      */
     public String getExtraDataDigest() {
       Object ref = extraDataDigest_;
@@ -2769,7 +2392,7 @@ public final class Model {
       }
     }
     /**
-     * <code>string extraDataDigest = 2;</code>
+     * <code>string extraDataDigest = 3;</code>
      */
     public com.google.protobuf.ByteString
         getExtraDataDigestBytes() {
@@ -2785,10 +2408,10 @@ public final class Model {
       }
     }
 
-    public static final int ADDRESS_FIELD_NUMBER = 3;
+    public static final int ADDRESS_FIELD_NUMBER = 4;
     private volatile Object address_;
     /**
-     * <code>string address = 3;</code>
+     * <code>string address = 4;</code>
      */
     public String getAddress() {
       Object ref = address_;
@@ -2803,7 +2426,7 @@ public final class Model {
       }
     }
     /**
-     * <code>string address = 3;</code>
+     * <code>string address = 4;</code>
      */
     public com.google.protobuf.ByteString
         getAddressBytes() {
@@ -2819,46 +2442,46 @@ public final class Model {
       }
     }
 
-    public static final int VALUE_FIELD_NUMBER = 4;
+    public static final int VALUE_FIELD_NUMBER = 5;
     private com.google.protobuf.ByteString value_;
     /**
-     * <code>bytes value = 4;</code>
+     * <code>bytes value = 5;</code>
      */
     public com.google.protobuf.ByteString getValue() {
       return value_;
     }
 
-    public static final int ISSUANCETIMESTAMP_FIELD_NUMBER = 5;
+    public static final int ISSUANCETIMESTAMP_FIELD_NUMBER = 6;
     private long issuanceTimestamp_;
     /**
-     * <code>int64 issuanceTimestamp = 5;</code>
+     * <code>int64 issuanceTimestamp = 6;</code>
      */
     public long getIssuanceTimestamp() {
       return issuanceTimestamp_;
     }
 
-    public static final int TIMELOCKLOWERBOUND_FIELD_NUMBER = 6;
+    public static final int TIMELOCKLOWERBOUND_FIELD_NUMBER = 7;
     private long timelockLowerBound_;
     /**
-     * <code>int64 timelockLowerBound = 6;</code>
+     * <code>int64 timelockLowerBound = 7;</code>
      */
     public long getTimelockLowerBound() {
       return timelockLowerBound_;
     }
 
-    public static final int TIMELOCKUPPERBOUND_FIELD_NUMBER = 7;
+    public static final int TIMELOCKUPPERBOUND_FIELD_NUMBER = 8;
     private long timelockUpperBound_;
     /**
-     * <code>int64 timelockUpperBound = 7;</code>
+     * <code>int64 timelockUpperBound = 8;</code>
      */
     public long getTimelockUpperBound() {
       return timelockUpperBound_;
     }
 
-    public static final int BUNDLENONCE_FIELD_NUMBER = 8;
+    public static final int BUNDLENONCE_FIELD_NUMBER = 9;
     private volatile Object bundleNonce_;
     /**
-     * <code>string bundleNonce = 8;</code>
+     * <code>string bundleNonce = 9;</code>
      */
     public String getBundleNonce() {
       Object ref = bundleNonce_;
@@ -2873,7 +2496,7 @@ public final class Model {
       }
     }
     /**
-     * <code>string bundleNonce = 8;</code>
+     * <code>string bundleNonce = 9;</code>
      */
     public com.google.protobuf.ByteString
         getBundleNonceBytes() {
@@ -2889,10 +2512,10 @@ public final class Model {
       }
     }
 
-    public static final int TRUNKHASH_FIELD_NUMBER = 9;
+    public static final int TRUNKHASH_FIELD_NUMBER = 10;
     private volatile Object trunkHash_;
     /**
-     * <code>string trunkHash = 9;</code>
+     * <code>string trunkHash = 10;</code>
      */
     public String getTrunkHash() {
       Object ref = trunkHash_;
@@ -2907,7 +2530,7 @@ public final class Model {
       }
     }
     /**
-     * <code>string trunkHash = 9;</code>
+     * <code>string trunkHash = 10;</code>
      */
     public com.google.protobuf.ByteString
         getTrunkHashBytes() {
@@ -2923,10 +2546,10 @@ public final class Model {
       }
     }
 
-    public static final int BRANCHHASH_FIELD_NUMBER = 10;
+    public static final int BRANCHHASH_FIELD_NUMBER = 11;
     private volatile Object branchHash_;
     /**
-     * <code>string branchHash = 10;</code>
+     * <code>string branchHash = 11;</code>
      */
     public String getBranchHash() {
       Object ref = branchHash_;
@@ -2941,7 +2564,7 @@ public final class Model {
       }
     }
     /**
-     * <code>string branchHash = 10;</code>
+     * <code>string branchHash = 11;</code>
      */
     public com.google.protobuf.ByteString
         getBranchHashBytes() {
@@ -2957,10 +2580,10 @@ public final class Model {
       }
     }
 
-    public static final int TAG_FIELD_NUMBER = 11;
+    public static final int TAG_FIELD_NUMBER = 12;
     private volatile Object tag_;
     /**
-     * <code>string tag = 11;</code>
+     * <code>string tag = 12;</code>
      */
     public String getTag() {
       Object ref = tag_;
@@ -2975,7 +2598,7 @@ public final class Model {
       }
     }
     /**
-     * <code>string tag = 11;</code>
+     * <code>string tag = 12;</code>
      */
     public com.google.protobuf.ByteString
         getTagBytes() {
@@ -2991,37 +2614,37 @@ public final class Model {
       }
     }
 
-    public static final int ATTACHMENTTIMESTAMP_FIELD_NUMBER = 12;
+    public static final int ATTACHMENTTIMESTAMP_FIELD_NUMBER = 13;
     private long attachmentTimestamp_;
     /**
-     * <code>int64 attachmentTimestamp = 12;</code>
+     * <code>int64 attachmentTimestamp = 13;</code>
      */
     public long getAttachmentTimestamp() {
       return attachmentTimestamp_;
     }
 
-    public static final int ATTACHMENTTIMESTAMPLOWERBOUND_FIELD_NUMBER = 13;
+    public static final int ATTACHMENTTIMESTAMPLOWERBOUND_FIELD_NUMBER = 14;
     private long attachmentTimestampLowerBound_;
     /**
-     * <code>int64 attachmentTimestampLowerBound = 13;</code>
+     * <code>int64 attachmentTimestampLowerBound = 14;</code>
      */
     public long getAttachmentTimestampLowerBound() {
       return attachmentTimestampLowerBound_;
     }
 
-    public static final int ATTACHMENTTIMESTAMPUPPERBOUND_FIELD_NUMBER = 14;
+    public static final int ATTACHMENTTIMESTAMPUPPERBOUND_FIELD_NUMBER = 15;
     private long attachmentTimestampUpperBound_;
     /**
-     * <code>int64 attachmentTimestampUpperBound = 14;</code>
+     * <code>int64 attachmentTimestampUpperBound = 15;</code>
      */
     public long getAttachmentTimestampUpperBound() {
       return attachmentTimestampUpperBound_;
     }
 
-    public static final int NONCE_FIELD_NUMBER = 15;
+    public static final int NONCE_FIELD_NUMBER = 16;
     private volatile Object nonce_;
     /**
-     * <code>string nonce = 15;</code>
+     * <code>string nonce = 16;</code>
      */
     public String getNonce() {
       Object ref = nonce_;
@@ -3036,7 +2659,7 @@ public final class Model {
       }
     }
     /**
-     * <code>string nonce = 15;</code>
+     * <code>string nonce = 16;</code>
      */
     public com.google.protobuf.ByteString
         getNonceBytes() {
@@ -3052,10 +2675,10 @@ public final class Model {
       }
     }
 
-    public static final int DECODEDSIGNATUREFRAGMENTS_FIELD_NUMBER = 16;
+    public static final int DECODEDSIGNATUREFRAGMENTS_FIELD_NUMBER = 17;
     private volatile Object decodedSignatureFragments_;
     /**
-     * <code>string decodedSignatureFragments = 16;</code>
+     * <code>string decodedSignatureFragments = 17;</code>
      */
     public String getDecodedSignatureFragments() {
       Object ref = decodedSignatureFragments_;
@@ -3070,7 +2693,7 @@ public final class Model {
       }
     }
     /**
-     * <code>string decodedSignatureFragments = 16;</code>
+     * <code>string decodedSignatureFragments = 17;</code>
      */
     public com.google.protobuf.ByteString
         getDecodedSignatureFragmentsBytes() {
@@ -3086,10 +2709,10 @@ public final class Model {
       }
     }
 
-    public static final int ESSENCE_FIELD_NUMBER = 17;
+    public static final int ESSENCE_FIELD_NUMBER = 18;
     private volatile Object essence_;
     /**
-     * <code>string essence = 17;</code>
+     * <code>string essence = 18;</code>
      */
     public String getEssence() {
       Object ref = essence_;
@@ -3104,7 +2727,7 @@ public final class Model {
       }
     }
     /**
-     * <code>string essence = 17;</code>
+     * <code>string essence = 18;</code>
      */
     public com.google.protobuf.ByteString
         getEssenceBytes() {
@@ -3120,56 +2743,22 @@ public final class Model {
       }
     }
 
-    public static final int ISBUNDLEHEAD_FIELD_NUMBER = 18;
+    public static final int ISBUNDLEHEAD_FIELD_NUMBER = 19;
     private boolean isBundleHead_;
     /**
-     * <code>bool isBundleHead = 18;</code>
+     * <code>bool isBundleHead = 19;</code>
      */
     public boolean getIsBundleHead() {
       return isBundleHead_;
     }
 
-    public static final int ISBUNDLETAIL_FIELD_NUMBER = 19;
+    public static final int ISBUNDLETAIL_FIELD_NUMBER = 20;
     private boolean isBundleTail_;
     /**
-     * <code>bool isBundleTail = 19;</code>
+     * <code>bool isBundleTail = 20;</code>
      */
     public boolean getIsBundleTail() {
       return isBundleTail_;
-    }
-
-    public static final int HASH_FIELD_NUMBER = 20;
-    private volatile Object hash_;
-    /**
-     * <code>string hash = 20;</code>
-     */
-    public String getHash() {
-      Object ref = hash_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        hash_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string hash = 20;</code>
-     */
-    public com.google.protobuf.ByteString
-        getHashBytes() {
-      Object ref = hash_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        hash_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3186,65 +2775,65 @@ public final class Model {
     @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getHashBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hash_);
+      }
       if (!getSignatureFragmentsBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, signatureFragments_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, signatureFragments_);
       }
       if (!getExtraDataDigestBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, extraDataDigest_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, extraDataDigest_);
       }
       if (!getAddressBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, address_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, address_);
       }
       if (!value_.isEmpty()) {
-        output.writeBytes(4, value_);
+        output.writeBytes(5, value_);
       }
       if (issuanceTimestamp_ != 0L) {
-        output.writeInt64(5, issuanceTimestamp_);
+        output.writeInt64(6, issuanceTimestamp_);
       }
       if (timelockLowerBound_ != 0L) {
-        output.writeInt64(6, timelockLowerBound_);
+        output.writeInt64(7, timelockLowerBound_);
       }
       if (timelockUpperBound_ != 0L) {
-        output.writeInt64(7, timelockUpperBound_);
+        output.writeInt64(8, timelockUpperBound_);
       }
       if (!getBundleNonceBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, bundleNonce_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, bundleNonce_);
       }
       if (!getTrunkHashBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, trunkHash_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, trunkHash_);
       }
       if (!getBranchHashBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, branchHash_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, branchHash_);
       }
       if (!getTagBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, tag_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, tag_);
       }
       if (attachmentTimestamp_ != 0L) {
-        output.writeInt64(12, attachmentTimestamp_);
+        output.writeInt64(13, attachmentTimestamp_);
       }
       if (attachmentTimestampLowerBound_ != 0L) {
-        output.writeInt64(13, attachmentTimestampLowerBound_);
+        output.writeInt64(14, attachmentTimestampLowerBound_);
       }
       if (attachmentTimestampUpperBound_ != 0L) {
-        output.writeInt64(14, attachmentTimestampUpperBound_);
+        output.writeInt64(15, attachmentTimestampUpperBound_);
       }
       if (!getNonceBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, nonce_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, nonce_);
       }
       if (!getDecodedSignatureFragmentsBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, decodedSignatureFragments_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, decodedSignatureFragments_);
       }
       if (!getEssenceBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, essence_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, essence_);
       }
       if (isBundleHead_ != false) {
-        output.writeBool(18, isBundleHead_);
+        output.writeBool(19, isBundleHead_);
       }
       if (isBundleTail_ != false) {
-        output.writeBool(19, isBundleTail_);
-      }
-      if (!getHashBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 20, hash_);
+        output.writeBool(20, isBundleTail_);
       }
       unknownFields.writeTo(output);
     }
@@ -3255,74 +2844,74 @@ public final class Model {
       if (size != -1) return size;
 
       size = 0;
+      if (!getHashBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hash_);
+      }
       if (!getSignatureFragmentsBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, signatureFragments_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, signatureFragments_);
       }
       if (!getExtraDataDigestBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, extraDataDigest_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, extraDataDigest_);
       }
       if (!getAddressBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, address_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, address_);
       }
       if (!value_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(4, value_);
+          .computeBytesSize(5, value_);
       }
       if (issuanceTimestamp_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(5, issuanceTimestamp_);
+          .computeInt64Size(6, issuanceTimestamp_);
       }
       if (timelockLowerBound_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(6, timelockLowerBound_);
+          .computeInt64Size(7, timelockLowerBound_);
       }
       if (timelockUpperBound_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(7, timelockUpperBound_);
+          .computeInt64Size(8, timelockUpperBound_);
       }
       if (!getBundleNonceBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, bundleNonce_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, bundleNonce_);
       }
       if (!getTrunkHashBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, trunkHash_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, trunkHash_);
       }
       if (!getBranchHashBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, branchHash_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, branchHash_);
       }
       if (!getTagBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, tag_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, tag_);
       }
       if (attachmentTimestamp_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(12, attachmentTimestamp_);
+          .computeInt64Size(13, attachmentTimestamp_);
       }
       if (attachmentTimestampLowerBound_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(13, attachmentTimestampLowerBound_);
+          .computeInt64Size(14, attachmentTimestampLowerBound_);
       }
       if (attachmentTimestampUpperBound_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(14, attachmentTimestampUpperBound_);
+          .computeInt64Size(15, attachmentTimestampUpperBound_);
       }
       if (!getNonceBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, nonce_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, nonce_);
       }
       if (!getDecodedSignatureFragmentsBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, decodedSignatureFragments_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, decodedSignatureFragments_);
       }
       if (!getEssenceBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, essence_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, essence_);
       }
       if (isBundleHead_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(18, isBundleHead_);
+          .computeBoolSize(19, isBundleHead_);
       }
       if (isBundleTail_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(19, isBundleTail_);
-      }
-      if (!getHashBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, hash_);
+          .computeBoolSize(20, isBundleTail_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3339,6 +2928,8 @@ public final class Model {
       }
       Transaction other = (Transaction) obj;
 
+      if (!getHash()
+          .equals(other.getHash())) return false;
       if (!getSignatureFragments()
           .equals(other.getSignatureFragments())) return false;
       if (!getExtraDataDigest()
@@ -3377,8 +2968,6 @@ public final class Model {
           != other.getIsBundleHead()) return false;
       if (getIsBundleTail()
           != other.getIsBundleTail()) return false;
-      if (!getHash()
-          .equals(other.getHash())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3390,6 +2979,8 @@ public final class Model {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getHash().hashCode();
       hash = (37 * hash) + SIGNATUREFRAGMENTS_FIELD_NUMBER;
       hash = (53 * hash) + getSignatureFragments().hashCode();
       hash = (37 * hash) + EXTRADATADIGEST_FIELD_NUMBER;
@@ -3436,8 +3027,6 @@ public final class Model {
       hash = (37 * hash) + ISBUNDLETAIL_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsBundleTail());
-      hash = (37 * hash) + HASH_FIELD_NUMBER;
-      hash = (53 * hash) + getHash().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3571,6 +3160,8 @@ public final class Model {
       @Override
       public Builder clear() {
         super.clear();
+        hash_ = "";
+
         signatureFragments_ = "";
 
         extraDataDigest_ = "";
@@ -3609,8 +3200,6 @@ public final class Model {
 
         isBundleTail_ = false;
 
-        hash_ = "";
-
         return this;
       }
 
@@ -3637,6 +3226,7 @@ public final class Model {
       @Override
       public Transaction buildPartial() {
         Transaction result = new Transaction(this);
+        result.hash_ = hash_;
         result.signatureFragments_ = signatureFragments_;
         result.extraDataDigest_ = extraDataDigest_;
         result.address_ = address_;
@@ -3656,7 +3246,6 @@ public final class Model {
         result.essence_ = essence_;
         result.isBundleHead_ = isBundleHead_;
         result.isBundleTail_ = isBundleTail_;
-        result.hash_ = hash_;
         onBuilt();
         return result;
       }
@@ -3705,6 +3294,10 @@ public final class Model {
 
       public Builder mergeFrom(Transaction other) {
         if (other == Transaction.getDefaultInstance()) return this;
+        if (!other.getHash().isEmpty()) {
+          hash_ = other.hash_;
+          onChanged();
+        }
         if (!other.getSignatureFragments().isEmpty()) {
           signatureFragments_ = other.signatureFragments_;
           onChanged();
@@ -3772,10 +3365,6 @@ public final class Model {
         if (other.getIsBundleTail() != false) {
           setIsBundleTail(other.getIsBundleTail());
         }
-        if (!other.getHash().isEmpty()) {
-          hash_ = other.hash_;
-          onChanged();
-        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3805,936 +3394,9 @@ public final class Model {
         return this;
       }
 
-      private Object signatureFragments_ = "";
-      /**
-       * <code>string signatureFragments = 1;</code>
-       */
-      public String getSignatureFragments() {
-        Object ref = signatureFragments_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          signatureFragments_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>string signatureFragments = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getSignatureFragmentsBytes() {
-        Object ref = signatureFragments_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          signatureFragments_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string signatureFragments = 1;</code>
-       */
-      public Builder setSignatureFragments(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        signatureFragments_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string signatureFragments = 1;</code>
-       */
-      public Builder clearSignatureFragments() {
-        
-        signatureFragments_ = getDefaultInstance().getSignatureFragments();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string signatureFragments = 1;</code>
-       */
-      public Builder setSignatureFragmentsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        signatureFragments_ = value;
-        onChanged();
-        return this;
-      }
-
-      private Object extraDataDigest_ = "";
-      /**
-       * <code>string extraDataDigest = 2;</code>
-       */
-      public String getExtraDataDigest() {
-        Object ref = extraDataDigest_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          extraDataDigest_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>string extraDataDigest = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getExtraDataDigestBytes() {
-        Object ref = extraDataDigest_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          extraDataDigest_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string extraDataDigest = 2;</code>
-       */
-      public Builder setExtraDataDigest(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        extraDataDigest_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string extraDataDigest = 2;</code>
-       */
-      public Builder clearExtraDataDigest() {
-        
-        extraDataDigest_ = getDefaultInstance().getExtraDataDigest();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string extraDataDigest = 2;</code>
-       */
-      public Builder setExtraDataDigestBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        extraDataDigest_ = value;
-        onChanged();
-        return this;
-      }
-
-      private Object address_ = "";
-      /**
-       * <code>string address = 3;</code>
-       */
-      public String getAddress() {
-        Object ref = address_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          address_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>string address = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getAddressBytes() {
-        Object ref = address_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          address_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string address = 3;</code>
-       */
-      public Builder setAddress(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        address_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string address = 3;</code>
-       */
-      public Builder clearAddress() {
-        
-        address_ = getDefaultInstance().getAddress();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string address = 3;</code>
-       */
-      public Builder setAddressBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        address_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString value_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes value = 4;</code>
-       */
-      public com.google.protobuf.ByteString getValue() {
-        return value_;
-      }
-      /**
-       * <code>bytes value = 4;</code>
-       */
-      public Builder setValue(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes value = 4;</code>
-       */
-      public Builder clearValue() {
-        
-        value_ = getDefaultInstance().getValue();
-        onChanged();
-        return this;
-      }
-
-      private long issuanceTimestamp_ ;
-      /**
-       * <code>int64 issuanceTimestamp = 5;</code>
-       */
-      public long getIssuanceTimestamp() {
-        return issuanceTimestamp_;
-      }
-      /**
-       * <code>int64 issuanceTimestamp = 5;</code>
-       */
-      public Builder setIssuanceTimestamp(long value) {
-        
-        issuanceTimestamp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 issuanceTimestamp = 5;</code>
-       */
-      public Builder clearIssuanceTimestamp() {
-        
-        issuanceTimestamp_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long timelockLowerBound_ ;
-      /**
-       * <code>int64 timelockLowerBound = 6;</code>
-       */
-      public long getTimelockLowerBound() {
-        return timelockLowerBound_;
-      }
-      /**
-       * <code>int64 timelockLowerBound = 6;</code>
-       */
-      public Builder setTimelockLowerBound(long value) {
-        
-        timelockLowerBound_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 timelockLowerBound = 6;</code>
-       */
-      public Builder clearTimelockLowerBound() {
-        
-        timelockLowerBound_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long timelockUpperBound_ ;
-      /**
-       * <code>int64 timelockUpperBound = 7;</code>
-       */
-      public long getTimelockUpperBound() {
-        return timelockUpperBound_;
-      }
-      /**
-       * <code>int64 timelockUpperBound = 7;</code>
-       */
-      public Builder setTimelockUpperBound(long value) {
-        
-        timelockUpperBound_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 timelockUpperBound = 7;</code>
-       */
-      public Builder clearTimelockUpperBound() {
-        
-        timelockUpperBound_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private Object bundleNonce_ = "";
-      /**
-       * <code>string bundleNonce = 8;</code>
-       */
-      public String getBundleNonce() {
-        Object ref = bundleNonce_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          bundleNonce_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>string bundleNonce = 8;</code>
-       */
-      public com.google.protobuf.ByteString
-          getBundleNonceBytes() {
-        Object ref = bundleNonce_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          bundleNonce_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string bundleNonce = 8;</code>
-       */
-      public Builder setBundleNonce(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        bundleNonce_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string bundleNonce = 8;</code>
-       */
-      public Builder clearBundleNonce() {
-        
-        bundleNonce_ = getDefaultInstance().getBundleNonce();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string bundleNonce = 8;</code>
-       */
-      public Builder setBundleNonceBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        bundleNonce_ = value;
-        onChanged();
-        return this;
-      }
-
-      private Object trunkHash_ = "";
-      /**
-       * <code>string trunkHash = 9;</code>
-       */
-      public String getTrunkHash() {
-        Object ref = trunkHash_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          trunkHash_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>string trunkHash = 9;</code>
-       */
-      public com.google.protobuf.ByteString
-          getTrunkHashBytes() {
-        Object ref = trunkHash_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          trunkHash_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string trunkHash = 9;</code>
-       */
-      public Builder setTrunkHash(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        trunkHash_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string trunkHash = 9;</code>
-       */
-      public Builder clearTrunkHash() {
-        
-        trunkHash_ = getDefaultInstance().getTrunkHash();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string trunkHash = 9;</code>
-       */
-      public Builder setTrunkHashBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        trunkHash_ = value;
-        onChanged();
-        return this;
-      }
-
-      private Object branchHash_ = "";
-      /**
-       * <code>string branchHash = 10;</code>
-       */
-      public String getBranchHash() {
-        Object ref = branchHash_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          branchHash_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>string branchHash = 10;</code>
-       */
-      public com.google.protobuf.ByteString
-          getBranchHashBytes() {
-        Object ref = branchHash_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          branchHash_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string branchHash = 10;</code>
-       */
-      public Builder setBranchHash(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        branchHash_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string branchHash = 10;</code>
-       */
-      public Builder clearBranchHash() {
-        
-        branchHash_ = getDefaultInstance().getBranchHash();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string branchHash = 10;</code>
-       */
-      public Builder setBranchHashBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        branchHash_ = value;
-        onChanged();
-        return this;
-      }
-
-      private Object tag_ = "";
-      /**
-       * <code>string tag = 11;</code>
-       */
-      public String getTag() {
-        Object ref = tag_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          tag_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>string tag = 11;</code>
-       */
-      public com.google.protobuf.ByteString
-          getTagBytes() {
-        Object ref = tag_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          tag_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string tag = 11;</code>
-       */
-      public Builder setTag(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        tag_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string tag = 11;</code>
-       */
-      public Builder clearTag() {
-        
-        tag_ = getDefaultInstance().getTag();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string tag = 11;</code>
-       */
-      public Builder setTagBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        tag_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long attachmentTimestamp_ ;
-      /**
-       * <code>int64 attachmentTimestamp = 12;</code>
-       */
-      public long getAttachmentTimestamp() {
-        return attachmentTimestamp_;
-      }
-      /**
-       * <code>int64 attachmentTimestamp = 12;</code>
-       */
-      public Builder setAttachmentTimestamp(long value) {
-        
-        attachmentTimestamp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 attachmentTimestamp = 12;</code>
-       */
-      public Builder clearAttachmentTimestamp() {
-        
-        attachmentTimestamp_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long attachmentTimestampLowerBound_ ;
-      /**
-       * <code>int64 attachmentTimestampLowerBound = 13;</code>
-       */
-      public long getAttachmentTimestampLowerBound() {
-        return attachmentTimestampLowerBound_;
-      }
-      /**
-       * <code>int64 attachmentTimestampLowerBound = 13;</code>
-       */
-      public Builder setAttachmentTimestampLowerBound(long value) {
-        
-        attachmentTimestampLowerBound_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 attachmentTimestampLowerBound = 13;</code>
-       */
-      public Builder clearAttachmentTimestampLowerBound() {
-        
-        attachmentTimestampLowerBound_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long attachmentTimestampUpperBound_ ;
-      /**
-       * <code>int64 attachmentTimestampUpperBound = 14;</code>
-       */
-      public long getAttachmentTimestampUpperBound() {
-        return attachmentTimestampUpperBound_;
-      }
-      /**
-       * <code>int64 attachmentTimestampUpperBound = 14;</code>
-       */
-      public Builder setAttachmentTimestampUpperBound(long value) {
-        
-        attachmentTimestampUpperBound_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 attachmentTimestampUpperBound = 14;</code>
-       */
-      public Builder clearAttachmentTimestampUpperBound() {
-        
-        attachmentTimestampUpperBound_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private Object nonce_ = "";
-      /**
-       * <code>string nonce = 15;</code>
-       */
-      public String getNonce() {
-        Object ref = nonce_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          nonce_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>string nonce = 15;</code>
-       */
-      public com.google.protobuf.ByteString
-          getNonceBytes() {
-        Object ref = nonce_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          nonce_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string nonce = 15;</code>
-       */
-      public Builder setNonce(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        nonce_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string nonce = 15;</code>
-       */
-      public Builder clearNonce() {
-        
-        nonce_ = getDefaultInstance().getNonce();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string nonce = 15;</code>
-       */
-      public Builder setNonceBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        nonce_ = value;
-        onChanged();
-        return this;
-      }
-
-      private Object decodedSignatureFragments_ = "";
-      /**
-       * <code>string decodedSignatureFragments = 16;</code>
-       */
-      public String getDecodedSignatureFragments() {
-        Object ref = decodedSignatureFragments_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          decodedSignatureFragments_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>string decodedSignatureFragments = 16;</code>
-       */
-      public com.google.protobuf.ByteString
-          getDecodedSignatureFragmentsBytes() {
-        Object ref = decodedSignatureFragments_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          decodedSignatureFragments_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string decodedSignatureFragments = 16;</code>
-       */
-      public Builder setDecodedSignatureFragments(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        decodedSignatureFragments_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string decodedSignatureFragments = 16;</code>
-       */
-      public Builder clearDecodedSignatureFragments() {
-        
-        decodedSignatureFragments_ = getDefaultInstance().getDecodedSignatureFragments();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string decodedSignatureFragments = 16;</code>
-       */
-      public Builder setDecodedSignatureFragmentsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        decodedSignatureFragments_ = value;
-        onChanged();
-        return this;
-      }
-
-      private Object essence_ = "";
-      /**
-       * <code>string essence = 17;</code>
-       */
-      public String getEssence() {
-        Object ref = essence_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          essence_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>string essence = 17;</code>
-       */
-      public com.google.protobuf.ByteString
-          getEssenceBytes() {
-        Object ref = essence_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          essence_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string essence = 17;</code>
-       */
-      public Builder setEssence(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        essence_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string essence = 17;</code>
-       */
-      public Builder clearEssence() {
-        
-        essence_ = getDefaultInstance().getEssence();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string essence = 17;</code>
-       */
-      public Builder setEssenceBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        essence_ = value;
-        onChanged();
-        return this;
-      }
-
-      private boolean isBundleHead_ ;
-      /**
-       * <code>bool isBundleHead = 18;</code>
-       */
-      public boolean getIsBundleHead() {
-        return isBundleHead_;
-      }
-      /**
-       * <code>bool isBundleHead = 18;</code>
-       */
-      public Builder setIsBundleHead(boolean value) {
-        
-        isBundleHead_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool isBundleHead = 18;</code>
-       */
-      public Builder clearIsBundleHead() {
-        
-        isBundleHead_ = false;
-        onChanged();
-        return this;
-      }
-
-      private boolean isBundleTail_ ;
-      /**
-       * <code>bool isBundleTail = 19;</code>
-       */
-      public boolean getIsBundleTail() {
-        return isBundleTail_;
-      }
-      /**
-       * <code>bool isBundleTail = 19;</code>
-       */
-      public Builder setIsBundleTail(boolean value) {
-        
-        isBundleTail_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool isBundleTail = 19;</code>
-       */
-      public Builder clearIsBundleTail() {
-        
-        isBundleTail_ = false;
-        onChanged();
-        return this;
-      }
-
       private Object hash_ = "";
       /**
-       * <code>string hash = 20;</code>
+       * <code>string hash = 1;</code>
        */
       public String getHash() {
         Object ref = hash_;
@@ -4749,7 +3411,7 @@ public final class Model {
         }
       }
       /**
-       * <code>string hash = 20;</code>
+       * <code>string hash = 1;</code>
        */
       public com.google.protobuf.ByteString
           getHashBytes() {
@@ -4765,7 +3427,7 @@ public final class Model {
         }
       }
       /**
-       * <code>string hash = 20;</code>
+       * <code>string hash = 1;</code>
        */
       public Builder setHash(
           String value) {
@@ -4778,7 +3440,7 @@ public final class Model {
         return this;
       }
       /**
-       * <code>string hash = 20;</code>
+       * <code>string hash = 1;</code>
        */
       public Builder clearHash() {
         
@@ -4787,7 +3449,7 @@ public final class Model {
         return this;
       }
       /**
-       * <code>string hash = 20;</code>
+       * <code>string hash = 1;</code>
        */
       public Builder setHashBytes(
           com.google.protobuf.ByteString value) {
@@ -4797,6 +3459,933 @@ public final class Model {
   checkByteStringIsUtf8(value);
         
         hash_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Object signatureFragments_ = "";
+      /**
+       * <code>string signatureFragments = 2;</code>
+       */
+      public String getSignatureFragments() {
+        Object ref = signatureFragments_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          signatureFragments_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>string signatureFragments = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSignatureFragmentsBytes() {
+        Object ref = signatureFragments_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          signatureFragments_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string signatureFragments = 2;</code>
+       */
+      public Builder setSignatureFragments(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        signatureFragments_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string signatureFragments = 2;</code>
+       */
+      public Builder clearSignatureFragments() {
+        
+        signatureFragments_ = getDefaultInstance().getSignatureFragments();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string signatureFragments = 2;</code>
+       */
+      public Builder setSignatureFragmentsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        signatureFragments_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Object extraDataDigest_ = "";
+      /**
+       * <code>string extraDataDigest = 3;</code>
+       */
+      public String getExtraDataDigest() {
+        Object ref = extraDataDigest_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          extraDataDigest_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>string extraDataDigest = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getExtraDataDigestBytes() {
+        Object ref = extraDataDigest_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          extraDataDigest_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string extraDataDigest = 3;</code>
+       */
+      public Builder setExtraDataDigest(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        extraDataDigest_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string extraDataDigest = 3;</code>
+       */
+      public Builder clearExtraDataDigest() {
+        
+        extraDataDigest_ = getDefaultInstance().getExtraDataDigest();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string extraDataDigest = 3;</code>
+       */
+      public Builder setExtraDataDigestBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        extraDataDigest_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Object address_ = "";
+      /**
+       * <code>string address = 4;</code>
+       */
+      public String getAddress() {
+        Object ref = address_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>string address = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 4;</code>
+       */
+      public Builder setAddress(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        address_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 4;</code>
+       */
+      public Builder clearAddress() {
+        
+        address_ = getDefaultInstance().getAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 4;</code>
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        address_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString value_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes value = 5;</code>
+       */
+      public com.google.protobuf.ByteString getValue() {
+        return value_;
+      }
+      /**
+       * <code>bytes value = 5;</code>
+       */
+      public Builder setValue(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes value = 5;</code>
+       */
+      public Builder clearValue() {
+        
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+
+      private long issuanceTimestamp_ ;
+      /**
+       * <code>int64 issuanceTimestamp = 6;</code>
+       */
+      public long getIssuanceTimestamp() {
+        return issuanceTimestamp_;
+      }
+      /**
+       * <code>int64 issuanceTimestamp = 6;</code>
+       */
+      public Builder setIssuanceTimestamp(long value) {
+        
+        issuanceTimestamp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 issuanceTimestamp = 6;</code>
+       */
+      public Builder clearIssuanceTimestamp() {
+        
+        issuanceTimestamp_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long timelockLowerBound_ ;
+      /**
+       * <code>int64 timelockLowerBound = 7;</code>
+       */
+      public long getTimelockLowerBound() {
+        return timelockLowerBound_;
+      }
+      /**
+       * <code>int64 timelockLowerBound = 7;</code>
+       */
+      public Builder setTimelockLowerBound(long value) {
+        
+        timelockLowerBound_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 timelockLowerBound = 7;</code>
+       */
+      public Builder clearTimelockLowerBound() {
+        
+        timelockLowerBound_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long timelockUpperBound_ ;
+      /**
+       * <code>int64 timelockUpperBound = 8;</code>
+       */
+      public long getTimelockUpperBound() {
+        return timelockUpperBound_;
+      }
+      /**
+       * <code>int64 timelockUpperBound = 8;</code>
+       */
+      public Builder setTimelockUpperBound(long value) {
+        
+        timelockUpperBound_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 timelockUpperBound = 8;</code>
+       */
+      public Builder clearTimelockUpperBound() {
+        
+        timelockUpperBound_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private Object bundleNonce_ = "";
+      /**
+       * <code>string bundleNonce = 9;</code>
+       */
+      public String getBundleNonce() {
+        Object ref = bundleNonce_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          bundleNonce_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>string bundleNonce = 9;</code>
+       */
+      public com.google.protobuf.ByteString
+          getBundleNonceBytes() {
+        Object ref = bundleNonce_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          bundleNonce_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bundleNonce = 9;</code>
+       */
+      public Builder setBundleNonce(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        bundleNonce_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bundleNonce = 9;</code>
+       */
+      public Builder clearBundleNonce() {
+        
+        bundleNonce_ = getDefaultInstance().getBundleNonce();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bundleNonce = 9;</code>
+       */
+      public Builder setBundleNonceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        bundleNonce_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Object trunkHash_ = "";
+      /**
+       * <code>string trunkHash = 10;</code>
+       */
+      public String getTrunkHash() {
+        Object ref = trunkHash_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          trunkHash_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>string trunkHash = 10;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTrunkHashBytes() {
+        Object ref = trunkHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          trunkHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string trunkHash = 10;</code>
+       */
+      public Builder setTrunkHash(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        trunkHash_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string trunkHash = 10;</code>
+       */
+      public Builder clearTrunkHash() {
+        
+        trunkHash_ = getDefaultInstance().getTrunkHash();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string trunkHash = 10;</code>
+       */
+      public Builder setTrunkHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        trunkHash_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Object branchHash_ = "";
+      /**
+       * <code>string branchHash = 11;</code>
+       */
+      public String getBranchHash() {
+        Object ref = branchHash_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          branchHash_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>string branchHash = 11;</code>
+       */
+      public com.google.protobuf.ByteString
+          getBranchHashBytes() {
+        Object ref = branchHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          branchHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string branchHash = 11;</code>
+       */
+      public Builder setBranchHash(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        branchHash_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string branchHash = 11;</code>
+       */
+      public Builder clearBranchHash() {
+        
+        branchHash_ = getDefaultInstance().getBranchHash();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string branchHash = 11;</code>
+       */
+      public Builder setBranchHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        branchHash_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Object tag_ = "";
+      /**
+       * <code>string tag = 12;</code>
+       */
+      public String getTag() {
+        Object ref = tag_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          tag_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>string tag = 12;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTagBytes() {
+        Object ref = tag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          tag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string tag = 12;</code>
+       */
+      public Builder setTag(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tag_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tag = 12;</code>
+       */
+      public Builder clearTag() {
+        
+        tag_ = getDefaultInstance().getTag();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tag = 12;</code>
+       */
+      public Builder setTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tag_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long attachmentTimestamp_ ;
+      /**
+       * <code>int64 attachmentTimestamp = 13;</code>
+       */
+      public long getAttachmentTimestamp() {
+        return attachmentTimestamp_;
+      }
+      /**
+       * <code>int64 attachmentTimestamp = 13;</code>
+       */
+      public Builder setAttachmentTimestamp(long value) {
+        
+        attachmentTimestamp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 attachmentTimestamp = 13;</code>
+       */
+      public Builder clearAttachmentTimestamp() {
+        
+        attachmentTimestamp_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long attachmentTimestampLowerBound_ ;
+      /**
+       * <code>int64 attachmentTimestampLowerBound = 14;</code>
+       */
+      public long getAttachmentTimestampLowerBound() {
+        return attachmentTimestampLowerBound_;
+      }
+      /**
+       * <code>int64 attachmentTimestampLowerBound = 14;</code>
+       */
+      public Builder setAttachmentTimestampLowerBound(long value) {
+        
+        attachmentTimestampLowerBound_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 attachmentTimestampLowerBound = 14;</code>
+       */
+      public Builder clearAttachmentTimestampLowerBound() {
+        
+        attachmentTimestampLowerBound_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long attachmentTimestampUpperBound_ ;
+      /**
+       * <code>int64 attachmentTimestampUpperBound = 15;</code>
+       */
+      public long getAttachmentTimestampUpperBound() {
+        return attachmentTimestampUpperBound_;
+      }
+      /**
+       * <code>int64 attachmentTimestampUpperBound = 15;</code>
+       */
+      public Builder setAttachmentTimestampUpperBound(long value) {
+        
+        attachmentTimestampUpperBound_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 attachmentTimestampUpperBound = 15;</code>
+       */
+      public Builder clearAttachmentTimestampUpperBound() {
+        
+        attachmentTimestampUpperBound_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private Object nonce_ = "";
+      /**
+       * <code>string nonce = 16;</code>
+       */
+      public String getNonce() {
+        Object ref = nonce_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          nonce_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>string nonce = 16;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNonceBytes() {
+        Object ref = nonce_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          nonce_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nonce = 16;</code>
+       */
+      public Builder setNonce(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nonce_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nonce = 16;</code>
+       */
+      public Builder clearNonce() {
+        
+        nonce_ = getDefaultInstance().getNonce();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nonce = 16;</code>
+       */
+      public Builder setNonceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nonce_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Object decodedSignatureFragments_ = "";
+      /**
+       * <code>string decodedSignatureFragments = 17;</code>
+       */
+      public String getDecodedSignatureFragments() {
+        Object ref = decodedSignatureFragments_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          decodedSignatureFragments_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>string decodedSignatureFragments = 17;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDecodedSignatureFragmentsBytes() {
+        Object ref = decodedSignatureFragments_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          decodedSignatureFragments_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string decodedSignatureFragments = 17;</code>
+       */
+      public Builder setDecodedSignatureFragments(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        decodedSignatureFragments_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string decodedSignatureFragments = 17;</code>
+       */
+      public Builder clearDecodedSignatureFragments() {
+        
+        decodedSignatureFragments_ = getDefaultInstance().getDecodedSignatureFragments();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string decodedSignatureFragments = 17;</code>
+       */
+      public Builder setDecodedSignatureFragmentsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        decodedSignatureFragments_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Object essence_ = "";
+      /**
+       * <code>string essence = 18;</code>
+       */
+      public String getEssence() {
+        Object ref = essence_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          essence_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>string essence = 18;</code>
+       */
+      public com.google.protobuf.ByteString
+          getEssenceBytes() {
+        Object ref = essence_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          essence_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string essence = 18;</code>
+       */
+      public Builder setEssence(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        essence_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string essence = 18;</code>
+       */
+      public Builder clearEssence() {
+        
+        essence_ = getDefaultInstance().getEssence();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string essence = 18;</code>
+       */
+      public Builder setEssenceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        essence_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean isBundleHead_ ;
+      /**
+       * <code>bool isBundleHead = 19;</code>
+       */
+      public boolean getIsBundleHead() {
+        return isBundleHead_;
+      }
+      /**
+       * <code>bool isBundleHead = 19;</code>
+       */
+      public Builder setIsBundleHead(boolean value) {
+        
+        isBundleHead_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool isBundleHead = 19;</code>
+       */
+      public Builder clearIsBundleHead() {
+        
+        isBundleHead_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isBundleTail_ ;
+      /**
+       * <code>bool isBundleTail = 20;</code>
+       */
+      public boolean getIsBundleTail() {
+        return isBundleTail_;
+      }
+      /**
+       * <code>bool isBundleTail = 20;</code>
+       */
+      public Builder setIsBundleTail(boolean value) {
+        
+        isBundleTail_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool isBundleTail = 20;</code>
+       */
+      public Builder clearIsBundleTail() {
+        
+        isBundleTail_ = false;
         onChanged();
         return this;
       }
@@ -4872,7 +4461,7 @@ public final class Model {
       descriptor;
   static {
     String[] descriptorData = {
-      "\n\013model.proto\"\337\003\n\022TransactionBuilder\022\032\n\022" +
+      "\n\013model.proto\"\234\003\n\022TransactionBuilder\022\032\n\022" +
       "signatureFragments\030\001 \001(\t\022\027\n\017extraDataDig" +
       "est\030\002 \001(\t\022\017\n\007address\030\003 \001(\t\022\r\n\005value\030\004 \001(" +
       "\014\022\031\n\021issuanceTimestamp\030\005 \001(\003\022\032\n\022timelock" +
@@ -4881,22 +4470,21 @@ public final class Model {
       " \001(\t\022\022\n\nbranchHash\030\n \001(\t\022\013\n\003tag\030\013 \001(\t\022\033\n" +
       "\023attachmentTimestamp\030\014 \001(\003\022%\n\035attachment" +
       "TimestampLowerBound\030\r \001(\003\022%\n\035attachmentT" +
-      "imestampUpperBound\030\016 \001(\003\022\r\n\005nonce\030\017 \001(\t\022" +
-      "!\n\031decodedSignatureFragments\030\020 \001(\t\022\017\n\007es" +
-      "sence\030\021 \001(\t\022\024\n\014isBundleHead\030\022 \001(\010\022\024\n\014isB" +
-      "undleTail\030\023 \001(\010\"\346\003\n\013Transaction\022\032\n\022signa" +
-      "tureFragments\030\001 \001(\t\022\027\n\017extraDataDigest\030\002" +
-      " \001(\t\022\017\n\007address\030\003 \001(\t\022\r\n\005value\030\004 \001(\014\022\031\n\021" +
-      "issuanceTimestamp\030\005 \001(\003\022\032\n\022timelockLower" +
-      "Bound\030\006 \001(\003\022\032\n\022timelockUpperBound\030\007 \001(\003\022" +
-      "\023\n\013bundleNonce\030\010 \001(\t\022\021\n\ttrunkHash\030\t \001(\t\022" +
-      "\022\n\nbranchHash\030\n \001(\t\022\013\n\003tag\030\013 \001(\t\022\033\n\023atta" +
-      "chmentTimestamp\030\014 \001(\003\022%\n\035attachmentTimes" +
-      "tampLowerBound\030\r \001(\003\022%\n\035attachmentTimest" +
-      "ampUpperBound\030\016 \001(\003\022\r\n\005nonce\030\017 \001(\t\022!\n\031de" +
-      "codedSignatureFragments\030\020 \001(\t\022\017\n\007essence" +
-      "\030\021 \001(\t\022\024\n\014isBundleHead\030\022 \001(\010\022\024\n\014isBundle" +
-      "Tail\030\023 \001(\010\022\014\n\004hash\030\024 \001(\tb\006proto3"
+      "imestampUpperBound\030\016 \001(\003\022\024\n\014isBundleHead" +
+      "\030\017 \001(\010\022\024\n\014isBundleTail\030\020 \001(\010\"\346\003\n\013Transac" +
+      "tion\022\014\n\004hash\030\001 \001(\t\022\032\n\022signatureFragments" +
+      "\030\002 \001(\t\022\027\n\017extraDataDigest\030\003 \001(\t\022\017\n\007addre" +
+      "ss\030\004 \001(\t\022\r\n\005value\030\005 \001(\014\022\031\n\021issuanceTimes" +
+      "tamp\030\006 \001(\003\022\032\n\022timelockLowerBound\030\007 \001(\003\022\032" +
+      "\n\022timelockUpperBound\030\010 \001(\003\022\023\n\013bundleNonc" +
+      "e\030\t \001(\t\022\021\n\ttrunkHash\030\n \001(\t\022\022\n\nbranchHash" +
+      "\030\013 \001(\t\022\013\n\003tag\030\014 \001(\t\022\033\n\023attachmentTimesta" +
+      "mp\030\r \001(\003\022%\n\035attachmentTimestampLowerBoun" +
+      "d\030\016 \001(\003\022%\n\035attachmentTimestampUpperBound" +
+      "\030\017 \001(\003\022\r\n\005nonce\030\020 \001(\t\022!\n\031decodedSignatur" +
+      "eFragments\030\021 \001(\t\022\017\n\007essence\030\022 \001(\t\022\024\n\014isB" +
+      "undleHead\030\023 \001(\010\022\024\n\014isBundleTail\030\024 \001(\010b\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4915,13 +4503,13 @@ public final class Model {
     internal_static_TransactionBuilder_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_TransactionBuilder_descriptor,
-        new String[] { "SignatureFragments", "ExtraDataDigest", "Address", "Value", "IssuanceTimestamp", "TimelockLowerBound", "TimelockUpperBound", "BundleNonce", "TrunkHash", "BranchHash", "Tag", "AttachmentTimestamp", "AttachmentTimestampLowerBound", "AttachmentTimestampUpperBound", "Nonce", "DecodedSignatureFragments", "Essence", "IsBundleHead", "IsBundleTail", });
+        new String[] { "SignatureFragments", "ExtraDataDigest", "Address", "Value", "IssuanceTimestamp", "TimelockLowerBound", "TimelockUpperBound", "BundleNonce", "TrunkHash", "BranchHash", "Tag", "AttachmentTimestamp", "AttachmentTimestampLowerBound", "AttachmentTimestampUpperBound", "IsBundleHead", "IsBundleTail", });
     internal_static_Transaction_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Transaction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Transaction_descriptor,
-        new String[] { "SignatureFragments", "ExtraDataDigest", "Address", "Value", "IssuanceTimestamp", "TimelockLowerBound", "TimelockUpperBound", "BundleNonce", "TrunkHash", "BranchHash", "Tag", "AttachmentTimestamp", "AttachmentTimestampLowerBound", "AttachmentTimestampUpperBound", "Nonce", "DecodedSignatureFragments", "Essence", "IsBundleHead", "IsBundleTail", "Hash", });
+        new String[] { "Hash", "SignatureFragments", "ExtraDataDigest", "Address", "Value", "IssuanceTimestamp", "TimelockLowerBound", "TimelockUpperBound", "BundleNonce", "TrunkHash", "BranchHash", "Tag", "AttachmentTimestamp", "AttachmentTimestampLowerBound", "AttachmentTimestampUpperBound", "Nonce", "DecodedSignatureFragments", "Essence", "IsBundleHead", "IsBundleTail", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

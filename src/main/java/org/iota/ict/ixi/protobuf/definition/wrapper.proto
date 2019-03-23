@@ -18,11 +18,13 @@ message WrapperMessage {
  		AddEffectListenerRequest addEffectListenerRequest = 8;
  		RemoveEffectListenerRequest removeEffectListenerRequest = 9;
  		SubmitEffectRequest submitEffectRequest = 10;
+ 		GetEffectRequest getEffectRequest = 11;
 
- 		FindTransactionsByAddressResponse findTransactionsByAddressResponse = 11;
- 		FindTransactionsByTagResponse findTransactionsByTagResponse = 12;
- 		FindTransactionByHashResponse findTransactionByHashResponse = 13;
- 		DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 14;
+ 		FindTransactionsByAddressResponse findTransactionsByAddressResponse = 12;
+ 		FindTransactionsByTagResponse findTransactionsByTagResponse = 13;
+ 		FindTransactionByHashResponse findTransactionByHashResponse = 14;
+ 		DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 15;
+ 		GetEffectResponse getEffectResponse = 16;
 
     }
 
@@ -37,11 +39,13 @@ message WrapperMessage {
       	ADD_EFFECT_LISTENER_REQUEST = 6;
       	REMOVE_EFFECT_LISTENER_REQUEST = 7;
         SUBMIT_EFFECT_REQUEST = 8;
+        GET_EFFECT_REQUEST = 9;
 
-        FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE = 9;
-        FIND_TRANSACTIONS_BY_TAG_RESPONSE = 10;
-        FIND_TRANSACTION_BY_HASH_RESPONSE = 11;
-        DETERMINE_APPROVAL_CONFIDENCE_RESPONSE = 12;
+        FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE = 10;
+        FIND_TRANSACTIONS_BY_TAG_RESPONSE = 11;
+        FIND_TRANSACTION_BY_HASH_RESPONSE = 12;
+        DETERMINE_APPROVAL_CONFIDENCE_RESPONSE = 13;
+        GET_EFFECT_RESPONSE = 14;
 
     }
 

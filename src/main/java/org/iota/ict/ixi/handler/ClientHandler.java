@@ -1,8 +1,8 @@
-package org.iota.ict.ixi;
+package org.iota.ict.ixi.handler;
 
 import org.iota.ict.eee.EffectListenerQueue;
+import org.iota.ict.ixi.Ixi;
 import org.iota.ict.ixi.protobuf.Wrapper;
-import org.iota.ict.ixi.requests.*;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -82,6 +82,11 @@ public class ClientHandler extends Thread {
                         break;
                     }
 
+                    case GET_EFFECT_REQUEST: {
+                        ProcessGetEffectRequest.process(request.getGetEffectRequest(), this);
+                        break;
+                    }
+
                 }
 
             }
@@ -111,6 +116,10 @@ public class ClientHandler extends Thread {
     public void removeEffectListener(String environment) {
         ixi.removeListener(effectListenerByEnvironment.get(environment));
         effectListenerByEnvironment.remove(environment);
+    }
+
+    public String getEffect(String environment) {
+        return effectListenerByEnvironment.get(environment).pollEffect();
     }
 
 }

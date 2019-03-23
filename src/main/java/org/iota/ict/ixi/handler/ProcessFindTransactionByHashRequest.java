@@ -1,7 +1,6 @@
-package org.iota.ict.ixi.requests;
+package org.iota.ict.ixi.handler;
 
 import com.google.protobuf.ByteString;
-import org.iota.ict.ixi.ClientHandler;
 import org.iota.ict.ixi.protobuf.Model;
 import org.iota.ict.ixi.protobuf.Request;
 import org.iota.ict.ixi.protobuf.Response;

@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+message TransactionBuilder {
+
+	string signatureFragments = 1;
+    string extraDataDigest = 2;
+    string address = 3;
+	bytes value = 4;
+	int64 issuanceTimestamp = 5;
+	int64 timelockLowerBound = 6;
+	int64 timelockUpperBound = 7;
+    string bundleNonce = 8;
+    string trunkHash = 9;
+	string branchHash = 10;
+    string tag = 11;
+	int64 attachmentTimestamp = 12;
+	int64 attachmentTimestampLowerBound = 13;
+	int64 attachmentTimestampUpperBound = 14;
+	bool isBundleHead = 15;
+	bool isBundleTail = 16;
+
+}
+
+message Transaction {
+
+	string hash = 1;
+	string signatureFragments = 2;
+    string extraDataDigest = 3;
+    string address = 4;
+	bytes value = 5;
+	int64 issuanceTimestamp = 6;
+	int64 timelockLowerBound = 7;
+	int64 timelockUpperBound = 8;
+    string bundleNonce = 9;
+    string trunkHash = 10;
+	string branchHash = 11;
+    string tag = 12;
+	int64 attachmentTimestamp = 13;
+	int64 attachmentTimestampLowerBound = 14;
+	int64 attachmentTimestampUpperBound = 15;
+    string nonce = 16;
+    string decodedSignatureFragments = 17;
+    string essence = 18;
+	bool isBundleHead = 19;
+	bool isBundleTail = 20;
+
+}

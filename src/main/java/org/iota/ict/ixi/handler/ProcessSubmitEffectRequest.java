@@ -1,7 +1,6 @@
-package org.iota.ict.ixi.requests;
+package org.iota.ict.ixi.handler;
 
 import org.iota.ict.eee.Environment;
-import org.iota.ict.ixi.ClientHandler;
 import org.iota.ict.ixi.protobuf.Request;
 
 public class ProcessSubmitEffectRequest {
