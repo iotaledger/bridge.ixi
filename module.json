@@ -1,22 +1,9 @@
-// your module.json file
 {
-  // the name under which your IXI will appear
   "name": "bridge.ixi",
-
-  // your IXI module class with package prefix
   "main_class": "org.iota.ict.ixi.Bridge",
-
-  // Describe your module in 2-3 sentences.
   "description": "bridge.ixi represents the interface which allows modules written in any programming language to interact with the underlying infrastructure. By giving everyone the opportunity to participate with their desired programming language, bridge.ixi will help grow the module ecosystem as well as have positive impact on the overall development.",
-
-  // must match the GitHub repository you will later publish it to (format: username/repository)
   "repository": "iotaledger/bridge.ixi",
-
-  // enter the port to visit your module's web GUI
-  // set to -1 if your module doesn't have one
-  // makes it easy for users to navigate from the ict web gui to your module's custom gui
   "gui_port": -1,
-
-  // all Ict versions your ixi is compatible with
-  "supported_versions": ["0.6-SNAPSHOT"]
+  "supported_versions": ["0.6-SNAPSHOT"],
+  "version": "0.1-SNAPSHOT"
 }
