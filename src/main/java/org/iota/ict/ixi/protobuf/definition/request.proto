@@ -22,10 +22,6 @@ message SubmitTransactionBytesRequest {
 	bytes transactionBytes = 1;
 }
 
-message DetermineApprovalConfidenceRequest {
-	string transactionHash = 1;
-}
-
 message AddEffectListenerRequest {
 	string environment = 1;
 }

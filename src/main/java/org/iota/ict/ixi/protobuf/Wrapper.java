@@ -91,132 +91,106 @@ public final class Wrapper {
     Request.SubmitTransactionBytesRequestOrBuilder getSubmitTransactionBytesRequestOrBuilder();
 
     /**
-     * <code>.DetermineApprovalConfidenceRequest determineApprovalConfidenceRequest = 7;</code>
-     */
-    boolean hasDetermineApprovalConfidenceRequest();
-    /**
-     * <code>.DetermineApprovalConfidenceRequest determineApprovalConfidenceRequest = 7;</code>
-     */
-    Request.DetermineApprovalConfidenceRequest getDetermineApprovalConfidenceRequest();
-    /**
-     * <code>.DetermineApprovalConfidenceRequest determineApprovalConfidenceRequest = 7;</code>
-     */
-    Request.DetermineApprovalConfidenceRequestOrBuilder getDetermineApprovalConfidenceRequestOrBuilder();
-
-    /**
-     * <code>.AddEffectListenerRequest addEffectListenerRequest = 8;</code>
+     * <code>.AddEffectListenerRequest addEffectListenerRequest = 7;</code>
      */
     boolean hasAddEffectListenerRequest();
     /**
-     * <code>.AddEffectListenerRequest addEffectListenerRequest = 8;</code>
+     * <code>.AddEffectListenerRequest addEffectListenerRequest = 7;</code>
      */
     Request.AddEffectListenerRequest getAddEffectListenerRequest();
     /**
-     * <code>.AddEffectListenerRequest addEffectListenerRequest = 8;</code>
+     * <code>.AddEffectListenerRequest addEffectListenerRequest = 7;</code>
      */
     Request.AddEffectListenerRequestOrBuilder getAddEffectListenerRequestOrBuilder();
 
     /**
-     * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 9;</code>
+     * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 8;</code>
      */
     boolean hasRemoveEffectListenerRequest();
     /**
-     * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 9;</code>
+     * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 8;</code>
      */
     Request.RemoveEffectListenerRequest getRemoveEffectListenerRequest();
     /**
-     * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 9;</code>
+     * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 8;</code>
      */
     Request.RemoveEffectListenerRequestOrBuilder getRemoveEffectListenerRequestOrBuilder();
 
     /**
-     * <code>.SubmitEffectRequest submitEffectRequest = 10;</code>
+     * <code>.SubmitEffectRequest submitEffectRequest = 9;</code>
      */
     boolean hasSubmitEffectRequest();
     /**
-     * <code>.SubmitEffectRequest submitEffectRequest = 10;</code>
+     * <code>.SubmitEffectRequest submitEffectRequest = 9;</code>
      */
     Request.SubmitEffectRequest getSubmitEffectRequest();
     /**
-     * <code>.SubmitEffectRequest submitEffectRequest = 10;</code>
+     * <code>.SubmitEffectRequest submitEffectRequest = 9;</code>
      */
     Request.SubmitEffectRequestOrBuilder getSubmitEffectRequestOrBuilder();
 
     /**
-     * <code>.GetEffectRequest getEffectRequest = 11;</code>
+     * <code>.GetEffectRequest getEffectRequest = 10;</code>
      */
     boolean hasGetEffectRequest();
     /**
-     * <code>.GetEffectRequest getEffectRequest = 11;</code>
+     * <code>.GetEffectRequest getEffectRequest = 10;</code>
      */
     Request.GetEffectRequest getGetEffectRequest();
     /**
-     * <code>.GetEffectRequest getEffectRequest = 11;</code>
+     * <code>.GetEffectRequest getEffectRequest = 10;</code>
      */
     Request.GetEffectRequestOrBuilder getGetEffectRequestOrBuilder();
 
     /**
-     * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 12;</code>
+     * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 11;</code>
      */
     boolean hasFindTransactionsByAddressResponse();
     /**
-     * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 12;</code>
+     * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 11;</code>
      */
     Response.FindTransactionsByAddressResponse getFindTransactionsByAddressResponse();
     /**
-     * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 12;</code>
+     * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 11;</code>
      */
     Response.FindTransactionsByAddressResponseOrBuilder getFindTransactionsByAddressResponseOrBuilder();
 
     /**
-     * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 13;</code>
+     * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 12;</code>
      */
     boolean hasFindTransactionsByTagResponse();
     /**
-     * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 13;</code>
+     * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 12;</code>
      */
     Response.FindTransactionsByTagResponse getFindTransactionsByTagResponse();
     /**
-     * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 13;</code>
+     * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 12;</code>
      */
     Response.FindTransactionsByTagResponseOrBuilder getFindTransactionsByTagResponseOrBuilder();
 
     /**
-     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 14;</code>
+     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
      */
     boolean hasFindTransactionByHashResponse();
     /**
-     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 14;</code>
+     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
      */
     Response.FindTransactionByHashResponse getFindTransactionByHashResponse();
     /**
-     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 14;</code>
+     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
      */
     Response.FindTransactionByHashResponseOrBuilder getFindTransactionByHashResponseOrBuilder();
 
     /**
-     * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 15;</code>
-     */
-    boolean hasDetermineApprovalConfidenceResponse();
-    /**
-     * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 15;</code>
-     */
-    Response.DetermineApprovalConfidenceResponse getDetermineApprovalConfidenceResponse();
-    /**
-     * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 15;</code>
-     */
-    Response.DetermineApprovalConfidenceResponseOrBuilder getDetermineApprovalConfidenceResponseOrBuilder();
-
-    /**
-     * <code>.GetEffectResponse getEffectResponse = 16;</code>
+     * <code>.GetEffectResponse getEffectResponse = 14;</code>
      */
     boolean hasGetEffectResponse();
     /**
-     * <code>.GetEffectResponse getEffectResponse = 16;</code>
+     * <code>.GetEffectResponse getEffectResponse = 14;</code>
      */
     Response.GetEffectResponse getGetEffectResponse();
     /**
-     * <code>.GetEffectResponse getEffectResponse = 16;</code>
+     * <code>.GetEffectResponse getEffectResponse = 14;</code>
      */
     Response.GetEffectResponseOrBuilder getGetEffectResponseOrBuilder();
 
@@ -339,22 +313,8 @@ public final class Wrapper {
               break;
             }
             case 58: {
-              Request.DetermineApprovalConfidenceRequest.Builder subBuilder = null;
-              if (msgCase_ == 7) {
-                subBuilder = ((Request.DetermineApprovalConfidenceRequest) msg_).toBuilder();
-              }
-              msg_ =
-                  input.readMessage(Request.DetermineApprovalConfidenceRequest.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((Request.DetermineApprovalConfidenceRequest) msg_);
-                msg_ = subBuilder.buildPartial();
-              }
-              msgCase_ = 7;
-              break;
-            }
-            case 66: {
               Request.AddEffectListenerRequest.Builder subBuilder = null;
-              if (msgCase_ == 8) {
+              if (msgCase_ == 7) {
                 subBuilder = ((Request.AddEffectListenerRequest) msg_).toBuilder();
               }
               msg_ =
@@ -363,12 +323,12 @@ public final class Wrapper {
                 subBuilder.mergeFrom((Request.AddEffectListenerRequest) msg_);
                 msg_ = subBuilder.buildPartial();
               }
-              msgCase_ = 8;
+              msgCase_ = 7;
               break;
             }
-            case 74: {
+            case 66: {
               Request.RemoveEffectListenerRequest.Builder subBuilder = null;
-              if (msgCase_ == 9) {
+              if (msgCase_ == 8) {
                 subBuilder = ((Request.RemoveEffectListenerRequest) msg_).toBuilder();
               }
               msg_ =
@@ -377,12 +337,12 @@ public final class Wrapper {
                 subBuilder.mergeFrom((Request.RemoveEffectListenerRequest) msg_);
                 msg_ = subBuilder.buildPartial();
               }
-              msgCase_ = 9;
+              msgCase_ = 8;
               break;
             }
-            case 82: {
+            case 74: {
               Request.SubmitEffectRequest.Builder subBuilder = null;
-              if (msgCase_ == 10) {
+              if (msgCase_ == 9) {
                 subBuilder = ((Request.SubmitEffectRequest) msg_).toBuilder();
               }
               msg_ =
@@ -391,12 +351,12 @@ public final class Wrapper {
                 subBuilder.mergeFrom((Request.SubmitEffectRequest) msg_);
                 msg_ = subBuilder.buildPartial();
               }
-              msgCase_ = 10;
+              msgCase_ = 9;
               break;
             }
-            case 90: {
+            case 82: {
               Request.GetEffectRequest.Builder subBuilder = null;
-              if (msgCase_ == 11) {
+              if (msgCase_ == 10) {
                 subBuilder = ((Request.GetEffectRequest) msg_).toBuilder();
               }
               msg_ =
@@ -405,12 +365,12 @@ public final class Wrapper {
                 subBuilder.mergeFrom((Request.GetEffectRequest) msg_);
                 msg_ = subBuilder.buildPartial();
               }
-              msgCase_ = 11;
+              msgCase_ = 10;
               break;
             }
-            case 98: {
+            case 90: {
               Response.FindTransactionsByAddressResponse.Builder subBuilder = null;
-              if (msgCase_ == 12) {
+              if (msgCase_ == 11) {
                 subBuilder = ((Response.FindTransactionsByAddressResponse) msg_).toBuilder();
               }
               msg_ =
@@ -419,12 +379,12 @@ public final class Wrapper {
                 subBuilder.mergeFrom((Response.FindTransactionsByAddressResponse) msg_);
                 msg_ = subBuilder.buildPartial();
               }
-              msgCase_ = 12;
+              msgCase_ = 11;
               break;
             }
-            case 106: {
+            case 98: {
               Response.FindTransactionsByTagResponse.Builder subBuilder = null;
-              if (msgCase_ == 13) {
+              if (msgCase_ == 12) {
                 subBuilder = ((Response.FindTransactionsByTagResponse) msg_).toBuilder();
               }
               msg_ =
@@ -433,12 +393,12 @@ public final class Wrapper {
                 subBuilder.mergeFrom((Response.FindTransactionsByTagResponse) msg_);
                 msg_ = subBuilder.buildPartial();
               }
-              msgCase_ = 13;
+              msgCase_ = 12;
               break;
             }
-            case 114: {
+            case 106: {
               Response.FindTransactionByHashResponse.Builder subBuilder = null;
-              if (msgCase_ == 14) {
+              if (msgCase_ == 13) {
                 subBuilder = ((Response.FindTransactionByHashResponse) msg_).toBuilder();
               }
               msg_ =
@@ -447,26 +407,12 @@ public final class Wrapper {
                 subBuilder.mergeFrom((Response.FindTransactionByHashResponse) msg_);
                 msg_ = subBuilder.buildPartial();
               }
-              msgCase_ = 14;
+              msgCase_ = 13;
               break;
             }
-            case 122: {
-              Response.DetermineApprovalConfidenceResponse.Builder subBuilder = null;
-              if (msgCase_ == 15) {
-                subBuilder = ((Response.DetermineApprovalConfidenceResponse) msg_).toBuilder();
-              }
-              msg_ =
-                  input.readMessage(Response.DetermineApprovalConfidenceResponse.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((Response.DetermineApprovalConfidenceResponse) msg_);
-                msg_ = subBuilder.buildPartial();
-              }
-              msgCase_ = 15;
-              break;
-            }
-            case 130: {
+            case 114: {
               Response.GetEffectResponse.Builder subBuilder = null;
-              if (msgCase_ == 16) {
+              if (msgCase_ == 14) {
                 subBuilder = ((Response.GetEffectResponse) msg_).toBuilder();
               }
               msg_ =
@@ -475,7 +421,7 @@ public final class Wrapper {
                 subBuilder.mergeFrom((Response.GetEffectResponse) msg_);
                 msg_ = subBuilder.buildPartial();
               }
-              msgCase_ = 16;
+              msgCase_ = 14;
               break;
             }
             default: {
@@ -536,45 +482,37 @@ public final class Wrapper {
        */
       SUBMIT_TRANSACTION_BYTES_REQUEST(4),
       /**
-       * <code>DETERMINE_APPROVAL_CONFIDENCE_REQUEST = 5;</code>
+       * <code>ADD_EFFECT_LISTENER_REQUEST = 5;</code>
        */
-      DETERMINE_APPROVAL_CONFIDENCE_REQUEST(5),
+      ADD_EFFECT_LISTENER_REQUEST(5),
       /**
-       * <code>ADD_EFFECT_LISTENER_REQUEST = 6;</code>
+       * <code>REMOVE_EFFECT_LISTENER_REQUEST = 6;</code>
        */
-      ADD_EFFECT_LISTENER_REQUEST(6),
+      REMOVE_EFFECT_LISTENER_REQUEST(6),
       /**
-       * <code>REMOVE_EFFECT_LISTENER_REQUEST = 7;</code>
+       * <code>SUBMIT_EFFECT_REQUEST = 7;</code>
        */
-      REMOVE_EFFECT_LISTENER_REQUEST(7),
+      SUBMIT_EFFECT_REQUEST(7),
       /**
-       * <code>SUBMIT_EFFECT_REQUEST = 8;</code>
+       * <code>GET_EFFECT_REQUEST = 8;</code>
        */
-      SUBMIT_EFFECT_REQUEST(8),
+      GET_EFFECT_REQUEST(8),
       /**
-       * <code>GET_EFFECT_REQUEST = 9;</code>
+       * <code>FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE = 9;</code>
        */
-      GET_EFFECT_REQUEST(9),
+      FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE(9),
       /**
-       * <code>FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE = 10;</code>
+       * <code>FIND_TRANSACTIONS_BY_TAG_RESPONSE = 10;</code>
        */
-      FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE(10),
+      FIND_TRANSACTIONS_BY_TAG_RESPONSE(10),
       /**
-       * <code>FIND_TRANSACTIONS_BY_TAG_RESPONSE = 11;</code>
+       * <code>FIND_TRANSACTION_BY_HASH_RESPONSE = 11;</code>
        */
-      FIND_TRANSACTIONS_BY_TAG_RESPONSE(11),
+      FIND_TRANSACTION_BY_HASH_RESPONSE(11),
       /**
-       * <code>FIND_TRANSACTION_BY_HASH_RESPONSE = 12;</code>
+       * <code>GET_EFFECT_RESPONSE = 12;</code>
        */
-      FIND_TRANSACTION_BY_HASH_RESPONSE(12),
-      /**
-       * <code>DETERMINE_APPROVAL_CONFIDENCE_RESPONSE = 13;</code>
-       */
-      DETERMINE_APPROVAL_CONFIDENCE_RESPONSE(13),
-      /**
-       * <code>GET_EFFECT_RESPONSE = 14;</code>
-       */
-      GET_EFFECT_RESPONSE(14),
+      GET_EFFECT_RESPONSE(12),
       UNRECOGNIZED(-1),
       ;
 
@@ -599,45 +537,37 @@ public final class Wrapper {
        */
       public static final int SUBMIT_TRANSACTION_BYTES_REQUEST_VALUE = 4;
       /**
-       * <code>DETERMINE_APPROVAL_CONFIDENCE_REQUEST = 5;</code>
+       * <code>ADD_EFFECT_LISTENER_REQUEST = 5;</code>
        */
-      public static final int DETERMINE_APPROVAL_CONFIDENCE_REQUEST_VALUE = 5;
+      public static final int ADD_EFFECT_LISTENER_REQUEST_VALUE = 5;
       /**
-       * <code>ADD_EFFECT_LISTENER_REQUEST = 6;</code>
+       * <code>REMOVE_EFFECT_LISTENER_REQUEST = 6;</code>
        */
-      public static final int ADD_EFFECT_LISTENER_REQUEST_VALUE = 6;
+      public static final int REMOVE_EFFECT_LISTENER_REQUEST_VALUE = 6;
       /**
-       * <code>REMOVE_EFFECT_LISTENER_REQUEST = 7;</code>
+       * <code>SUBMIT_EFFECT_REQUEST = 7;</code>
        */
-      public static final int REMOVE_EFFECT_LISTENER_REQUEST_VALUE = 7;
+      public static final int SUBMIT_EFFECT_REQUEST_VALUE = 7;
       /**
-       * <code>SUBMIT_EFFECT_REQUEST = 8;</code>
+       * <code>GET_EFFECT_REQUEST = 8;</code>
        */
-      public static final int SUBMIT_EFFECT_REQUEST_VALUE = 8;
+      public static final int GET_EFFECT_REQUEST_VALUE = 8;
       /**
-       * <code>GET_EFFECT_REQUEST = 9;</code>
+       * <code>FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE = 9;</code>
        */
-      public static final int GET_EFFECT_REQUEST_VALUE = 9;
+      public static final int FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE_VALUE = 9;
       /**
-       * <code>FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE = 10;</code>
+       * <code>FIND_TRANSACTIONS_BY_TAG_RESPONSE = 10;</code>
        */
-      public static final int FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE_VALUE = 10;
+      public static final int FIND_TRANSACTIONS_BY_TAG_RESPONSE_VALUE = 10;
       /**
-       * <code>FIND_TRANSACTIONS_BY_TAG_RESPONSE = 11;</code>
+       * <code>FIND_TRANSACTION_BY_HASH_RESPONSE = 11;</code>
        */
-      public static final int FIND_TRANSACTIONS_BY_TAG_RESPONSE_VALUE = 11;
+      public static final int FIND_TRANSACTION_BY_HASH_RESPONSE_VALUE = 11;
       /**
-       * <code>FIND_TRANSACTION_BY_HASH_RESPONSE = 12;</code>
+       * <code>GET_EFFECT_RESPONSE = 12;</code>
        */
-      public static final int FIND_TRANSACTION_BY_HASH_RESPONSE_VALUE = 12;
-      /**
-       * <code>DETERMINE_APPROVAL_CONFIDENCE_RESPONSE = 13;</code>
-       */
-      public static final int DETERMINE_APPROVAL_CONFIDENCE_RESPONSE_VALUE = 13;
-      /**
-       * <code>GET_EFFECT_RESPONSE = 14;</code>
-       */
-      public static final int GET_EFFECT_RESPONSE_VALUE = 14;
+      public static final int GET_EFFECT_RESPONSE_VALUE = 12;
 
 
       public final int getNumber() {
@@ -663,16 +593,14 @@ public final class Wrapper {
           case 2: return FIND_TRANSACTION_BY_HASH_REQUEST;
           case 3: return SUBMIT_TRANSACTION_BUILDER_REQUEST;
           case 4: return SUBMIT_TRANSACTION_BYTES_REQUEST;
-          case 5: return DETERMINE_APPROVAL_CONFIDENCE_REQUEST;
-          case 6: return ADD_EFFECT_LISTENER_REQUEST;
-          case 7: return REMOVE_EFFECT_LISTENER_REQUEST;
-          case 8: return SUBMIT_EFFECT_REQUEST;
-          case 9: return GET_EFFECT_REQUEST;
-          case 10: return FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE;
-          case 11: return FIND_TRANSACTIONS_BY_TAG_RESPONSE;
-          case 12: return FIND_TRANSACTION_BY_HASH_RESPONSE;
-          case 13: return DETERMINE_APPROVAL_CONFIDENCE_RESPONSE;
-          case 14: return GET_EFFECT_RESPONSE;
+          case 5: return ADD_EFFECT_LISTENER_REQUEST;
+          case 6: return REMOVE_EFFECT_LISTENER_REQUEST;
+          case 7: return SUBMIT_EFFECT_REQUEST;
+          case 8: return GET_EFFECT_REQUEST;
+          case 9: return FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE;
+          case 10: return FIND_TRANSACTIONS_BY_TAG_RESPONSE;
+          case 11: return FIND_TRANSACTION_BY_HASH_RESPONSE;
+          case 12: return GET_EFFECT_RESPONSE;
           default: return null;
         }
       }
@@ -734,16 +662,14 @@ public final class Wrapper {
       FINDTRANSACTIONBYHASHREQUEST(4),
       SUBMITTRANSACTIONBUILDERREQUEST(5),
       SUBMITTRANSACTIONBYTESREQUEST(6),
-      DETERMINEAPPROVALCONFIDENCEREQUEST(7),
-      ADDEFFECTLISTENERREQUEST(8),
-      REMOVEEFFECTLISTENERREQUEST(9),
-      SUBMITEFFECTREQUEST(10),
-      GETEFFECTREQUEST(11),
-      FINDTRANSACTIONSBYADDRESSRESPONSE(12),
-      FINDTRANSACTIONSBYTAGRESPONSE(13),
-      FINDTRANSACTIONBYHASHRESPONSE(14),
-      DETERMINEAPPROVALCONFIDENCERESPONSE(15),
-      GETEFFECTRESPONSE(16),
+      ADDEFFECTLISTENERREQUEST(7),
+      REMOVEEFFECTLISTENERREQUEST(8),
+      SUBMITEFFECTREQUEST(9),
+      GETEFFECTREQUEST(10),
+      FINDTRANSACTIONSBYADDRESSRESPONSE(11),
+      FINDTRANSACTIONSBYTAGRESPONSE(12),
+      FINDTRANSACTIONBYHASHRESPONSE(13),
+      GETEFFECTRESPONSE(14),
       MSG_NOT_SET(0);
       private final int value;
       private MsgCase(int value) {
@@ -764,16 +690,14 @@ public final class Wrapper {
           case 4: return FINDTRANSACTIONBYHASHREQUEST;
           case 5: return SUBMITTRANSACTIONBUILDERREQUEST;
           case 6: return SUBMITTRANSACTIONBYTESREQUEST;
-          case 7: return DETERMINEAPPROVALCONFIDENCEREQUEST;
-          case 8: return ADDEFFECTLISTENERREQUEST;
-          case 9: return REMOVEEFFECTLISTENERREQUEST;
-          case 10: return SUBMITEFFECTREQUEST;
-          case 11: return GETEFFECTREQUEST;
-          case 12: return FINDTRANSACTIONSBYADDRESSRESPONSE;
-          case 13: return FINDTRANSACTIONSBYTAGRESPONSE;
-          case 14: return FINDTRANSACTIONBYHASHRESPONSE;
-          case 15: return DETERMINEAPPROVALCONFIDENCERESPONSE;
-          case 16: return GETEFFECTRESPONSE;
+          case 7: return ADDEFFECTLISTENERREQUEST;
+          case 8: return REMOVEEFFECTLISTENERREQUEST;
+          case 9: return SUBMITEFFECTREQUEST;
+          case 10: return GETEFFECTREQUEST;
+          case 11: return FINDTRANSACTIONSBYADDRESSRESPONSE;
+          case 12: return FINDTRANSACTIONSBYTAGRESPONSE;
+          case 13: return FINDTRANSACTIONBYHASHRESPONSE;
+          case 14: return GETEFFECTRESPONSE;
           case 0: return MSG_NOT_SET;
           default: return null;
         }
@@ -936,261 +860,209 @@ public final class Wrapper {
       return Request.SubmitTransactionBytesRequest.getDefaultInstance();
     }
 
-    public static final int DETERMINEAPPROVALCONFIDENCEREQUEST_FIELD_NUMBER = 7;
+    public static final int ADDEFFECTLISTENERREQUEST_FIELD_NUMBER = 7;
     /**
-     * <code>.DetermineApprovalConfidenceRequest determineApprovalConfidenceRequest = 7;</code>
+     * <code>.AddEffectListenerRequest addEffectListenerRequest = 7;</code>
      */
-    public boolean hasDetermineApprovalConfidenceRequest() {
+    public boolean hasAddEffectListenerRequest() {
       return msgCase_ == 7;
     }
     /**
-     * <code>.DetermineApprovalConfidenceRequest determineApprovalConfidenceRequest = 7;</code>
+     * <code>.AddEffectListenerRequest addEffectListenerRequest = 7;</code>
      */
-    public Request.DetermineApprovalConfidenceRequest getDetermineApprovalConfidenceRequest() {
+    public Request.AddEffectListenerRequest getAddEffectListenerRequest() {
       if (msgCase_ == 7) {
-         return (Request.DetermineApprovalConfidenceRequest) msg_;
+         return (Request.AddEffectListenerRequest) msg_;
       }
-      return Request.DetermineApprovalConfidenceRequest.getDefaultInstance();
+      return Request.AddEffectListenerRequest.getDefaultInstance();
     }
     /**
-     * <code>.DetermineApprovalConfidenceRequest determineApprovalConfidenceRequest = 7;</code>
+     * <code>.AddEffectListenerRequest addEffectListenerRequest = 7;</code>
      */
-    public Request.DetermineApprovalConfidenceRequestOrBuilder getDetermineApprovalConfidenceRequestOrBuilder() {
+    public Request.AddEffectListenerRequestOrBuilder getAddEffectListenerRequestOrBuilder() {
       if (msgCase_ == 7) {
-         return (Request.DetermineApprovalConfidenceRequest) msg_;
+         return (Request.AddEffectListenerRequest) msg_;
       }
-      return Request.DetermineApprovalConfidenceRequest.getDefaultInstance();
+      return Request.AddEffectListenerRequest.getDefaultInstance();
     }
 
-    public static final int ADDEFFECTLISTENERREQUEST_FIELD_NUMBER = 8;
+    public static final int REMOVEEFFECTLISTENERREQUEST_FIELD_NUMBER = 8;
     /**
-     * <code>.AddEffectListenerRequest addEffectListenerRequest = 8;</code>
+     * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 8;</code>
      */
-    public boolean hasAddEffectListenerRequest() {
+    public boolean hasRemoveEffectListenerRequest() {
       return msgCase_ == 8;
     }
     /**
-     * <code>.AddEffectListenerRequest addEffectListenerRequest = 8;</code>
+     * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 8;</code>
      */
-    public Request.AddEffectListenerRequest getAddEffectListenerRequest() {
+    public Request.RemoveEffectListenerRequest getRemoveEffectListenerRequest() {
       if (msgCase_ == 8) {
-         return (Request.AddEffectListenerRequest) msg_;
+         return (Request.RemoveEffectListenerRequest) msg_;
       }
-      return Request.AddEffectListenerRequest.getDefaultInstance();
+      return Request.RemoveEffectListenerRequest.getDefaultInstance();
     }
     /**
-     * <code>.AddEffectListenerRequest addEffectListenerRequest = 8;</code>
+     * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 8;</code>
      */
-    public Request.AddEffectListenerRequestOrBuilder getAddEffectListenerRequestOrBuilder() {
+    public Request.RemoveEffectListenerRequestOrBuilder getRemoveEffectListenerRequestOrBuilder() {
       if (msgCase_ == 8) {
-         return (Request.AddEffectListenerRequest) msg_;
+         return (Request.RemoveEffectListenerRequest) msg_;
       }
-      return Request.AddEffectListenerRequest.getDefaultInstance();
+      return Request.RemoveEffectListenerRequest.getDefaultInstance();
     }
 
-    public static final int REMOVEEFFECTLISTENERREQUEST_FIELD_NUMBER = 9;
+    public static final int SUBMITEFFECTREQUEST_FIELD_NUMBER = 9;
     /**
-     * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 9;</code>
+     * <code>.SubmitEffectRequest submitEffectRequest = 9;</code>
      */
-    public boolean hasRemoveEffectListenerRequest() {
+    public boolean hasSubmitEffectRequest() {
       return msgCase_ == 9;
     }
     /**
-     * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 9;</code>
+     * <code>.SubmitEffectRequest submitEffectRequest = 9;</code>
      */
-    public Request.RemoveEffectListenerRequest getRemoveEffectListenerRequest() {
+    public Request.SubmitEffectRequest getSubmitEffectRequest() {
       if (msgCase_ == 9) {
-         return (Request.RemoveEffectListenerRequest) msg_;
+         return (Request.SubmitEffectRequest) msg_;
       }
-      return Request.RemoveEffectListenerRequest.getDefaultInstance();
+      return Request.SubmitEffectRequest.getDefaultInstance();
     }
     /**
-     * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 9;</code>
+     * <code>.SubmitEffectRequest submitEffectRequest = 9;</code>
      */
-    public Request.RemoveEffectListenerRequestOrBuilder getRemoveEffectListenerRequestOrBuilder() {
+    public Request.SubmitEffectRequestOrBuilder getSubmitEffectRequestOrBuilder() {
       if (msgCase_ == 9) {
-         return (Request.RemoveEffectListenerRequest) msg_;
+         return (Request.SubmitEffectRequest) msg_;
       }
-      return Request.RemoveEffectListenerRequest.getDefaultInstance();
+      return Request.SubmitEffectRequest.getDefaultInstance();
     }
 
-    public static final int SUBMITEFFECTREQUEST_FIELD_NUMBER = 10;
+    public static final int GETEFFECTREQUEST_FIELD_NUMBER = 10;
     /**
-     * <code>.SubmitEffectRequest submitEffectRequest = 10;</code>
+     * <code>.GetEffectRequest getEffectRequest = 10;</code>
      */
-    public boolean hasSubmitEffectRequest() {
+    public boolean hasGetEffectRequest() {
       return msgCase_ == 10;
     }
     /**
-     * <code>.SubmitEffectRequest submitEffectRequest = 10;</code>
+     * <code>.GetEffectRequest getEffectRequest = 10;</code>
      */
-    public Request.SubmitEffectRequest getSubmitEffectRequest() {
+    public Request.GetEffectRequest getGetEffectRequest() {
       if (msgCase_ == 10) {
-         return (Request.SubmitEffectRequest) msg_;
+         return (Request.GetEffectRequest) msg_;
       }
-      return Request.SubmitEffectRequest.getDefaultInstance();
+      return Request.GetEffectRequest.getDefaultInstance();
     }
     /**
-     * <code>.SubmitEffectRequest submitEffectRequest = 10;</code>
+     * <code>.GetEffectRequest getEffectRequest = 10;</code>
      */
-    public Request.SubmitEffectRequestOrBuilder getSubmitEffectRequestOrBuilder() {
+    public Request.GetEffectRequestOrBuilder getGetEffectRequestOrBuilder() {
       if (msgCase_ == 10) {
-         return (Request.SubmitEffectRequest) msg_;
+         return (Request.GetEffectRequest) msg_;
       }
-      return Request.SubmitEffectRequest.getDefaultInstance();
+      return Request.GetEffectRequest.getDefaultInstance();
     }
 
-    public static final int GETEFFECTREQUEST_FIELD_NUMBER = 11;
+    public static final int FINDTRANSACTIONSBYADDRESSRESPONSE_FIELD_NUMBER = 11;
     /**
-     * <code>.GetEffectRequest getEffectRequest = 11;</code>
+     * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 11;</code>
      */
-    public boolean hasGetEffectRequest() {
+    public boolean hasFindTransactionsByAddressResponse() {
       return msgCase_ == 11;
     }
     /**
-     * <code>.GetEffectRequest getEffectRequest = 11;</code>
+     * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 11;</code>
      */
-    public Request.GetEffectRequest getGetEffectRequest() {
+    public Response.FindTransactionsByAddressResponse getFindTransactionsByAddressResponse() {
       if (msgCase_ == 11) {
-         return (Request.GetEffectRequest) msg_;
+         return (Response.FindTransactionsByAddressResponse) msg_;
       }
-      return Request.GetEffectRequest.getDefaultInstance();
+      return Response.FindTransactionsByAddressResponse.getDefaultInstance();
     }
     /**
-     * <code>.GetEffectRequest getEffectRequest = 11;</code>
+     * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 11;</code>
      */
-    public Request.GetEffectRequestOrBuilder getGetEffectRequestOrBuilder() {
+    public Response.FindTransactionsByAddressResponseOrBuilder getFindTransactionsByAddressResponseOrBuilder() {
       if (msgCase_ == 11) {
-         return (Request.GetEffectRequest) msg_;
+         return (Response.FindTransactionsByAddressResponse) msg_;
       }
-      return Request.GetEffectRequest.getDefaultInstance();
+      return Response.FindTransactionsByAddressResponse.getDefaultInstance();
     }
 
-    public static final int FINDTRANSACTIONSBYADDRESSRESPONSE_FIELD_NUMBER = 12;
+    public static final int FINDTRANSACTIONSBYTAGRESPONSE_FIELD_NUMBER = 12;
     /**
-     * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 12;</code>
+     * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 12;</code>
      */
-    public boolean hasFindTransactionsByAddressResponse() {
+    public boolean hasFindTransactionsByTagResponse() {
       return msgCase_ == 12;
     }
     /**
-     * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 12;</code>
+     * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 12;</code>
      */
-    public Response.FindTransactionsByAddressResponse getFindTransactionsByAddressResponse() {
+    public Response.FindTransactionsByTagResponse getFindTransactionsByTagResponse() {
       if (msgCase_ == 12) {
-         return (Response.FindTransactionsByAddressResponse) msg_;
+         return (Response.FindTransactionsByTagResponse) msg_;
       }
-      return Response.FindTransactionsByAddressResponse.getDefaultInstance();
+      return Response.FindTransactionsByTagResponse.getDefaultInstance();
     }
     /**
-     * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 12;</code>
+     * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 12;</code>
      */
-    public Response.FindTransactionsByAddressResponseOrBuilder getFindTransactionsByAddressResponseOrBuilder() {
+    public Response.FindTransactionsByTagResponseOrBuilder getFindTransactionsByTagResponseOrBuilder() {
       if (msgCase_ == 12) {
-         return (Response.FindTransactionsByAddressResponse) msg_;
+         return (Response.FindTransactionsByTagResponse) msg_;
       }
-      return Response.FindTransactionsByAddressResponse.getDefaultInstance();
+      return Response.FindTransactionsByTagResponse.getDefaultInstance();
     }
 
-    public static final int FINDTRANSACTIONSBYTAGRESPONSE_FIELD_NUMBER = 13;
+    public static final int FINDTRANSACTIONBYHASHRESPONSE_FIELD_NUMBER = 13;
     /**
-     * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 13;</code>
+     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
      */
-    public boolean hasFindTransactionsByTagResponse() {
+    public boolean hasFindTransactionByHashResponse() {
       return msgCase_ == 13;
     }
     /**
-     * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 13;</code>
+     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
      */
-    public Response.FindTransactionsByTagResponse getFindTransactionsByTagResponse() {
+    public Response.FindTransactionByHashResponse getFindTransactionByHashResponse() {
       if (msgCase_ == 13) {
-         return (Response.FindTransactionsByTagResponse) msg_;
+         return (Response.FindTransactionByHashResponse) msg_;
       }
-      return Response.FindTransactionsByTagResponse.getDefaultInstance();
+      return Response.FindTransactionByHashResponse.getDefaultInstance();
     }
     /**
-     * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 13;</code>
+     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
      */
-    public Response.FindTransactionsByTagResponseOrBuilder getFindTransactionsByTagResponseOrBuilder() {
+    public Response.FindTransactionByHashResponseOrBuilder getFindTransactionByHashResponseOrBuilder() {
       if (msgCase_ == 13) {
-         return (Response.FindTransactionsByTagResponse) msg_;
+         return (Response.FindTransactionByHashResponse) msg_;
       }
-      return Response.FindTransactionsByTagResponse.getDefaultInstance();
+      return Response.FindTransactionByHashResponse.getDefaultInstance();
     }
 
-    public static final int FINDTRANSACTIONBYHASHRESPONSE_FIELD_NUMBER = 14;
+    public static final int GETEFFECTRESPONSE_FIELD_NUMBER = 14;
     /**
-     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 14;</code>
+     * <code>.GetEffectResponse getEffectResponse = 14;</code>
      */
-    public boolean hasFindTransactionByHashResponse() {
+    public boolean hasGetEffectResponse() {
       return msgCase_ == 14;
     }
     /**
-     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 14;</code>
-     */
-    public Response.FindTransactionByHashResponse getFindTransactionByHashResponse() {
-      if (msgCase_ == 14) {
-         return (Response.FindTransactionByHashResponse) msg_;
-      }
-      return Response.FindTransactionByHashResponse.getDefaultInstance();
-    }
-    /**
-     * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 14;</code>
-     */
-    public Response.FindTransactionByHashResponseOrBuilder getFindTransactionByHashResponseOrBuilder() {
-      if (msgCase_ == 14) {
-         return (Response.FindTransactionByHashResponse) msg_;
-      }
-      return Response.FindTransactionByHashResponse.getDefaultInstance();
-    }
-
-    public static final int DETERMINEAPPROVALCONFIDENCERESPONSE_FIELD_NUMBER = 15;
-    /**
-     * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 15;</code>
-     */
-    public boolean hasDetermineApprovalConfidenceResponse() {
-      return msgCase_ == 15;
-    }
-    /**
-     * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 15;</code>
-     */
-    public Response.DetermineApprovalConfidenceResponse getDetermineApprovalConfidenceResponse() {
-      if (msgCase_ == 15) {
-         return (Response.DetermineApprovalConfidenceResponse) msg_;
-      }
-      return Response.DetermineApprovalConfidenceResponse.getDefaultInstance();
-    }
-    /**
-     * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 15;</code>
-     */
-    public Response.DetermineApprovalConfidenceResponseOrBuilder getDetermineApprovalConfidenceResponseOrBuilder() {
-      if (msgCase_ == 15) {
-         return (Response.DetermineApprovalConfidenceResponse) msg_;
-      }
-      return Response.DetermineApprovalConfidenceResponse.getDefaultInstance();
-    }
-
-    public static final int GETEFFECTRESPONSE_FIELD_NUMBER = 16;
-    /**
-     * <code>.GetEffectResponse getEffectResponse = 16;</code>
-     */
-    public boolean hasGetEffectResponse() {
-      return msgCase_ == 16;
-    }
-    /**
-     * <code>.GetEffectResponse getEffectResponse = 16;</code>
+     * <code>.GetEffectResponse getEffectResponse = 14;</code>
      */
     public Response.GetEffectResponse getGetEffectResponse() {
-      if (msgCase_ == 16) {
+      if (msgCase_ == 14) {
          return (Response.GetEffectResponse) msg_;
       }
       return Response.GetEffectResponse.getDefaultInstance();
     }
     /**
-     * <code>.GetEffectResponse getEffectResponse = 16;</code>
+     * <code>.GetEffectResponse getEffectResponse = 14;</code>
      */
     public Response.GetEffectResponseOrBuilder getGetEffectResponseOrBuilder() {
-      if (msgCase_ == 16) {
+      if (msgCase_ == 14) {
          return (Response.GetEffectResponse) msg_;
       }
       return Response.GetEffectResponse.getDefaultInstance();
@@ -1229,34 +1101,28 @@ public final class Wrapper {
         output.writeMessage(6, (Request.SubmitTransactionBytesRequest) msg_);
       }
       if (msgCase_ == 7) {
-        output.writeMessage(7, (Request.DetermineApprovalConfidenceRequest) msg_);
+        output.writeMessage(7, (Request.AddEffectListenerRequest) msg_);
       }
       if (msgCase_ == 8) {
-        output.writeMessage(8, (Request.AddEffectListenerRequest) msg_);
+        output.writeMessage(8, (Request.RemoveEffectListenerRequest) msg_);
       }
       if (msgCase_ == 9) {
-        output.writeMessage(9, (Request.RemoveEffectListenerRequest) msg_);
+        output.writeMessage(9, (Request.SubmitEffectRequest) msg_);
       }
       if (msgCase_ == 10) {
-        output.writeMessage(10, (Request.SubmitEffectRequest) msg_);
+        output.writeMessage(10, (Request.GetEffectRequest) msg_);
       }
       if (msgCase_ == 11) {
-        output.writeMessage(11, (Request.GetEffectRequest) msg_);
+        output.writeMessage(11, (Response.FindTransactionsByAddressResponse) msg_);
       }
       if (msgCase_ == 12) {
-        output.writeMessage(12, (Response.FindTransactionsByAddressResponse) msg_);
+        output.writeMessage(12, (Response.FindTransactionsByTagResponse) msg_);
       }
       if (msgCase_ == 13) {
-        output.writeMessage(13, (Response.FindTransactionsByTagResponse) msg_);
+        output.writeMessage(13, (Response.FindTransactionByHashResponse) msg_);
       }
       if (msgCase_ == 14) {
-        output.writeMessage(14, (Response.FindTransactionByHashResponse) msg_);
-      }
-      if (msgCase_ == 15) {
-        output.writeMessage(15, (Response.DetermineApprovalConfidenceResponse) msg_);
-      }
-      if (msgCase_ == 16) {
-        output.writeMessage(16, (Response.GetEffectResponse) msg_);
+        output.writeMessage(14, (Response.GetEffectResponse) msg_);
       }
       unknownFields.writeTo(output);
     }
@@ -1293,43 +1159,35 @@ public final class Wrapper {
       }
       if (msgCase_ == 7) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, (Request.DetermineApprovalConfidenceRequest) msg_);
+          .computeMessageSize(7, (Request.AddEffectListenerRequest) msg_);
       }
       if (msgCase_ == 8) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, (Request.AddEffectListenerRequest) msg_);
+          .computeMessageSize(8, (Request.RemoveEffectListenerRequest) msg_);
       }
       if (msgCase_ == 9) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, (Request.RemoveEffectListenerRequest) msg_);
+          .computeMessageSize(9, (Request.SubmitEffectRequest) msg_);
       }
       if (msgCase_ == 10) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, (Request.SubmitEffectRequest) msg_);
+          .computeMessageSize(10, (Request.GetEffectRequest) msg_);
       }
       if (msgCase_ == 11) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, (Request.GetEffectRequest) msg_);
+          .computeMessageSize(11, (Response.FindTransactionsByAddressResponse) msg_);
       }
       if (msgCase_ == 12) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, (Response.FindTransactionsByAddressResponse) msg_);
+          .computeMessageSize(12, (Response.FindTransactionsByTagResponse) msg_);
       }
       if (msgCase_ == 13) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, (Response.FindTransactionsByTagResponse) msg_);
+          .computeMessageSize(13, (Response.FindTransactionByHashResponse) msg_);
       }
       if (msgCase_ == 14) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, (Response.FindTransactionByHashResponse) msg_);
-      }
-      if (msgCase_ == 15) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, (Response.DetermineApprovalConfidenceResponse) msg_);
-      }
-      if (msgCase_ == 16) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(16, (Response.GetEffectResponse) msg_);
+          .computeMessageSize(14, (Response.GetEffectResponse) msg_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1370,42 +1228,34 @@ public final class Wrapper {
               .equals(other.getSubmitTransactionBytesRequest())) return false;
           break;
         case 7:
-          if (!getDetermineApprovalConfidenceRequest()
-              .equals(other.getDetermineApprovalConfidenceRequest())) return false;
-          break;
-        case 8:
           if (!getAddEffectListenerRequest()
               .equals(other.getAddEffectListenerRequest())) return false;
           break;
-        case 9:
+        case 8:
           if (!getRemoveEffectListenerRequest()
               .equals(other.getRemoveEffectListenerRequest())) return false;
           break;
-        case 10:
+        case 9:
           if (!getSubmitEffectRequest()
               .equals(other.getSubmitEffectRequest())) return false;
           break;
-        case 11:
+        case 10:
           if (!getGetEffectRequest()
               .equals(other.getGetEffectRequest())) return false;
           break;
-        case 12:
+        case 11:
           if (!getFindTransactionsByAddressResponse()
               .equals(other.getFindTransactionsByAddressResponse())) return false;
           break;
-        case 13:
+        case 12:
           if (!getFindTransactionsByTagResponse()
               .equals(other.getFindTransactionsByTagResponse())) return false;
           break;
-        case 14:
+        case 13:
           if (!getFindTransactionByHashResponse()
               .equals(other.getFindTransactionByHashResponse())) return false;
           break;
-        case 15:
-          if (!getDetermineApprovalConfidenceResponse()
-              .equals(other.getDetermineApprovalConfidenceResponse())) return false;
-          break;
-        case 16:
+        case 14:
           if (!getGetEffectResponse()
               .equals(other.getGetEffectResponse())) return false;
           break;
@@ -1447,42 +1297,34 @@ public final class Wrapper {
           hash = (53 * hash) + getSubmitTransactionBytesRequest().hashCode();
           break;
         case 7:
-          hash = (37 * hash) + DETERMINEAPPROVALCONFIDENCEREQUEST_FIELD_NUMBER;
-          hash = (53 * hash) + getDetermineApprovalConfidenceRequest().hashCode();
-          break;
-        case 8:
           hash = (37 * hash) + ADDEFFECTLISTENERREQUEST_FIELD_NUMBER;
           hash = (53 * hash) + getAddEffectListenerRequest().hashCode();
           break;
-        case 9:
+        case 8:
           hash = (37 * hash) + REMOVEEFFECTLISTENERREQUEST_FIELD_NUMBER;
           hash = (53 * hash) + getRemoveEffectListenerRequest().hashCode();
           break;
-        case 10:
+        case 9:
           hash = (37 * hash) + SUBMITEFFECTREQUEST_FIELD_NUMBER;
           hash = (53 * hash) + getSubmitEffectRequest().hashCode();
           break;
-        case 11:
+        case 10:
           hash = (37 * hash) + GETEFFECTREQUEST_FIELD_NUMBER;
           hash = (53 * hash) + getGetEffectRequest().hashCode();
           break;
-        case 12:
+        case 11:
           hash = (37 * hash) + FINDTRANSACTIONSBYADDRESSRESPONSE_FIELD_NUMBER;
           hash = (53 * hash) + getFindTransactionsByAddressResponse().hashCode();
           break;
-        case 13:
+        case 12:
           hash = (37 * hash) + FINDTRANSACTIONSBYTAGRESPONSE_FIELD_NUMBER;
           hash = (53 * hash) + getFindTransactionsByTagResponse().hashCode();
           break;
-        case 14:
+        case 13:
           hash = (37 * hash) + FINDTRANSACTIONBYHASHRESPONSE_FIELD_NUMBER;
           hash = (53 * hash) + getFindTransactionByHashResponse().hashCode();
           break;
-        case 15:
-          hash = (37 * hash) + DETERMINEAPPROVALCONFIDENCERESPONSE_FIELD_NUMBER;
-          hash = (53 * hash) + getDetermineApprovalConfidenceResponse().hashCode();
-          break;
-        case 16:
+        case 14:
           hash = (37 * hash) + GETEFFECTRESPONSE_FIELD_NUMBER;
           hash = (53 * hash) + getGetEffectResponse().hashCode();
           break;
@@ -1689,69 +1531,55 @@ public final class Wrapper {
           }
         }
         if (msgCase_ == 7) {
-          if (determineApprovalConfidenceRequestBuilder_ == null) {
-            result.msg_ = msg_;
-          } else {
-            result.msg_ = determineApprovalConfidenceRequestBuilder_.build();
-          }
-        }
-        if (msgCase_ == 8) {
           if (addEffectListenerRequestBuilder_ == null) {
             result.msg_ = msg_;
           } else {
             result.msg_ = addEffectListenerRequestBuilder_.build();
           }
         }
-        if (msgCase_ == 9) {
+        if (msgCase_ == 8) {
           if (removeEffectListenerRequestBuilder_ == null) {
             result.msg_ = msg_;
           } else {
             result.msg_ = removeEffectListenerRequestBuilder_.build();
           }
         }
-        if (msgCase_ == 10) {
+        if (msgCase_ == 9) {
           if (submitEffectRequestBuilder_ == null) {
             result.msg_ = msg_;
           } else {
             result.msg_ = submitEffectRequestBuilder_.build();
           }
         }
-        if (msgCase_ == 11) {
+        if (msgCase_ == 10) {
           if (getEffectRequestBuilder_ == null) {
             result.msg_ = msg_;
           } else {
             result.msg_ = getEffectRequestBuilder_.build();
           }
         }
-        if (msgCase_ == 12) {
+        if (msgCase_ == 11) {
           if (findTransactionsByAddressResponseBuilder_ == null) {
             result.msg_ = msg_;
           } else {
             result.msg_ = findTransactionsByAddressResponseBuilder_.build();
           }
         }
-        if (msgCase_ == 13) {
+        if (msgCase_ == 12) {
           if (findTransactionsByTagResponseBuilder_ == null) {
             result.msg_ = msg_;
           } else {
             result.msg_ = findTransactionsByTagResponseBuilder_.build();
           }
         }
-        if (msgCase_ == 14) {
+        if (msgCase_ == 13) {
           if (findTransactionByHashResponseBuilder_ == null) {
             result.msg_ = msg_;
           } else {
             result.msg_ = findTransactionByHashResponseBuilder_.build();
           }
         }
-        if (msgCase_ == 15) {
-          if (determineApprovalConfidenceResponseBuilder_ == null) {
-            result.msg_ = msg_;
-          } else {
-            result.msg_ = determineApprovalConfidenceResponseBuilder_.build();
-          }
-        }
-        if (msgCase_ == 16) {
+        if (msgCase_ == 14) {
           if (getEffectResponseBuilder_ == null) {
             result.msg_ = msg_;
           } else {
@@ -1831,10 +1659,6 @@ public final class Wrapper {
             mergeSubmitTransactionBytesRequest(other.getSubmitTransactionBytesRequest());
             break;
           }
-          case DETERMINEAPPROVALCONFIDENCEREQUEST: {
-            mergeDetermineApprovalConfidenceRequest(other.getDetermineApprovalConfidenceRequest());
-            break;
-          }
           case ADDEFFECTLISTENERREQUEST: {
             mergeAddEffectListenerRequest(other.getAddEffectListenerRequest());
             break;
@@ -1861,10 +1685,6 @@ public final class Wrapper {
           }
           case FINDTRANSACTIONBYHASHRESPONSE: {
             mergeFindTransactionByHashResponse(other.getFindTransactionByHashResponse());
-            break;
-          }
-          case DETERMINEAPPROVALCONFIDENCERESPONSE: {
-            mergeDetermineApprovalConfidenceResponse(other.getDetermineApprovalConfidenceResponse());
             break;
           }
           case GETEFFECTRESPONSE: {
@@ -2645,167 +2465,31 @@ public final class Wrapper {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          Request.DetermineApprovalConfidenceRequest, Request.DetermineApprovalConfidenceRequest.Builder, Request.DetermineApprovalConfidenceRequestOrBuilder> determineApprovalConfidenceRequestBuilder_;
+          Request.AddEffectListenerRequest, Request.AddEffectListenerRequest.Builder, Request.AddEffectListenerRequestOrBuilder> addEffectListenerRequestBuilder_;
       /**
-       * <code>.DetermineApprovalConfidenceRequest determineApprovalConfidenceRequest = 7;</code>
+       * <code>.AddEffectListenerRequest addEffectListenerRequest = 7;</code>
        */
-      public boolean hasDetermineApprovalConfidenceRequest() {
+      public boolean hasAddEffectListenerRequest() {
         return msgCase_ == 7;
       }
       /**
-       * <code>.DetermineApprovalConfidenceRequest determineApprovalConfidenceRequest = 7;</code>
-       */
-      public Request.DetermineApprovalConfidenceRequest getDetermineApprovalConfidenceRequest() {
-        if (determineApprovalConfidenceRequestBuilder_ == null) {
-          if (msgCase_ == 7) {
-            return (Request.DetermineApprovalConfidenceRequest) msg_;
-          }
-          return Request.DetermineApprovalConfidenceRequest.getDefaultInstance();
-        } else {
-          if (msgCase_ == 7) {
-            return determineApprovalConfidenceRequestBuilder_.getMessage();
-          }
-          return Request.DetermineApprovalConfidenceRequest.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.DetermineApprovalConfidenceRequest determineApprovalConfidenceRequest = 7;</code>
-       */
-      public Builder setDetermineApprovalConfidenceRequest(Request.DetermineApprovalConfidenceRequest value) {
-        if (determineApprovalConfidenceRequestBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          msg_ = value;
-          onChanged();
-        } else {
-          determineApprovalConfidenceRequestBuilder_.setMessage(value);
-        }
-        msgCase_ = 7;
-        return this;
-      }
-      /**
-       * <code>.DetermineApprovalConfidenceRequest determineApprovalConfidenceRequest = 7;</code>
-       */
-      public Builder setDetermineApprovalConfidenceRequest(
-          Request.DetermineApprovalConfidenceRequest.Builder builderForValue) {
-        if (determineApprovalConfidenceRequestBuilder_ == null) {
-          msg_ = builderForValue.build();
-          onChanged();
-        } else {
-          determineApprovalConfidenceRequestBuilder_.setMessage(builderForValue.build());
-        }
-        msgCase_ = 7;
-        return this;
-      }
-      /**
-       * <code>.DetermineApprovalConfidenceRequest determineApprovalConfidenceRequest = 7;</code>
-       */
-      public Builder mergeDetermineApprovalConfidenceRequest(Request.DetermineApprovalConfidenceRequest value) {
-        if (determineApprovalConfidenceRequestBuilder_ == null) {
-          if (msgCase_ == 7 &&
-              msg_ != Request.DetermineApprovalConfidenceRequest.getDefaultInstance()) {
-            msg_ = Request.DetermineApprovalConfidenceRequest.newBuilder((Request.DetermineApprovalConfidenceRequest) msg_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            msg_ = value;
-          }
-          onChanged();
-        } else {
-          if (msgCase_ == 7) {
-            determineApprovalConfidenceRequestBuilder_.mergeFrom(value);
-          }
-          determineApprovalConfidenceRequestBuilder_.setMessage(value);
-        }
-        msgCase_ = 7;
-        return this;
-      }
-      /**
-       * <code>.DetermineApprovalConfidenceRequest determineApprovalConfidenceRequest = 7;</code>
-       */
-      public Builder clearDetermineApprovalConfidenceRequest() {
-        if (determineApprovalConfidenceRequestBuilder_ == null) {
-          if (msgCase_ == 7) {
-            msgCase_ = 0;
-            msg_ = null;
-            onChanged();
-          }
-        } else {
-          if (msgCase_ == 7) {
-            msgCase_ = 0;
-            msg_ = null;
-          }
-          determineApprovalConfidenceRequestBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.DetermineApprovalConfidenceRequest determineApprovalConfidenceRequest = 7;</code>
-       */
-      public Request.DetermineApprovalConfidenceRequest.Builder getDetermineApprovalConfidenceRequestBuilder() {
-        return getDetermineApprovalConfidenceRequestFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.DetermineApprovalConfidenceRequest determineApprovalConfidenceRequest = 7;</code>
-       */
-      public Request.DetermineApprovalConfidenceRequestOrBuilder getDetermineApprovalConfidenceRequestOrBuilder() {
-        if ((msgCase_ == 7) && (determineApprovalConfidenceRequestBuilder_ != null)) {
-          return determineApprovalConfidenceRequestBuilder_.getMessageOrBuilder();
-        } else {
-          if (msgCase_ == 7) {
-            return (Request.DetermineApprovalConfidenceRequest) msg_;
-          }
-          return Request.DetermineApprovalConfidenceRequest.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.DetermineApprovalConfidenceRequest determineApprovalConfidenceRequest = 7;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          Request.DetermineApprovalConfidenceRequest, Request.DetermineApprovalConfidenceRequest.Builder, Request.DetermineApprovalConfidenceRequestOrBuilder> 
-          getDetermineApprovalConfidenceRequestFieldBuilder() {
-        if (determineApprovalConfidenceRequestBuilder_ == null) {
-          if (!(msgCase_ == 7)) {
-            msg_ = Request.DetermineApprovalConfidenceRequest.getDefaultInstance();
-          }
-          determineApprovalConfidenceRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Request.DetermineApprovalConfidenceRequest, Request.DetermineApprovalConfidenceRequest.Builder, Request.DetermineApprovalConfidenceRequestOrBuilder>(
-                  (Request.DetermineApprovalConfidenceRequest) msg_,
-                  getParentForChildren(),
-                  isClean());
-          msg_ = null;
-        }
-        msgCase_ = 7;
-        onChanged();;
-        return determineApprovalConfidenceRequestBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          Request.AddEffectListenerRequest, Request.AddEffectListenerRequest.Builder, Request.AddEffectListenerRequestOrBuilder> addEffectListenerRequestBuilder_;
-      /**
-       * <code>.AddEffectListenerRequest addEffectListenerRequest = 8;</code>
-       */
-      public boolean hasAddEffectListenerRequest() {
-        return msgCase_ == 8;
-      }
-      /**
-       * <code>.AddEffectListenerRequest addEffectListenerRequest = 8;</code>
+       * <code>.AddEffectListenerRequest addEffectListenerRequest = 7;</code>
        */
       public Request.AddEffectListenerRequest getAddEffectListenerRequest() {
         if (addEffectListenerRequestBuilder_ == null) {
-          if (msgCase_ == 8) {
+          if (msgCase_ == 7) {
             return (Request.AddEffectListenerRequest) msg_;
           }
           return Request.AddEffectListenerRequest.getDefaultInstance();
         } else {
-          if (msgCase_ == 8) {
+          if (msgCase_ == 7) {
             return addEffectListenerRequestBuilder_.getMessage();
           }
           return Request.AddEffectListenerRequest.getDefaultInstance();
         }
       }
       /**
-       * <code>.AddEffectListenerRequest addEffectListenerRequest = 8;</code>
+       * <code>.AddEffectListenerRequest addEffectListenerRequest = 7;</code>
        */
       public Builder setAddEffectListenerRequest(Request.AddEffectListenerRequest value) {
         if (addEffectListenerRequestBuilder_ == null) {
@@ -2817,11 +2501,11 @@ public final class Wrapper {
         } else {
           addEffectListenerRequestBuilder_.setMessage(value);
         }
-        msgCase_ = 8;
+        msgCase_ = 7;
         return this;
       }
       /**
-       * <code>.AddEffectListenerRequest addEffectListenerRequest = 8;</code>
+       * <code>.AddEffectListenerRequest addEffectListenerRequest = 7;</code>
        */
       public Builder setAddEffectListenerRequest(
           Request.AddEffectListenerRequest.Builder builderForValue) {
@@ -2831,15 +2515,15 @@ public final class Wrapper {
         } else {
           addEffectListenerRequestBuilder_.setMessage(builderForValue.build());
         }
-        msgCase_ = 8;
+        msgCase_ = 7;
         return this;
       }
       /**
-       * <code>.AddEffectListenerRequest addEffectListenerRequest = 8;</code>
+       * <code>.AddEffectListenerRequest addEffectListenerRequest = 7;</code>
        */
       public Builder mergeAddEffectListenerRequest(Request.AddEffectListenerRequest value) {
         if (addEffectListenerRequestBuilder_ == null) {
-          if (msgCase_ == 8 &&
+          if (msgCase_ == 7 &&
               msg_ != Request.AddEffectListenerRequest.getDefaultInstance()) {
             msg_ = Request.AddEffectListenerRequest.newBuilder((Request.AddEffectListenerRequest) msg_)
                 .mergeFrom(value).buildPartial();
@@ -2848,26 +2532,26 @@ public final class Wrapper {
           }
           onChanged();
         } else {
-          if (msgCase_ == 8) {
+          if (msgCase_ == 7) {
             addEffectListenerRequestBuilder_.mergeFrom(value);
           }
           addEffectListenerRequestBuilder_.setMessage(value);
         }
-        msgCase_ = 8;
+        msgCase_ = 7;
         return this;
       }
       /**
-       * <code>.AddEffectListenerRequest addEffectListenerRequest = 8;</code>
+       * <code>.AddEffectListenerRequest addEffectListenerRequest = 7;</code>
        */
       public Builder clearAddEffectListenerRequest() {
         if (addEffectListenerRequestBuilder_ == null) {
-          if (msgCase_ == 8) {
+          if (msgCase_ == 7) {
             msgCase_ = 0;
             msg_ = null;
             onChanged();
           }
         } else {
-          if (msgCase_ == 8) {
+          if (msgCase_ == 7) {
             msgCase_ = 0;
             msg_ = null;
           }
@@ -2876,32 +2560,32 @@ public final class Wrapper {
         return this;
       }
       /**
-       * <code>.AddEffectListenerRequest addEffectListenerRequest = 8;</code>
+       * <code>.AddEffectListenerRequest addEffectListenerRequest = 7;</code>
        */
       public Request.AddEffectListenerRequest.Builder getAddEffectListenerRequestBuilder() {
         return getAddEffectListenerRequestFieldBuilder().getBuilder();
       }
       /**
-       * <code>.AddEffectListenerRequest addEffectListenerRequest = 8;</code>
+       * <code>.AddEffectListenerRequest addEffectListenerRequest = 7;</code>
        */
       public Request.AddEffectListenerRequestOrBuilder getAddEffectListenerRequestOrBuilder() {
-        if ((msgCase_ == 8) && (addEffectListenerRequestBuilder_ != null)) {
+        if ((msgCase_ == 7) && (addEffectListenerRequestBuilder_ != null)) {
           return addEffectListenerRequestBuilder_.getMessageOrBuilder();
         } else {
-          if (msgCase_ == 8) {
+          if (msgCase_ == 7) {
             return (Request.AddEffectListenerRequest) msg_;
           }
           return Request.AddEffectListenerRequest.getDefaultInstance();
         }
       }
       /**
-       * <code>.AddEffectListenerRequest addEffectListenerRequest = 8;</code>
+       * <code>.AddEffectListenerRequest addEffectListenerRequest = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           Request.AddEffectListenerRequest, Request.AddEffectListenerRequest.Builder, Request.AddEffectListenerRequestOrBuilder> 
           getAddEffectListenerRequestFieldBuilder() {
         if (addEffectListenerRequestBuilder_ == null) {
-          if (!(msgCase_ == 8)) {
+          if (!(msgCase_ == 7)) {
             msg_ = Request.AddEffectListenerRequest.getDefaultInstance();
           }
           addEffectListenerRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -2911,7 +2595,7 @@ public final class Wrapper {
                   isClean());
           msg_ = null;
         }
-        msgCase_ = 8;
+        msgCase_ = 7;
         onChanged();;
         return addEffectListenerRequestBuilder_;
       }
@@ -2919,29 +2603,29 @@ public final class Wrapper {
       private com.google.protobuf.SingleFieldBuilderV3<
           Request.RemoveEffectListenerRequest, Request.RemoveEffectListenerRequest.Builder, Request.RemoveEffectListenerRequestOrBuilder> removeEffectListenerRequestBuilder_;
       /**
-       * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 9;</code>
+       * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 8;</code>
        */
       public boolean hasRemoveEffectListenerRequest() {
-        return msgCase_ == 9;
+        return msgCase_ == 8;
       }
       /**
-       * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 9;</code>
+       * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 8;</code>
        */
       public Request.RemoveEffectListenerRequest getRemoveEffectListenerRequest() {
         if (removeEffectListenerRequestBuilder_ == null) {
-          if (msgCase_ == 9) {
+          if (msgCase_ == 8) {
             return (Request.RemoveEffectListenerRequest) msg_;
           }
           return Request.RemoveEffectListenerRequest.getDefaultInstance();
         } else {
-          if (msgCase_ == 9) {
+          if (msgCase_ == 8) {
             return removeEffectListenerRequestBuilder_.getMessage();
           }
           return Request.RemoveEffectListenerRequest.getDefaultInstance();
         }
       }
       /**
-       * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 9;</code>
+       * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 8;</code>
        */
       public Builder setRemoveEffectListenerRequest(Request.RemoveEffectListenerRequest value) {
         if (removeEffectListenerRequestBuilder_ == null) {
@@ -2953,11 +2637,11 @@ public final class Wrapper {
         } else {
           removeEffectListenerRequestBuilder_.setMessage(value);
         }
-        msgCase_ = 9;
+        msgCase_ = 8;
         return this;
       }
       /**
-       * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 9;</code>
+       * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 8;</code>
        */
       public Builder setRemoveEffectListenerRequest(
           Request.RemoveEffectListenerRequest.Builder builderForValue) {
@@ -2967,15 +2651,15 @@ public final class Wrapper {
         } else {
           removeEffectListenerRequestBuilder_.setMessage(builderForValue.build());
         }
-        msgCase_ = 9;
+        msgCase_ = 8;
         return this;
       }
       /**
-       * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 9;</code>
+       * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 8;</code>
        */
       public Builder mergeRemoveEffectListenerRequest(Request.RemoveEffectListenerRequest value) {
         if (removeEffectListenerRequestBuilder_ == null) {
-          if (msgCase_ == 9 &&
+          if (msgCase_ == 8 &&
               msg_ != Request.RemoveEffectListenerRequest.getDefaultInstance()) {
             msg_ = Request.RemoveEffectListenerRequest.newBuilder((Request.RemoveEffectListenerRequest) msg_)
                 .mergeFrom(value).buildPartial();
@@ -2984,26 +2668,26 @@ public final class Wrapper {
           }
           onChanged();
         } else {
-          if (msgCase_ == 9) {
+          if (msgCase_ == 8) {
             removeEffectListenerRequestBuilder_.mergeFrom(value);
           }
           removeEffectListenerRequestBuilder_.setMessage(value);
         }
-        msgCase_ = 9;
+        msgCase_ = 8;
         return this;
       }
       /**
-       * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 9;</code>
+       * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 8;</code>
        */
       public Builder clearRemoveEffectListenerRequest() {
         if (removeEffectListenerRequestBuilder_ == null) {
-          if (msgCase_ == 9) {
+          if (msgCase_ == 8) {
             msgCase_ = 0;
             msg_ = null;
             onChanged();
           }
         } else {
-          if (msgCase_ == 9) {
+          if (msgCase_ == 8) {
             msgCase_ = 0;
             msg_ = null;
           }
@@ -3012,32 +2696,32 @@ public final class Wrapper {
         return this;
       }
       /**
-       * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 9;</code>
+       * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 8;</code>
        */
       public Request.RemoveEffectListenerRequest.Builder getRemoveEffectListenerRequestBuilder() {
         return getRemoveEffectListenerRequestFieldBuilder().getBuilder();
       }
       /**
-       * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 9;</code>
+       * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 8;</code>
        */
       public Request.RemoveEffectListenerRequestOrBuilder getRemoveEffectListenerRequestOrBuilder() {
-        if ((msgCase_ == 9) && (removeEffectListenerRequestBuilder_ != null)) {
+        if ((msgCase_ == 8) && (removeEffectListenerRequestBuilder_ != null)) {
           return removeEffectListenerRequestBuilder_.getMessageOrBuilder();
         } else {
-          if (msgCase_ == 9) {
+          if (msgCase_ == 8) {
             return (Request.RemoveEffectListenerRequest) msg_;
           }
           return Request.RemoveEffectListenerRequest.getDefaultInstance();
         }
       }
       /**
-       * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 9;</code>
+       * <code>.RemoveEffectListenerRequest removeEffectListenerRequest = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           Request.RemoveEffectListenerRequest, Request.RemoveEffectListenerRequest.Builder, Request.RemoveEffectListenerRequestOrBuilder> 
           getRemoveEffectListenerRequestFieldBuilder() {
         if (removeEffectListenerRequestBuilder_ == null) {
-          if (!(msgCase_ == 9)) {
+          if (!(msgCase_ == 8)) {
             msg_ = Request.RemoveEffectListenerRequest.getDefaultInstance();
           }
           removeEffectListenerRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -3047,7 +2731,7 @@ public final class Wrapper {
                   isClean());
           msg_ = null;
         }
-        msgCase_ = 9;
+        msgCase_ = 8;
         onChanged();;
         return removeEffectListenerRequestBuilder_;
       }
@@ -3055,29 +2739,29 @@ public final class Wrapper {
       private com.google.protobuf.SingleFieldBuilderV3<
           Request.SubmitEffectRequest, Request.SubmitEffectRequest.Builder, Request.SubmitEffectRequestOrBuilder> submitEffectRequestBuilder_;
       /**
-       * <code>.SubmitEffectRequest submitEffectRequest = 10;</code>
+       * <code>.SubmitEffectRequest submitEffectRequest = 9;</code>
        */
       public boolean hasSubmitEffectRequest() {
-        return msgCase_ == 10;
+        return msgCase_ == 9;
       }
       /**
-       * <code>.SubmitEffectRequest submitEffectRequest = 10;</code>
+       * <code>.SubmitEffectRequest submitEffectRequest = 9;</code>
        */
       public Request.SubmitEffectRequest getSubmitEffectRequest() {
         if (submitEffectRequestBuilder_ == null) {
-          if (msgCase_ == 10) {
+          if (msgCase_ == 9) {
             return (Request.SubmitEffectRequest) msg_;
           }
           return Request.SubmitEffectRequest.getDefaultInstance();
         } else {
-          if (msgCase_ == 10) {
+          if (msgCase_ == 9) {
             return submitEffectRequestBuilder_.getMessage();
           }
           return Request.SubmitEffectRequest.getDefaultInstance();
         }
       }
       /**
-       * <code>.SubmitEffectRequest submitEffectRequest = 10;</code>
+       * <code>.SubmitEffectRequest submitEffectRequest = 9;</code>
        */
       public Builder setSubmitEffectRequest(Request.SubmitEffectRequest value) {
         if (submitEffectRequestBuilder_ == null) {
@@ -3089,11 +2773,11 @@ public final class Wrapper {
         } else {
           submitEffectRequestBuilder_.setMessage(value);
         }
-        msgCase_ = 10;
+        msgCase_ = 9;
         return this;
       }
       /**
-       * <code>.SubmitEffectRequest submitEffectRequest = 10;</code>
+       * <code>.SubmitEffectRequest submitEffectRequest = 9;</code>
        */
       public Builder setSubmitEffectRequest(
           Request.SubmitEffectRequest.Builder builderForValue) {
@@ -3103,15 +2787,15 @@ public final class Wrapper {
         } else {
           submitEffectRequestBuilder_.setMessage(builderForValue.build());
         }
-        msgCase_ = 10;
+        msgCase_ = 9;
         return this;
       }
       /**
-       * <code>.SubmitEffectRequest submitEffectRequest = 10;</code>
+       * <code>.SubmitEffectRequest submitEffectRequest = 9;</code>
        */
       public Builder mergeSubmitEffectRequest(Request.SubmitEffectRequest value) {
         if (submitEffectRequestBuilder_ == null) {
-          if (msgCase_ == 10 &&
+          if (msgCase_ == 9 &&
               msg_ != Request.SubmitEffectRequest.getDefaultInstance()) {
             msg_ = Request.SubmitEffectRequest.newBuilder((Request.SubmitEffectRequest) msg_)
                 .mergeFrom(value).buildPartial();
@@ -3120,26 +2804,26 @@ public final class Wrapper {
           }
           onChanged();
         } else {
-          if (msgCase_ == 10) {
+          if (msgCase_ == 9) {
             submitEffectRequestBuilder_.mergeFrom(value);
           }
           submitEffectRequestBuilder_.setMessage(value);
         }
-        msgCase_ = 10;
+        msgCase_ = 9;
         return this;
       }
       /**
-       * <code>.SubmitEffectRequest submitEffectRequest = 10;</code>
+       * <code>.SubmitEffectRequest submitEffectRequest = 9;</code>
        */
       public Builder clearSubmitEffectRequest() {
         if (submitEffectRequestBuilder_ == null) {
-          if (msgCase_ == 10) {
+          if (msgCase_ == 9) {
             msgCase_ = 0;
             msg_ = null;
             onChanged();
           }
         } else {
-          if (msgCase_ == 10) {
+          if (msgCase_ == 9) {
             msgCase_ = 0;
             msg_ = null;
           }
@@ -3148,32 +2832,32 @@ public final class Wrapper {
         return this;
       }
       /**
-       * <code>.SubmitEffectRequest submitEffectRequest = 10;</code>
+       * <code>.SubmitEffectRequest submitEffectRequest = 9;</code>
        */
       public Request.SubmitEffectRequest.Builder getSubmitEffectRequestBuilder() {
         return getSubmitEffectRequestFieldBuilder().getBuilder();
       }
       /**
-       * <code>.SubmitEffectRequest submitEffectRequest = 10;</code>
+       * <code>.SubmitEffectRequest submitEffectRequest = 9;</code>
        */
       public Request.SubmitEffectRequestOrBuilder getSubmitEffectRequestOrBuilder() {
-        if ((msgCase_ == 10) && (submitEffectRequestBuilder_ != null)) {
+        if ((msgCase_ == 9) && (submitEffectRequestBuilder_ != null)) {
           return submitEffectRequestBuilder_.getMessageOrBuilder();
         } else {
-          if (msgCase_ == 10) {
+          if (msgCase_ == 9) {
             return (Request.SubmitEffectRequest) msg_;
           }
           return Request.SubmitEffectRequest.getDefaultInstance();
         }
       }
       /**
-       * <code>.SubmitEffectRequest submitEffectRequest = 10;</code>
+       * <code>.SubmitEffectRequest submitEffectRequest = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           Request.SubmitEffectRequest, Request.SubmitEffectRequest.Builder, Request.SubmitEffectRequestOrBuilder> 
           getSubmitEffectRequestFieldBuilder() {
         if (submitEffectRequestBuilder_ == null) {
-          if (!(msgCase_ == 10)) {
+          if (!(msgCase_ == 9)) {
             msg_ = Request.SubmitEffectRequest.getDefaultInstance();
           }
           submitEffectRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -3183,7 +2867,7 @@ public final class Wrapper {
                   isClean());
           msg_ = null;
         }
-        msgCase_ = 10;
+        msgCase_ = 9;
         onChanged();;
         return submitEffectRequestBuilder_;
       }
@@ -3191,29 +2875,29 @@ public final class Wrapper {
       private com.google.protobuf.SingleFieldBuilderV3<
           Request.GetEffectRequest, Request.GetEffectRequest.Builder, Request.GetEffectRequestOrBuilder> getEffectRequestBuilder_;
       /**
-       * <code>.GetEffectRequest getEffectRequest = 11;</code>
+       * <code>.GetEffectRequest getEffectRequest = 10;</code>
        */
       public boolean hasGetEffectRequest() {
-        return msgCase_ == 11;
+        return msgCase_ == 10;
       }
       /**
-       * <code>.GetEffectRequest getEffectRequest = 11;</code>
+       * <code>.GetEffectRequest getEffectRequest = 10;</code>
        */
       public Request.GetEffectRequest getGetEffectRequest() {
         if (getEffectRequestBuilder_ == null) {
-          if (msgCase_ == 11) {
+          if (msgCase_ == 10) {
             return (Request.GetEffectRequest) msg_;
           }
           return Request.GetEffectRequest.getDefaultInstance();
         } else {
-          if (msgCase_ == 11) {
+          if (msgCase_ == 10) {
             return getEffectRequestBuilder_.getMessage();
           }
           return Request.GetEffectRequest.getDefaultInstance();
         }
       }
       /**
-       * <code>.GetEffectRequest getEffectRequest = 11;</code>
+       * <code>.GetEffectRequest getEffectRequest = 10;</code>
        */
       public Builder setGetEffectRequest(Request.GetEffectRequest value) {
         if (getEffectRequestBuilder_ == null) {
@@ -3225,11 +2909,11 @@ public final class Wrapper {
         } else {
           getEffectRequestBuilder_.setMessage(value);
         }
-        msgCase_ = 11;
+        msgCase_ = 10;
         return this;
       }
       /**
-       * <code>.GetEffectRequest getEffectRequest = 11;</code>
+       * <code>.GetEffectRequest getEffectRequest = 10;</code>
        */
       public Builder setGetEffectRequest(
           Request.GetEffectRequest.Builder builderForValue) {
@@ -3239,15 +2923,15 @@ public final class Wrapper {
         } else {
           getEffectRequestBuilder_.setMessage(builderForValue.build());
         }
-        msgCase_ = 11;
+        msgCase_ = 10;
         return this;
       }
       /**
-       * <code>.GetEffectRequest getEffectRequest = 11;</code>
+       * <code>.GetEffectRequest getEffectRequest = 10;</code>
        */
       public Builder mergeGetEffectRequest(Request.GetEffectRequest value) {
         if (getEffectRequestBuilder_ == null) {
-          if (msgCase_ == 11 &&
+          if (msgCase_ == 10 &&
               msg_ != Request.GetEffectRequest.getDefaultInstance()) {
             msg_ = Request.GetEffectRequest.newBuilder((Request.GetEffectRequest) msg_)
                 .mergeFrom(value).buildPartial();
@@ -3256,26 +2940,26 @@ public final class Wrapper {
           }
           onChanged();
         } else {
-          if (msgCase_ == 11) {
+          if (msgCase_ == 10) {
             getEffectRequestBuilder_.mergeFrom(value);
           }
           getEffectRequestBuilder_.setMessage(value);
         }
-        msgCase_ = 11;
+        msgCase_ = 10;
         return this;
       }
       /**
-       * <code>.GetEffectRequest getEffectRequest = 11;</code>
+       * <code>.GetEffectRequest getEffectRequest = 10;</code>
        */
       public Builder clearGetEffectRequest() {
         if (getEffectRequestBuilder_ == null) {
-          if (msgCase_ == 11) {
+          if (msgCase_ == 10) {
             msgCase_ = 0;
             msg_ = null;
             onChanged();
           }
         } else {
-          if (msgCase_ == 11) {
+          if (msgCase_ == 10) {
             msgCase_ = 0;
             msg_ = null;
           }
@@ -3284,32 +2968,32 @@ public final class Wrapper {
         return this;
       }
       /**
-       * <code>.GetEffectRequest getEffectRequest = 11;</code>
+       * <code>.GetEffectRequest getEffectRequest = 10;</code>
        */
       public Request.GetEffectRequest.Builder getGetEffectRequestBuilder() {
         return getGetEffectRequestFieldBuilder().getBuilder();
       }
       /**
-       * <code>.GetEffectRequest getEffectRequest = 11;</code>
+       * <code>.GetEffectRequest getEffectRequest = 10;</code>
        */
       public Request.GetEffectRequestOrBuilder getGetEffectRequestOrBuilder() {
-        if ((msgCase_ == 11) && (getEffectRequestBuilder_ != null)) {
+        if ((msgCase_ == 10) && (getEffectRequestBuilder_ != null)) {
           return getEffectRequestBuilder_.getMessageOrBuilder();
         } else {
-          if (msgCase_ == 11) {
+          if (msgCase_ == 10) {
             return (Request.GetEffectRequest) msg_;
           }
           return Request.GetEffectRequest.getDefaultInstance();
         }
       }
       /**
-       * <code>.GetEffectRequest getEffectRequest = 11;</code>
+       * <code>.GetEffectRequest getEffectRequest = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           Request.GetEffectRequest, Request.GetEffectRequest.Builder, Request.GetEffectRequestOrBuilder> 
           getGetEffectRequestFieldBuilder() {
         if (getEffectRequestBuilder_ == null) {
-          if (!(msgCase_ == 11)) {
+          if (!(msgCase_ == 10)) {
             msg_ = Request.GetEffectRequest.getDefaultInstance();
           }
           getEffectRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -3319,7 +3003,7 @@ public final class Wrapper {
                   isClean());
           msg_ = null;
         }
-        msgCase_ = 11;
+        msgCase_ = 10;
         onChanged();;
         return getEffectRequestBuilder_;
       }
@@ -3327,29 +3011,29 @@ public final class Wrapper {
       private com.google.protobuf.SingleFieldBuilderV3<
           Response.FindTransactionsByAddressResponse, Response.FindTransactionsByAddressResponse.Builder, Response.FindTransactionsByAddressResponseOrBuilder> findTransactionsByAddressResponseBuilder_;
       /**
-       * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 12;</code>
+       * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 11;</code>
        */
       public boolean hasFindTransactionsByAddressResponse() {
-        return msgCase_ == 12;
+        return msgCase_ == 11;
       }
       /**
-       * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 12;</code>
+       * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 11;</code>
        */
       public Response.FindTransactionsByAddressResponse getFindTransactionsByAddressResponse() {
         if (findTransactionsByAddressResponseBuilder_ == null) {
-          if (msgCase_ == 12) {
+          if (msgCase_ == 11) {
             return (Response.FindTransactionsByAddressResponse) msg_;
           }
           return Response.FindTransactionsByAddressResponse.getDefaultInstance();
         } else {
-          if (msgCase_ == 12) {
+          if (msgCase_ == 11) {
             return findTransactionsByAddressResponseBuilder_.getMessage();
           }
           return Response.FindTransactionsByAddressResponse.getDefaultInstance();
         }
       }
       /**
-       * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 12;</code>
+       * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 11;</code>
        */
       public Builder setFindTransactionsByAddressResponse(Response.FindTransactionsByAddressResponse value) {
         if (findTransactionsByAddressResponseBuilder_ == null) {
@@ -3361,11 +3045,11 @@ public final class Wrapper {
         } else {
           findTransactionsByAddressResponseBuilder_.setMessage(value);
         }
-        msgCase_ = 12;
+        msgCase_ = 11;
         return this;
       }
       /**
-       * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 12;</code>
+       * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 11;</code>
        */
       public Builder setFindTransactionsByAddressResponse(
           Response.FindTransactionsByAddressResponse.Builder builderForValue) {
@@ -3375,15 +3059,15 @@ public final class Wrapper {
         } else {
           findTransactionsByAddressResponseBuilder_.setMessage(builderForValue.build());
         }
-        msgCase_ = 12;
+        msgCase_ = 11;
         return this;
       }
       /**
-       * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 12;</code>
+       * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 11;</code>
        */
       public Builder mergeFindTransactionsByAddressResponse(Response.FindTransactionsByAddressResponse value) {
         if (findTransactionsByAddressResponseBuilder_ == null) {
-          if (msgCase_ == 12 &&
+          if (msgCase_ == 11 &&
               msg_ != Response.FindTransactionsByAddressResponse.getDefaultInstance()) {
             msg_ = Response.FindTransactionsByAddressResponse.newBuilder((Response.FindTransactionsByAddressResponse) msg_)
                 .mergeFrom(value).buildPartial();
@@ -3392,26 +3076,26 @@ public final class Wrapper {
           }
           onChanged();
         } else {
-          if (msgCase_ == 12) {
+          if (msgCase_ == 11) {
             findTransactionsByAddressResponseBuilder_.mergeFrom(value);
           }
           findTransactionsByAddressResponseBuilder_.setMessage(value);
         }
-        msgCase_ = 12;
+        msgCase_ = 11;
         return this;
       }
       /**
-       * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 12;</code>
+       * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 11;</code>
        */
       public Builder clearFindTransactionsByAddressResponse() {
         if (findTransactionsByAddressResponseBuilder_ == null) {
-          if (msgCase_ == 12) {
+          if (msgCase_ == 11) {
             msgCase_ = 0;
             msg_ = null;
             onChanged();
           }
         } else {
-          if (msgCase_ == 12) {
+          if (msgCase_ == 11) {
             msgCase_ = 0;
             msg_ = null;
           }
@@ -3420,32 +3104,32 @@ public final class Wrapper {
         return this;
       }
       /**
-       * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 12;</code>
+       * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 11;</code>
        */
       public Response.FindTransactionsByAddressResponse.Builder getFindTransactionsByAddressResponseBuilder() {
         return getFindTransactionsByAddressResponseFieldBuilder().getBuilder();
       }
       /**
-       * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 12;</code>
+       * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 11;</code>
        */
       public Response.FindTransactionsByAddressResponseOrBuilder getFindTransactionsByAddressResponseOrBuilder() {
-        if ((msgCase_ == 12) && (findTransactionsByAddressResponseBuilder_ != null)) {
+        if ((msgCase_ == 11) && (findTransactionsByAddressResponseBuilder_ != null)) {
           return findTransactionsByAddressResponseBuilder_.getMessageOrBuilder();
         } else {
-          if (msgCase_ == 12) {
+          if (msgCase_ == 11) {
             return (Response.FindTransactionsByAddressResponse) msg_;
           }
           return Response.FindTransactionsByAddressResponse.getDefaultInstance();
         }
       }
       /**
-       * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 12;</code>
+       * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           Response.FindTransactionsByAddressResponse, Response.FindTransactionsByAddressResponse.Builder, Response.FindTransactionsByAddressResponseOrBuilder> 
           getFindTransactionsByAddressResponseFieldBuilder() {
         if (findTransactionsByAddressResponseBuilder_ == null) {
-          if (!(msgCase_ == 12)) {
+          if (!(msgCase_ == 11)) {
             msg_ = Response.FindTransactionsByAddressResponse.getDefaultInstance();
           }
           findTransactionsByAddressResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -3455,7 +3139,7 @@ public final class Wrapper {
                   isClean());
           msg_ = null;
         }
-        msgCase_ = 12;
+        msgCase_ = 11;
         onChanged();;
         return findTransactionsByAddressResponseBuilder_;
       }
@@ -3463,29 +3147,29 @@ public final class Wrapper {
       private com.google.protobuf.SingleFieldBuilderV3<
           Response.FindTransactionsByTagResponse, Response.FindTransactionsByTagResponse.Builder, Response.FindTransactionsByTagResponseOrBuilder> findTransactionsByTagResponseBuilder_;
       /**
-       * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 13;</code>
+       * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 12;</code>
        */
       public boolean hasFindTransactionsByTagResponse() {
-        return msgCase_ == 13;
+        return msgCase_ == 12;
       }
       /**
-       * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 13;</code>
+       * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 12;</code>
        */
       public Response.FindTransactionsByTagResponse getFindTransactionsByTagResponse() {
         if (findTransactionsByTagResponseBuilder_ == null) {
-          if (msgCase_ == 13) {
+          if (msgCase_ == 12) {
             return (Response.FindTransactionsByTagResponse) msg_;
           }
           return Response.FindTransactionsByTagResponse.getDefaultInstance();
         } else {
-          if (msgCase_ == 13) {
+          if (msgCase_ == 12) {
             return findTransactionsByTagResponseBuilder_.getMessage();
           }
           return Response.FindTransactionsByTagResponse.getDefaultInstance();
         }
       }
       /**
-       * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 13;</code>
+       * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 12;</code>
        */
       public Builder setFindTransactionsByTagResponse(Response.FindTransactionsByTagResponse value) {
         if (findTransactionsByTagResponseBuilder_ == null) {
@@ -3497,11 +3181,11 @@ public final class Wrapper {
         } else {
           findTransactionsByTagResponseBuilder_.setMessage(value);
         }
-        msgCase_ = 13;
+        msgCase_ = 12;
         return this;
       }
       /**
-       * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 13;</code>
+       * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 12;</code>
        */
       public Builder setFindTransactionsByTagResponse(
           Response.FindTransactionsByTagResponse.Builder builderForValue) {
@@ -3511,15 +3195,15 @@ public final class Wrapper {
         } else {
           findTransactionsByTagResponseBuilder_.setMessage(builderForValue.build());
         }
-        msgCase_ = 13;
+        msgCase_ = 12;
         return this;
       }
       /**
-       * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 13;</code>
+       * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 12;</code>
        */
       public Builder mergeFindTransactionsByTagResponse(Response.FindTransactionsByTagResponse value) {
         if (findTransactionsByTagResponseBuilder_ == null) {
-          if (msgCase_ == 13 &&
+          if (msgCase_ == 12 &&
               msg_ != Response.FindTransactionsByTagResponse.getDefaultInstance()) {
             msg_ = Response.FindTransactionsByTagResponse.newBuilder((Response.FindTransactionsByTagResponse) msg_)
                 .mergeFrom(value).buildPartial();
@@ -3528,26 +3212,26 @@ public final class Wrapper {
           }
           onChanged();
         } else {
-          if (msgCase_ == 13) {
+          if (msgCase_ == 12) {
             findTransactionsByTagResponseBuilder_.mergeFrom(value);
           }
           findTransactionsByTagResponseBuilder_.setMessage(value);
         }
-        msgCase_ = 13;
+        msgCase_ = 12;
         return this;
       }
       /**
-       * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 13;</code>
+       * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 12;</code>
        */
       public Builder clearFindTransactionsByTagResponse() {
         if (findTransactionsByTagResponseBuilder_ == null) {
-          if (msgCase_ == 13) {
+          if (msgCase_ == 12) {
             msgCase_ = 0;
             msg_ = null;
             onChanged();
           }
         } else {
-          if (msgCase_ == 13) {
+          if (msgCase_ == 12) {
             msgCase_ = 0;
             msg_ = null;
           }
@@ -3556,32 +3240,32 @@ public final class Wrapper {
         return this;
       }
       /**
-       * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 13;</code>
+       * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 12;</code>
        */
       public Response.FindTransactionsByTagResponse.Builder getFindTransactionsByTagResponseBuilder() {
         return getFindTransactionsByTagResponseFieldBuilder().getBuilder();
       }
       /**
-       * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 13;</code>
+       * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 12;</code>
        */
       public Response.FindTransactionsByTagResponseOrBuilder getFindTransactionsByTagResponseOrBuilder() {
-        if ((msgCase_ == 13) && (findTransactionsByTagResponseBuilder_ != null)) {
+        if ((msgCase_ == 12) && (findTransactionsByTagResponseBuilder_ != null)) {
           return findTransactionsByTagResponseBuilder_.getMessageOrBuilder();
         } else {
-          if (msgCase_ == 13) {
+          if (msgCase_ == 12) {
             return (Response.FindTransactionsByTagResponse) msg_;
           }
           return Response.FindTransactionsByTagResponse.getDefaultInstance();
         }
       }
       /**
-       * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 13;</code>
+       * <code>.FindTransactionsByTagResponse findTransactionsByTagResponse = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           Response.FindTransactionsByTagResponse, Response.FindTransactionsByTagResponse.Builder, Response.FindTransactionsByTagResponseOrBuilder> 
           getFindTransactionsByTagResponseFieldBuilder() {
         if (findTransactionsByTagResponseBuilder_ == null) {
-          if (!(msgCase_ == 13)) {
+          if (!(msgCase_ == 12)) {
             msg_ = Response.FindTransactionsByTagResponse.getDefaultInstance();
           }
           findTransactionsByTagResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -3591,7 +3275,7 @@ public final class Wrapper {
                   isClean());
           msg_ = null;
         }
-        msgCase_ = 13;
+        msgCase_ = 12;
         onChanged();;
         return findTransactionsByTagResponseBuilder_;
       }
@@ -3599,29 +3283,29 @@ public final class Wrapper {
       private com.google.protobuf.SingleFieldBuilderV3<
           Response.FindTransactionByHashResponse, Response.FindTransactionByHashResponse.Builder, Response.FindTransactionByHashResponseOrBuilder> findTransactionByHashResponseBuilder_;
       /**
-       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 14;</code>
+       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
        */
       public boolean hasFindTransactionByHashResponse() {
-        return msgCase_ == 14;
+        return msgCase_ == 13;
       }
       /**
-       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 14;</code>
+       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
        */
       public Response.FindTransactionByHashResponse getFindTransactionByHashResponse() {
         if (findTransactionByHashResponseBuilder_ == null) {
-          if (msgCase_ == 14) {
+          if (msgCase_ == 13) {
             return (Response.FindTransactionByHashResponse) msg_;
           }
           return Response.FindTransactionByHashResponse.getDefaultInstance();
         } else {
-          if (msgCase_ == 14) {
+          if (msgCase_ == 13) {
             return findTransactionByHashResponseBuilder_.getMessage();
           }
           return Response.FindTransactionByHashResponse.getDefaultInstance();
         }
       }
       /**
-       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 14;</code>
+       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
        */
       public Builder setFindTransactionByHashResponse(Response.FindTransactionByHashResponse value) {
         if (findTransactionByHashResponseBuilder_ == null) {
@@ -3633,11 +3317,11 @@ public final class Wrapper {
         } else {
           findTransactionByHashResponseBuilder_.setMessage(value);
         }
-        msgCase_ = 14;
+        msgCase_ = 13;
         return this;
       }
       /**
-       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 14;</code>
+       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
        */
       public Builder setFindTransactionByHashResponse(
           Response.FindTransactionByHashResponse.Builder builderForValue) {
@@ -3647,15 +3331,15 @@ public final class Wrapper {
         } else {
           findTransactionByHashResponseBuilder_.setMessage(builderForValue.build());
         }
-        msgCase_ = 14;
+        msgCase_ = 13;
         return this;
       }
       /**
-       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 14;</code>
+       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
        */
       public Builder mergeFindTransactionByHashResponse(Response.FindTransactionByHashResponse value) {
         if (findTransactionByHashResponseBuilder_ == null) {
-          if (msgCase_ == 14 &&
+          if (msgCase_ == 13 &&
               msg_ != Response.FindTransactionByHashResponse.getDefaultInstance()) {
             msg_ = Response.FindTransactionByHashResponse.newBuilder((Response.FindTransactionByHashResponse) msg_)
                 .mergeFrom(value).buildPartial();
@@ -3664,26 +3348,26 @@ public final class Wrapper {
           }
           onChanged();
         } else {
-          if (msgCase_ == 14) {
+          if (msgCase_ == 13) {
             findTransactionByHashResponseBuilder_.mergeFrom(value);
           }
           findTransactionByHashResponseBuilder_.setMessage(value);
         }
-        msgCase_ = 14;
+        msgCase_ = 13;
         return this;
       }
       /**
-       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 14;</code>
+       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
        */
       public Builder clearFindTransactionByHashResponse() {
         if (findTransactionByHashResponseBuilder_ == null) {
-          if (msgCase_ == 14) {
+          if (msgCase_ == 13) {
             msgCase_ = 0;
             msg_ = null;
             onChanged();
           }
         } else {
-          if (msgCase_ == 14) {
+          if (msgCase_ == 13) {
             msgCase_ = 0;
             msg_ = null;
           }
@@ -3692,32 +3376,32 @@ public final class Wrapper {
         return this;
       }
       /**
-       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 14;</code>
+       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
        */
       public Response.FindTransactionByHashResponse.Builder getFindTransactionByHashResponseBuilder() {
         return getFindTransactionByHashResponseFieldBuilder().getBuilder();
       }
       /**
-       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 14;</code>
+       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
        */
       public Response.FindTransactionByHashResponseOrBuilder getFindTransactionByHashResponseOrBuilder() {
-        if ((msgCase_ == 14) && (findTransactionByHashResponseBuilder_ != null)) {
+        if ((msgCase_ == 13) && (findTransactionByHashResponseBuilder_ != null)) {
           return findTransactionByHashResponseBuilder_.getMessageOrBuilder();
         } else {
-          if (msgCase_ == 14) {
+          if (msgCase_ == 13) {
             return (Response.FindTransactionByHashResponse) msg_;
           }
           return Response.FindTransactionByHashResponse.getDefaultInstance();
         }
       }
       /**
-       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 14;</code>
+       * <code>.FindTransactionByHashResponse findTransactionByHashResponse = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           Response.FindTransactionByHashResponse, Response.FindTransactionByHashResponse.Builder, Response.FindTransactionByHashResponseOrBuilder> 
           getFindTransactionByHashResponseFieldBuilder() {
         if (findTransactionByHashResponseBuilder_ == null) {
-          if (!(msgCase_ == 14)) {
+          if (!(msgCase_ == 13)) {
             msg_ = Response.FindTransactionByHashResponse.getDefaultInstance();
           }
           findTransactionByHashResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -3727,173 +3411,37 @@ public final class Wrapper {
                   isClean());
           msg_ = null;
         }
-        msgCase_ = 14;
+        msgCase_ = 13;
         onChanged();;
         return findTransactionByHashResponseBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          Response.DetermineApprovalConfidenceResponse, Response.DetermineApprovalConfidenceResponse.Builder, Response.DetermineApprovalConfidenceResponseOrBuilder> determineApprovalConfidenceResponseBuilder_;
-      /**
-       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 15;</code>
-       */
-      public boolean hasDetermineApprovalConfidenceResponse() {
-        return msgCase_ == 15;
-      }
-      /**
-       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 15;</code>
-       */
-      public Response.DetermineApprovalConfidenceResponse getDetermineApprovalConfidenceResponse() {
-        if (determineApprovalConfidenceResponseBuilder_ == null) {
-          if (msgCase_ == 15) {
-            return (Response.DetermineApprovalConfidenceResponse) msg_;
-          }
-          return Response.DetermineApprovalConfidenceResponse.getDefaultInstance();
-        } else {
-          if (msgCase_ == 15) {
-            return determineApprovalConfidenceResponseBuilder_.getMessage();
-          }
-          return Response.DetermineApprovalConfidenceResponse.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 15;</code>
-       */
-      public Builder setDetermineApprovalConfidenceResponse(Response.DetermineApprovalConfidenceResponse value) {
-        if (determineApprovalConfidenceResponseBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          msg_ = value;
-          onChanged();
-        } else {
-          determineApprovalConfidenceResponseBuilder_.setMessage(value);
-        }
-        msgCase_ = 15;
-        return this;
-      }
-      /**
-       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 15;</code>
-       */
-      public Builder setDetermineApprovalConfidenceResponse(
-          Response.DetermineApprovalConfidenceResponse.Builder builderForValue) {
-        if (determineApprovalConfidenceResponseBuilder_ == null) {
-          msg_ = builderForValue.build();
-          onChanged();
-        } else {
-          determineApprovalConfidenceResponseBuilder_.setMessage(builderForValue.build());
-        }
-        msgCase_ = 15;
-        return this;
-      }
-      /**
-       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 15;</code>
-       */
-      public Builder mergeDetermineApprovalConfidenceResponse(Response.DetermineApprovalConfidenceResponse value) {
-        if (determineApprovalConfidenceResponseBuilder_ == null) {
-          if (msgCase_ == 15 &&
-              msg_ != Response.DetermineApprovalConfidenceResponse.getDefaultInstance()) {
-            msg_ = Response.DetermineApprovalConfidenceResponse.newBuilder((Response.DetermineApprovalConfidenceResponse) msg_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            msg_ = value;
-          }
-          onChanged();
-        } else {
-          if (msgCase_ == 15) {
-            determineApprovalConfidenceResponseBuilder_.mergeFrom(value);
-          }
-          determineApprovalConfidenceResponseBuilder_.setMessage(value);
-        }
-        msgCase_ = 15;
-        return this;
-      }
-      /**
-       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 15;</code>
-       */
-      public Builder clearDetermineApprovalConfidenceResponse() {
-        if (determineApprovalConfidenceResponseBuilder_ == null) {
-          if (msgCase_ == 15) {
-            msgCase_ = 0;
-            msg_ = null;
-            onChanged();
-          }
-        } else {
-          if (msgCase_ == 15) {
-            msgCase_ = 0;
-            msg_ = null;
-          }
-          determineApprovalConfidenceResponseBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 15;</code>
-       */
-      public Response.DetermineApprovalConfidenceResponse.Builder getDetermineApprovalConfidenceResponseBuilder() {
-        return getDetermineApprovalConfidenceResponseFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 15;</code>
-       */
-      public Response.DetermineApprovalConfidenceResponseOrBuilder getDetermineApprovalConfidenceResponseOrBuilder() {
-        if ((msgCase_ == 15) && (determineApprovalConfidenceResponseBuilder_ != null)) {
-          return determineApprovalConfidenceResponseBuilder_.getMessageOrBuilder();
-        } else {
-          if (msgCase_ == 15) {
-            return (Response.DetermineApprovalConfidenceResponse) msg_;
-          }
-          return Response.DetermineApprovalConfidenceResponse.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 15;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          Response.DetermineApprovalConfidenceResponse, Response.DetermineApprovalConfidenceResponse.Builder, Response.DetermineApprovalConfidenceResponseOrBuilder> 
-          getDetermineApprovalConfidenceResponseFieldBuilder() {
-        if (determineApprovalConfidenceResponseBuilder_ == null) {
-          if (!(msgCase_ == 15)) {
-            msg_ = Response.DetermineApprovalConfidenceResponse.getDefaultInstance();
-          }
-          determineApprovalConfidenceResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Response.DetermineApprovalConfidenceResponse, Response.DetermineApprovalConfidenceResponse.Builder, Response.DetermineApprovalConfidenceResponseOrBuilder>(
-                  (Response.DetermineApprovalConfidenceResponse) msg_,
-                  getParentForChildren(),
-                  isClean());
-          msg_ = null;
-        }
-        msgCase_ = 15;
-        onChanged();;
-        return determineApprovalConfidenceResponseBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
           Response.GetEffectResponse, Response.GetEffectResponse.Builder, Response.GetEffectResponseOrBuilder> getEffectResponseBuilder_;
       /**
-       * <code>.GetEffectResponse getEffectResponse = 16;</code>
+       * <code>.GetEffectResponse getEffectResponse = 14;</code>
        */
       public boolean hasGetEffectResponse() {
-        return msgCase_ == 16;
+        return msgCase_ == 14;
       }
       /**
-       * <code>.GetEffectResponse getEffectResponse = 16;</code>
+       * <code>.GetEffectResponse getEffectResponse = 14;</code>
        */
       public Response.GetEffectResponse getGetEffectResponse() {
         if (getEffectResponseBuilder_ == null) {
-          if (msgCase_ == 16) {
+          if (msgCase_ == 14) {
             return (Response.GetEffectResponse) msg_;
           }
           return Response.GetEffectResponse.getDefaultInstance();
         } else {
-          if (msgCase_ == 16) {
+          if (msgCase_ == 14) {
             return getEffectResponseBuilder_.getMessage();
           }
           return Response.GetEffectResponse.getDefaultInstance();
         }
       }
       /**
-       * <code>.GetEffectResponse getEffectResponse = 16;</code>
+       * <code>.GetEffectResponse getEffectResponse = 14;</code>
        */
       public Builder setGetEffectResponse(Response.GetEffectResponse value) {
         if (getEffectResponseBuilder_ == null) {
@@ -3905,11 +3453,11 @@ public final class Wrapper {
         } else {
           getEffectResponseBuilder_.setMessage(value);
         }
-        msgCase_ = 16;
+        msgCase_ = 14;
         return this;
       }
       /**
-       * <code>.GetEffectResponse getEffectResponse = 16;</code>
+       * <code>.GetEffectResponse getEffectResponse = 14;</code>
        */
       public Builder setGetEffectResponse(
           Response.GetEffectResponse.Builder builderForValue) {
@@ -3919,15 +3467,15 @@ public final class Wrapper {
         } else {
           getEffectResponseBuilder_.setMessage(builderForValue.build());
         }
-        msgCase_ = 16;
+        msgCase_ = 14;
         return this;
       }
       /**
-       * <code>.GetEffectResponse getEffectResponse = 16;</code>
+       * <code>.GetEffectResponse getEffectResponse = 14;</code>
        */
       public Builder mergeGetEffectResponse(Response.GetEffectResponse value) {
         if (getEffectResponseBuilder_ == null) {
-          if (msgCase_ == 16 &&
+          if (msgCase_ == 14 &&
               msg_ != Response.GetEffectResponse.getDefaultInstance()) {
             msg_ = Response.GetEffectResponse.newBuilder((Response.GetEffectResponse) msg_)
                 .mergeFrom(value).buildPartial();
@@ -3936,26 +3484,26 @@ public final class Wrapper {
           }
           onChanged();
         } else {
-          if (msgCase_ == 16) {
+          if (msgCase_ == 14) {
             getEffectResponseBuilder_.mergeFrom(value);
           }
           getEffectResponseBuilder_.setMessage(value);
         }
-        msgCase_ = 16;
+        msgCase_ = 14;
         return this;
       }
       /**
-       * <code>.GetEffectResponse getEffectResponse = 16;</code>
+       * <code>.GetEffectResponse getEffectResponse = 14;</code>
        */
       public Builder clearGetEffectResponse() {
         if (getEffectResponseBuilder_ == null) {
-          if (msgCase_ == 16) {
+          if (msgCase_ == 14) {
             msgCase_ = 0;
             msg_ = null;
             onChanged();
           }
         } else {
-          if (msgCase_ == 16) {
+          if (msgCase_ == 14) {
             msgCase_ = 0;
             msg_ = null;
           }
@@ -3964,32 +3512,32 @@ public final class Wrapper {
         return this;
       }
       /**
-       * <code>.GetEffectResponse getEffectResponse = 16;</code>
+       * <code>.GetEffectResponse getEffectResponse = 14;</code>
        */
       public Response.GetEffectResponse.Builder getGetEffectResponseBuilder() {
         return getGetEffectResponseFieldBuilder().getBuilder();
       }
       /**
-       * <code>.GetEffectResponse getEffectResponse = 16;</code>
+       * <code>.GetEffectResponse getEffectResponse = 14;</code>
        */
       public Response.GetEffectResponseOrBuilder getGetEffectResponseOrBuilder() {
-        if ((msgCase_ == 16) && (getEffectResponseBuilder_ != null)) {
+        if ((msgCase_ == 14) && (getEffectResponseBuilder_ != null)) {
           return getEffectResponseBuilder_.getMessageOrBuilder();
         } else {
-          if (msgCase_ == 16) {
+          if (msgCase_ == 14) {
             return (Response.GetEffectResponse) msg_;
           }
           return Response.GetEffectResponse.getDefaultInstance();
         }
       }
       /**
-       * <code>.GetEffectResponse getEffectResponse = 16;</code>
+       * <code>.GetEffectResponse getEffectResponse = 14;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           Response.GetEffectResponse, Response.GetEffectResponse.Builder, Response.GetEffectResponseOrBuilder> 
           getGetEffectResponseFieldBuilder() {
         if (getEffectResponseBuilder_ == null) {
-          if (!(msgCase_ == 16)) {
+          if (!(msgCase_ == 14)) {
             msg_ = Response.GetEffectResponse.getDefaultInstance();
           }
           getEffectResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -3999,7 +3547,7 @@ public final class Wrapper {
                   isClean());
           msg_ = null;
         }
-        msgCase_ = 16;
+        msgCase_ = 14;
         onChanged();;
         return getEffectResponseBuilder_;
       }
@@ -4071,7 +3619,7 @@ public final class Wrapper {
   static {
     String[] descriptorData = {
       "\n\rwrapper.proto\032\rrequest.proto\032\016response" +
-      ".proto\"\225\r\n\016WrapperMessage\0220\n\013messageType" +
+      ".proto\"\226\013\n\016WrapperMessage\0220\n\013messageType" +
       "\030\001 \001(\0162\033.WrapperMessage.MessageType\022M\n f" +
       "indTransactionsByAddressRequest\030\002 \001(\0132!." +
       "FindTransactionsByAddressRequestH\000\022E\n\034fi" +
@@ -4082,38 +3630,32 @@ public final class Wrapper {
       "lderRequest\030\005 \001(\0132 .SubmitTransactionBui" +
       "lderRequestH\000\022G\n\035submitTransactionBytesR" +
       "equest\030\006 \001(\0132\036.SubmitTransactionBytesReq" +
-      "uestH\000\022Q\n\"determineApprovalConfidenceReq" +
-      "uest\030\007 \001(\0132#.DetermineApprovalConfidence" +
-      "RequestH\000\022=\n\030addEffectListenerRequest\030\010 " +
-      "\001(\0132\031.AddEffectListenerRequestH\000\022C\n\033remo" +
-      "veEffectListenerRequest\030\t \001(\0132\034.RemoveEf" +
-      "fectListenerRequestH\000\0223\n\023submitEffectReq" +
-      "uest\030\n \001(\0132\024.SubmitEffectRequestH\000\022-\n\020ge" +
-      "tEffectRequest\030\013 \001(\0132\021.GetEffectRequestH" +
-      "\000\022O\n!findTransactionsByAddressResponse\030\014" +
-      " \001(\0132\".FindTransactionsByAddressResponse" +
-      "H\000\022G\n\035findTransactionsByTagResponse\030\r \001(" +
-      "\0132\036.FindTransactionsByTagResponseH\000\022G\n\035f" +
-      "indTransactionByHashResponse\030\016 \001(\0132\036.Fin" +
-      "dTransactionByHashResponseH\000\022S\n#determin" +
-      "eApprovalConfidenceResponse\030\017 \001(\0132$.Dete" +
-      "rmineApprovalConfidenceResponseH\000\022/\n\021get" +
-      "EffectResponse\030\020 \001(\0132\022.GetEffectResponse" +
-      "H\000\"\262\004\n\013MessageType\022(\n$FIND_TRANSACTIONS_" +
-      "BY_ADDRESS_REQUEST\020\000\022$\n FIND_TRANSACTION" +
-      "S_BY_TAG_REQUEST\020\001\022$\n FIND_TRANSACTION_B" +
-      "Y_HASH_REQUEST\020\002\022&\n\"SUBMIT_TRANSACTION_B" +
-      "UILDER_REQUEST\020\003\022$\n SUBMIT_TRANSACTION_B" +
-      "YTES_REQUEST\020\004\022)\n%DETERMINE_APPROVAL_CON" +
-      "FIDENCE_REQUEST\020\005\022\037\n\033ADD_EFFECT_LISTENER" +
-      "_REQUEST\020\006\022\"\n\036REMOVE_EFFECT_LISTENER_REQ" +
-      "UEST\020\007\022\031\n\025SUBMIT_EFFECT_REQUEST\020\010\022\026\n\022GET" +
-      "_EFFECT_REQUEST\020\t\022)\n%FIND_TRANSACTIONS_B" +
-      "Y_ADDRESS_RESPONSE\020\n\022%\n!FIND_TRANSACTION" +
-      "S_BY_TAG_RESPONSE\020\013\022%\n!FIND_TRANSACTION_" +
-      "BY_HASH_RESPONSE\020\014\022*\n&DETERMINE_APPROVAL" +
-      "_CONFIDENCE_RESPONSE\020\r\022\027\n\023GET_EFFECT_RES" +
-      "PONSE\020\016B\005\n\003msgb\006proto3"
+      "uestH\000\022=\n\030addEffectListenerRequest\030\007 \001(\013" +
+      "2\031.AddEffectListenerRequestH\000\022C\n\033removeE" +
+      "ffectListenerRequest\030\010 \001(\0132\034.RemoveEffec" +
+      "tListenerRequestH\000\0223\n\023submitEffectReques" +
+      "t\030\t \001(\0132\024.SubmitEffectRequestH\000\022-\n\020getEf" +
+      "fectRequest\030\n \001(\0132\021.GetEffectRequestH\000\022O" +
+      "\n!findTransactionsByAddressResponse\030\013 \001(" +
+      "\0132\".FindTransactionsByAddressResponseH\000\022" +
+      "G\n\035findTransactionsByTagResponse\030\014 \001(\0132\036" +
+      ".FindTransactionsByTagResponseH\000\022G\n\035find" +
+      "TransactionByHashResponse\030\r \001(\0132\036.FindTr" +
+      "ansactionByHashResponseH\000\022/\n\021getEffectRe" +
+      "sponse\030\016 \001(\0132\022.GetEffectResponseH\000\"\333\003\n\013M" +
+      "essageType\022(\n$FIND_TRANSACTIONS_BY_ADDRE" +
+      "SS_REQUEST\020\000\022$\n FIND_TRANSACTIONS_BY_TAG" +
+      "_REQUEST\020\001\022$\n FIND_TRANSACTION_BY_HASH_R" +
+      "EQUEST\020\002\022&\n\"SUBMIT_TRANSACTION_BUILDER_R" +
+      "EQUEST\020\003\022$\n SUBMIT_TRANSACTION_BYTES_REQ" +
+      "UEST\020\004\022\037\n\033ADD_EFFECT_LISTENER_REQUEST\020\005\022" +
+      "\"\n\036REMOVE_EFFECT_LISTENER_REQUEST\020\006\022\031\n\025S" +
+      "UBMIT_EFFECT_REQUEST\020\007\022\026\n\022GET_EFFECT_REQ" +
+      "UEST\020\010\022)\n%FIND_TRANSACTIONS_BY_ADDRESS_R" +
+      "ESPONSE\020\t\022%\n!FIND_TRANSACTIONS_BY_TAG_RE" +
+      "SPONSE\020\n\022%\n!FIND_TRANSACTION_BY_HASH_RES" +
+      "PONSE\020\013\022\027\n\023GET_EFFECT_RESPONSE\020\014B\005\n\003msgb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4134,7 +3676,7 @@ public final class Wrapper {
     internal_static_WrapperMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_WrapperMessage_descriptor,
-        new String[] { "MessageType", "FindTransactionsByAddressRequest", "FindTransactionsByTagRequest", "FindTransactionByHashRequest", "SubmitTransactionBuilderRequest", "SubmitTransactionBytesRequest", "DetermineApprovalConfidenceRequest", "AddEffectListenerRequest", "RemoveEffectListenerRequest", "SubmitEffectRequest", "GetEffectRequest", "FindTransactionsByAddressResponse", "FindTransactionsByTagResponse", "FindTransactionByHashResponse", "DetermineApprovalConfidenceResponse", "GetEffectResponse", "Msg", });
+        new String[] { "MessageType", "FindTransactionsByAddressRequest", "FindTransactionsByTagRequest", "FindTransactionByHashRequest", "SubmitTransactionBuilderRequest", "SubmitTransactionBytesRequest", "AddEffectListenerRequest", "RemoveEffectListenerRequest", "SubmitEffectRequest", "GetEffectRequest", "FindTransactionsByAddressResponse", "FindTransactionsByTagResponse", "FindTransactionByHashResponse", "GetEffectResponse", "Msg", });
     Request.getDescriptor();
     Response.getDescriptor();
   }

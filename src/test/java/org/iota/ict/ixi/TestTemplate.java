@@ -21,17 +21,18 @@ public abstract class TestTemplate {
         ict2 = new Ict(properties2.toFinal());
         addNeighborToIct(ict1,ict2);
         addNeighborToIct(ict2,ict1);
-        bridge = new Bridge(ict1);
-        new Thread(() -> bridge.run()).start();
-        try { Thread.sleep(500); } catch (Exception e) { ; }
+        try {
+            ict1.getModuleHolder().loadVirtualModule(Bridge.class, "Bridge.ixi");
+            ict1.getModuleHolder().startAllModules();
+        } catch (Throwable t) {
+            t.printStackTrace();
+        }
     }
 
     @After
     public void tearDown() {
-        bridge.terminate();
         ict1.terminate();
         ict2.terminate();
-        try { Thread.sleep(500); } catch (Exception e) { ; }
     }
 
     private static void addNeighborToIct(Ict ict, Ict neighbor) {

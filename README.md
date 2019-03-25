@@ -18,14 +18,14 @@ As soon as a module is connected, it can submit requests. For each request, the 
 ### Serialization
 Bridge.ixi makes use of [protocol buffers](https://developers.google.com/protocol-buffers/), an efficient, language-neutral mechanism for serializing structured data.
 With [protobuf3](https://developers.google.com/protocol-buffers/docs/proto3), the following languages are supported:
-Java, Python, Objective-C, C++, Dart, Go, Ruby, C#, JavaScript. Third-party implementations are also available for C, Rust, Elixir, Haskell, Swift and [many more](https://github.com/protocolbuffers/protobuf/blob/master/docs/third_party.md).
-#### How do I start with the protocol buffers?
+Java, Python, Objective-C, C++, Dart, Go, Ruby, C#, JavaScript and PHP. Third-party implementations are also available for C, Rust, Elixir, Haskell, Swift and [many more](https://github.com/protocolbuffers/protobuf/blob/master/docs/third_party.md).
+#### How to use protocol buffers?
 
 1) Download and install the protocol buffer compiler ([protoc](https://github.com/protocolbuffers/protobuf/releases)).
 2) Run the protocol buffer compiler for your module's language on the [.proto files](https://github.com/iotaledger/bridge.ixi/tree/master/src/main/java/org/iota/ict/ixi/protobuf/definition) to generate data access classes.
 3) Use these data access classes in your module project. They provide simple methods to build, serialize and deserialize your protocol buffer messages.
 
-Note that each message must be sent within a [wrapper message](https://github.com/iotaledger/bridge.ixi/blob/master/src/main/java/org/iota/ict/ixi/protobuf/definition/wrapper.proto). This is necessary so that the participants know what kind of message it is.
+Note that each message must be sent within a [wrapper message](https://github.com/iotaledger/bridge.ixi/blob/master/src/main/java/org/iota/ict/ixi/protobuf/definition/wrapper.proto). This is necessary so that the participants easily know what kind of message it is.
 
 ## Installation
 

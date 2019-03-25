@@ -1,7 +1,7 @@
 {
-  "name": "bridge.ixi",
+  "name": "Bridge.ixi",
   "main_class": "org.iota.ict.ixi.Bridge",
-  "description": "bridge.ixi represents the interface which allows modules written in any programming language to interact with the underlying infrastructure. By giving everyone the opportunity to participate with their desired programming language, bridge.ixi will help grow the module ecosystem as well as have positive impact on the overall development.",
+  "description": "Bridge.ixi represents the interface which allows modules written in any programming language to interact with the underlying infrastructure. By giving everyone the opportunity to participate with their desired programming language, Bridge.ixi will help grow the module ecosystem as well as have positive impact on the overall development.",
   "repository": "iotaledger/bridge.ixi",
   "gui_port": -1,
   "supported_versions": ["0.6-SNAPSHOT"],

@@ -13,7 +13,6 @@ public class Bridge extends IxiModule {
 
     private ServerSocket serverSocket;
     private List<ClientHandler> clients = new ArrayList();
-    private boolean terminate;
 
     public Bridge(Ixi ixi) {
         super(ixi);
@@ -31,9 +30,9 @@ public class Bridge extends IxiModule {
             return;
         }
 
-        System.out.println("bridge.ixi successfully started at port "+Constants.DEFAULT_BRIDGE_PORT);
+        System.out.println("Bridge.ixi successfully started at port "+Constants.DEFAULT_BRIDGE_PORT+".");
 
-        while(!terminate) {
+        while(isRunning()) {
 
             Socket clientSocket = null;
 
@@ -52,8 +51,8 @@ public class Bridge extends IxiModule {
 
     }
 
-    public void terminate() {
-        terminate = true;
+    @Override
+    public void onTerminate() {
         try { serverSocket.close(); } catch(Exception e) { ; }
         for(ClientHandler client: clients)
             client.interrupt();

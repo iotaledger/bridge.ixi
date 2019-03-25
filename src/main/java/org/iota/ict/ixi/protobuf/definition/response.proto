@@ -14,10 +14,6 @@ message FindTransactionByHashResponse {
     Transaction transaction = 1;
 }
 
-message DetermineApprovalConfidenceResponse {
-	double approvalConfidence = 1;
-}
-
 message GetEffectResponse {
 	string effect = 1;
 }

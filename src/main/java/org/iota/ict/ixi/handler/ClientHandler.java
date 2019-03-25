@@ -62,11 +62,6 @@ public class ClientHandler extends Thread {
                         break;
                     }
 
-                    case DETERMINE_APPROVAL_CONFIDENCE_REQUEST: {
-                        ProcessDetermineApprovalConfidenceRequest.process(request.getDetermineApprovalConfidenceRequest(), this);
-                        break;
-                    }
-
                     case ADD_EFFECT_LISTENER_REQUEST: {
                         ProcessAddEffectListenerRequest.process(request.getAddEffectListenerRequest(), this);
                         break;

@@ -14,17 +14,15 @@ message WrapperMessage {
  	    FindTransactionByHashRequest findTransactionByHashRequest = 4;
  		SubmitTransactionBuilderRequest submitTransactionBuilderRequest = 5;
  		SubmitTransactionBytesRequest submitTransactionBytesRequest = 6;
- 		DetermineApprovalConfidenceRequest determineApprovalConfidenceRequest = 7;
- 		AddEffectListenerRequest addEffectListenerRequest = 8;
- 		RemoveEffectListenerRequest removeEffectListenerRequest = 9;
- 		SubmitEffectRequest submitEffectRequest = 10;
- 		GetEffectRequest getEffectRequest = 11;
+ 		AddEffectListenerRequest addEffectListenerRequest = 7;
+ 		RemoveEffectListenerRequest removeEffectListenerRequest = 8;
+ 		SubmitEffectRequest submitEffectRequest = 9;
+ 		GetEffectRequest getEffectRequest = 10;
 
- 		FindTransactionsByAddressResponse findTransactionsByAddressResponse = 12;
- 		FindTransactionsByTagResponse findTransactionsByTagResponse = 13;
- 		FindTransactionByHashResponse findTransactionByHashResponse = 14;
- 		DetermineApprovalConfidenceResponse determineApprovalConfidenceResponse = 15;
- 		GetEffectResponse getEffectResponse = 16;
+ 		FindTransactionsByAddressResponse findTransactionsByAddressResponse = 11;
+ 		FindTransactionsByTagResponse findTransactionsByTagResponse = 12;
+ 		FindTransactionByHashResponse findTransactionByHashResponse = 13;
+ 		GetEffectResponse getEffectResponse = 14;
 
     }
 
@@ -35,17 +33,15 @@ message WrapperMessage {
       	FIND_TRANSACTION_BY_HASH_REQUEST = 2;
       	SUBMIT_TRANSACTION_BUILDER_REQUEST = 3;
       	SUBMIT_TRANSACTION_BYTES_REQUEST = 4;
-      	DETERMINE_APPROVAL_CONFIDENCE_REQUEST = 5;
-      	ADD_EFFECT_LISTENER_REQUEST = 6;
-      	REMOVE_EFFECT_LISTENER_REQUEST = 7;
-        SUBMIT_EFFECT_REQUEST = 8;
-        GET_EFFECT_REQUEST = 9;
+      	ADD_EFFECT_LISTENER_REQUEST = 5;
+      	REMOVE_EFFECT_LISTENER_REQUEST = 6;
+        SUBMIT_EFFECT_REQUEST = 7;
+        GET_EFFECT_REQUEST = 8;
 
-        FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE = 10;
-        FIND_TRANSACTIONS_BY_TAG_RESPONSE = 11;
-        FIND_TRANSACTION_BY_HASH_RESPONSE = 12;
-        DETERMINE_APPROVAL_CONFIDENCE_RESPONSE = 13;
-        GET_EFFECT_RESPONSE = 14;
+        FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE = 9;
+        FIND_TRANSACTIONS_BY_TAG_RESPONSE = 10;
+        FIND_TRANSACTION_BY_HASH_RESPONSE = 11;
+        GET_EFFECT_RESPONSE = 12;
 
     }
 
