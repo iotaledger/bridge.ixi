@@ -3,6 +3,7 @@ package org.iota.ict.ixi.handler;
 import org.iota.ict.eee.EffectListenerQueue;
 import org.iota.ict.ixi.Ixi;
 import org.iota.ict.ixi.protobuf.Wrapper;
+import org.iota.ict.utils.RestartableThread;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -13,13 +14,14 @@ import java.util.Map;
 /**
  * Thread which handles incoming connections on the given socket.
  */
-public class ClientHandler extends Thread {
+public class ClientHandler extends RestartableThread {
 
     private Socket socket;
     private Ixi ixi;
     private Map<String, EffectListenerQueue<String>> effectListenerByEnvironment = new HashMap<>();
 
     public ClientHandler(Socket socket, Ixi ixi) {
+        super(null);
         this.socket = socket;
         this.ixi = ixi;
         start();
@@ -30,7 +32,7 @@ public class ClientHandler extends Thread {
 
         try {
 
-            while (!interrupted()) {
+            while (isRunning()) {
 
                 Wrapper.WrapperMessage request = Wrapper.WrapperMessage.parseDelimitedFrom(socket.getInputStream());
                 Wrapper.WrapperMessage.MessageType type = request.getMessageType();
@@ -89,10 +91,12 @@ public class ClientHandler extends Thread {
         } catch (IOException e) {
             System.err.println("Error while processing client.");
             e.printStackTrace();
-        } finally {
-            try { socket.close(); } catch (Exception x) { ; }
         }
+    }
 
+    @Override
+    public void onTerminate() {
+        try { socket.close(); } catch (Exception x) { ; }
     }
 
     public OutputStream getOutputStream() throws IOException {

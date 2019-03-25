@@ -17,7 +17,7 @@ public class ProcessSubmitTransactionBuilderRequest {
         transactionBuilder.signatureFragments = protoBuf.getSignatureFragments();
         transactionBuilder.extraDataDigest = protoBuf.getExtraDataDigest();
         transactionBuilder.address = protoBuf.getAddress();
-        transactionBuilder.value = new BigInteger(protoBuf.getValue().toByteArray());
+        //transactionBuilder.value = new BigInteger(protoBuf.getValue().toByteArray());
         transactionBuilder.issuanceTimestamp = protoBuf.getIssuanceTimestamp();
         transactionBuilder.timelockLowerBound = protoBuf.getTimelockLowerBound();
         transactionBuilder.timelockUpperBound = protoBuf.getTimelockUpperBound();

@@ -8,11 +8,12 @@ import org.iota.ict.utils.properties.Properties;
  * */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         Properties properties = new Properties();
         Ict ict = new Ict(properties.toFinal());
-        new Bridge(ict).run();
+        ict.getModuleHolder().loadVirtualModule(Bridge.class, "Bridge.ixi");
+        ict.getModuleHolder().startAllModules();
 
     }
 
