@@ -130,17 +130,17 @@ public final class Wrapper {
     Request.SubmitEffectRequestOrBuilder getSubmitEffectRequestOrBuilder();
 
     /**
-     * <code>.GetEffectRequest getEffectRequest = 10;</code>
+     * <code>.PollEffectRequest pollEffectRequest = 10;</code>
      */
-    boolean hasGetEffectRequest();
+    boolean hasPollEffectRequest();
     /**
-     * <code>.GetEffectRequest getEffectRequest = 10;</code>
+     * <code>.PollEffectRequest pollEffectRequest = 10;</code>
      */
-    Request.GetEffectRequest getGetEffectRequest();
+    Request.PollEffectRequest getPollEffectRequest();
     /**
-     * <code>.GetEffectRequest getEffectRequest = 10;</code>
+     * <code>.PollEffectRequest pollEffectRequest = 10;</code>
      */
-    Request.GetEffectRequestOrBuilder getGetEffectRequestOrBuilder();
+    Request.PollEffectRequestOrBuilder getPollEffectRequestOrBuilder();
 
     /**
      * <code>.FindTransactionsByAddressResponse findTransactionsByAddressResponse = 11;</code>
@@ -182,17 +182,17 @@ public final class Wrapper {
     Response.FindTransactionByHashResponseOrBuilder getFindTransactionByHashResponseOrBuilder();
 
     /**
-     * <code>.GetEffectResponse getEffectResponse = 14;</code>
+     * <code>.PollEffectResponse pollEffectResponse = 14;</code>
      */
-    boolean hasGetEffectResponse();
+    boolean hasPollEffectResponse();
     /**
-     * <code>.GetEffectResponse getEffectResponse = 14;</code>
+     * <code>.PollEffectResponse pollEffectResponse = 14;</code>
      */
-    Response.GetEffectResponse getGetEffectResponse();
+    Response.PollEffectResponse getPollEffectResponse();
     /**
-     * <code>.GetEffectResponse getEffectResponse = 14;</code>
+     * <code>.PollEffectResponse pollEffectResponse = 14;</code>
      */
-    Response.GetEffectResponseOrBuilder getGetEffectResponseOrBuilder();
+    Response.PollEffectResponseOrBuilder getPollEffectResponseOrBuilder();
 
     public WrapperMessage.MsgCase getMsgCase();
   }
@@ -355,14 +355,14 @@ public final class Wrapper {
               break;
             }
             case 82: {
-              Request.GetEffectRequest.Builder subBuilder = null;
+              Request.PollEffectRequest.Builder subBuilder = null;
               if (msgCase_ == 10) {
-                subBuilder = ((Request.GetEffectRequest) msg_).toBuilder();
+                subBuilder = ((Request.PollEffectRequest) msg_).toBuilder();
               }
               msg_ =
-                  input.readMessage(Request.GetEffectRequest.parser(), extensionRegistry);
+                  input.readMessage(Request.PollEffectRequest.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((Request.GetEffectRequest) msg_);
+                subBuilder.mergeFrom((Request.PollEffectRequest) msg_);
                 msg_ = subBuilder.buildPartial();
               }
               msgCase_ = 10;
@@ -411,14 +411,14 @@ public final class Wrapper {
               break;
             }
             case 114: {
-              Response.GetEffectResponse.Builder subBuilder = null;
+              Response.PollEffectResponse.Builder subBuilder = null;
               if (msgCase_ == 14) {
-                subBuilder = ((Response.GetEffectResponse) msg_).toBuilder();
+                subBuilder = ((Response.PollEffectResponse) msg_).toBuilder();
               }
               msg_ =
-                  input.readMessage(Response.GetEffectResponse.parser(), extensionRegistry);
+                  input.readMessage(Response.PollEffectResponse.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((Response.GetEffectResponse) msg_);
+                subBuilder.mergeFrom((Response.PollEffectResponse) msg_);
                 msg_ = subBuilder.buildPartial();
               }
               msgCase_ = 14;
@@ -494,9 +494,9 @@ public final class Wrapper {
        */
       SUBMIT_EFFECT_REQUEST(7),
       /**
-       * <code>GET_EFFECT_REQUEST = 8;</code>
+       * <code>POLL_EFFECT_REQUEST = 8;</code>
        */
-      GET_EFFECT_REQUEST(8),
+      POLL_EFFECT_REQUEST(8),
       /**
        * <code>FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE = 9;</code>
        */
@@ -510,9 +510,9 @@ public final class Wrapper {
        */
       FIND_TRANSACTION_BY_HASH_RESPONSE(11),
       /**
-       * <code>GET_EFFECT_RESPONSE = 12;</code>
+       * <code>POLL_EFFECT_RESPONSE = 12;</code>
        */
-      GET_EFFECT_RESPONSE(12),
+      POLL_EFFECT_RESPONSE(12),
       UNRECOGNIZED(-1),
       ;
 
@@ -549,9 +549,9 @@ public final class Wrapper {
        */
       public static final int SUBMIT_EFFECT_REQUEST_VALUE = 7;
       /**
-       * <code>GET_EFFECT_REQUEST = 8;</code>
+       * <code>POLL_EFFECT_REQUEST = 8;</code>
        */
-      public static final int GET_EFFECT_REQUEST_VALUE = 8;
+      public static final int POLL_EFFECT_REQUEST_VALUE = 8;
       /**
        * <code>FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE = 9;</code>
        */
@@ -565,9 +565,9 @@ public final class Wrapper {
        */
       public static final int FIND_TRANSACTION_BY_HASH_RESPONSE_VALUE = 11;
       /**
-       * <code>GET_EFFECT_RESPONSE = 12;</code>
+       * <code>POLL_EFFECT_RESPONSE = 12;</code>
        */
-      public static final int GET_EFFECT_RESPONSE_VALUE = 12;
+      public static final int POLL_EFFECT_RESPONSE_VALUE = 12;
 
 
       public final int getNumber() {
@@ -596,11 +596,11 @@ public final class Wrapper {
           case 5: return ADD_EFFECT_LISTENER_REQUEST;
           case 6: return REMOVE_EFFECT_LISTENER_REQUEST;
           case 7: return SUBMIT_EFFECT_REQUEST;
-          case 8: return GET_EFFECT_REQUEST;
+          case 8: return POLL_EFFECT_REQUEST;
           case 9: return FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE;
           case 10: return FIND_TRANSACTIONS_BY_TAG_RESPONSE;
           case 11: return FIND_TRANSACTION_BY_HASH_RESPONSE;
-          case 12: return GET_EFFECT_RESPONSE;
+          case 12: return POLL_EFFECT_RESPONSE;
           default: return null;
         }
       }
@@ -665,11 +665,11 @@ public final class Wrapper {
       ADDEFFECTLISTENERREQUEST(7),
       REMOVEEFFECTLISTENERREQUEST(8),
       SUBMITEFFECTREQUEST(9),
-      GETEFFECTREQUEST(10),
+      POLLEFFECTREQUEST(10),
       FINDTRANSACTIONSBYADDRESSRESPONSE(11),
       FINDTRANSACTIONSBYTAGRESPONSE(12),
       FINDTRANSACTIONBYHASHRESPONSE(13),
-      GETEFFECTRESPONSE(14),
+      POLLEFFECTRESPONSE(14),
       MSG_NOT_SET(0);
       private final int value;
       private MsgCase(int value) {
@@ -693,11 +693,11 @@ public final class Wrapper {
           case 7: return ADDEFFECTLISTENERREQUEST;
           case 8: return REMOVEEFFECTLISTENERREQUEST;
           case 9: return SUBMITEFFECTREQUEST;
-          case 10: return GETEFFECTREQUEST;
+          case 10: return POLLEFFECTREQUEST;
           case 11: return FINDTRANSACTIONSBYADDRESSRESPONSE;
           case 12: return FINDTRANSACTIONSBYTAGRESPONSE;
           case 13: return FINDTRANSACTIONBYHASHRESPONSE;
-          case 14: return GETEFFECTRESPONSE;
+          case 14: return POLLEFFECTRESPONSE;
           case 0: return MSG_NOT_SET;
           default: return null;
         }
@@ -938,30 +938,30 @@ public final class Wrapper {
       return Request.SubmitEffectRequest.getDefaultInstance();
     }
 
-    public static final int GETEFFECTREQUEST_FIELD_NUMBER = 10;
+    public static final int POLLEFFECTREQUEST_FIELD_NUMBER = 10;
     /**
-     * <code>.GetEffectRequest getEffectRequest = 10;</code>
+     * <code>.PollEffectRequest pollEffectRequest = 10;</code>
      */
-    public boolean hasGetEffectRequest() {
+    public boolean hasPollEffectRequest() {
       return msgCase_ == 10;
     }
     /**
-     * <code>.GetEffectRequest getEffectRequest = 10;</code>
+     * <code>.PollEffectRequest pollEffectRequest = 10;</code>
      */
-    public Request.GetEffectRequest getGetEffectRequest() {
+    public Request.PollEffectRequest getPollEffectRequest() {
       if (msgCase_ == 10) {
-         return (Request.GetEffectRequest) msg_;
+         return (Request.PollEffectRequest) msg_;
       }
-      return Request.GetEffectRequest.getDefaultInstance();
+      return Request.PollEffectRequest.getDefaultInstance();
     }
     /**
-     * <code>.GetEffectRequest getEffectRequest = 10;</code>
+     * <code>.PollEffectRequest pollEffectRequest = 10;</code>
      */
-    public Request.GetEffectRequestOrBuilder getGetEffectRequestOrBuilder() {
+    public Request.PollEffectRequestOrBuilder getPollEffectRequestOrBuilder() {
       if (msgCase_ == 10) {
-         return (Request.GetEffectRequest) msg_;
+         return (Request.PollEffectRequest) msg_;
       }
-      return Request.GetEffectRequest.getDefaultInstance();
+      return Request.PollEffectRequest.getDefaultInstance();
     }
 
     public static final int FINDTRANSACTIONSBYADDRESSRESPONSE_FIELD_NUMBER = 11;
@@ -1042,30 +1042,30 @@ public final class Wrapper {
       return Response.FindTransactionByHashResponse.getDefaultInstance();
     }
 
-    public static final int GETEFFECTRESPONSE_FIELD_NUMBER = 14;
+    public static final int POLLEFFECTRESPONSE_FIELD_NUMBER = 14;
     /**
-     * <code>.GetEffectResponse getEffectResponse = 14;</code>
+     * <code>.PollEffectResponse pollEffectResponse = 14;</code>
      */
-    public boolean hasGetEffectResponse() {
+    public boolean hasPollEffectResponse() {
       return msgCase_ == 14;
     }
     /**
-     * <code>.GetEffectResponse getEffectResponse = 14;</code>
+     * <code>.PollEffectResponse pollEffectResponse = 14;</code>
      */
-    public Response.GetEffectResponse getGetEffectResponse() {
+    public Response.PollEffectResponse getPollEffectResponse() {
       if (msgCase_ == 14) {
-         return (Response.GetEffectResponse) msg_;
+         return (Response.PollEffectResponse) msg_;
       }
-      return Response.GetEffectResponse.getDefaultInstance();
+      return Response.PollEffectResponse.getDefaultInstance();
     }
     /**
-     * <code>.GetEffectResponse getEffectResponse = 14;</code>
+     * <code>.PollEffectResponse pollEffectResponse = 14;</code>
      */
-    public Response.GetEffectResponseOrBuilder getGetEffectResponseOrBuilder() {
+    public Response.PollEffectResponseOrBuilder getPollEffectResponseOrBuilder() {
       if (msgCase_ == 14) {
-         return (Response.GetEffectResponse) msg_;
+         return (Response.PollEffectResponse) msg_;
       }
-      return Response.GetEffectResponse.getDefaultInstance();
+      return Response.PollEffectResponse.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1110,7 +1110,7 @@ public final class Wrapper {
         output.writeMessage(9, (Request.SubmitEffectRequest) msg_);
       }
       if (msgCase_ == 10) {
-        output.writeMessage(10, (Request.GetEffectRequest) msg_);
+        output.writeMessage(10, (Request.PollEffectRequest) msg_);
       }
       if (msgCase_ == 11) {
         output.writeMessage(11, (Response.FindTransactionsByAddressResponse) msg_);
@@ -1122,7 +1122,7 @@ public final class Wrapper {
         output.writeMessage(13, (Response.FindTransactionByHashResponse) msg_);
       }
       if (msgCase_ == 14) {
-        output.writeMessage(14, (Response.GetEffectResponse) msg_);
+        output.writeMessage(14, (Response.PollEffectResponse) msg_);
       }
       unknownFields.writeTo(output);
     }
@@ -1171,7 +1171,7 @@ public final class Wrapper {
       }
       if (msgCase_ == 10) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, (Request.GetEffectRequest) msg_);
+          .computeMessageSize(10, (Request.PollEffectRequest) msg_);
       }
       if (msgCase_ == 11) {
         size += com.google.protobuf.CodedOutputStream
@@ -1187,7 +1187,7 @@ public final class Wrapper {
       }
       if (msgCase_ == 14) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, (Response.GetEffectResponse) msg_);
+          .computeMessageSize(14, (Response.PollEffectResponse) msg_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1240,8 +1240,8 @@ public final class Wrapper {
               .equals(other.getSubmitEffectRequest())) return false;
           break;
         case 10:
-          if (!getGetEffectRequest()
-              .equals(other.getGetEffectRequest())) return false;
+          if (!getPollEffectRequest()
+              .equals(other.getPollEffectRequest())) return false;
           break;
         case 11:
           if (!getFindTransactionsByAddressResponse()
@@ -1256,8 +1256,8 @@ public final class Wrapper {
               .equals(other.getFindTransactionByHashResponse())) return false;
           break;
         case 14:
-          if (!getGetEffectResponse()
-              .equals(other.getGetEffectResponse())) return false;
+          if (!getPollEffectResponse()
+              .equals(other.getPollEffectResponse())) return false;
           break;
         case 0:
         default:
@@ -1309,8 +1309,8 @@ public final class Wrapper {
           hash = (53 * hash) + getSubmitEffectRequest().hashCode();
           break;
         case 10:
-          hash = (37 * hash) + GETEFFECTREQUEST_FIELD_NUMBER;
-          hash = (53 * hash) + getGetEffectRequest().hashCode();
+          hash = (37 * hash) + POLLEFFECTREQUEST_FIELD_NUMBER;
+          hash = (53 * hash) + getPollEffectRequest().hashCode();
           break;
         case 11:
           hash = (37 * hash) + FINDTRANSACTIONSBYADDRESSRESPONSE_FIELD_NUMBER;
@@ -1325,8 +1325,8 @@ public final class Wrapper {
           hash = (53 * hash) + getFindTransactionByHashResponse().hashCode();
           break;
         case 14:
-          hash = (37 * hash) + GETEFFECTRESPONSE_FIELD_NUMBER;
-          hash = (53 * hash) + getGetEffectResponse().hashCode();
+          hash = (37 * hash) + POLLEFFECTRESPONSE_FIELD_NUMBER;
+          hash = (53 * hash) + getPollEffectResponse().hashCode();
           break;
         case 0:
         default:
@@ -1552,10 +1552,10 @@ public final class Wrapper {
           }
         }
         if (msgCase_ == 10) {
-          if (getEffectRequestBuilder_ == null) {
+          if (pollEffectRequestBuilder_ == null) {
             result.msg_ = msg_;
           } else {
-            result.msg_ = getEffectRequestBuilder_.build();
+            result.msg_ = pollEffectRequestBuilder_.build();
           }
         }
         if (msgCase_ == 11) {
@@ -1580,10 +1580,10 @@ public final class Wrapper {
           }
         }
         if (msgCase_ == 14) {
-          if (getEffectResponseBuilder_ == null) {
+          if (pollEffectResponseBuilder_ == null) {
             result.msg_ = msg_;
           } else {
-            result.msg_ = getEffectResponseBuilder_.build();
+            result.msg_ = pollEffectResponseBuilder_.build();
           }
         }
         result.msgCase_ = msgCase_;
@@ -1671,8 +1671,8 @@ public final class Wrapper {
             mergeSubmitEffectRequest(other.getSubmitEffectRequest());
             break;
           }
-          case GETEFFECTREQUEST: {
-            mergeGetEffectRequest(other.getGetEffectRequest());
+          case POLLEFFECTREQUEST: {
+            mergePollEffectRequest(other.getPollEffectRequest());
             break;
           }
           case FINDTRANSACTIONSBYADDRESSRESPONSE: {
@@ -1687,8 +1687,8 @@ public final class Wrapper {
             mergeFindTransactionByHashResponse(other.getFindTransactionByHashResponse());
             break;
           }
-          case GETEFFECTRESPONSE: {
-            mergeGetEffectResponse(other.getGetEffectResponse());
+          case POLLEFFECTRESPONSE: {
+            mergePollEffectResponse(other.getPollEffectResponse());
             break;
           }
           case MSG_NOT_SET: {
@@ -2873,67 +2873,67 @@ public final class Wrapper {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          Request.GetEffectRequest, Request.GetEffectRequest.Builder, Request.GetEffectRequestOrBuilder> getEffectRequestBuilder_;
+          Request.PollEffectRequest, Request.PollEffectRequest.Builder, Request.PollEffectRequestOrBuilder> pollEffectRequestBuilder_;
       /**
-       * <code>.GetEffectRequest getEffectRequest = 10;</code>
+       * <code>.PollEffectRequest pollEffectRequest = 10;</code>
        */
-      public boolean hasGetEffectRequest() {
+      public boolean hasPollEffectRequest() {
         return msgCase_ == 10;
       }
       /**
-       * <code>.GetEffectRequest getEffectRequest = 10;</code>
+       * <code>.PollEffectRequest pollEffectRequest = 10;</code>
        */
-      public Request.GetEffectRequest getGetEffectRequest() {
-        if (getEffectRequestBuilder_ == null) {
+      public Request.PollEffectRequest getPollEffectRequest() {
+        if (pollEffectRequestBuilder_ == null) {
           if (msgCase_ == 10) {
-            return (Request.GetEffectRequest) msg_;
+            return (Request.PollEffectRequest) msg_;
           }
-          return Request.GetEffectRequest.getDefaultInstance();
+          return Request.PollEffectRequest.getDefaultInstance();
         } else {
           if (msgCase_ == 10) {
-            return getEffectRequestBuilder_.getMessage();
+            return pollEffectRequestBuilder_.getMessage();
           }
-          return Request.GetEffectRequest.getDefaultInstance();
+          return Request.PollEffectRequest.getDefaultInstance();
         }
       }
       /**
-       * <code>.GetEffectRequest getEffectRequest = 10;</code>
+       * <code>.PollEffectRequest pollEffectRequest = 10;</code>
        */
-      public Builder setGetEffectRequest(Request.GetEffectRequest value) {
-        if (getEffectRequestBuilder_ == null) {
+      public Builder setPollEffectRequest(Request.PollEffectRequest value) {
+        if (pollEffectRequestBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           msg_ = value;
           onChanged();
         } else {
-          getEffectRequestBuilder_.setMessage(value);
+          pollEffectRequestBuilder_.setMessage(value);
         }
         msgCase_ = 10;
         return this;
       }
       /**
-       * <code>.GetEffectRequest getEffectRequest = 10;</code>
+       * <code>.PollEffectRequest pollEffectRequest = 10;</code>
        */
-      public Builder setGetEffectRequest(
-          Request.GetEffectRequest.Builder builderForValue) {
-        if (getEffectRequestBuilder_ == null) {
+      public Builder setPollEffectRequest(
+          Request.PollEffectRequest.Builder builderForValue) {
+        if (pollEffectRequestBuilder_ == null) {
           msg_ = builderForValue.build();
           onChanged();
         } else {
-          getEffectRequestBuilder_.setMessage(builderForValue.build());
+          pollEffectRequestBuilder_.setMessage(builderForValue.build());
         }
         msgCase_ = 10;
         return this;
       }
       /**
-       * <code>.GetEffectRequest getEffectRequest = 10;</code>
+       * <code>.PollEffectRequest pollEffectRequest = 10;</code>
        */
-      public Builder mergeGetEffectRequest(Request.GetEffectRequest value) {
-        if (getEffectRequestBuilder_ == null) {
+      public Builder mergePollEffectRequest(Request.PollEffectRequest value) {
+        if (pollEffectRequestBuilder_ == null) {
           if (msgCase_ == 10 &&
-              msg_ != Request.GetEffectRequest.getDefaultInstance()) {
-            msg_ = Request.GetEffectRequest.newBuilder((Request.GetEffectRequest) msg_)
+              msg_ != Request.PollEffectRequest.getDefaultInstance()) {
+            msg_ = Request.PollEffectRequest.newBuilder((Request.PollEffectRequest) msg_)
                 .mergeFrom(value).buildPartial();
           } else {
             msg_ = value;
@@ -2941,18 +2941,18 @@ public final class Wrapper {
           onChanged();
         } else {
           if (msgCase_ == 10) {
-            getEffectRequestBuilder_.mergeFrom(value);
+            pollEffectRequestBuilder_.mergeFrom(value);
           }
-          getEffectRequestBuilder_.setMessage(value);
+          pollEffectRequestBuilder_.setMessage(value);
         }
         msgCase_ = 10;
         return this;
       }
       /**
-       * <code>.GetEffectRequest getEffectRequest = 10;</code>
+       * <code>.PollEffectRequest pollEffectRequest = 10;</code>
        */
-      public Builder clearGetEffectRequest() {
-        if (getEffectRequestBuilder_ == null) {
+      public Builder clearPollEffectRequest() {
+        if (pollEffectRequestBuilder_ == null) {
           if (msgCase_ == 10) {
             msgCase_ = 0;
             msg_ = null;
@@ -2963,49 +2963,49 @@ public final class Wrapper {
             msgCase_ = 0;
             msg_ = null;
           }
-          getEffectRequestBuilder_.clear();
+          pollEffectRequestBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.GetEffectRequest getEffectRequest = 10;</code>
+       * <code>.PollEffectRequest pollEffectRequest = 10;</code>
        */
-      public Request.GetEffectRequest.Builder getGetEffectRequestBuilder() {
-        return getGetEffectRequestFieldBuilder().getBuilder();
+      public Request.PollEffectRequest.Builder getPollEffectRequestBuilder() {
+        return getPollEffectRequestFieldBuilder().getBuilder();
       }
       /**
-       * <code>.GetEffectRequest getEffectRequest = 10;</code>
+       * <code>.PollEffectRequest pollEffectRequest = 10;</code>
        */
-      public Request.GetEffectRequestOrBuilder getGetEffectRequestOrBuilder() {
-        if ((msgCase_ == 10) && (getEffectRequestBuilder_ != null)) {
-          return getEffectRequestBuilder_.getMessageOrBuilder();
+      public Request.PollEffectRequestOrBuilder getPollEffectRequestOrBuilder() {
+        if ((msgCase_ == 10) && (pollEffectRequestBuilder_ != null)) {
+          return pollEffectRequestBuilder_.getMessageOrBuilder();
         } else {
           if (msgCase_ == 10) {
-            return (Request.GetEffectRequest) msg_;
+            return (Request.PollEffectRequest) msg_;
           }
-          return Request.GetEffectRequest.getDefaultInstance();
+          return Request.PollEffectRequest.getDefaultInstance();
         }
       }
       /**
-       * <code>.GetEffectRequest getEffectRequest = 10;</code>
+       * <code>.PollEffectRequest pollEffectRequest = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          Request.GetEffectRequest, Request.GetEffectRequest.Builder, Request.GetEffectRequestOrBuilder> 
-          getGetEffectRequestFieldBuilder() {
-        if (getEffectRequestBuilder_ == null) {
+          Request.PollEffectRequest, Request.PollEffectRequest.Builder, Request.PollEffectRequestOrBuilder> 
+          getPollEffectRequestFieldBuilder() {
+        if (pollEffectRequestBuilder_ == null) {
           if (!(msgCase_ == 10)) {
-            msg_ = Request.GetEffectRequest.getDefaultInstance();
+            msg_ = Request.PollEffectRequest.getDefaultInstance();
           }
-          getEffectRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Request.GetEffectRequest, Request.GetEffectRequest.Builder, Request.GetEffectRequestOrBuilder>(
-                  (Request.GetEffectRequest) msg_,
+          pollEffectRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              Request.PollEffectRequest, Request.PollEffectRequest.Builder, Request.PollEffectRequestOrBuilder>(
+                  (Request.PollEffectRequest) msg_,
                   getParentForChildren(),
                   isClean());
           msg_ = null;
         }
         msgCase_ = 10;
         onChanged();;
-        return getEffectRequestBuilder_;
+        return pollEffectRequestBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3417,67 +3417,67 @@ public final class Wrapper {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          Response.GetEffectResponse, Response.GetEffectResponse.Builder, Response.GetEffectResponseOrBuilder> getEffectResponseBuilder_;
+          Response.PollEffectResponse, Response.PollEffectResponse.Builder, Response.PollEffectResponseOrBuilder> pollEffectResponseBuilder_;
       /**
-       * <code>.GetEffectResponse getEffectResponse = 14;</code>
+       * <code>.PollEffectResponse pollEffectResponse = 14;</code>
        */
-      public boolean hasGetEffectResponse() {
+      public boolean hasPollEffectResponse() {
         return msgCase_ == 14;
       }
       /**
-       * <code>.GetEffectResponse getEffectResponse = 14;</code>
+       * <code>.PollEffectResponse pollEffectResponse = 14;</code>
        */
-      public Response.GetEffectResponse getGetEffectResponse() {
-        if (getEffectResponseBuilder_ == null) {
+      public Response.PollEffectResponse getPollEffectResponse() {
+        if (pollEffectResponseBuilder_ == null) {
           if (msgCase_ == 14) {
-            return (Response.GetEffectResponse) msg_;
+            return (Response.PollEffectResponse) msg_;
           }
-          return Response.GetEffectResponse.getDefaultInstance();
+          return Response.PollEffectResponse.getDefaultInstance();
         } else {
           if (msgCase_ == 14) {
-            return getEffectResponseBuilder_.getMessage();
+            return pollEffectResponseBuilder_.getMessage();
           }
-          return Response.GetEffectResponse.getDefaultInstance();
+          return Response.PollEffectResponse.getDefaultInstance();
         }
       }
       /**
-       * <code>.GetEffectResponse getEffectResponse = 14;</code>
+       * <code>.PollEffectResponse pollEffectResponse = 14;</code>
        */
-      public Builder setGetEffectResponse(Response.GetEffectResponse value) {
-        if (getEffectResponseBuilder_ == null) {
+      public Builder setPollEffectResponse(Response.PollEffectResponse value) {
+        if (pollEffectResponseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           msg_ = value;
           onChanged();
         } else {
-          getEffectResponseBuilder_.setMessage(value);
+          pollEffectResponseBuilder_.setMessage(value);
         }
         msgCase_ = 14;
         return this;
       }
       /**
-       * <code>.GetEffectResponse getEffectResponse = 14;</code>
+       * <code>.PollEffectResponse pollEffectResponse = 14;</code>
        */
-      public Builder setGetEffectResponse(
-          Response.GetEffectResponse.Builder builderForValue) {
-        if (getEffectResponseBuilder_ == null) {
+      public Builder setPollEffectResponse(
+          Response.PollEffectResponse.Builder builderForValue) {
+        if (pollEffectResponseBuilder_ == null) {
           msg_ = builderForValue.build();
           onChanged();
         } else {
-          getEffectResponseBuilder_.setMessage(builderForValue.build());
+          pollEffectResponseBuilder_.setMessage(builderForValue.build());
         }
         msgCase_ = 14;
         return this;
       }
       /**
-       * <code>.GetEffectResponse getEffectResponse = 14;</code>
+       * <code>.PollEffectResponse pollEffectResponse = 14;</code>
        */
-      public Builder mergeGetEffectResponse(Response.GetEffectResponse value) {
-        if (getEffectResponseBuilder_ == null) {
+      public Builder mergePollEffectResponse(Response.PollEffectResponse value) {
+        if (pollEffectResponseBuilder_ == null) {
           if (msgCase_ == 14 &&
-              msg_ != Response.GetEffectResponse.getDefaultInstance()) {
-            msg_ = Response.GetEffectResponse.newBuilder((Response.GetEffectResponse) msg_)
+              msg_ != Response.PollEffectResponse.getDefaultInstance()) {
+            msg_ = Response.PollEffectResponse.newBuilder((Response.PollEffectResponse) msg_)
                 .mergeFrom(value).buildPartial();
           } else {
             msg_ = value;
@@ -3485,18 +3485,18 @@ public final class Wrapper {
           onChanged();
         } else {
           if (msgCase_ == 14) {
-            getEffectResponseBuilder_.mergeFrom(value);
+            pollEffectResponseBuilder_.mergeFrom(value);
           }
-          getEffectResponseBuilder_.setMessage(value);
+          pollEffectResponseBuilder_.setMessage(value);
         }
         msgCase_ = 14;
         return this;
       }
       /**
-       * <code>.GetEffectResponse getEffectResponse = 14;</code>
+       * <code>.PollEffectResponse pollEffectResponse = 14;</code>
        */
-      public Builder clearGetEffectResponse() {
-        if (getEffectResponseBuilder_ == null) {
+      public Builder clearPollEffectResponse() {
+        if (pollEffectResponseBuilder_ == null) {
           if (msgCase_ == 14) {
             msgCase_ = 0;
             msg_ = null;
@@ -3507,49 +3507,49 @@ public final class Wrapper {
             msgCase_ = 0;
             msg_ = null;
           }
-          getEffectResponseBuilder_.clear();
+          pollEffectResponseBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.GetEffectResponse getEffectResponse = 14;</code>
+       * <code>.PollEffectResponse pollEffectResponse = 14;</code>
        */
-      public Response.GetEffectResponse.Builder getGetEffectResponseBuilder() {
-        return getGetEffectResponseFieldBuilder().getBuilder();
+      public Response.PollEffectResponse.Builder getPollEffectResponseBuilder() {
+        return getPollEffectResponseFieldBuilder().getBuilder();
       }
       /**
-       * <code>.GetEffectResponse getEffectResponse = 14;</code>
+       * <code>.PollEffectResponse pollEffectResponse = 14;</code>
        */
-      public Response.GetEffectResponseOrBuilder getGetEffectResponseOrBuilder() {
-        if ((msgCase_ == 14) && (getEffectResponseBuilder_ != null)) {
-          return getEffectResponseBuilder_.getMessageOrBuilder();
+      public Response.PollEffectResponseOrBuilder getPollEffectResponseOrBuilder() {
+        if ((msgCase_ == 14) && (pollEffectResponseBuilder_ != null)) {
+          return pollEffectResponseBuilder_.getMessageOrBuilder();
         } else {
           if (msgCase_ == 14) {
-            return (Response.GetEffectResponse) msg_;
+            return (Response.PollEffectResponse) msg_;
           }
-          return Response.GetEffectResponse.getDefaultInstance();
+          return Response.PollEffectResponse.getDefaultInstance();
         }
       }
       /**
-       * <code>.GetEffectResponse getEffectResponse = 14;</code>
+       * <code>.PollEffectResponse pollEffectResponse = 14;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          Response.GetEffectResponse, Response.GetEffectResponse.Builder, Response.GetEffectResponseOrBuilder> 
-          getGetEffectResponseFieldBuilder() {
-        if (getEffectResponseBuilder_ == null) {
+          Response.PollEffectResponse, Response.PollEffectResponse.Builder, Response.PollEffectResponseOrBuilder> 
+          getPollEffectResponseFieldBuilder() {
+        if (pollEffectResponseBuilder_ == null) {
           if (!(msgCase_ == 14)) {
-            msg_ = Response.GetEffectResponse.getDefaultInstance();
+            msg_ = Response.PollEffectResponse.getDefaultInstance();
           }
-          getEffectResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Response.GetEffectResponse, Response.GetEffectResponse.Builder, Response.GetEffectResponseOrBuilder>(
-                  (Response.GetEffectResponse) msg_,
+          pollEffectResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              Response.PollEffectResponse, Response.PollEffectResponse.Builder, Response.PollEffectResponseOrBuilder>(
+                  (Response.PollEffectResponse) msg_,
                   getParentForChildren(),
                   isClean());
           msg_ = null;
         }
         msgCase_ = 14;
         onChanged();;
-        return getEffectResponseBuilder_;
+        return pollEffectResponseBuilder_;
       }
       @Override
       public final Builder setUnknownFields(
@@ -3619,7 +3619,7 @@ public final class Wrapper {
   static {
     String[] descriptorData = {
       "\n\rwrapper.proto\032\rrequest.proto\032\016response" +
-      ".proto\"\226\013\n\016WrapperMessage\0220\n\013messageType" +
+      ".proto\"\234\013\n\016WrapperMessage\0220\n\013messageType" +
       "\030\001 \001(\0162\033.WrapperMessage.MessageType\022M\n f" +
       "indTransactionsByAddressRequest\030\002 \001(\0132!." +
       "FindTransactionsByAddressRequestH\000\022E\n\034fi" +
@@ -3634,28 +3634,28 @@ public final class Wrapper {
       "2\031.AddEffectListenerRequestH\000\022C\n\033removeE" +
       "ffectListenerRequest\030\010 \001(\0132\034.RemoveEffec" +
       "tListenerRequestH\000\0223\n\023submitEffectReques" +
-      "t\030\t \001(\0132\024.SubmitEffectRequestH\000\022-\n\020getEf" +
-      "fectRequest\030\n \001(\0132\021.GetEffectRequestH\000\022O" +
-      "\n!findTransactionsByAddressResponse\030\013 \001(" +
-      "\0132\".FindTransactionsByAddressResponseH\000\022" +
-      "G\n\035findTransactionsByTagResponse\030\014 \001(\0132\036" +
-      ".FindTransactionsByTagResponseH\000\022G\n\035find" +
-      "TransactionByHashResponse\030\r \001(\0132\036.FindTr" +
-      "ansactionByHashResponseH\000\022/\n\021getEffectRe" +
-      "sponse\030\016 \001(\0132\022.GetEffectResponseH\000\"\333\003\n\013M" +
-      "essageType\022(\n$FIND_TRANSACTIONS_BY_ADDRE" +
-      "SS_REQUEST\020\000\022$\n FIND_TRANSACTIONS_BY_TAG" +
-      "_REQUEST\020\001\022$\n FIND_TRANSACTION_BY_HASH_R" +
-      "EQUEST\020\002\022&\n\"SUBMIT_TRANSACTION_BUILDER_R" +
-      "EQUEST\020\003\022$\n SUBMIT_TRANSACTION_BYTES_REQ" +
-      "UEST\020\004\022\037\n\033ADD_EFFECT_LISTENER_REQUEST\020\005\022" +
-      "\"\n\036REMOVE_EFFECT_LISTENER_REQUEST\020\006\022\031\n\025S" +
-      "UBMIT_EFFECT_REQUEST\020\007\022\026\n\022GET_EFFECT_REQ" +
-      "UEST\020\010\022)\n%FIND_TRANSACTIONS_BY_ADDRESS_R" +
-      "ESPONSE\020\t\022%\n!FIND_TRANSACTIONS_BY_TAG_RE" +
-      "SPONSE\020\n\022%\n!FIND_TRANSACTION_BY_HASH_RES" +
-      "PONSE\020\013\022\027\n\023GET_EFFECT_RESPONSE\020\014B\005\n\003msgb" +
-      "\006proto3"
+      "t\030\t \001(\0132\024.SubmitEffectRequestH\000\022/\n\021pollE" +
+      "ffectRequest\030\n \001(\0132\022.PollEffectRequestH\000" +
+      "\022O\n!findTransactionsByAddressResponse\030\013 " +
+      "\001(\0132\".FindTransactionsByAddressResponseH" +
+      "\000\022G\n\035findTransactionsByTagResponse\030\014 \001(\013" +
+      "2\036.FindTransactionsByTagResponseH\000\022G\n\035fi" +
+      "ndTransactionByHashResponse\030\r \001(\0132\036.Find" +
+      "TransactionByHashResponseH\000\0221\n\022pollEffec" +
+      "tResponse\030\016 \001(\0132\023.PollEffectResponseH\000\"\335" +
+      "\003\n\013MessageType\022(\n$FIND_TRANSACTIONS_BY_A" +
+      "DDRESS_REQUEST\020\000\022$\n FIND_TRANSACTIONS_BY" +
+      "_TAG_REQUEST\020\001\022$\n FIND_TRANSACTION_BY_HA" +
+      "SH_REQUEST\020\002\022&\n\"SUBMIT_TRANSACTION_BUILD" +
+      "ER_REQUEST\020\003\022$\n SUBMIT_TRANSACTION_BYTES" +
+      "_REQUEST\020\004\022\037\n\033ADD_EFFECT_LISTENER_REQUES" +
+      "T\020\005\022\"\n\036REMOVE_EFFECT_LISTENER_REQUEST\020\006\022" +
+      "\031\n\025SUBMIT_EFFECT_REQUEST\020\007\022\027\n\023POLL_EFFEC" +
+      "T_REQUEST\020\010\022)\n%FIND_TRANSACTIONS_BY_ADDR" +
+      "ESS_RESPONSE\020\t\022%\n!FIND_TRANSACTIONS_BY_T" +
+      "AG_RESPONSE\020\n\022%\n!FIND_TRANSACTION_BY_HAS" +
+      "H_RESPONSE\020\013\022\030\n\024POLL_EFFECT_RESPONSE\020\014B\005" +
+      "\n\003msgb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3676,7 +3676,7 @@ public final class Wrapper {
     internal_static_WrapperMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_WrapperMessage_descriptor,
-        new String[] { "MessageType", "FindTransactionsByAddressRequest", "FindTransactionsByTagRequest", "FindTransactionByHashRequest", "SubmitTransactionBuilderRequest", "SubmitTransactionBytesRequest", "AddEffectListenerRequest", "RemoveEffectListenerRequest", "SubmitEffectRequest", "GetEffectRequest", "FindTransactionsByAddressResponse", "FindTransactionsByTagResponse", "FindTransactionByHashResponse", "GetEffectResponse", "Msg", });
+        new String[] { "MessageType", "FindTransactionsByAddressRequest", "FindTransactionsByTagRequest", "FindTransactionByHashRequest", "SubmitTransactionBuilderRequest", "SubmitTransactionBytesRequest", "AddEffectListenerRequest", "RemoveEffectListenerRequest", "SubmitEffectRequest", "PollEffectRequest", "FindTransactionsByAddressResponse", "FindTransactionsByTagResponse", "FindTransactionByHashResponse", "PollEffectResponse", "Msg", });
     Request.getDescriptor();
     Response.getDescriptor();
   }

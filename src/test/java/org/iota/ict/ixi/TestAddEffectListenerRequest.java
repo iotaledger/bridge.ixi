@@ -35,17 +35,17 @@ public class TestAddEffectListenerRequest extends TestTemplate {
         Thread.sleep(1000);
 
         // check if effect is available
-        Request.GetEffectRequest getEffectRequest = Request.GetEffectRequest.newBuilder().setEnvironment("TestEnvironment").build();
+        Request.PollEffectRequest getEffectRequest = Request.PollEffectRequest.newBuilder().setEnvironment("TestEnvironment").build();
         Wrapper.WrapperMessage getEffectRequestMessage = Wrapper.WrapperMessage.newBuilder()
-                .setMessageType(Wrapper.WrapperMessage.MessageType.GET_EFFECT_REQUEST)
-                .setGetEffectRequest(getEffectRequest)
+                .setMessageType(Wrapper.WrapperMessage.MessageType.POLL_EFFECT_REQUEST)
+                .setPollEffectRequest(getEffectRequest)
                 .build();
 
         getEffectRequestMessage.writeDelimitedTo(socket.getOutputStream());
 
         // read response from bridge
         Wrapper.WrapperMessage response = Wrapper.WrapperMessage.parseDelimitedFrom(socket.getInputStream());
-        String effect = response.getGetEffectResponse().getEffect();
+        String effect = response.getPollEffectResponse().getEffect();
 
         Assert.assertEquals("TestEffect", effect);
 

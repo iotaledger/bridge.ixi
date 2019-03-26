@@ -4527,8 +4527,8 @@ public final class Request {
 
   }
 
-  public interface GetEffectRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:GetEffectRequest)
+  public interface PollEffectRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PollEffectRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4542,18 +4542,18 @@ public final class Request {
         getEnvironmentBytes();
   }
   /**
-   * Protobuf type {@code GetEffectRequest}
+   * Protobuf type {@code PollEffectRequest}
    */
-  public  static final class GetEffectRequest extends
+  public  static final class PollEffectRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:GetEffectRequest)
-      GetEffectRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:PollEffectRequest)
+      PollEffectRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use GetEffectRequest.newBuilder() to construct.
-    private GetEffectRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use PollEffectRequest.newBuilder() to construct.
+    private PollEffectRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private GetEffectRequest() {
+    private PollEffectRequest() {
       environment_ = "";
     }
 
@@ -4562,7 +4562,7 @@ public final class Request {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GetEffectRequest(
+    private PollEffectRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4608,15 +4608,15 @@ public final class Request {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return Request.internal_static_GetEffectRequest_descriptor;
+      return Request.internal_static_PollEffectRequest_descriptor;
     }
 
     @Override
     protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return Request.internal_static_GetEffectRequest_fieldAccessorTable
+      return Request.internal_static_PollEffectRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              GetEffectRequest.class, Builder.class);
+              PollEffectRequest.class, Builder.class);
     }
 
     public static final int ENVIRONMENT_FIELD_NUMBER = 1;
@@ -4692,10 +4692,10 @@ public final class Request {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof GetEffectRequest)) {
+      if (!(obj instanceof PollEffectRequest)) {
         return super.equals(obj);
       }
-      GetEffectRequest other = (GetEffectRequest) obj;
+      PollEffectRequest other = (PollEffectRequest) obj;
 
       if (!getEnvironment()
           .equals(other.getEnvironment())) return false;
@@ -4717,69 +4717,69 @@ public final class Request {
       return hash;
     }
 
-    public static GetEffectRequest parseFrom(
+    public static PollEffectRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static GetEffectRequest parseFrom(
+    public static PollEffectRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static GetEffectRequest parseFrom(
+    public static PollEffectRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static GetEffectRequest parseFrom(
+    public static PollEffectRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static GetEffectRequest parseFrom(byte[] data)
+    public static PollEffectRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static GetEffectRequest parseFrom(
+    public static PollEffectRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static GetEffectRequest parseFrom(java.io.InputStream input)
+    public static PollEffectRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static GetEffectRequest parseFrom(
+    public static PollEffectRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static GetEffectRequest parseDelimitedFrom(java.io.InputStream input)
+    public static PollEffectRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static GetEffectRequest parseDelimitedFrom(
+    public static PollEffectRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static GetEffectRequest parseFrom(
+    public static PollEffectRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static GetEffectRequest parseFrom(
+    public static PollEffectRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4792,7 +4792,7 @@ public final class Request {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(GetEffectRequest prototype) {
+    public static Builder newBuilder(PollEffectRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @Override
@@ -4808,26 +4808,26 @@ public final class Request {
       return builder;
     }
     /**
-     * Protobuf type {@code GetEffectRequest}
+     * Protobuf type {@code PollEffectRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:GetEffectRequest)
-        GetEffectRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:PollEffectRequest)
+        PollEffectRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return Request.internal_static_GetEffectRequest_descriptor;
+        return Request.internal_static_PollEffectRequest_descriptor;
       }
 
       @Override
       protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return Request.internal_static_GetEffectRequest_fieldAccessorTable
+        return Request.internal_static_PollEffectRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                GetEffectRequest.class, Builder.class);
+                PollEffectRequest.class, Builder.class);
       }
 
-      // Construct using Request.GetEffectRequest.newBuilder()
+      // Construct using Request.PollEffectRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4853,17 +4853,17 @@ public final class Request {
       @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return Request.internal_static_GetEffectRequest_descriptor;
+        return Request.internal_static_PollEffectRequest_descriptor;
       }
 
       @Override
-      public GetEffectRequest getDefaultInstanceForType() {
-        return GetEffectRequest.getDefaultInstance();
+      public PollEffectRequest getDefaultInstanceForType() {
+        return PollEffectRequest.getDefaultInstance();
       }
 
       @Override
-      public GetEffectRequest build() {
-        GetEffectRequest result = buildPartial();
+      public PollEffectRequest build() {
+        PollEffectRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4871,8 +4871,8 @@ public final class Request {
       }
 
       @Override
-      public GetEffectRequest buildPartial() {
-        GetEffectRequest result = new GetEffectRequest(this);
+      public PollEffectRequest buildPartial() {
+        PollEffectRequest result = new PollEffectRequest(this);
         result.environment_ = environment_;
         onBuilt();
         return result;
@@ -4912,16 +4912,16 @@ public final class Request {
       }
       @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof GetEffectRequest) {
-          return mergeFrom((GetEffectRequest)other);
+        if (other instanceof PollEffectRequest) {
+          return mergeFrom((PollEffectRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(GetEffectRequest other) {
-        if (other == GetEffectRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(PollEffectRequest other) {
+        if (other == PollEffectRequest.getDefaultInstance()) return this;
         if (!other.getEnvironment().isEmpty()) {
           environment_ = other.environment_;
           onChanged();
@@ -4941,11 +4941,11 @@ public final class Request {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        GetEffectRequest parsedMessage = null;
+        PollEffectRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (GetEffectRequest) e.getUnfinishedMessage();
+          parsedMessage = (PollEffectRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5036,41 +5036,41 @@ public final class Request {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:GetEffectRequest)
+      // @@protoc_insertion_point(builder_scope:PollEffectRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:GetEffectRequest)
-    private static final GetEffectRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:PollEffectRequest)
+    private static final PollEffectRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new GetEffectRequest();
+      DEFAULT_INSTANCE = new PollEffectRequest();
     }
 
-    public static GetEffectRequest getDefaultInstance() {
+    public static PollEffectRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetEffectRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetEffectRequest>() {
+    private static final com.google.protobuf.Parser<PollEffectRequest>
+        PARSER = new com.google.protobuf.AbstractParser<PollEffectRequest>() {
       @Override
-      public GetEffectRequest parsePartialFrom(
+      public PollEffectRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetEffectRequest(input, extensionRegistry);
+        return new PollEffectRequest(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<GetEffectRequest> parser() {
+    public static com.google.protobuf.Parser<PollEffectRequest> parser() {
       return PARSER;
     }
 
     @Override
-    public com.google.protobuf.Parser<GetEffectRequest> getParserForType() {
+    public com.google.protobuf.Parser<PollEffectRequest> getParserForType() {
       return PARSER;
     }
 
     @Override
-    public GetEffectRequest getDefaultInstanceForType() {
+    public PollEffectRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5117,10 +5117,10 @@ public final class Request {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_SubmitEffectRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_GetEffectRequest_descriptor;
+    internal_static_PollEffectRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_GetEffectRequest_fieldAccessorTable;
+      internal_static_PollEffectRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5141,9 +5141,9 @@ public final class Request {
       "ddEffectListenerRequest\022\023\n\013environment\030\001" +
       " \001(\t\"2\n\033RemoveEffectListenerRequest\022\023\n\013e" +
       "nvironment\030\001 \001(\t\":\n\023SubmitEffectRequest\022" +
-      "\023\n\013environment\030\001 \001(\t\022\016\n\006effect\030\002 \001(\t\"\'\n\020" +
-      "GetEffectRequest\022\023\n\013environment\030\001 \001(\tb\006p" +
-      "roto3"
+      "\023\n\013environment\030\001 \001(\t\022\016\n\006effect\030\002 \001(\t\"(\n\021" +
+      "PollEffectRequest\022\023\n\013environment\030\001 \001(\tb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5206,11 +5206,11 @@ public final class Request {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SubmitEffectRequest_descriptor,
         new String[] { "Environment", "Effect", });
-    internal_static_GetEffectRequest_descriptor =
+    internal_static_PollEffectRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);
-    internal_static_GetEffectRequest_fieldAccessorTable = new
+    internal_static_PollEffectRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_GetEffectRequest_descriptor,
+        internal_static_PollEffectRequest_descriptor,
         new String[] { "Environment", });
     Model.getDescriptor();
   }

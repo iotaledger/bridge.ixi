@@ -35,6 +35,6 @@ message SubmitEffectRequest {
 	string effect = 2;
 }
 
-message GetEffectRequest {
+message PollEffectRequest {
 	string environment = 1;
 }

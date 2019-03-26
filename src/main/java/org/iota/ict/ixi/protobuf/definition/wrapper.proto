@@ -17,12 +17,12 @@ message WrapperMessage {
  		AddEffectListenerRequest addEffectListenerRequest = 7;
  		RemoveEffectListenerRequest removeEffectListenerRequest = 8;
  		SubmitEffectRequest submitEffectRequest = 9;
- 		GetEffectRequest getEffectRequest = 10;
+ 		PollEffectRequest pollEffectRequest = 10;
 
  		FindTransactionsByAddressResponse findTransactionsByAddressResponse = 11;
  		FindTransactionsByTagResponse findTransactionsByTagResponse = 12;
  		FindTransactionByHashResponse findTransactionByHashResponse = 13;
- 		GetEffectResponse getEffectResponse = 14;
+ 		PollEffectResponse pollEffectResponse = 14;
 
     }
 
@@ -36,12 +36,12 @@ message WrapperMessage {
       	ADD_EFFECT_LISTENER_REQUEST = 5;
       	REMOVE_EFFECT_LISTENER_REQUEST = 6;
         SUBMIT_EFFECT_REQUEST = 7;
-        GET_EFFECT_REQUEST = 8;
+        POLL_EFFECT_REQUEST = 8;
 
         FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE = 9;
         FIND_TRANSACTIONS_BY_TAG_RESPONSE = 10;
         FIND_TRANSACTION_BY_HASH_RESPONSE = 11;
-        GET_EFFECT_RESPONSE = 12;
+        POLL_EFFECT_RESPONSE = 12;
 
     }
 

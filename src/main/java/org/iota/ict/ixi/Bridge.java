@@ -39,10 +39,10 @@ public class Bridge extends IxiModule {
                 subWorkers.add(new ClientHandler(clientSocket, ixi));
 
             } catch (IOException e) {
-                System.err.println("Error while accepting client.");
+                System.err.println("Error while waiting for new clients.");
                 e.printStackTrace();
                 try { clientSocket.close(); } catch(Exception x) { ; }
-            }
+        }
 
         }
 

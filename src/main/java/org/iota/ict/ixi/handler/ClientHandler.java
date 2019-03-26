@@ -79,8 +79,8 @@ public class ClientHandler extends RestartableThread {
                         break;
                     }
 
-                    case GET_EFFECT_REQUEST: {
-                        ProcessGetEffectRequest.process(request.getGetEffectRequest(), this);
+                    case POLL_EFFECT_REQUEST: {
+                        ProcessPollEffectRequest.process(request.getPollEffectRequest(), this);
                         break;
                     }
 

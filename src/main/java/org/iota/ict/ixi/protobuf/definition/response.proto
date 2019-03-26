@@ -14,6 +14,6 @@ message FindTransactionByHashResponse {
     Transaction transaction = 1;
 }
 
-message GetEffectResponse {
+message PollEffectResponse {
 	string effect = 1;
 }
