@@ -42,7 +42,7 @@ public class Bridge extends IxiModule {
                 System.err.println("Error while waiting for new clients.");
                 e.printStackTrace();
                 try { clientSocket.close(); } catch(Exception x) { ; }
-        }
+            }
 
         }
 

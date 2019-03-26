@@ -35,6 +35,12 @@ public class ClientHandler extends RestartableThread {
             while (isRunning()) {
 
                 Wrapper.WrapperMessage request = Wrapper.WrapperMessage.parseDelimitedFrom(socket.getInputStream());
+
+                if(request == null) {
+                    try { socket.close(); } catch (Exception x) { ; }
+                    return;
+                }
+
                 Wrapper.WrapperMessage.MessageType type = request.getMessageType();
 
                 switch (type) {
@@ -88,10 +94,12 @@ public class ClientHandler extends RestartableThread {
 
             }
 
-        } catch (IOException e) {
+        } catch (Throwable t) {
+            try { socket.close(); } catch (Exception x) { ; }
             System.err.println("Error while processing client.");
-            e.printStackTrace();
+            t.printStackTrace();
         }
+
     }
 
     @Override
