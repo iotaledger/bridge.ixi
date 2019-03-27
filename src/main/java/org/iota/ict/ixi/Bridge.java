@@ -1,5 +1,6 @@
 package org.iota.ict.ixi;
 
+import org.iota.ict.Ict;
 import org.iota.ict.ixi.handler.ClientHandler;
 import org.iota.ict.ixi.util.Constants;
 
@@ -21,13 +22,12 @@ public class Bridge extends IxiModule {
         try {
             serverSocket = new ServerSocket(Constants.DEFAULT_BRIDGE_PORT);
         } catch (IOException e) {
-            System.err.println("Error while staring server socket.");
-            e.printStackTrace();
+            Ict.LOGGER.info("[Bridge.ixi] Cannot start server at port "+Constants.DEFAULT_BRIDGE_PORT+":" + e.getMessage());
             try { serverSocket.close(); } catch(Exception x) { ; }
             return;
         }
 
-        System.out.println("Bridge.ixi successfully started at port "+Constants.DEFAULT_BRIDGE_PORT+".");
+        Ict.LOGGER.info("[Bridge.ixi] Server successfully started at port "+Constants.DEFAULT_BRIDGE_PORT+".");
 
         while(isRunning()) {
 
@@ -38,9 +38,7 @@ public class Bridge extends IxiModule {
                 clientSocket = serverSocket.accept();
                 subWorkers.add(new ClientHandler(clientSocket, ixi));
 
-            } catch (IOException e) {
-                System.err.println("Error while waiting for new clients.");
-                e.printStackTrace();
+            } catch (Exception e) {
                 try { clientSocket.close(); } catch(Exception x) { ; }
             }
 
@@ -50,6 +48,7 @@ public class Bridge extends IxiModule {
 
     @Override
     public void onTerminate() {
+        Ict.LOGGER.info("[Bridge.ixi] Terminating server...");
         try { serverSocket.close(); } catch(Exception e) { ; }
     }
 

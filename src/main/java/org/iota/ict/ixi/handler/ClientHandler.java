@@ -1,5 +1,6 @@
 package org.iota.ict.ixi.handler;
 
+import org.iota.ict.Ict;
 import org.iota.ict.eee.EffectListenerQueue;
 import org.iota.ict.ixi.Ixi;
 import org.iota.ict.ixi.protobuf.Wrapper;
@@ -30,18 +31,23 @@ public class ClientHandler extends RestartableThread {
     @Override
     public void run() {
 
-        try {
+        while(true) {
 
-            while (isRunning()) {
+            Wrapper.WrapperMessage request;
 
-                Wrapper.WrapperMessage request = Wrapper.WrapperMessage.parseDelimitedFrom(socket.getInputStream());
+            try {
+                request = Wrapper.WrapperMessage.parseDelimitedFrom(socket.getInputStream());
+                if(request == null)
+                    throw new Exception();
+            } catch (Throwable t) {
+                Ict.LOGGER.info("[Bridge.ixi] Terminating client...");
+                try { socket.close(); } catch (Exception x) { ; }
+                return;
+            }
 
-                if(request == null) {
-                    try { socket.close(); } catch (Exception x) { ; }
-                    return;
-                }
+            Wrapper.WrapperMessage.MessageType type = request.getMessageType();
 
-                Wrapper.WrapperMessage.MessageType type = request.getMessageType();
+            try {
 
                 switch (type) {
 
@@ -92,12 +98,12 @@ public class ClientHandler extends RestartableThread {
 
                 }
 
+            } catch (Throwable t) {
+                Ict.LOGGER.info("[Bridge.ixi] Error while processing client: " + t.getMessage());
+                try { socket.close(); } catch (Exception x) { ; }
+                return;
             }
 
-        } catch (Throwable t) {
-            try { socket.close(); } catch (Exception x) { ; }
-            System.err.println("Error while processing client.");
-            t.printStackTrace();
         }
 
     }
