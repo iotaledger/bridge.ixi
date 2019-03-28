@@ -19,7 +19,7 @@ public class ProcessSubmitTransactionBuilderRequest {
         transactionBuilder.address = protoBuf.getAddress();
         if(protoBuf.getValue().size() > 0)
             transactionBuilder.value = new BigInteger(protoBuf.getValue().toByteArray());
-        transactionBuilder.issuanceTimestamp = protoBuf.getIssuanceTimestamp();
+        //transactionBuilder.issuanceTimestamp = protoBuf.getIssuanceTimestamp();
         transactionBuilder.timelockLowerBound = protoBuf.getTimelockLowerBound();
         transactionBuilder.timelockUpperBound = protoBuf.getTimelockUpperBound();
         transactionBuilder.bundleNonce = protoBuf.getBundleNonce();
