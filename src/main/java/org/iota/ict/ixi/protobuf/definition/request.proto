@@ -38,3 +38,7 @@ message SubmitEffectRequest {
 message PollEffectRequest {
 	string environment = 1;
 }
+
+message TakeEffectRequest {
+	string environment = 1;
+}

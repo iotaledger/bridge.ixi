@@ -17,3 +17,7 @@ message FindTransactionByHashResponse {
 message PollEffectResponse {
 	string effect = 1;
 }
+
+message TakeEffectResponse {
+	string effect = 1;
+}

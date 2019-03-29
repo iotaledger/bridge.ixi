@@ -7,7 +7,7 @@ import org.iota.ict.model.transaction.TransactionBuilder;
 
 import java.math.BigInteger;
 
-public class ProcessSubmitTransactionBuilderRequest {
+public class ProcessSubmitTransactionBuilder {
 
     public static void process(Request.SubmitTransactionBuilderRequest request, ClientHandler clientHandler) {
 

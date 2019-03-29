@@ -6,17 +6,18 @@ import org.iota.ict.ixi.protobuf.Wrapper;
 
 import java.io.IOException;
 
-public class ProcessPollEffectRequest {
+public class ProcessPollEffect {
 
     public static void process(Request.PollEffectRequest request, ClientHandler clientHandler) throws IOException {
 
-        String effect = clientHandler.getEffect(request.getEnvironment());
+        String effect = clientHandler.pollEffect(request.getEnvironment());
 
         if(effect == null) {
             Wrapper.WrapperMessage wrapperMessage = Wrapper.WrapperMessage.newBuilder()
                     .setMessageType(Wrapper.WrapperMessage.MessageType.POLL_EFFECT_REQUEST)
                     .build();
-            wrapperMessage.writeDelimitedTo(clientHandler.getOutputStream());
+            clientHandler.getOutputStream().writeInt(wrapperMessage.toByteArray().length);
+            wrapperMessage.writeTo(clientHandler.getOutputStream());
             return;
         }
 
@@ -27,7 +28,9 @@ public class ProcessPollEffectRequest {
                 .setMessageType(Wrapper.WrapperMessage.MessageType.POLL_EFFECT_REQUEST)
                 .setPollEffectResponse(responseBuilder)
                 .build();
-        wrapperMessage.writeDelimitedTo(clientHandler.getOutputStream());
+
+        clientHandler.getOutputStream().writeInt(wrapperMessage.toByteArray().length);
+        wrapperMessage.writeTo(clientHandler.getOutputStream());
 
     }
 

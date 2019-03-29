@@ -10,7 +10,7 @@ import org.iota.ict.model.transaction.Transaction;
 import java.io.IOException;
 import java.util.Set;
 
-public class ProcessFindTransactionsByTagRequest {
+public class ProcessFindTransactionsByTag {
 
     public static void process(Request.FindTransactionsByTagRequest request, ClientHandler clientHandler) throws IOException {
 
@@ -20,7 +20,8 @@ public class ProcessFindTransactionsByTagRequest {
             Wrapper.WrapperMessage wrapperMessage = Wrapper.WrapperMessage.newBuilder()
                     .setMessageType(Wrapper.WrapperMessage.MessageType.FIND_TRANSACTIONS_BY_TAG_RESPONSE)
                     .build();
-            wrapperMessage.writeDelimitedTo(clientHandler.getOutputStream());
+            clientHandler.getOutputStream().writeInt(wrapperMessage.toByteArray().length);
+            wrapperMessage.writeTo(clientHandler.getOutputStream());
             return;
         }
 
@@ -59,7 +60,8 @@ public class ProcessFindTransactionsByTagRequest {
                 .setFindTransactionsByTagResponse(responseBuilder.build())
                 .build();
 
-        wrapperMessage.writeDelimitedTo(clientHandler.getOutputStream());
+        clientHandler.getOutputStream().writeInt(wrapperMessage.toByteArray().length);
+        wrapperMessage.writeTo(clientHandler.getOutputStream());
 
     }
 

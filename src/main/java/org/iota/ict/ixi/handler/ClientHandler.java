@@ -2,12 +2,14 @@ package org.iota.ict.ixi.handler;
 
 import org.iota.ict.Ict;
 import org.iota.ict.eee.EffectListenerQueue;
+import org.iota.ict.eee.Environment;
 import org.iota.ict.ixi.Ixi;
 import org.iota.ict.ixi.protobuf.Wrapper;
 import org.iota.ict.utils.RestartableThread;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
@@ -18,12 +20,16 @@ import java.util.Map;
 public class ClientHandler extends RestartableThread {
 
     private Socket socket;
+    private DataInputStream inputStream;
+    private DataOutputStream outputStream;
     private Ixi ixi;
     private Map<String, EffectListenerQueue<String>> effectListenerByEnvironment = new HashMap<>();
 
-    public ClientHandler(Socket socket, Ixi ixi) {
+    public ClientHandler(Socket socket, Ixi ixi) throws IOException {
         super(null);
         this.socket = socket;
+        this.inputStream = new DataInputStream(socket.getInputStream());
+        this.outputStream = new DataOutputStream(socket.getOutputStream());
         this.ixi = ixi;
         start();
     }
@@ -36,10 +42,17 @@ public class ClientHandler extends RestartableThread {
             Wrapper.WrapperMessage request;
 
             try {
-                request = Wrapper.WrapperMessage.parseDelimitedFrom(socket.getInputStream());
+
+                int bufferLength = inputStream.readInt();
+                byte[] buffer = new byte[bufferLength];
+                inputStream.readFully(buffer, 0, bufferLength);
+                request = Wrapper.WrapperMessage.parseFrom(buffer);
+
                 if(request == null)
                     throw new Exception();
+
             } catch (Throwable t) {
+                t.printStackTrace();
                 Ict.LOGGER.info("[Bridge.ixi] Terminating client...");
                 try { socket.close(); } catch (Exception x) { ; }
                 return;
@@ -47,52 +60,59 @@ public class ClientHandler extends RestartableThread {
 
             Wrapper.WrapperMessage.MessageType type = request.getMessageType();
 
+            System.out.println(type.name());
+
             try {
 
                 switch (type) {
 
                     case FIND_TRANSACTIONS_BY_ADDRESS_REQUEST: {
-                        ProcessFindTransactionsByAddressRequest.process(request.getFindTransactionsByAddressRequest(), this);
+                        ProcessFindTransactionsByAddress.process(request.getFindTransactionsByAddressRequest(), this);
                         break;
                     }
 
                     case FIND_TRANSACTIONS_BY_TAG_REQUEST: {
-                        ProcessFindTransactionsByTagRequest.process(request.getFindTransactionsByTagRequest(), this);
+                        ProcessFindTransactionsByTag.process(request.getFindTransactionsByTagRequest(), this);
                         break;
                     }
 
                     case FIND_TRANSACTION_BY_HASH_REQUEST: {
-                        ProcessFindTransactionByHashRequest.process(request.getFindTransactionByHashRequest(), this);
+                        ProcessFindTransactionByHash.process(request.getFindTransactionByHashRequest(), this);
                         break;
                     }
 
                     case SUBMIT_TRANSACTION_BUILDER_REQUEST: {
-                        ProcessSubmitTransactionBuilderRequest.process(request.getSubmitTransactionBuilderRequest(), this);
+                        ProcessSubmitTransactionBuilder.process(request.getSubmitTransactionBuilderRequest(), this);
                         break;
                     }
 
                     case SUBMIT_TRANSACTION_BYTES_REQUEST: {
-                        ProcessSubmitTransactionBytesRequest.process(request.getSubmitTransactionBytesRequest(), this);
+                        ProcessSubmitTransactionBytes.process(request.getSubmitTransactionBytesRequest(), this);
                         break;
                     }
 
                     case ADD_EFFECT_LISTENER_REQUEST: {
-                        ProcessAddEffectListenerRequest.process(request.getAddEffectListenerRequest(), this);
+                        ProcessAddEffectListener.process(request.getAddEffectListenerRequest(), this);
                         break;
                     }
 
                     case REMOVE_EFFECT_LISTENER_REQUEST: {
-                        ProcessRemoveEffectListenerRequest.process(request.getRemoveEffectListenerRequest(), this);
+                        ProcessRemoveEffectListener.process(request.getRemoveEffectListenerRequest(), this);
                         break;
                     }
 
                     case SUBMIT_EFFECT_REQUEST: {
-                        ProcessSubmitEffectRequest.process(request.getSubmitEffectRequest(), this);
+                        ProcessSubmitEffect.process(request.getSubmitEffectRequest(), this);
                         break;
                     }
 
                     case POLL_EFFECT_REQUEST: {
-                        ProcessPollEffectRequest.process(request.getPollEffectRequest(), this);
+                        ProcessPollEffect.process(request.getPollEffectRequest(), this);
+                        break;
+                    }
+
+                    case TAKE_EFFECT_REQUEST: {
+                        ProcessTakeEffect.process(request.getTakeEffectRequest(), this);
                         break;
                     }
 
@@ -113,17 +133,18 @@ public class ClientHandler extends RestartableThread {
         try { socket.close(); } catch (Exception x) { ; }
     }
 
-    public OutputStream getOutputStream() throws IOException {
-        return socket.getOutputStream();
+    public DataOutputStream getOutputStream() {
+        return outputStream;
     }
 
     public Ixi getIxi() {
         return ixi;
     }
 
-    public void addEffectListener(EffectListenerQueue<String> effectListener) {
+    public void addEffectListener(String environment) {
+        EffectListenerQueue<String> effectListener = new EffectListenerQueue<>(new Environment(environment));
         ixi.addListener(effectListener);
-        effectListenerByEnvironment.put(effectListener.getEnvironment().toString(), effectListener);
+        effectListenerByEnvironment.put(environment, effectListener);
     }
 
     public void removeEffectListener(String environment) {
@@ -131,8 +152,12 @@ public class ClientHandler extends RestartableThread {
         effectListenerByEnvironment.remove(environment);
     }
 
-    public String getEffect(String environment) {
+    public String pollEffect(String environment) {
         return effectListenerByEnvironment.get(environment).pollEffect();
+    }
+
+    public String takeEffect(String environment) throws InterruptedException {
+        return effectListenerByEnvironment.get(environment).takeEffect();
     }
 
 }

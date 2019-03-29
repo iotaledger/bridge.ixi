@@ -10,7 +10,7 @@ import org.iota.ict.model.transaction.Transaction;
 import java.io.IOException;
 import java.util.Set;
 
-public class ProcessFindTransactionsByAddressRequest {
+public class ProcessFindTransactionsByAddress {
 
     public static void process(Request.FindTransactionsByAddressRequest request, ClientHandler clientHandler) throws IOException {
 
@@ -20,7 +20,8 @@ public class ProcessFindTransactionsByAddressRequest {
             Wrapper.WrapperMessage wrapperMessage = Wrapper.WrapperMessage.newBuilder()
                     .setMessageType(Wrapper.WrapperMessage.MessageType.FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE)
                     .build();
-            wrapperMessage.writeDelimitedTo(clientHandler.getOutputStream());
+            clientHandler.getOutputStream().writeInt(wrapperMessage.toByteArray().length);
+            wrapperMessage.writeTo(clientHandler.getOutputStream());
             return;
         }
 
@@ -59,7 +60,10 @@ public class ProcessFindTransactionsByAddressRequest {
                 .setFindTransactionsByAddressResponse(responseBuilder.build())
                 .build();
 
-        wrapperMessage.writeDelimitedTo(clientHandler.getOutputStream());
+        clientHandler.getOutputStream().writeInt(wrapperMessage.toByteArray().length);
+        System.out.println("SERVER LENGTH: "+wrapperMessage.toByteArray().length);
+        wrapperMessage.writeTo(clientHandler.getOutputStream());
+        System.out.println(wrapperMessage.toByteArray().length);
 
     }
 

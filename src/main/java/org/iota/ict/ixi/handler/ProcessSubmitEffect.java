@@ -3,7 +3,7 @@ package org.iota.ict.ixi.handler;
 import org.iota.ict.eee.Environment;
 import org.iota.ict.ixi.protobuf.Request;
 
-public class ProcessSubmitEffectRequest {
+public class ProcessSubmitEffect {
 
     public static void process(Request.SubmitEffectRequest request, ClientHandler clientHandler) {
 

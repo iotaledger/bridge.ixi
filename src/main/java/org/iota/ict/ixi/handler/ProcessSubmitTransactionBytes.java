@@ -3,7 +3,7 @@ package org.iota.ict.ixi.handler;
 import org.iota.ict.ixi.protobuf.Request;
 import org.iota.ict.model.transaction.Transaction;
 
-public class ProcessSubmitTransactionBytesRequest {
+public class ProcessSubmitTransactionBytes {
 
     public static void process(Request.SubmitTransactionBytesRequest request, ClientHandler clientHandler) {
 

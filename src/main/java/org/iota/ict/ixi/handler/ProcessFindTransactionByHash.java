@@ -9,7 +9,7 @@ import org.iota.ict.model.transaction.Transaction;
 
 import java.io.IOException;
 
-public class ProcessFindTransactionByHashRequest {
+public class ProcessFindTransactionByHash {
 
     public static void process(Request.FindTransactionByHashRequest request, ClientHandler clientHandler) throws IOException {
 
@@ -19,7 +19,8 @@ public class ProcessFindTransactionByHashRequest {
             Wrapper.WrapperMessage wrapperMessage = Wrapper.WrapperMessage.newBuilder()
                     .setMessageType(Wrapper.WrapperMessage.MessageType.FIND_TRANSACTION_BY_HASH_RESPONSE)
                     .build();
-            wrapperMessage.writeDelimitedTo(clientHandler.getOutputStream());
+            clientHandler.getOutputStream().writeInt(wrapperMessage.toByteArray().length);
+            wrapperMessage.writeTo(clientHandler.getOutputStream());
             return;
         }
 
@@ -53,7 +54,8 @@ public class ProcessFindTransactionByHashRequest {
                 .setFindTransactionByHashResponse(response)
                 .build();
 
-        wrapperMessage.writeDelimitedTo(clientHandler.getOutputStream());
+        clientHandler.getOutputStream().writeInt(wrapperMessage.toByteArray().length);
+        wrapperMessage.writeTo(clientHandler.getOutputStream());
 
     }
 
