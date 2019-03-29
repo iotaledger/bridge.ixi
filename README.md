@@ -34,7 +34,7 @@ There are two ways to do this:
 
 #### Simple Method
 
-Go to [releases](https://github.com/iotaledger/bridge.ixi/releases) and download the **bridge.ixi-{VERSION}.jar**
+Go to [releases](https://github.com/iotaledger/bridge.ixi/releases) and download the **bridge-{VERSION}.jar**
 from the most recent release.
 
 #### Advanced Method
@@ -51,14 +51,14 @@ git clone https://github.com/iotaledger/bridge.ixi
 # change into the just created local copy of the repository
 cd bridge.ixi
 
-# build the bridge.ixi-{VERSION}.jar file
+# build the bridge-{VERSION}.jar file
 gradle ixi
 ```
 
 ### Step 3: Install Bridge.ixi
-Move bridge.ixi-{VERSION}.jar to the **modules/** directory of your Ict:
+Move bridge-{VERSION}.jar to the **modules/** directory of your Ict:
 ```shell
-mv bridge.ixi-{VERSION}.jar ict/modules
+mv bridge-{VERSION}.jar ict/modules
 ```
 
 ### Step 4: Run Ict
