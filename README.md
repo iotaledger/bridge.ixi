@@ -19,13 +19,6 @@ As soon as a module is connected, it can submit requests. For each request, the 
 Bridge.ixi makes use of [protocol buffers](https://developers.google.com/protocol-buffers/), an efficient, language-neutral mechanism for serializing structured data.
 With [protobuf3](https://developers.google.com/protocol-buffers/docs/proto3), the following languages are supported:
 Java, Python, Objective-C, C++, Dart, Go, Ruby, C#, JavaScript and PHP. Third-party implementations are also available for C, Rust, Elixir, Haskell, Swift and [many more](https://github.com/protocolbuffers/protobuf/blob/master/docs/third_party.md).
-#### How to use protocol buffers?
-
-1) Download and install the protocol buffer compiler ([protoc](https://github.com/protocolbuffers/protobuf/releases)).
-2) Run the protocol buffer compiler for your module's language on the [.proto files](https://github.com/iotaledger/bridge.ixi/tree/master/src/main/java/org/iota/ict/ixi/protobuf/definition) to generate data access classes.
-3) Use these data access classes in your module project. They provide simple methods to build, serialize and deserialize your protocol buffer messages.
-
-Note that each message must be sent within a [wrapper message](https://github.com/iotaledger/bridge.ixi/blob/master/src/main/java/org/iota/ict/ixi/protobuf/definition/wrapper.proto). This is necessary so that the participants easily know what kind of message it is.
 
 ## Installation
 
@@ -73,3 +66,18 @@ Switch to Ict directory and run:
 ```shell
 java -jar ict-{VERSION}.jar
 ```
+
+## Code your module
+
+After you have installed Bridge.ixi for your Ict, all you need to do is establish a tcp socket connection to the Bridge.ixi server running on port 7331. Once you have done this, you are able to send/receive protocol buffer messages.
+
+To get a better feeling for the protocol buffers, it is a good idea to take a look at the [official protocol buffer guide](https://developers.google.com/protocol-buffers/) and the available [module example](https://github.com/iotaledger/bridge.ixi/tree/master/examples).
+
+#### How to use protocol buffers?
+
+1) Download and install the protocol buffer compiler ([protoc](https://github.com/protocolbuffers/protobuf/releases)).
+2) Run the protocol buffer compiler for your module's language on the [.proto files](https://github.com/iotaledger/bridge.ixi/tree/master/src/main/java/org/iota/ict/ixi/protobuf/definition) to generate data access classes.
+3) Use these data access classes in your module project. They provide simple methods to build, serialize and deserialize your protocol buffer messages.
+
+Note that each message must be sent within a [wrapper message](https://github.com/iotaledger/bridge.ixi/blob/master/src/main/java/org/iota/ict/ixi/protobuf/definition/wrapper.proto). This is necessary so that the participants easily know what kind of message it is.
+
