@@ -60,8 +60,6 @@ public class ClientHandler extends RestartableThread {
 
             Wrapper.WrapperMessage.MessageType type = request.getMessageType();
 
-            System.out.println(type.name());
-
             try {
 
                 switch (type) {

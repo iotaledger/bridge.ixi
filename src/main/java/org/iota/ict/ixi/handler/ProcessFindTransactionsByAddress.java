@@ -61,9 +61,7 @@ public class ProcessFindTransactionsByAddress {
                 .build();
 
         clientHandler.getOutputStream().writeInt(wrapperMessage.toByteArray().length);
-        System.out.println("SERVER LENGTH: "+wrapperMessage.toByteArray().length);
         wrapperMessage.writeTo(clientHandler.getOutputStream());
-        System.out.println(wrapperMessage.toByteArray().length);
 
     }
 
