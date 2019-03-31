@@ -52,7 +52,7 @@ public abstract class TestTemplate {
         ict.updateProperties(properties.toFinal());
     }
 
-    public  Wrapper.WrapperMessage readMessage() throws IOException {
+    public Wrapper.WrapperMessage readMessage() throws IOException {
         int bufferLength = inputStream.readInt();
         byte[] buffer = new byte[bufferLength];
         inputStream.readFully(buffer, 0, bufferLength);

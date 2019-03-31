@@ -43,16 +43,12 @@ public class ClientHandler extends RestartableThread {
 
             try {
 
-                int bufferLength = inputStream.readInt();
-                byte[] buffer = new byte[bufferLength];
-                inputStream.readFully(buffer, 0, bufferLength);
-                request = Wrapper.WrapperMessage.parseFrom(buffer);
+                request = readMessage();
 
                 if(request == null)
                     throw new Exception();
 
             } catch (Throwable t) {
-                t.printStackTrace();
                 Ict.LOGGER.info("[Bridge.ixi] Terminating client...");
                 try { socket.close(); } catch (Exception x) { ; }
                 return;
@@ -131,8 +127,16 @@ public class ClientHandler extends RestartableThread {
         try { socket.close(); } catch (Exception x) { ; }
     }
 
-    public DataOutputStream getOutputStream() {
-        return outputStream;
+    private Wrapper.WrapperMessage readMessage() throws IOException {
+        int bufferLength = inputStream.readInt();
+        byte[] buffer = new byte[bufferLength];
+        inputStream.readFully(buffer, 0, bufferLength);
+        return Wrapper.WrapperMessage.parseFrom(buffer);
+    }
+
+    public void sendMessage(Wrapper.WrapperMessage message) throws IOException {
+        outputStream.writeInt(message.toByteArray().length);
+        message.writeTo(outputStream);
     }
 
     public Ixi getIxi() {

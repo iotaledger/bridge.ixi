@@ -20,8 +20,7 @@ public class ProcessFindTransactionsByTag {
             Wrapper.WrapperMessage wrapperMessage = Wrapper.WrapperMessage.newBuilder()
                     .setMessageType(Wrapper.WrapperMessage.MessageType.FIND_TRANSACTIONS_BY_TAG_RESPONSE)
                     .build();
-            clientHandler.getOutputStream().writeInt(wrapperMessage.toByteArray().length);
-            wrapperMessage.writeTo(clientHandler.getOutputStream());
+            clientHandler.sendMessage(wrapperMessage);
             return;
         }
 
@@ -60,8 +59,7 @@ public class ProcessFindTransactionsByTag {
                 .setFindTransactionsByTagResponse(responseBuilder.build())
                 .build();
 
-        clientHandler.getOutputStream().writeInt(wrapperMessage.toByteArray().length);
-        wrapperMessage.writeTo(clientHandler.getOutputStream());
+        clientHandler.sendMessage(wrapperMessage);
 
     }
 

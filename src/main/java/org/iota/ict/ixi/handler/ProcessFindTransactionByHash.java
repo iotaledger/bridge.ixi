@@ -19,8 +19,7 @@ public class ProcessFindTransactionByHash {
             Wrapper.WrapperMessage wrapperMessage = Wrapper.WrapperMessage.newBuilder()
                     .setMessageType(Wrapper.WrapperMessage.MessageType.FIND_TRANSACTION_BY_HASH_RESPONSE)
                     .build();
-            clientHandler.getOutputStream().writeInt(wrapperMessage.toByteArray().length);
-            wrapperMessage.writeTo(clientHandler.getOutputStream());
+            clientHandler.sendMessage(wrapperMessage);
             return;
         }
 
@@ -54,8 +53,7 @@ public class ProcessFindTransactionByHash {
                 .setFindTransactionByHashResponse(response)
                 .build();
 
-        clientHandler.getOutputStream().writeInt(wrapperMessage.toByteArray().length);
-        wrapperMessage.writeTo(clientHandler.getOutputStream());
+        clientHandler.sendMessage(wrapperMessage);
 
     }
 

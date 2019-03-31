@@ -20,8 +20,7 @@ public class ProcessFindTransactionsByAddress {
             Wrapper.WrapperMessage wrapperMessage = Wrapper.WrapperMessage.newBuilder()
                     .setMessageType(Wrapper.WrapperMessage.MessageType.FIND_TRANSACTIONS_BY_ADDRESS_RESPONSE)
                     .build();
-            clientHandler.getOutputStream().writeInt(wrapperMessage.toByteArray().length);
-            wrapperMessage.writeTo(clientHandler.getOutputStream());
+            clientHandler.sendMessage(wrapperMessage);
             return;
         }
 
@@ -60,8 +59,7 @@ public class ProcessFindTransactionsByAddress {
                 .setFindTransactionsByAddressResponse(responseBuilder.build())
                 .build();
 
-        clientHandler.getOutputStream().writeInt(wrapperMessage.toByteArray().length);
-        wrapperMessage.writeTo(clientHandler.getOutputStream());
+        clientHandler.sendMessage(wrapperMessage);
 
     }
 

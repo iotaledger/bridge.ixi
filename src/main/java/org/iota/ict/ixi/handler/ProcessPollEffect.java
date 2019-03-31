@@ -16,8 +16,7 @@ public class ProcessPollEffect {
             Wrapper.WrapperMessage wrapperMessage = Wrapper.WrapperMessage.newBuilder()
                     .setMessageType(Wrapper.WrapperMessage.MessageType.POLL_EFFECT_REQUEST)
                     .build();
-            clientHandler.getOutputStream().writeInt(wrapperMessage.toByteArray().length);
-            wrapperMessage.writeTo(clientHandler.getOutputStream());
+            clientHandler.sendMessage(wrapperMessage);
             return;
         }
 
@@ -29,8 +28,7 @@ public class ProcessPollEffect {
                 .setPollEffectResponse(responseBuilder)
                 .build();
 
-        clientHandler.getOutputStream().writeInt(wrapperMessage.toByteArray().length);
-        wrapperMessage.writeTo(clientHandler.getOutputStream());
+        clientHandler.sendMessage(wrapperMessage);
 
     }
 
