@@ -4,6 +4,6 @@
   "description": "Bridge.ixi represents the interface which allows modules written in any programming language to interact with the underlying infrastructure. By giving everyone the opportunity to participate with their desired programming language, Bridge.ixi will help grow the module ecosystem.",
   "repository": "iotaledger/bridge.ixi",
   "gui_port": -1,
-  "supported_versions": ["0.6-SNAPSHOT"],
+  "supported_versions": ["0.6"],
   "version": "0.1"
 }
