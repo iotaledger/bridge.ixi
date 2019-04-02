@@ -25,8 +25,8 @@ class CSharp
             {
                 TransactionBuilder = new TransactionBuilder
                 {
-                    Address = "TEST9ADDRESS",
-                    Tag = "BRIDGE9TEST"
+                    Address = "TEST9ADDRESS999999999999999999999999999999999999999999999999999999999999999999999",
+                    Tag = "BRIDGE9TEST9999999999999999"
                 }
             }
         };
@@ -58,31 +58,24 @@ class CSharp
 
     }
 
-    static byte[] IntegerToByteArray(int intValue)
-    {
-        byte[] intBytes = BitConverter.GetBytes(intValue);
-        if (BitConverter.IsLittleEndian) // Big-Endian byte order required
-            Array.Reverse(intBytes);
-        return intBytes;
-    }
-
     static void SendMessage(WrapperMessage wrapperMessage)
     {
         byte[] buffer = wrapperMessage.ToByteArray();
         int bufferLength = buffer.Length;
-        // send buffer length first to the server so it knows how big the message will be
-        byte[] integerBytes = IntegerToByteArray(bufferLength);
-        stream.Write(integerBytes, 0, 4);
+        // send bufferLength first to the server so it knows how big the message will be
+        stream.Write(IntegerToByteArray(bufferLength), 0, 4);
         // send buffer to server
         stream.Write(buffer, 0, buffer.Length);
     }
 
     static WrapperMessage ReadMessage()
     {
+        // read bufferLength from the stream
         byte[] integerBytes = ReadFully(4);
         if (BitConverter.IsLittleEndian) // Big-Endian byte order required
             Array.Reverse(integerBytes);
         int bufferLength = BitConverter.ToInt32(integerBytes, 0);
+        // read buffer from the stream
         byte[] buffer = ReadFully(bufferLength);
         return WrapperMessage.Parser.ParseFrom(buffer);
     }
@@ -103,6 +96,14 @@ class CSharp
             n += count;
         }
         return b;
+    }
+
+    static byte[] IntegerToByteArray(int intValue)
+    {
+        byte[] intBytes = BitConverter.GetBytes(intValue);
+        if (BitConverter.IsLittleEndian) // Big-Endian byte order required
+            Array.Reverse(intBytes);
+        return intBytes;
     }
 
 }
