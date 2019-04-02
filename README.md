@@ -69,15 +69,15 @@ java -jar ict-{VERSION}.jar
 
 ## Code your module
 
-After you have installed Bridge.ixi for your Ict, all you need to do is establish a tcp socket connection to the Bridge.ixi server running on port 7331. Once you have done this, you are able to send/receive protocol buffer messages.
+After you have installed Bridge.ixi for your Ict, you can start coding your module in your desired language. All you need to do is establish a tcp socket connection to the Bridge.ixi server running on port **7331**. Once you have done this, you are able to send/receive protocol buffer messages.
 
-To get a better feeling for the protocol buffers, it is a good idea to take a look at the [official protocol buffer guide](https://developers.google.com/protocol-buffers/) and the available [module example](https://github.com/iotaledger/bridge.ixi/tree/master/examples).
+To get a better feeling for the protocol buffers, it is a good idea to take a look at the [official protocol buffer guide](https://developers.google.com/protocol-buffers/) and the available [module example](https://github.com/iotaledger/bridge.ixi/blob/master/examples/CSharp.cs).
 
-#### How to use protocol buffers?
+#### Brief instructions for the protocol buffers
 
 1) Download and install the protocol buffer compiler ([protoc](https://github.com/protocolbuffers/protobuf/releases)).
 2) Run the protocol buffer compiler for your module's language on the [.proto files](https://github.com/iotaledger/bridge.ixi/tree/master/src/main/java/org/iota/ict/ixi/protobuf/definition) to generate data access classes.
-3) Use these data access classes in your module project. They provide simple methods to build, serialize and deserialize your protocol buffer messages.
+3) Use these **data access classes** in your module project. They provide simple **methods to build, serialize and deserialize** your protocol buffer messages.
 
-Note that each message must be sent within a [wrapper message](https://github.com/iotaledger/bridge.ixi/blob/master/src/main/java/org/iota/ict/ixi/protobuf/definition/wrapper.proto). This is necessary so that the participants easily know what kind of message it is.
+Note that each message must be sent within a wrapper message. This is necessary so that the participants easily know what kind of message it is. Take a look at the [module example](https://github.com/iotaledger/bridge.ixi/blob/master/examples/CSharp.cs), which illustrates this better.
 
