@@ -6,8 +6,8 @@ using System.Threading;
 class CSharp
 {
 
-    const int BRIDGE_PORT = 7331;
     const string BRIDGE_IP = "127.0.0.1";
+    const int BRIDGE_PORT = 7331;
     static NetworkStream stream;
 
     static void Main(string[] args)
@@ -25,7 +25,7 @@ class CSharp
             {
                 TransactionBuilder = new TransactionBuilder
                 {
-                    Address = "TEST9ADDRESS999999999999999999999999999999999999999999999999999999999999999999999",
+                    Address = "TEST9ADDRESS",
                     Tag = "BRIDGE9TEST"
                 }
             }
@@ -45,7 +45,7 @@ class CSharp
 
         SendMessage(findTransactionsByAddressRequestWrapper);
 
-        Thread.Sleep(3000);
+        Thread.Sleep(1500);
 
         // READ THE RESPONSE
         WrapperMessage wrapper = ReadMessage();
@@ -79,14 +79,30 @@ class CSharp
 
     static WrapperMessage ReadMessage()
     {
-        byte[] integerBytes = new byte[4];
-        stream.Read(integerBytes, 0, 4);
+        byte[] integerBytes = ReadFully(4);
         if (BitConverter.IsLittleEndian) // Big-Endian byte order required
             Array.Reverse(integerBytes);
         int bufferLength = BitConverter.ToInt32(integerBytes, 0);
-        byte[] buffer = new byte[bufferLength];
-        stream.Read(buffer, 0, bufferLength);
+        byte[] buffer = ReadFully(bufferLength);
         return WrapperMessage.Parser.ParseFrom(buffer);
+    }
+
+    /**
+    * Stream.Read() does not guarantee that the whole message will be read in.
+    * Because of this, it's strongly recommended to use a method like ReadFully() which reads the socket stream until all relevant data has been received.
+    */
+    public static byte[] ReadFully(int len)
+    {
+        byte[] b = new byte[len];
+        int n = 0;
+        while (n < len)
+        {
+            int count = stream.Read(b, n, len - n);
+            if (count < 0)
+                throw new Exception("EOF");
+            n += count;
+        }
+        return b;
     }
 
 }
